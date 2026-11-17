@@ -10,23 +10,25 @@ import {
   MenuSeparator,
   MenuShortcut,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
+} from "@theo/ui/menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@workspace/ui/components/sidebar";
+} from "@theo/ui/sidebar";
 import { ChevronsUpDownIcon, PlusIcon } from "lucide-react";
 
 export function TeamSwitcher({
   teams,
+  onAddTeam,
 }: {
   teams: {
     name: string;
     logo: React.ReactNode;
     plan: string;
   }[];
+  onAddTeam?: () => void;
 }) {
   const { isMobile } = useSidebar();
   const [activeTeam, setActiveTeam] = React.useState(teams[0]);
@@ -71,17 +73,21 @@ export function TeamSwitcher({
                 </MenuItem>
               ))}
             </MenuGroup>
-            <MenuSeparator />
-            <MenuGroup>
-              <MenuItem>
-                <div className="flex size-6 items-center justify-center rounded-md border bg-background">
-                  <PlusIcon aria-hidden="true" />
-                </div>
-                <span className="font-medium text-muted-foreground">
-                  Add team
-                </span>
-              </MenuItem>
-            </MenuGroup>
+            {onAddTeam && (
+              <>
+                <MenuSeparator />
+                <MenuGroup>
+                  <MenuItem onClick={onAddTeam}>
+                    <div className="flex size-6 items-center justify-center rounded-md border bg-background">
+                      <PlusIcon aria-hidden="true" />
+                    </div>
+                    <span className="font-medium text-muted-foreground">
+                      Add team
+                    </span>
+                  </MenuItem>
+                </MenuGroup>
+              </>
+            )}
           </MenuPopup>
         </Menu>
       </SidebarMenuItem>

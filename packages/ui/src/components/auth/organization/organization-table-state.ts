@@ -26,7 +26,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { ORGANIZATION_TABLE_PAGE_SIZE } from "./organization-table";
+import { ORGANIZATION_TABLE_PAGE_SIZE } from "@theo/ui/auth/organization/organization-table";
 
 const TABLE_STATE_STORAGE_PREFIX = "better-auth-ui:organization-table";
 

@@ -4,8 +4,8 @@ import { type AuthView, getProviderId } from "@better-auth-ui/core";
 import { useAuth } from "@better-auth-ui/react";
 import { useMemo } from "react";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { ProviderButton } from "./provider-button";
+import { cn } from "@theo/ui/utils";
+import { ProviderButton } from "@theo/ui/auth/provider-button";
 
 export type ProviderButtonsProps = {
   socialLayout?: SocialLayout;

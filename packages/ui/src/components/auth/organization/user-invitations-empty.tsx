@@ -9,8 +9,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
+} from "@theo/ui/empty";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
 
 /**
  * Empty state for `UserInvitations`.

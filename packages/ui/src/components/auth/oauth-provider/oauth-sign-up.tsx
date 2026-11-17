@@ -13,19 +13,19 @@ import {
 } from "@better-auth-ui/react/plugins/oauth-provider";
 import { useEffect, useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import type { SocialLayout } from "../provider-buttons";
-import { SignUp } from "../sign-up";
+} from "@theo/ui/card";
+import { Spinner } from "@theo/ui/spinner";
+import { oauthProviderPlugin } from "@theo/ui/auth/plugins/oauth-provider-plugin";
+import { cn } from "@theo/ui/utils";
+import type { SocialLayout } from "@theo/ui/auth/provider-buttons";
+import { SignUp } from "@theo/ui/auth/sign-up";
 
 export type OAuthSignUpProps = {
   className?: string;

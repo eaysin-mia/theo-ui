@@ -30,16 +30,16 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
+} from "@theo/ui/alert-dialog";
+import { Badge } from "@theo/ui/badge";
+import { Button, buttonVariants } from "@theo/ui/button";
 import {
   Card,
   CardFrame,
   CardFrameFooter,
   CardPanel,
-} from "@workspace/ui/components/card";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+} from "@theo/ui/card";
+import { Checkbox } from "@theo/ui/checkbox";
 import {
   Dialog,
   DialogDescription,
@@ -48,22 +48,22 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
+} from "@theo/ui/dialog";
 import {
   Menu,
   MenuPopup,
   MenuRadioGroup,
   MenuRadioItem,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/menu";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { Spinner } from "@workspace/ui/components/spinner";
+} from "@theo/ui/input-group";
+import { Spinner } from "@theo/ui/spinner";
 import {
   Table,
   TableBody,
@@ -71,29 +71,29 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@workspace/ui/components/table";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/table";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,
   useAuthForm,
-} from "../auth-form";
-import { OrganizationSortableTableHead } from "./organization-sortable-table-head";
+} from "@theo/ui/auth/auth-form";
+import { OrganizationSortableTableHead } from "@theo/ui/auth/organization/organization-sortable-table-head";
 import {
   createOrganizationColumnHelper,
   ORGANIZATION_TABLE_PAGE_SIZE,
   useOrganizationTable,
-} from "./organization-table";
-import { OrganizationTableBulkAction } from "./organization-table-bulk-action";
-import { OrganizationTablePagination } from "./organization-table-pagination";
+} from "@theo/ui/auth/organization/organization-table";
+import { OrganizationTableBulkAction } from "@theo/ui/auth/organization/organization-table-bulk-action";
+import { OrganizationTablePagination } from "@theo/ui/auth/organization/organization-table-pagination";
 import {
   type OrganizationSelectableRow,
   OrganizationTableSelectAll,
   OrganizationTableSelectRow,
-} from "./organization-table-selection";
-import { useOrganizationTableState } from "./organization-table-state";
-import { OrganizationTableViewOptions } from "./organization-table-view-options";
+} from "@theo/ui/auth/organization/organization-table-selection";
+import { useOrganizationTableState } from "@theo/ui/auth/organization/organization-table-state";
+import { OrganizationTableViewOptions } from "@theo/ui/auth/organization/organization-table-view-options";
 
 type Role = {
   id: string;

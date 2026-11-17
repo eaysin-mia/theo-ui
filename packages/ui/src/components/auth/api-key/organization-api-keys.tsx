@@ -9,8 +9,8 @@ import {
   useActiveMemberRole,
   useHasPermission,
 } from "@better-auth-ui/react/plugins/organization";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { ApiKeys } from "./api-keys";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { ApiKeys } from "@theo/ui/auth/api-key/api-keys";
 
 export type OrganizationApiKeysProps = {
   className?: string;

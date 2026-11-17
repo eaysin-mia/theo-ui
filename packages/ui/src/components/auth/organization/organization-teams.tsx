@@ -41,9 +41,9 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@workspace/ui/components/alert-dialog";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
-import { Card, CardPanel } from "@workspace/ui/components/card";
+} from "@theo/ui/alert-dialog";
+import { Button, buttonVariants } from "@theo/ui/button";
+import { Card, CardPanel } from "@theo/ui/card";
 import {
   Dialog,
   DialogClose,
@@ -53,9 +53,9 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/dialog";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   Select,
   SelectGroup,
@@ -63,14 +63,14 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
+} from "@theo/ui/select";
+import { Spinner } from "@theo/ui/spinner";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,
   useAuthForm,
-} from "../auth-form";
+} from "@theo/ui/auth/auth-form";
 
 type Team = { id: string; name: string; [key: string]: unknown };
 

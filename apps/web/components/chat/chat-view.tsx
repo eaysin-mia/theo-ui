@@ -5,12 +5,9 @@ import { useState } from "react";
 import {
   ArrowUpIcon,
   BotIcon,
-  FileTextIcon,
   PaperclipIcon,
-  RotateCcwIcon,
   SparklesIcon,
   SquareIcon,
-  Trash2Icon,
   UserRoundIcon,
   UsersRoundIcon,
 } from "lucide-react";
@@ -21,7 +18,7 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "@workspace/ui/components/message-scroller";
+} from "@theo/ui/message-scroller";
 import {
   Composer,
   ComposerActionGroup,
@@ -35,7 +32,7 @@ import {
   type ComposerTrigger,
   type ComposerValue,
   getComposerText,
-} from "@workspace/ui/components/composer";
+} from "@theo/ui/composer";
 import {
   Attachment,
   AttachmentContent,
@@ -45,7 +42,7 @@ import {
   AttachmentTitle,
   AttachmentAction,
   AttachmentActions,
-} from "@workspace/ui/components/attachment";
+} from "@theo/ui/attachment";
 import {
   Empty,
   EmptyContent,
@@ -53,10 +50,10 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { Button } from "@workspace/ui/components/button";
-import { FileType, getFileType } from "@workspace/ui/components/file-type";
-import { Message, MessageContent } from "@workspace/ui/components/message";
+} from "@theo/ui/empty";
+import { Button } from "@theo/ui/button";
+import { FileType, getFileType } from "@theo/ui/file-type";
+import { Message, MessageContent } from "@theo/ui/message";
 import {
   ChatMessage,
   type ChatMessageItem,
@@ -79,7 +76,7 @@ const INITIAL_MESSAGES: ChatMessageItem[] = [
     role: "assistant",
     model: "Claude 3.7 Sonnet",
     reasoning:
-      "1. Inspecting workspace packages and `@workspace/ui` exports.\n2. Checking Base UI `useRender` primitives.\n3. Analyzing `Composer`, `MessageScroller`, `Bubble`, and `CodeBlock` composition.\n4. Evaluating layout integration with Next.js App Router.",
+      "1. Inspecting workspace packages and `@theo/ui` exports.\n2. Checking Base UI `useRender` primitives.\n3. Analyzing `Composer`, `MessageScroller`, `Bubble`, and `CodeBlock` composition.\n4. Evaluating layout integration with Next.js App Router.",
     reasoningDuration: 2400,
     tools: [
       {
@@ -127,9 +124,9 @@ const INITIAL_MESSAGES: ChatMessageItem[] = [
 Here is an example snippet showing how you compose the feed:
 
 \`\`\`tsx
-import { MessageScroller, MessageScrollerContent } from "@workspace/ui/components/message-scroller";
-import { Message, MessageContent } from "@workspace/ui/components/message";
-import { Bubble, BubbleContent } from "@workspace/ui/components/bubble";
+import { MessageScroller, MessageScrollerContent } from "@theo/ui/message-scroller";
+import { Message, MessageContent } from "@theo/ui/message";
+import { Bubble, BubbleContent } from "@theo/ui/bubble";
 
 export function ChatFeed({ messages }) {
   return (

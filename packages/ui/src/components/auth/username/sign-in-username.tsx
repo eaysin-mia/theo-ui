@@ -27,26 +27,26 @@ import { useState } from "react";
 import {
   ProviderButtons,
   type SocialLayout,
-} from "@workspace/ui/components/auth/provider-buttons";
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+} from "@theo/ui/auth/provider-buttons";
+import { Button } from "@theo/ui/button";
+import { Checkbox } from "@theo/ui/checkbox";
 import {
   Field,
   FieldLabel,
   FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
-import { usernamePlugin } from "@workspace/ui/lib/auth/username-plugin";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
-import { AuthFormContainer } from "../auth-layout";
-import { LastUsedBadge } from "../last-login-method/last-used-badge";
-import { ReauthenticationNotice } from "../reauthentication";
+} from "@theo/ui/input-group";
+import { usernamePlugin } from "@theo/ui/auth/plugins/username-plugin";
+import { useSignInContinuation } from "#internal/lib/auth/use-sign-in-continuation";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { LastUsedBadge } from "@theo/ui/auth/last-login-method/last-used-badge";
+import { ReauthenticationNotice } from "@theo/ui/auth/reauthentication";
 
 export type SignInUsernameProps = {
   className?: string;

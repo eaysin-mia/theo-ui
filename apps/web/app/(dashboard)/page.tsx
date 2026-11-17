@@ -4,16 +4,16 @@ import { authClient } from "@/lib/auth-client";
 import {
   useActiveOrganization,
   useSession,
-} from "@workspace/ui/components/auth";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+} from "@theo/ui/auth";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
+} from "@theo/ui/card";
 import {
   Building2,
   Database,
@@ -26,23 +26,23 @@ import {
   Users,
 } from "lucide-react";
 import Link from "next/link";
-import { Pattern } from "@workspace/ui/components/examples/c-timeline-4";
-import { AutoHeightDemo } from "@workspace/ui/components/examples/c-auto-height-1";
-import { CartButton } from "@workspace/ui/components/buttons/cart-button";
-import { RainbowButton } from "@workspace/ui/components/buttons/rainbow-button";
-import { ShimmerButton } from "@workspace/ui/components/buttons/shimmer-button";
-import { UndoButton } from "@workspace/ui/components/buttons/undo-button";
-import { HoldButton } from "@workspace/ui/components/buttons/hold-button";
-import { HaloSearch } from "@workspace/ui/components/halo-search";
-import { TipSelector } from "@workspace/ui/components/tip-selector";
-import { UptimeCard } from "@workspace/ui/components/uptime-card";
+import { AutoHeightDemo } from "@/components/ui-demos/auto-height-demo";
+import { TimelineDemo } from "@/components/ui-demos/timeline-demo";
+import { CartButton } from "@theo/ui/buttons/cart-button";
+import { RainbowButton } from "@theo/ui/buttons/rainbow-button";
+import { ShimmerButton } from "@theo/ui/buttons/shimmer-button";
+import { UndoButton } from "@theo/ui/buttons/undo-button";
+import { HoldButton } from "@theo/ui/buttons/hold-button";
+import { HaloSearch } from "@theo/ui/halo-search";
+import { TipSelector } from "@theo/ui/tip-selector";
+import { UptimeCard } from "@theo/ui/uptime-card";
 import {
   RelativeTime,
   RelativeTimeZone,
   RelativeTimeZoneDate,
   RelativeTimeZoneDisplay,
   RelativeTimeZoneLabel,
-} from "@workspace/ui/components/relative-time";
+} from "@theo/ui/relative-time";
 
 export default function DashboardOverviewPage() {
   const { data: session } = useSession(authClient);
@@ -81,7 +81,7 @@ export default function DashboardOverviewPage() {
         <UptimeCard />
       </div>
 
-      <Pattern />
+      <TimelineDemo />
       <div className="relative overflow-hidden rounded-2xl border bg-linear-to-br from-card to-muted/40 p-6 md:p-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col gap-1.5">

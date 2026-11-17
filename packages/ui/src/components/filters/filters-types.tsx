@@ -1,5 +1,5 @@
 import type * as React from "react";
-import type { FilterDateValue } from "./filters-date";
+import type { FilterDateValue } from "@theo/ui/filters/filters-date";
 
 /* -------------------------------------------------------------------------- */
 /*                                 Query tree                                 */

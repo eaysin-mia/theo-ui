@@ -13,25 +13,25 @@ import { Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@workspace/ui/components/button";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+import { Button } from "@theo/ui/button";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { phoneNumberPlugin } from "@workspace/ui/lib/auth/phone-number-plugin";
+} from "@theo/ui/input-group";
+import { phoneNumberPlugin } from "@theo/ui/auth/plugins/phone-number-plugin";
 import {
   isAuthFormFieldInvalid,
   setAuthFormServerError,
   useAuthForm,
-} from "../auth-form";
-import { AuthFormContainer } from "../auth-layout";
-import { OtpField } from "../otp-field";
-import { PasswordStrengthMeter } from "../password-strength-meter";
-import { useIsHydrated } from "../use-is-hydrated";
-import { PHONE_NUMBER_RESET_STORAGE_KEY } from "./forgot-phone-number-password";
+} from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { OtpField } from "@theo/ui/auth/otp-field";
+import { PasswordStrengthMeter } from "@theo/ui/auth/password-strength-meter";
+import { useIsHydrated } from "@theo/ui/auth/use-is-hydrated";
+import { PHONE_NUMBER_RESET_STORAGE_KEY } from "@theo/ui/auth/phone-number/forgot-phone-number-password";
 
 export type ResetPhoneNumberPasswordProps = {
   className?: string;

@@ -4,7 +4,7 @@ import { StatusIcon } from "@/components/chat/status-icon";
 import {
   CodeBlock,
   CodeBlockContent,
-} from "@workspace/ui/components/code-block";
+} from "@theo/ui/code-block";
 import {
   TraceCollapsible,
   TraceCollapsibleContent,
@@ -13,7 +13,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@workspace/ui/components/trace";
+} from "@theo/ui/trace";
 
 export interface ToolPartProps {
   toolName: string;

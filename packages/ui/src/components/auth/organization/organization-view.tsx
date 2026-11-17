@@ -9,14 +9,14 @@ import {
 import type { Organization } from "better-auth/client";
 import type { ComponentProps } from "react";
 
-import { Badge } from "@workspace/ui/components/badge";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+import { Badge } from "@theo/ui/badge";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
 import {
   OrganizationLogo,
   type OrganizationLogoSize,
-} from "./organization-logo";
-import { OrganizationViewSkeleton } from "./organization-view-skeleton";
+} from "@theo/ui/auth/organization/organization-logo";
+import { OrganizationViewSkeleton } from "@theo/ui/auth/organization/organization-view-skeleton";
 
 export type OrganizationViewProps = {
   className?: string;

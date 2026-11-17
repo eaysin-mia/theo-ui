@@ -22,18 +22,18 @@ import {
   useRef,
 } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Alert, AlertDescription } from "@workspace/ui/components/alert";
+import { Button } from "@theo/ui/button";
+import { Alert, AlertDescription } from "@theo/ui/alert";
 import { CircleAlertIcon } from "lucide-react";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { AdditionalField, type AdditionalFieldProps } from "./additional-field";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { Spinner } from "@theo/ui/spinner";
+import { AdditionalField, type AdditionalFieldProps } from "@theo/ui/auth/additional-field";
 
 const { fieldContext, formContext, useFieldContext, useFormContext } =
   createFormHookContexts();

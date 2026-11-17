@@ -5,20 +5,20 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useListOrganizations } from "@better-auth-ui/react/plugins/organization";
 import { Fragment, useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardAction,
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { CreateOrganizationDialog } from "./create-organization-dialog";
-import { OrganizationRow } from "./organization-row";
-import { OrganizationViewSkeleton } from "./organization-view-skeleton";
-import { OrganizationsEmpty } from "./organizations-empty";
+} from "@theo/ui/card";
+import { Separator } from "@theo/ui/separator";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { CreateOrganizationDialog } from "@theo/ui/auth/organization/create-organization-dialog";
+import { OrganizationRow } from "@theo/ui/auth/organization/organization-row";
+import { OrganizationViewSkeleton } from "@theo/ui/auth/organization/organization-view-skeleton";
+import { OrganizationsEmpty } from "@theo/ui/auth/organization/organizations-empty";
 
 export type OrganizationsProps = {
   className?: string;

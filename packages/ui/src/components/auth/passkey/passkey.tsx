@@ -4,14 +4,14 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { Fingerprint, Pencil, X } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { passkeyPlugin } from "@workspace/ui/lib/auth/passkey-plugin";
+import { Button } from "@theo/ui/button";
+import { passkeyPlugin } from "@theo/ui/auth/plugins/passkey-plugin";
 
 import {
   DeletePasskeyDialog,
   type ListedPasskey,
-} from "./delete-passkey-dialog";
-import { RenamePasskeyDialog } from "./rename-passkey-dialog";
+} from "@theo/ui/auth/passkey/delete-passkey-dialog";
+import { RenamePasskeyDialog } from "@theo/ui/auth/passkey/rename-passkey-dialog";
 
 export type PasskeyProps = {
   passkey: ListedPasskey;

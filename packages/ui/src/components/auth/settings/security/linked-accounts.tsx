@@ -9,10 +9,10 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { LinkedAccount } from "./linked-account";
+} from "@theo/ui/card";
+import { Separator } from "@theo/ui/separator";
+import { Skeleton } from "@theo/ui/skeleton";
+import { LinkedAccount } from "@theo/ui/auth/settings/security/linked-account";
 
 export type LinkedAccountsProps = {
   className?: string;

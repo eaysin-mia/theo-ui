@@ -4,8 +4,8 @@ import * as React from "react";
 import { Questionnaire as QuestionnairePrimitive } from "@shadcn/react/questionnaire";
 import type { VariantProps } from "class-variance-authority";
 import { CheckIcon } from "lucide-react";
-import { buttonVariants } from "@workspace/ui/components/button";
-import { cn } from "@workspace/ui/lib/utils";
+import { buttonVariants } from "@theo/ui/button";
+import { cn } from "@theo/ui/utils";
 
 function Questionnaire({
   className,

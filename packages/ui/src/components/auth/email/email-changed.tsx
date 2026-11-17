@@ -16,12 +16,12 @@ import {
   Text,
 } from "react-email";
 
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 import {
   type EmailClassNames,
   type EmailColors,
   EmailStyles,
-} from "./email-styles";
+} from "@theo/ui/auth/email/email-styles";
 
 const emailChangedEmailLocalization = {
   YOUR_EMAIL_ADDRESS_HAS_BEEN_CHANGED: "Your email address has been changed",

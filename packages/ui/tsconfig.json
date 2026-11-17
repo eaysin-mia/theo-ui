@@ -2,7 +2,20 @@
   "extends": "@workspace/typescript-config/react-library.json",
   "compilerOptions": {
     "paths": {
-      "@workspace/ui/*": ["./src/*"]
+      "#internal/*": ["./src/*"],
+      "@theo/ui/auth/plugins/*": ["./src/auth/plugins/*"],
+      "@theo/ui/filters": ["./src/components/filters/filters.tsx"],
+      "@theo/ui/gantt": ["./src/components/gantt/gantt.tsx"],
+      "@theo/ui/auth/*": ["./src/components/auth/*"],
+      "@theo/ui/app-layout/*": ["./src/components/app-layout/*"],
+      "@theo/ui/buttons/*": ["./src/components/buttons/*"],
+      "@theo/ui/event-calendar/*": ["./src/components/event-calendar/*"],
+      "@theo/ui/filters/*": ["./src/components/filters/*"],
+      "@theo/ui/gantt/*": ["./src/components/gantt/*"],
+      "@theo/ui/hooks/*": ["./src/hooks/*"],
+      "@theo/ui/qr-code/*": ["./src/components/qr-code/*"],
+      "@theo/ui/utils": ["./src/lib/utils.ts"],
+      "@theo/ui/*": ["./src/components/*"]
     }
   },
   "include": ["."],

@@ -5,7 +5,7 @@ import { cva } from "class-variance-authority";
 import { ChevronDownIcon } from "lucide-react";
 import type * as React from "react";
 
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 
 function NavigationMenu({
   align = "start",

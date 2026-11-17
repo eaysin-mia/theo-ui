@@ -6,11 +6,11 @@ import { useAuth, useAuthPlugin, useFetchOptions } from "@better-auth-ui/react";
 import { useRequestPasswordResetOtp } from "@better-auth-ui/react/plugins/email-otp";
 import { useId } from "react";
 
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { emailOtpPlugin } from "@workspace/ui/lib/auth/email-otp-plugin";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
-import { AuthFormContainer } from "../auth-layout";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { emailOtpPlugin } from "@theo/ui/auth/plugins/email-otp-plugin";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
 
 /** `sessionStorage` key the reset-code form reads the pending address from. */
 export const RESET_PASSWORD_OTP_STORAGE_KEY =

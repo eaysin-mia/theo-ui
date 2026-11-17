@@ -1,8 +1,8 @@
 "use client";
 
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { TableCell, TableRow } from "@workspace/ui/components/table";
-import { UserView } from "../user/user-view";
+import { Skeleton } from "@theo/ui/skeleton";
+import { TableCell, TableRow } from "@theo/ui/table";
+import { UserView } from "@theo/ui/auth/user/user-view";
 import type { ReactNode } from "react";
 
 /** Placeholder cells for the table's current visible columns. */

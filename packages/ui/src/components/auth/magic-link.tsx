@@ -17,14 +17,14 @@ import {
   Field,
   FieldLabel,
   FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { magicLinkPlugin } from "@workspace/ui/lib/auth/magic-link-plugin";
-import { isAuthFormFieldInvalid, useAuthForm } from "./auth-form";
-import { AuthFormContainer } from "./auth-layout";
-import { MAGIC_LINK_SENT_STORAGE_KEY } from "./magic-link-sent";
-import { ProviderButtons, type SocialLayout } from "./provider-buttons";
-import { ReauthenticationNotice } from "./reauthentication";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { magicLinkPlugin } from "@theo/ui/auth/plugins/magic-link-plugin";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { MAGIC_LINK_SENT_STORAGE_KEY } from "@theo/ui/auth/magic-link-sent";
+import { ProviderButtons, type SocialLayout } from "@theo/ui/auth/provider-buttons";
+import { ReauthenticationNotice } from "@theo/ui/auth/reauthentication";
 
 export type MagicLinkProps = {
   className?: string;

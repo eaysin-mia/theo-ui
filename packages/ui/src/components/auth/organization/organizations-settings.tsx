@@ -2,9 +2,9 @@
 
 import type { ComponentProps } from "react";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { Organizations } from "./organizations";
-import { UserInvitations } from "./user-invitations";
+import { cn } from "@theo/ui/utils";
+import { Organizations } from "@theo/ui/auth/organization/organizations";
+import { UserInvitations } from "@theo/ui/auth/organization/user-invitations";
 
 export type OrganizationsSettingsProps = {
   className?: string;

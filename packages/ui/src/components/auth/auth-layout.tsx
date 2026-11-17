@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 
 /* -------------------------------------------------------------------------------------------------
  * Context & Types
@@ -114,7 +114,7 @@ export interface AuthLayoutBrandProps extends Omit<
 }
 
 export function AuthLayoutBrand({
-  name = "ReUI",
+  name,
   logo = <DefaultBrandLogo />,
   href = "/",
   className,
@@ -173,9 +173,9 @@ export interface AuthLayoutActionProps extends React.HTMLAttributes<HTMLDivEleme
 }
 
 export function AuthLayoutAction({
-  text = "Not on ReUI yet?",
-  actionLabel = "Create a workspace",
-  href = "/auth/sign-up",
+  text,
+  actionLabel,
+  href,
   onClick,
   className,
   children,
@@ -196,6 +196,8 @@ export function AuthLayoutAction({
     );
   }
 
+  if (!text && !actionLabel) return null;
+
   return (
     <div
       className={cn(
@@ -206,7 +208,7 @@ export function AuthLayoutAction({
       {...props}
     >
       {text && <span>{text}</span>}
-      {actionLabel && (
+      {actionLabel && href && (
         <AuthLink
           href={href}
           onClick={onClick}
@@ -274,7 +276,7 @@ export function AuthLayoutFooter({
   );
 }
 
-export interface AuthLegalNoticeProps extends React.HTMLAttributes<HTMLParagraphElement> {
+export interface AuthLegalNoticeProps extends React.HTMLAttributes<HTMLDivElement> {
   appName?: string;
   termsHref?: string;
   privacyHref?: string;
@@ -283,9 +285,9 @@ export interface AuthLegalNoticeProps extends React.HTMLAttributes<HTMLParagraph
 }
 
 export function AuthLegalNotice({
-  appName = "ReUI",
-  termsHref = "/terms",
-  privacyHref = "/privacy",
+  appName,
+  termsHref,
+  privacyHref,
   className,
   children,
   ...props
@@ -298,15 +300,17 @@ export function AuthLegalNotice({
           className,
         )}
         data-slot="auth-layout-legal-notice"
-        {...(props as React.HTMLAttributes<HTMLDivElement>)}
+        {...props}
       >
         {children}
       </div>
     );
   }
 
+  if (!appName || !termsHref || !privacyHref) return null;
+
   return (
-    <p
+    <div
       className={cn(
         "text-center text-xs leading-normal text-muted-foreground",
         className,
@@ -314,22 +318,24 @@ export function AuthLegalNotice({
       data-slot="auth-layout-legal-notice"
       {...props}
     >
-      By continuing, you agree to {appName}&apos;s{" "}
-      <AuthLink
-        href={termsHref}
-        className="font-medium text-foreground underline underline-offset-4 transition-opacity hover:opacity-80"
-      >
-        Terms of Service
-      </AuthLink>{" "}
-      and{" "}
-      <AuthLink
-        href={privacyHref}
-        className="font-medium text-foreground underline underline-offset-4 transition-opacity hover:opacity-80"
-      >
-        Privacy Policy
-      </AuthLink>
-      .
-    </p>
+      <p>
+        By continuing, you agree to {appName}&apos;s{" "}
+        <AuthLink
+          href={termsHref}
+          className="font-medium text-foreground underline underline-offset-4 transition-opacity hover:opacity-80"
+        >
+          Terms of Service
+        </AuthLink>{" "}
+        and{" "}
+        <AuthLink
+          href={privacyHref}
+          className="font-medium text-foreground underline underline-offset-4 transition-opacity hover:opacity-80"
+        >
+          Privacy Policy
+        </AuthLink>
+        .
+      </p>
+    </div>
   );
 }
 
@@ -452,10 +458,10 @@ export interface AuthLayoutProps extends Omit<
   description?: React.ReactNode;
 
   /** Shorthand: brand config */
-  brand?: AuthBrandConfig | React.ReactNode;
+  brand?: AuthBrandConfig | React.ReactElement | null;
 
   /** Shorthand: top right action */
-  headerAction?: AuthHeaderActionConfig | React.ReactNode;
+  headerAction?: AuthHeaderActionConfig | React.ReactElement | null;
 
   /** Shorthand: legal notice below form */
   legalNotice?: React.ReactNode;
@@ -507,29 +513,18 @@ export function AuthLayout({
         {isShorthand ? (
           <>
             <AuthLayoutHeader className={headerClassName}>
-              {brand === null ? null : React.isValidElement(brand) ? (
+              {brand == null ? null : React.isValidElement(brand) ? (
                 brand
               ) : (
-                <AuthLayoutBrand
-                  name={(brand as AuthBrandConfig)?.name}
-                  logo={(brand as AuthBrandConfig)?.logo}
-                  href={(brand as AuthBrandConfig)?.href}
-                />
+                <AuthLayoutBrand {...brand} />
               )}
 
-              {headerAction === null ? null : React.isValidElement(
+              {headerAction == null ? null : React.isValidElement(
                   headerAction,
                 ) ? (
                 headerAction
               ) : (
-                <AuthLayoutAction
-                  text={(headerAction as AuthHeaderActionConfig)?.text}
-                  actionLabel={
-                    (headerAction as AuthHeaderActionConfig)?.actionLabel
-                  }
-                  href={(headerAction as AuthHeaderActionConfig)?.href}
-                  onClick={(headerAction as AuthHeaderActionConfig)?.onClick}
-                />
+                <AuthLayoutAction {...headerAction} />
               )}
             </AuthLayoutHeader>
 

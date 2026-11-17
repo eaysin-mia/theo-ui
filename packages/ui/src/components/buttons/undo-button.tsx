@@ -10,8 +10,8 @@ import {
   useRef,
   useState,
 } from "react";
-import { Kbd } from "@workspace/ui/components/kbd";
-import { cn } from "@workspace/ui/lib/utils";
+import { Kbd } from "@theo/ui/kbd";
+import { cn } from "@theo/ui/utils";
 
 const useIsomorphicLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect;

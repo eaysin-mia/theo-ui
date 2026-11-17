@@ -46,10 +46,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
-import { Card, CardPanel } from "@workspace/ui/components/card";
+} from "@theo/ui/alert-dialog";
+import { Badge } from "@theo/ui/badge";
+import { Button, buttonVariants } from "@theo/ui/button";
+import { Card, CardPanel } from "@theo/ui/card";
 import {
   Dialog,
   DialogClose,
@@ -59,18 +59,18 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
+} from "@theo/ui/dialog";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
+} from "@theo/ui/input-group";
 import {
   Select,
   SelectGroup,
@@ -78,13 +78,13 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { Switch } from "@workspace/ui/components/switch";
-import { Textarea } from "@workspace/ui/components/textarea";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
+} from "@theo/ui/select";
+import { Spinner } from "@theo/ui/spinner";
+import { Switch } from "@theo/ui/switch";
+import { Textarea } from "@theo/ui/textarea";
+import { oauthProviderPlugin } from "@theo/ui/auth/plugins/oauth-provider-plugin";
+import { cn } from "@theo/ui/utils";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
 
 type ClientAction =
   | { kind: "delete"; client: ManagedOAuthClient }

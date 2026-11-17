@@ -17,17 +17,17 @@ import type { Invitation } from "better-auth/client";
 import { Send, X } from "lucide-react";
 import { toast } from "sonner";
 
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { TableCell, TableRow } from "@workspace/ui/components/table";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { OrganizationTableRowSkeleton } from "./organization-table-row-skeleton";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
+import { Spinner } from "@theo/ui/spinner";
+import { TableCell, TableRow } from "@theo/ui/table";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
+import { OrganizationTableRowSkeleton } from "@theo/ui/auth/organization/organization-table-row-skeleton";
 import {
   type OrganizationSelectableRow,
   OrganizationTableSelectRow,
-} from "./organization-table-selection";
+} from "@theo/ui/auth/organization/organization-table-selection";
 
 export type OrganizationInvitationRowProps = {
   columnIds: readonly string[];

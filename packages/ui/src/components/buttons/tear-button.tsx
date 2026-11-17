@@ -10,7 +10,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 
 const HEIGHT = 68;
 const BODY_WIDTH = 236;
@@ -147,11 +147,11 @@ export interface TearButtonProps {
 export function TearButton({
   tone = "default",
   icon = <Trash2 aria-hidden="true" className="size-4" />,
-  label = "Delete workspace",
+  label = "Confirm action",
   description = "Tear off the stub to confirm",
   stubLabel = "Tear",
-  confirmedLabel = "Workspace deleted",
-  confirmedDescription = "Kept in trash for 30 days",
+  confirmedLabel = "Action confirmed",
+  confirmedDescription = "",
   onConfirm,
   resetAfter = 2400,
   className,

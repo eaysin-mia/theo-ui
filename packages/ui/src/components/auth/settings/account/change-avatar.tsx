@@ -4,18 +4,18 @@ import { fileToAvatarDataUrl } from "@better-auth-ui/core";
 import { useAuth, useSession, useUpdateUser } from "@better-auth-ui/react";
 import { Trash2, Upload } from "lucide-react";
 import { type ChangeEvent, useRef, useState } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
-import { UserAvatar } from "@workspace/ui/components/auth/user/user-avatar";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
+import { toastManager } from "@theo/ui/toast";
+import { UserAvatar } from "@theo/ui/auth/user/user-avatar";
+import { Button, buttonVariants } from "@theo/ui/button";
 import {
   Menu,
   MenuItem,
   MenuPopup,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/menu";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Spinner } from "@theo/ui/spinner";
+import { cn } from "@theo/ui/utils";
 
 export type ChangeAvatarProps = {
   className?: string;

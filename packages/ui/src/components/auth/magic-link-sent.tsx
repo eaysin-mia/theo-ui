@@ -3,10 +3,10 @@
 import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useEffect, useState } from "react";
 
-import { magicLinkPlugin } from "@workspace/ui/lib/auth/magic-link-plugin";
-import { AuthFormContainer } from "./auth-layout";
-import { OpenEmailButton } from "./open-email-button";
-import { useIsHydrated } from "./use-is-hydrated";
+import { magicLinkPlugin } from "@theo/ui/auth/plugins/magic-link-plugin";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { OpenEmailButton } from "@theo/ui/auth/open-email-button";
+import { useIsHydrated } from "@theo/ui/auth/use-is-hydrated";
 
 /** `sessionStorage` key the magic-link form stores the submitted email under. */
 export const MAGIC_LINK_SENT_STORAGE_KEY = "better-auth-ui.magic-link-sent";

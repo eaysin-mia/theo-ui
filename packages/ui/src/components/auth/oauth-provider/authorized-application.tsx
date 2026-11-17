@@ -15,11 +15,11 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar";
-import { Button } from "@workspace/ui/components/button";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
-import { RemoveAuthorizationDialog } from "./remove-authorization-dialog";
+} from "@theo/ui/avatar";
+import { Button } from "@theo/ui/button";
+import { Skeleton } from "@theo/ui/skeleton";
+import { oauthProviderPlugin } from "@theo/ui/auth/plugins/oauth-provider-plugin";
+import { RemoveAuthorizationDialog } from "@theo/ui/auth/oauth-provider/remove-authorization-dialog";
 
 export type AuthorizedApplicationProps = {
   /** @remarks `AuthorizedOAuthApplication` */

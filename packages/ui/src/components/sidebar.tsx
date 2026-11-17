@@ -5,25 +5,25 @@ import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
 import { PanelLeftIcon } from "lucide-react";
 import * as React from "react";
-import { useMediaQuery } from "@workspace/ui/hooks/use-media-query";
-import { cn } from "@workspace/ui/lib/utils";
-import { Button } from "@workspace/ui/components/button";
-import { Input } from "@workspace/ui/components/input";
-import { ScrollArea } from "@workspace/ui/components/scroll-area";
-import { Separator } from "@workspace/ui/components/separator";
+import { useMediaQuery } from "@theo/ui/hooks/use-media-query";
+import { cn } from "@theo/ui/utils";
+import { Button } from "@theo/ui/button";
+import { Input } from "@theo/ui/input";
+import { ScrollArea } from "@theo/ui/scroll-area";
+import { Separator } from "@theo/ui/separator";
 import {
   Drawer,
   DrawerDescription,
   DrawerHeader,
   DrawerPopup,
   DrawerTitle,
-} from "@workspace/ui/components/drawer";
-import { Skeleton } from "@workspace/ui/components/skeleton";
+} from "@theo/ui/drawer";
+import { Skeleton } from "@theo/ui/skeleton";
 import {
   Tooltip,
   TooltipPopup,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip";
+} from "@theo/ui/tooltip";
 
 const SIDEBAR_COOKIE_NAME: string = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE: number = 60 * 60 * 24 * 7;

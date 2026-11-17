@@ -16,8 +16,8 @@ import {
 } from "@better-auth-ui/react/plugins/two-factor";
 import { Check, Copy, Mail, ShieldCheck, Smartphone } from "lucide-react";
 import { useMemo, useState } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
-import { Button } from "@workspace/ui/components/button";
+import { toastManager } from "@theo/ui/toast";
+import { Button } from "@theo/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -27,20 +27,20 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/dialog";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { Tabs, TabsList, TabsTab } from "@workspace/ui/components/tabs";
-import { twoFactorPlugin } from "@workspace/ui/lib/auth/two-factor-plugin";
-import { useTwoFactorPasswordRequirement } from "@workspace/ui/lib/auth/use-two-factor-password";
-import { submitAuthForm, useAuthForm } from "../auth-form";
-import { OtpField } from "../otp-field";
-import { BackupCodes } from "./backup-codes";
+} from "@theo/ui/input-group";
+import { Tabs, TabsList, TabsTab } from "@theo/ui/tabs";
+import { twoFactorPlugin } from "@theo/ui/auth/plugins/two-factor-plugin";
+import { useTwoFactorPasswordRequirement } from "#internal/lib/auth/use-two-factor-password";
+import { submitAuthForm, useAuthForm } from "@theo/ui/auth/auth-form";
+import { OtpField } from "@theo/ui/auth/otp-field";
+import { BackupCodes } from "@theo/ui/auth/two-factor/backup-codes";
 
 type EnrollmentStep = "password" | "verify" | "backupCodes";
 

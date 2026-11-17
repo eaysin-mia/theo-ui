@@ -13,12 +13,12 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
-import { AuthorizedApplication } from "./authorized-application";
-import { AuthorizedApplicationSkeleton } from "./authorized-application-skeleton";
-import { AuthorizedApplicationsEmpty } from "./authorized-applications-empty";
+} from "@theo/ui/card";
+import { Separator } from "@theo/ui/separator";
+import { oauthProviderPlugin } from "@theo/ui/auth/plugins/oauth-provider-plugin";
+import { AuthorizedApplication } from "@theo/ui/auth/oauth-provider/authorized-application";
+import { AuthorizedApplicationSkeleton } from "@theo/ui/auth/oauth-provider/authorized-application-skeleton";
+import { AuthorizedApplicationsEmpty } from "@theo/ui/auth/oauth-provider/authorized-applications-empty";
 
 export type AuthorizedApplicationsProps = {
   className?: string;

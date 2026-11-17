@@ -22,14 +22,14 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@workspace/ui/components/tabs";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { TabsScrollContainer } from "../tabs-scroll-container";
-import { OrganizationPeople } from "./organization-people";
-import { OrganizationRoles } from "./organization-roles";
-import { OrganizationSettings } from "./organization-settings";
-import { OrganizationTeams } from "./organization-teams";
+} from "@theo/ui/tabs";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
+import { TabsScrollContainer } from "@theo/ui/auth/tabs-scroll-container";
+import { OrganizationPeople } from "@theo/ui/auth/organization/organization-people";
+import { OrganizationRoles } from "@theo/ui/auth/organization/organization-roles";
+import { OrganizationSettings } from "@theo/ui/auth/organization/organization-settings";
+import { OrganizationTeams } from "@theo/ui/auth/organization/organization-teams";
 
 export type OrganizationProps = {
   className?: string;

@@ -13,12 +13,12 @@ import {
   useFilterPopupOpen,
   useFilterRender,
   useFilterReorderable,
-} from "@workspace/ui/components/filters/filters-context";
+} from "@theo/ui/filters/filters-context";
 import {
   FilterMenu,
   useFilterOptions,
   useFilterValueResolution,
-} from "@workspace/ui/components/filters/filters-editors";
+} from "@theo/ui/filters/filters-editors";
 import {
   collapseFilterPath,
   FILTER_MENU_CLASS,
@@ -26,45 +26,45 @@ import {
   formatFilterPath,
   getFilterField,
   getFilterFieldChain,
-} from "@workspace/ui/components/filters/filters-lib";
+} from "@theo/ui/filters/filters-lib";
 import {
   coerceFilterValue,
   getFilterArity,
   getFilterOperator,
   operatorTakesValue,
   visibleFilterOperators,
-} from "@workspace/ui/components/filters/filters-operators";
+} from "@theo/ui/filters/filters-operators";
 import {
   findFilterNode,
   isFilterGroup,
-} from "@workspace/ui/components/filters/filters-query";
+} from "@theo/ui/filters/filters-query";
 import {
   isFilterDateValue,
   formatFilterDate,
   type FilterDateValue,
-} from "@workspace/ui/components/filters/filters-date";
+} from "@theo/ui/filters/filters-date";
 import type {
   FilterEditorProps,
   FilterField,
   FilterGroupNode,
   FilterOperator,
   FilterRule,
-} from "@workspace/ui/components/filters/filters-types";
+} from "@theo/ui/filters/filters-types";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
+import { cn } from "@theo/ui/utils";
+import { Button, buttonVariants } from "@theo/ui/button";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@workspace/ui/components/breadcrumb";
+} from "@theo/ui/breadcrumb";
 import {
   Group,
   GroupSeparator,
   GroupText,
-} from "@workspace/ui/components/group";
+} from "@theo/ui/group";
 import {
   Menu,
   MenuPopup,
@@ -72,18 +72,18 @@ import {
   MenuRadioGroup,
   MenuRadioItem,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
+} from "@theo/ui/menu";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "@workspace/ui/components/popover";
+} from "@theo/ui/popover";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip";
+} from "@theo/ui/tooltip";
 import {
   ChevronRightIcon,
   CornerDownRightIcon,

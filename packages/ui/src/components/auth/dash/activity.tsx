@@ -45,8 +45,8 @@ import {
 } from "lucide-react";
 import { Fragment, useEffect, useMemo } from "react";
 
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardAction,
@@ -55,7 +55,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
+} from "@theo/ui/card";
 import {
   Empty,
   EmptyContent,
@@ -63,13 +63,13 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
+} from "@theo/ui/empty";
+import { Field, FieldLabel } from "@theo/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
+} from "@theo/ui/input-group";
 import {
   Select,
   SelectGroup,
@@ -77,14 +77,14 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Separator } from "@workspace/ui/components/separator";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { dashPlugin } from "@workspace/ui/lib/auth/dash-plugin";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { useServerTableState } from "../server-table-state";
+} from "@theo/ui/select";
+import { Separator } from "@theo/ui/separator";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Spinner } from "@theo/ui/spinner";
+import { dashPlugin } from "@theo/ui/auth/plugins/dash-plugin";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
+import { useServerTableState } from "@theo/ui/auth/server-table-state";
 
 type ActivityAccess = "admin" | "admin-user" | "organization" | "user";
 

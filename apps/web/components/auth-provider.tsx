@@ -1,6 +1,6 @@
 "use client";
 
-import { AuthProvider as CossAuthProvider } from "@workspace/ui/components/auth/auth-provider";
+import { AuthProvider as CossAuthProvider } from "@theo/ui/auth/auth-provider";
 import { authClient } from "@/lib/auth-client";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -8,36 +8,36 @@ import { useParams, useRouter } from "next/navigation";
 import { type PropsWithChildren, useMemo } from "react";
 
 // Coss UI Auth Plugins from packages/ui
-import { adminPlugin } from "@workspace/ui/lib/auth/admin-plugin";
+import { adminPlugin } from "@theo/ui/auth/plugins/admin-plugin";
 import {
   agentAuthPlugin,
   createAgentAuthClientAdapter,
-} from "@workspace/ui/lib/auth/agent-auth-plugin";
-import { anonymousPlugin } from "@workspace/ui/lib/auth/anonymous-plugin";
-import { apiKeyPlugin } from "@workspace/ui/lib/auth/api-key-plugin";
+} from "@theo/ui/auth/plugins/agent-auth-plugin";
+import { anonymousPlugin } from "@theo/ui/auth/plugins/anonymous-plugin";
+import { apiKeyPlugin } from "@theo/ui/auth/plugins/api-key-plugin";
 import {
   billingPlugin,
-  createDemoBillingAdapter,
-} from "@workspace/ui/lib/auth/billing-plugin";
-import { deleteUserPlugin } from "@workspace/ui/lib/auth/delete-user-plugin";
-import { deviceAuthorizationPlugin } from "@workspace/ui/lib/auth/device-authorization-plugin";
-import { emailOtpPlugin } from "@workspace/ui/lib/auth/email-otp-plugin";
-import { lastLoginMethodPlugin } from "@workspace/ui/lib/auth/last-login-method-plugin";
-import { magicLinkPlugin } from "@workspace/ui/lib/auth/magic-link-plugin";
-import { multiSessionPlugin } from "@workspace/ui/lib/auth/multi-session-plugin";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { passkeyPlugin } from "@workspace/ui/lib/auth/passkey-plugin";
-import { phoneNumberPlugin } from "@workspace/ui/lib/auth/phone-number-plugin";
+} from "@theo/ui/auth/plugins/billing-plugin";
+import { createDemoBillingAdapter } from "@/lib/auth/demo-billing-adapter";
+import { deleteUserPlugin } from "@theo/ui/auth/plugins/delete-user-plugin";
+import { deviceAuthorizationPlugin } from "@theo/ui/auth/plugins/device-authorization-plugin";
+import { emailOtpPlugin } from "@theo/ui/auth/plugins/email-otp-plugin";
+import { lastLoginMethodPlugin } from "@theo/ui/auth/plugins/last-login-method-plugin";
+import { magicLinkPlugin } from "@theo/ui/auth/plugins/magic-link-plugin";
+import { multiSessionPlugin } from "@theo/ui/auth/plugins/multi-session-plugin";
+import { oauthProviderPlugin } from "@theo/ui/auth/plugins/oauth-provider-plugin";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { passkeyPlugin } from "@theo/ui/auth/plugins/passkey-plugin";
+import { phoneNumberPlugin } from "@theo/ui/auth/plugins/phone-number-plugin";
 import {
   createEip1193WalletConnector,
   siwePlugin,
-} from "@workspace/ui/lib/auth/siwe-plugin";
-import { ssoPlugin } from "@workspace/ui/lib/auth/sso-plugin";
-import { oneTapPlugin } from "@workspace/ui/lib/auth/one-tap-plugin";
-import { themePlugin } from "@workspace/ui/lib/auth/theme-plugin";
-import { twoFactorPlugin } from "@workspace/ui/lib/auth/two-factor-plugin";
-import { usernamePlugin } from "@workspace/ui/lib/auth/username-plugin";
+} from "@theo/ui/auth/plugins/siwe-plugin";
+import { ssoPlugin } from "@theo/ui/auth/plugins/sso-plugin";
+import { oneTapPlugin } from "@theo/ui/auth/plugins/one-tap-plugin";
+import { themePlugin } from "@theo/ui/auth/plugins/theme-plugin";
+import { twoFactorPlugin } from "@theo/ui/auth/plugins/two-factor-plugin";
+import { usernamePlugin } from "@theo/ui/auth/plugins/username-plugin";
 
 const normalizeParam = (param: string | string[] | undefined) =>
   (Array.isArray(param) ? param[0] : param)?.replace(/^@/, "") ?? null;

@@ -6,10 +6,10 @@ import { useSetActiveOrganization } from "@better-auth-ui/react/plugins/organiza
 import type { Organization } from "better-auth/client";
 import { Settings as SettingsIcon } from "lucide-react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { OrganizationView } from "./organization-view";
+import { Button } from "@theo/ui/button";
+import { Spinner } from "@theo/ui/spinner";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { OrganizationView } from "@theo/ui/auth/organization/organization-view";
 
 export type OrganizationRowProps = {
   organization: Organization;

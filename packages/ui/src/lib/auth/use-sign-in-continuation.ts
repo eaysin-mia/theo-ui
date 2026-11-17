@@ -6,7 +6,7 @@ import {
   isTwoFactorRedirect,
   storeTwoFactorMethods,
   TWO_FACTOR_PLUGIN_ID,
-} from "./two-factor-methods";
+} from "#internal/lib/auth/two-factor-methods";
 
 /**
  * Resolve what happens after a sign-in request succeeds.

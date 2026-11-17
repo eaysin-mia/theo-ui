@@ -2,9 +2,9 @@
 
 import type { ComponentProps } from "react";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { OrganizationInvitations } from "./organization-invitations";
-import { OrganizationMembers } from "./organization-members";
+import { cn } from "@theo/ui/utils";
+import { OrganizationInvitations } from "@theo/ui/auth/organization/organization-invitations";
+import { OrganizationMembers } from "@theo/ui/auth/organization/organization-members";
 
 /** Props for the `OrganizationPeople` component. */
 export type OrganizationPeopleProps = {

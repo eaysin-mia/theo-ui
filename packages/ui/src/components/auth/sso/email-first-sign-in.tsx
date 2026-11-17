@@ -31,26 +31,26 @@ import { useIsMutating } from "@tanstack/react-query";
 import { CircleAlertIcon, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
-import { Alert, AlertDescription } from "@workspace/ui/components/alert";
+import { Button } from "@theo/ui/button";
+import { Checkbox } from "@theo/ui/checkbox";
+import { Alert, AlertDescription } from "@theo/ui/alert";
 import {
   Field,
   FieldLabel,
   FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { ssoPlugin } from "@workspace/ui/lib/auth/sso-plugin";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
-import { AuthFormContainer } from "../auth-layout";
-import { ProviderButtons } from "../provider-buttons";
-import { ReauthenticationNotice } from "../reauthentication";
+} from "@theo/ui/input-group";
+import { ssoPlugin } from "@theo/ui/auth/plugins/sso-plugin";
+import { useSignInContinuation } from "#internal/lib/auth/use-sign-in-continuation";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { ProviderButtons } from "@theo/ui/auth/provider-buttons";
+import { ReauthenticationNotice } from "@theo/ui/auth/reauthentication";
 
 export type EmailFirstSignInProps = {
   className?: string;

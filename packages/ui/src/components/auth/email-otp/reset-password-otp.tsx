@@ -15,27 +15,27 @@ import { Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@workspace/ui/components/button";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+import { Button } from "@theo/ui/button";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { emailOtpPlugin } from "@workspace/ui/lib/auth/email-otp-plugin";
+} from "@theo/ui/input-group";
+import { emailOtpPlugin } from "@theo/ui/auth/plugins/email-otp-plugin";
 import {
   isAuthFormFieldInvalid,
   setAuthFormServerError,
   submitAuthForm,
   useAuthForm,
-} from "../auth-form";
-import { AuthFormContainer } from "../auth-layout";
-import { OpenEmailButton } from "../open-email-button";
-import { OtpField } from "../otp-field";
-import { PasswordStrengthMeter } from "../password-strength-meter";
-import { useIsHydrated } from "../use-is-hydrated";
-import { RESET_PASSWORD_OTP_STORAGE_KEY } from "./forgot-password-otp";
+} from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { OpenEmailButton } from "@theo/ui/auth/open-email-button";
+import { OtpField } from "@theo/ui/auth/otp-field";
+import { PasswordStrengthMeter } from "@theo/ui/auth/password-strength-meter";
+import { useIsHydrated } from "@theo/ui/auth/use-is-hydrated";
+import { RESET_PASSWORD_OTP_STORAGE_KEY } from "@theo/ui/auth/email-otp/forgot-password-otp";
 
 export type ResetPasswordOtpProps = {
   className?: string;

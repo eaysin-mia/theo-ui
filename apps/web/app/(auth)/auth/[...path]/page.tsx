@@ -2,23 +2,19 @@
 
 import { use } from "react";
 import Link from "next/link";
-import { Auth } from "@workspace/ui/components/auth/auth";
-import {
-  AuthLayout,
-  AuthLegalNotice,
-} from "@workspace/ui/components/auth/auth-layout";
+import { Auth, AuthLayout } from "@theo/ui/auth";
 
 const HEADER_ACTIONS: Record<
   string,
   { text?: string; actionLabel?: string; href?: string }
 > = {
   "sign-in": {
-    text: "Not on ReUI yet?",
+    text: "New to Theo UI?",
     actionLabel: "Create a workspace",
     href: "/auth/sign-up",
   },
   "sign-up": {
-    text: "Already have an account?",
+    text: "Already using Theo UI?",
     actionLabel: "Sign in",
     href: "/auth/sign-in",
   },
@@ -55,7 +51,7 @@ export default function AuthCatchAllPage({
   return (
     <AuthLayout
       brand={{
-        name: "ReUI",
+        name: "Theo UI",
         href: "/",
       }}
       headerAction={headerAction}
@@ -64,7 +60,6 @@ export default function AuthCatchAllPage({
           {children}
         </Link>
       )}
-      legalNotice={<AuthLegalNotice appName="ReUI" />}
     >
       <Auth path={resolvedPath} />
     </AuthLayout>

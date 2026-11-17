@@ -6,11 +6,11 @@ import { useAuth, useSendVerificationEmail } from "@better-auth-ui/react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@workspace/ui/components/button";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { AuthFormContainer } from "./auth-layout";
-import { OpenEmailButton } from "./open-email-button";
-import { useIsHydrated } from "./use-is-hydrated";
+import { Button } from "@theo/ui/button";
+import { Spinner } from "@theo/ui/spinner";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { OpenEmailButton } from "@theo/ui/auth/open-email-button";
+import { useIsHydrated } from "@theo/ui/auth/use-is-hydrated";
 
 export type VerifyEmailProps = {
   className?: string;

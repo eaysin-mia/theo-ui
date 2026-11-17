@@ -4,16 +4,16 @@ import type { AuthView } from "@better-auth-ui/core";
 import { useAuth } from "@better-auth-ui/react";
 import { type ComponentType, useEffect } from "react";
 
-import { AuthRedirect } from "./auth-redirect";
-import { AuthCallback, AuthError } from "./auth-result";
-import { ForgotPassword } from "./forgot-password";
-import type { SocialLayout } from "./provider-buttons";
-import { ResetLinkSent } from "./reset-link-sent";
-import { ResetPassword } from "./reset-password";
-import { SignIn } from "./sign-in";
-import { SignOut } from "./sign-out";
-import { SignUp } from "./sign-up";
-import { VerifyEmail } from "./verify-email";
+import { AuthRedirect } from "@theo/ui/auth/auth-redirect";
+import { AuthCallback, AuthError } from "@theo/ui/auth/auth-result";
+import { ForgotPassword } from "@theo/ui/auth/forgot-password";
+import type { SocialLayout } from "@theo/ui/auth/provider-buttons";
+import { ResetLinkSent } from "@theo/ui/auth/reset-link-sent";
+import { ResetPassword } from "@theo/ui/auth/reset-password";
+import { SignIn } from "@theo/ui/auth/sign-in";
+import { SignOut } from "@theo/ui/auth/sign-out";
+import { SignUp } from "@theo/ui/auth/sign-up";
+import { VerifyEmail } from "@theo/ui/auth/verify-email";
 
 export type AuthProps = {
   className?: string;

@@ -10,7 +10,7 @@ import {
   useAgentAuthorizations,
   useRevokeAgentCapability,
 } from "@better-auth-ui/react/plugins/agent-auth";
-import { BotIcon, ShieldAlertIcon, XIcon } from "lucide-react";
+import { BotIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 
 import {
@@ -21,19 +21,19 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+} from "@theo/ui/alert-dialog";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { agentAuthPlugin } from "@workspace/ui/lib/auth/agent-auth-plugin";
+} from "@theo/ui/card";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Spinner } from "@theo/ui/spinner";
+import { agentAuthPlugin } from "@theo/ui/auth/plugins/agent-auth-plugin";
 
 type RevokeTarget = {
   agent: AgentAuthorization;

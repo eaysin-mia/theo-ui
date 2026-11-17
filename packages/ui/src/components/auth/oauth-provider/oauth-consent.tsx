@@ -25,8 +25,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar";
-import { Button } from "@workspace/ui/components/button";
+} from "@theo/ui/avatar";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardPanel,
@@ -34,13 +34,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { UserAvatar } from "../user/user-avatar";
+} from "@theo/ui/card";
+import { Separator } from "@theo/ui/separator";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Spinner } from "@theo/ui/spinner";
+import { oauthProviderPlugin } from "@theo/ui/auth/plugins/oauth-provider-plugin";
+import { cn } from "@theo/ui/utils";
+import { UserAvatar } from "@theo/ui/auth/user/user-avatar";
 
 export type OAuthConsentProps = {
   className?: string;

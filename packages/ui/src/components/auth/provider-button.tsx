@@ -20,10 +20,10 @@ import {
 import { useIsMutating } from "@tanstack/react-query";
 import type { ComponentProps } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { cn } from "@workspace/ui/lib/utils";
-import { LastUsedBadge } from "./last-login-method/last-used-badge";
+import { Button } from "@theo/ui/button";
+import { Spinner } from "@theo/ui/spinner";
+import { cn } from "@theo/ui/utils";
+import { LastUsedBadge } from "@theo/ui/auth/last-login-method/last-used-badge";
 
 export type ProviderButtonProps = {
   provider: AuthSocialProvider;

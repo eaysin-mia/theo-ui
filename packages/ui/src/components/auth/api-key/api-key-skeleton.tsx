@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "@workspace/ui/components/skeleton";
+import { Skeleton } from "@theo/ui/skeleton";
 
 export function ApiKeySkeleton() {
   return (

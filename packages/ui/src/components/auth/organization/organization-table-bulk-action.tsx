@@ -12,9 +12,9 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@workspace/ui/components/alert-dialog";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
-import { Spinner } from "@workspace/ui/components/spinner";
+} from "@theo/ui/alert-dialog";
+import { Button, buttonVariants } from "@theo/ui/button";
+import { Spinner } from "@theo/ui/spinner";
 
 export function OrganizationTableBulkAction({
   actionLabel,

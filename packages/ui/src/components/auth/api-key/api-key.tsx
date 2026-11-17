@@ -5,10 +5,10 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { Key, Pencil, X } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { apiKeyPlugin } from "@workspace/ui/lib/auth/api-key-plugin";
-import { DeleteApiKeyDialog } from "./delete-api-key-dialog";
-import { EditApiKeyDialog } from "./edit-api-key-dialog";
+import { Button } from "@theo/ui/button";
+import { apiKeyPlugin } from "@theo/ui/auth/plugins/api-key-plugin";
+import { DeleteApiKeyDialog } from "@theo/ui/auth/api-key/delete-api-key-dialog";
+import { EditApiKeyDialog } from "@theo/ui/auth/api-key/edit-api-key-dialog";
 
 export type ApiKeyProps = {
   apiKey: ListedApiKey;

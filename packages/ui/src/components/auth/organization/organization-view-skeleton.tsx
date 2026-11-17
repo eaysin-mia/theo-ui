@@ -2,12 +2,12 @@
 
 import type { ComponentProps } from "react";
 
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { cn } from "@workspace/ui/lib/utils";
+import { Skeleton } from "@theo/ui/skeleton";
+import { cn } from "@theo/ui/utils";
 import {
   OrganizationLogo,
   type OrganizationLogoSize,
-} from "./organization-logo";
+} from "@theo/ui/auth/organization/organization-logo";
 
 export type OrganizationViewSkeletonProps = {
   className?: string;

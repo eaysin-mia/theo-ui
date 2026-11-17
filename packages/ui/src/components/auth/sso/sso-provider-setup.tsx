@@ -26,20 +26,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Alert, AlertDescription } from "@workspace/ui/components/alert";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/card";
+import { Alert, AlertDescription } from "@theo/ui/alert";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@workspace/ui/components/tabs";
-import { Textarea } from "@workspace/ui/components/textarea";
-import { ssoPlugin } from "@workspace/ui/lib/auth/sso-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
+} from "@theo/ui/tabs";
+import { Textarea } from "@theo/ui/textarea";
+import { ssoPlugin } from "@theo/ui/auth/plugins/sso-plugin";
+import { cn } from "@theo/ui/utils";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
 
 type SsoProtocol = "oidc" | "saml";
 

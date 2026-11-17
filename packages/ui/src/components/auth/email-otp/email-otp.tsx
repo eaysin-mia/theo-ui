@@ -12,27 +12,27 @@ import { useSelector } from "@tanstack/react-form";
 import { useIsMutating } from "@tanstack/react-query";
 import { useId, useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Field,
   FieldLabel,
   FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { emailOtpPlugin } from "@workspace/ui/lib/auth/email-otp-plugin";
-import { useResendCooldown } from "@workspace/ui/lib/auth/use-resend-cooldown";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { emailOtpPlugin } from "@theo/ui/auth/plugins/email-otp-plugin";
+import { useResendCooldown } from "#internal/lib/auth/use-resend-cooldown";
+import { useSignInContinuation } from "#internal/lib/auth/use-sign-in-continuation";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,
   submitAuthForm,
   useAuthForm,
-} from "../auth-form";
-import { AuthFormContainer } from "../auth-layout";
-import { OpenEmailButton } from "../open-email-button";
-import { OtpField } from "../otp-field";
-import { ProviderButtons, type SocialLayout } from "../provider-buttons";
-import { ReauthenticationNotice } from "../reauthentication";
+} from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { OpenEmailButton } from "@theo/ui/auth/open-email-button";
+import { OtpField } from "@theo/ui/auth/otp-field";
+import { ProviderButtons, type SocialLayout } from "@theo/ui/auth/provider-buttons";
+import { ReauthenticationNotice } from "@theo/ui/auth/reauthentication";
 
 export type EmailOtpProps = {
   className?: string;

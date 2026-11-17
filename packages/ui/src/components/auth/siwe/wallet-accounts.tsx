@@ -23,9 +23,9 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+} from "@theo/ui/alert-dialog";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardAction,
@@ -33,10 +33,10 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { siwePlugin } from "@workspace/ui/lib/auth/siwe-plugin";
+} from "@theo/ui/card";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Spinner } from "@theo/ui/spinner";
+import { siwePlugin } from "@theo/ui/auth/plugins/siwe-plugin";
 
 const shortAddress = (address: string) =>
   address.length > 14 ? `${address.slice(0, 8)}…${address.slice(-6)}` : address;

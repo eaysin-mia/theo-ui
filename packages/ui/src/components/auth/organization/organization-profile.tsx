@@ -22,19 +22,19 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/card";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { Skeleton } from "@theo/ui/skeleton";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,
   useAuthForm,
-} from "../auth-form";
-import { ChangeOrganizationLogo } from "./change-organization-logo";
-import { SlugField } from "./slug-field";
+} from "@theo/ui/auth/auth-form";
+import { ChangeOrganizationLogo } from "@theo/ui/auth/organization/change-organization-logo";
+import { SlugField } from "@theo/ui/auth/organization/slug-field";
 
 export type OrganizationProfileProps = {
   className?: string;

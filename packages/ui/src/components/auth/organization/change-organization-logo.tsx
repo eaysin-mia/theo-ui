@@ -12,18 +12,18 @@ import { Trash2, Upload } from "lucide-react";
 import { type ChangeEvent, useRef, useState } from "react";
 import { toast } from "sonner";
 
-import { Button, buttonVariants } from "@workspace/ui/components/button";
+import { Button, buttonVariants } from "@theo/ui/button";
 import {
   Menu,
   MenuItem,
   MenuPopup,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
-import { Label } from "@workspace/ui/components/label";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { OrganizationLogo } from "./organization-logo";
+} from "@theo/ui/menu";
+import { Label } from "@theo/ui/label";
+import { Spinner } from "@theo/ui/spinner";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
+import { OrganizationLogo } from "@theo/ui/auth/organization/organization-logo";
 
 export type ChangeOrganizationLogoProps = {
   className?: string;

@@ -4,7 +4,7 @@ import { useAuth, useAuthPlugin, useSession } from "@better-auth-ui/react";
 import { ShieldCheck } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardAction,
@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
+} from "@theo/ui/card";
 import {
   Empty,
   EmptyContent,
@@ -20,12 +20,12 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { twoFactorPlugin } from "@workspace/ui/lib/auth/two-factor-plugin";
-import { DisableTwoFactorDialog } from "./disable-two-factor-dialog";
-import { EnableTwoFactorDialog } from "./enable-two-factor-dialog";
-import { RegenerateBackupCodesDialog } from "./regenerate-backup-codes-dialog";
+} from "@theo/ui/empty";
+import { Skeleton } from "@theo/ui/skeleton";
+import { twoFactorPlugin } from "@theo/ui/auth/plugins/two-factor-plugin";
+import { DisableTwoFactorDialog } from "@theo/ui/auth/two-factor/disable-two-factor-dialog";
+import { EnableTwoFactorDialog } from "@theo/ui/auth/two-factor/enable-two-factor-dialog";
+import { RegenerateBackupCodesDialog } from "@theo/ui/auth/two-factor/regenerate-backup-codes-dialog";
 
 export type TwoFactorSettingsProps = {
   className?: string;

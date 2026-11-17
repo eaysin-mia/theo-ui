@@ -8,10 +8,10 @@ import {
 import { useAuth, useAuthPlugin, useFetchOptions } from "@better-auth-ui/react";
 import { useRequestPhoneNumberPasswordReset } from "@better-auth-ui/react/plugins/phone-number";
 
-import { phoneNumberPlugin } from "@workspace/ui/lib/auth/phone-number-plugin";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
-import { AuthFormContainer } from "../auth-layout";
-import { InternationalPhoneField } from "./international-phone-field";
+import { phoneNumberPlugin } from "@theo/ui/auth/plugins/phone-number-plugin";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { InternationalPhoneField } from "@theo/ui/auth/phone-number/international-phone-field";
 
 export const PHONE_NUMBER_RESET_STORAGE_KEY =
   "better-auth-ui.phone-number-reset";

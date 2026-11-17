@@ -8,10 +8,10 @@ import {
 } from "@better-auth-ui/react/plugins/organization";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { DeleteOrganizationDialog } from "./delete-organization-dialog";
-import { DeleteOrganizationSkeleton } from "./delete-organization-skeleton";
+import { Button } from "@theo/ui/button";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { DeleteOrganizationDialog } from "@theo/ui/auth/organization/delete-organization-dialog";
+import { DeleteOrganizationSkeleton } from "@theo/ui/auth/organization/delete-organization-skeleton";
 
 /**
  * Danger-zone row to delete the active organization. Hidden for members without

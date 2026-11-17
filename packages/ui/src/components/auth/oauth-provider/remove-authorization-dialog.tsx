@@ -17,10 +17,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Button } from "@workspace/ui/components/button";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
+} from "@theo/ui/alert-dialog";
+import { Button } from "@theo/ui/button";
+import { Spinner } from "@theo/ui/spinner";
+import { oauthProviderPlugin } from "@theo/ui/auth/plugins/oauth-provider-plugin";
 
 export type RemoveAuthorizationDialogProps = {
   /** @remarks `AuthorizedOAuthApplication` */

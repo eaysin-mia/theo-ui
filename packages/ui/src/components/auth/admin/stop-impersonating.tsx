@@ -8,9 +8,9 @@ import { useAuth, useAuthPlugin, useSession } from "@better-auth-ui/react";
 import { useStopImpersonating } from "@better-auth-ui/react/plugins/admin";
 import { UserRoundCheck } from "lucide-react";
 
-import { MenuItem } from "@workspace/ui/components/menu";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { adminPlugin } from "@workspace/ui/lib/auth/admin-plugin";
+import { MenuItem } from "@theo/ui/menu";
+import { Spinner } from "@theo/ui/spinner";
+import { adminPlugin } from "@theo/ui/auth/plugins/admin-plugin";
 
 export type StopImpersonatingProps = {
   className?: string;

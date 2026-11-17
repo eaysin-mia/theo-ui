@@ -7,16 +7,16 @@ import { useIsUsernameAvailable } from "@better-auth-ui/react/plugins/username";
 import { useDebouncer } from "@tanstack/react-pacer";
 import { Check, X } from "lucide-react";
 import { useState } from "react";
-import type { AdditionalFieldProps } from "@workspace/ui/components/auth/additional-field";
-import { AuthFieldError } from "@workspace/ui/components/auth/auth-field-error";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
+import type { AdditionalFieldProps } from "@theo/ui/auth/additional-field";
+import { AuthFieldError } from "@theo/ui/auth/auth-field-error";
+import { Field, FieldLabel } from "@theo/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { usernamePlugin } from "@workspace/ui/lib/auth/username-plugin";
+} from "@theo/ui/input-group";
+import { Spinner } from "@theo/ui/spinner";
+import { usernamePlugin } from "@theo/ui/auth/plugins/username-plugin";
 
 /**
  * Renderer for the `username` additional field. Owns availability checking,

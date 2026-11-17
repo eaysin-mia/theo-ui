@@ -4,7 +4,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar";
+} from "@theo/ui/avatar";
 import {
   Menu,
   MenuGroup,
@@ -12,13 +12,13 @@ import {
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
+} from "@theo/ui/menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@workspace/ui/components/sidebar";
+} from "@theo/ui/sidebar";
 import {
   BadgeCheckIcon,
   BellIcon,

@@ -1,10 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { UserButton } from "@workspace/ui/components/auth/user/user-button";
-import { NavMain } from "@workspace/ui/components/app-layout/nav-main";
-import { TeamSwitcher } from "@workspace/ui/components/app-layout/team-switcher";
-import { Kbd } from "@workspace/ui/components/kbd";
+import { NavMain } from "@theo/ui/app-layout/nav-main";
+import { TeamSwitcher } from "@theo/ui/app-layout/team-switcher";
+import { Kbd } from "@theo/ui/kbd";
 import {
   Sidebar,
   SidebarContent,
@@ -16,96 +15,9 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "@workspace/ui/components/sidebar";
-import {
-  GalleryVerticalEndIcon,
-  HomeIcon,
-  SearchIcon,
-  SettingsIcon,
-  ShieldAlertIcon,
-  SparklesIcon,
-} from "lucide-react";
-
-const navMain = [
-  {
-    title: "Dashboard",
-    url: "/",
-    icon: <HomeIcon />,
-  },
-  {
-    title: "AI Chat",
-    url: "/chat",
-    icon: <SparklesIcon />,
-  },
-  {
-    title: "Settings",
-    url: "/settings",
-    icon: <SettingsIcon />,
-    items: [
-      {
-        title: "Overview",
-        url: "/settings",
-      },
-      {
-        title: "Account & Preferences",
-        url: "/settings/account",
-      },
-      {
-        title: "Security & 2FA",
-        url: "/settings/security",
-      },
-      {
-        title: "Organizations",
-        url: "/settings/organizations",
-      },
-      {
-        title: "OAuth Apps",
-        url: "/settings/oauth-clients",
-      },
-      {
-        title: "Billing & Plans",
-        url: "/settings/billing",
-      },
-    ],
-  },
-  {
-    title: "Administration",
-    url: "/admin/users",
-    icon: <ShieldAlertIcon />,
-    items: [
-      {
-        title: "User Management",
-        url: "/admin/users",
-      },
-    ],
-  },
-];
-
-const sampleTeams = [
-  {
-    name: "Acme Workspace",
-    logo: <GalleryVerticalEndIcon />,
-    plan: "Enterprise",
-  },
-];
-
-function SidebarUser() {
-  const { isMobile } = useSidebar();
-
-  return (
-    <SidebarMenu>
-      <SidebarMenuItem>
-        <UserButton
-          render={<SidebarMenuButton size="lg" tooltip="Account" />}
-          side={isMobile ? "bottom" : "right"}
-          align="end"
-          sideOffset={4}
-          className="w-full"
-        />
-      </SidebarMenuItem>
-    </SidebarMenu>
-  );
-}
+} from "@theo/ui/sidebar";
+import { LayoutDashboardIcon, SearchIcon } from "lucide-react";
+import type { NavMainItem } from "@theo/ui/app-layout/nav-main";
 
 export type AppSidebarProps = React.ComponentProps<typeof Sidebar> & {
   app?: {
@@ -119,8 +31,11 @@ export type AppSidebarProps = React.ComponentProps<typeof Sidebar> & {
     logo: React.ReactNode;
     plan: string;
   }[];
+  navItems: NavMainItem[];
   currentPath?: string;
   onSearchClick?: () => void;
+  onAddTeam?: () => void;
+  renderUser?: (options: { isMobile: boolean }) => React.ReactNode;
   renderLink?: (
     props: React.ComponentProps<"a"> & {
       href: string;
@@ -130,9 +45,8 @@ export type AppSidebarProps = React.ComponentProps<typeof Sidebar> & {
 };
 
 const defaultApp = {
-  name: "Theo UI",
-  logo: <GalleryVerticalEndIcon aria-hidden="true" />,
-  subtitle: "Personal",
+  name: "Application",
+  logo: <LayoutDashboardIcon aria-hidden="true" />,
   href: "/",
 };
 
@@ -200,9 +114,12 @@ export function AppBrand({
 
 export function AppSidebar({
   app = defaultApp,
-  teams = sampleTeams,
+  teams = [],
+  navItems,
   currentPath,
   onSearchClick,
+  onAddTeam,
+  renderUser,
   renderLink,
   ...props
 }: AppSidebarProps) {
@@ -216,12 +133,12 @@ export function AppSidebar({
 
   const hasTeams = Boolean(teams && teams.length > 0);
   const brandElement = hasTeams ? (
-    <TeamSwitcher teams={teams!} />
+    <TeamSwitcher teams={teams} onAddTeam={onAddTeam} />
   ) : (
     <AppBrand app={app} renderLink={renderLink} />
   );
   const items = React.useMemo(() => {
-    return navMain.map((item) => {
+    return navItems.map((item) => {
       const isItemActive = currentPath
         ? item.url === currentPath ||
           (item.url !== "/" && currentPath.startsWith(item.url))
@@ -240,7 +157,7 @@ export function AppSidebar({
         items: subItems,
       };
     });
-  }, [currentPath]);
+  }, [currentPath, navItems]);
 
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -281,7 +198,11 @@ export function AppSidebar({
         <NavMain items={items} renderLink={renderLink} className="pt-1" />
       </SidebarContent>
       <SidebarFooter>
-        <SidebarUser />
+        {renderUser && (
+          <SidebarMenu>
+            <SidebarMenuItem>{renderUser({ isMobile })}</SidebarMenuItem>
+          </SidebarMenu>
+        )}
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

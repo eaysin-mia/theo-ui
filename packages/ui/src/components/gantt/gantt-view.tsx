@@ -20,15 +20,15 @@ import {
   useGanttSettings,
   useGanttViewConfig,
   type GanttColumn,
-} from "@workspace/ui/components/gantt/gantt";
-import { GanttBar } from "@workspace/ui/components/gantt/gantt-bar";
+} from "@theo/ui/gantt/gantt";
+import { GanttBar } from "@theo/ui/gantt/gantt-bar";
 import {
   cancelActiveGanttGestures,
   markGestureEnd,
   useGanttGestures,
   useGanttGestureTeardown,
   wasRecentDrag,
-} from "@workspace/ui/components/gantt/gantt-dnd";
+} from "@theo/ui/gantt/gantt-dnd";
 import {
   buildDependencyPath,
   getBaselineVariance,
@@ -44,7 +44,7 @@ import {
   zonedStartOfDay,
   type GanttDependencyGeometry,
   type GanttLaneMemo,
-} from "@workspace/ui/components/gantt/gantt-lib";
+} from "@theo/ui/gantt/gantt-lib";
 import type {
   GanttBaseline,
   GanttBaselineVariance,
@@ -54,7 +54,7 @@ import type {
   GanttResource,
   GanttResourceReorder,
   GanttSegment,
-} from "@workspace/ui/components/gantt/gantt-types";
+} from "@theo/ui/gantt/gantt-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 // Base UI's ScrollArea re-measures its thumb + overflow on mount, viewport
 // resize and scroll, but NOT on a content-size change unless the content sits
@@ -77,20 +77,20 @@ import {
   type Locale,
 } from "date-fns";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+import { cn } from "@theo/ui/utils";
+import { Button } from "@theo/ui/button";
+import { Checkbox } from "@theo/ui/checkbox";
 import {
   ContextMenu,
   ContextMenuPopup,
   ContextMenuTrigger,
-} from "@workspace/ui/components/context-menu";
+} from "@theo/ui/context-menu";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip";
+} from "@theo/ui/tooltip";
 import {
   PlusIcon,
   MinusIcon,

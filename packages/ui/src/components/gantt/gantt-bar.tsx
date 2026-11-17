@@ -12,36 +12,36 @@ import {
   useGantt,
   useGanttSelector,
   useGanttViewConfig,
-} from "@workspace/ui/components/gantt/gantt";
+} from "@theo/ui/gantt/gantt";
 import {
   useGanttGestures,
   wasRecentDrag,
-} from "@workspace/ui/components/gantt/gantt-dnd";
+} from "@theo/ui/gantt/gantt-dnd";
 import {
   flattenResources,
   getBaselineVariance,
   resolveEventBaseline,
   toZoned,
-} from "@workspace/ui/components/gantt/gantt-lib";
+} from "@theo/ui/gantt/gantt-lib";
 import type {
   GanttOccurrence,
   GanttSegment,
-} from "@workspace/ui/components/gantt/gantt-types";
+} from "@theo/ui/gantt/gantt-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 import {
   ContextMenu,
   ContextMenuPopup,
   ContextMenuTrigger,
-} from "@workspace/ui/components/context-menu";
+} from "@theo/ui/context-menu";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip";
+} from "@theo/ui/tooltip";
 import { RepeatIcon, CheckIcon } from "lucide-react";
 
 /**

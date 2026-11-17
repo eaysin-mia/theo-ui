@@ -12,9 +12,9 @@ import { CalendarIcon, Check, ChevronDownIcon, Copy } from "lucide-react";
 import { type ComponentType, useRef, useState } from "react";
 import { toast } from "sonner";
 
-import { Button, buttonVariants } from "@workspace/ui/components/button";
-import { Calendar } from "@workspace/ui/components/calendar";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+import { Button, buttonVariants } from "@theo/ui/button";
+import { Calendar } from "@theo/ui/calendar";
+import { Checkbox } from "@theo/ui/checkbox";
 import {
   Combobox,
   ComboboxEmpty,
@@ -22,31 +22,31 @@ import {
   ComboboxItem,
   ComboboxList,
   ComboboxPopup,
-} from "@workspace/ui/components/combobox";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { AuthFieldError } from "@workspace/ui/components/auth/auth-field-error";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/combobox";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { AuthFieldError } from "@theo/ui/auth/auth-field-error";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
+} from "@theo/ui/input-group";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "@workspace/ui/components/popover";
+} from "@theo/ui/popover";
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Slider } from "@workspace/ui/components/slider";
-import { Switch } from "@workspace/ui/components/switch";
-import { Textarea } from "@workspace/ui/components/textarea";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/select";
+import { Slider } from "@theo/ui/slider";
+import { Switch } from "@theo/ui/switch";
+import { Textarea } from "@theo/ui/textarea";
+import { cn } from "@theo/ui/utils";
 
 export type AdditionalFieldProps = {
   name: string;

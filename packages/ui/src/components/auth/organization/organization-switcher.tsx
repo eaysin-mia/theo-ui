@@ -15,19 +15,19 @@ import {
 } from "lucide-react";
 import { type ComponentProps, type ReactElement, useState } from "react";
 
-import { buttonVariants } from "@workspace/ui/components/button";
+import { buttonVariants } from "@theo/ui/button";
 import {
   Menu,
   MenuItem,
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { UserView } from "../user/user-view";
-import { CreateOrganizationDialog } from "./create-organization-dialog";
-import { OrganizationView } from "./organization-view";
+} from "@theo/ui/menu";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
+import { UserView } from "@theo/ui/auth/user/user-view";
+import { CreateOrganizationDialog } from "@theo/ui/auth/organization/create-organization-dialog";
+import { OrganizationView } from "@theo/ui/auth/organization/organization-view";
 
 /** Props for the `OrganizationSwitcher` component. */
 export type OrganizationSwitcherProps = {

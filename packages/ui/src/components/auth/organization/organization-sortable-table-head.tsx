@@ -4,10 +4,10 @@ import { type Column, type RowData, Subscribe } from "@tanstack/react-table";
 import { ChevronUp } from "lucide-react";
 import type { MouseEvent, ReactNode } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { TableHead } from "@workspace/ui/components/table";
-import { cn } from "@workspace/ui/lib/utils";
-import type { organizationTableFeatures } from "./organization-table";
+import { Button } from "@theo/ui/button";
+import { TableHead } from "@theo/ui/table";
+import { cn } from "@theo/ui/utils";
+import type { organizationTableFeatures } from "@theo/ui/auth/organization/organization-table";
 
 export function OrganizationSortableTableHead<TData extends RowData>({
   children,

@@ -14,7 +14,7 @@ import {
 import { useQueryClient } from "@tanstack/react-query";
 import { Eye, EyeOff, TriangleAlert } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
+import { toastManager } from "@theo/ui/toast";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -24,8 +24,8 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@workspace/ui/components/alert-dialog";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
+} from "@theo/ui/alert-dialog";
+import { Button, buttonVariants } from "@theo/ui/button";
 import {
   Card,
   CardDescription,
@@ -33,17 +33,17 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
+} from "@theo/ui/card";
+import { Field, FieldLabel } from "@theo/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { deleteUserPlugin } from "@workspace/ui/lib/auth/delete-user-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
-import { ReauthenticationAction } from "../reauthentication";
+} from "@theo/ui/input-group";
+import { deleteUserPlugin } from "@theo/ui/auth/plugins/delete-user-plugin";
+import { cn } from "@theo/ui/utils";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { ReauthenticationAction } from "@theo/ui/auth/reauthentication";
 
 export type DeleteAccountProps = {
   className?: string;

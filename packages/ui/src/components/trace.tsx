@@ -1,13 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@workspace/ui/components/collapsible";
+} from "@theo/ui/collapsible";
 import { ChevronRightIcon } from "lucide-react";
 
 export type TraceProps = React.ComponentProps<"div">;

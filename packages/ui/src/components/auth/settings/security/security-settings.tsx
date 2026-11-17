@@ -1,10 +1,10 @@
 "use client";
 
 import { useAuth } from "@better-auth-ui/react";
-import { cn } from "@workspace/ui/lib/utils";
-import { ActiveSessions } from "./active-sessions";
-import { ChangePassword } from "./change-password";
-import { LinkedAccounts } from "./linked-accounts";
+import { cn } from "@theo/ui/utils";
+import { ActiveSessions } from "@theo/ui/auth/settings/security/active-sessions";
+import { ChangePassword } from "@theo/ui/auth/settings/security/change-password";
+import { LinkedAccounts } from "@theo/ui/auth/settings/security/linked-accounts";
 
 export type SecuritySettingsProps = {
   className?: string;

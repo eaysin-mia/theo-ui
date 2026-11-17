@@ -5,7 +5,7 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useListPasskeys } from "@better-auth-ui/react/plugins/passkey";
 import { Fragment, useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardAction,
@@ -13,14 +13,14 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { passkeyPlugin } from "@workspace/ui/lib/auth/passkey-plugin";
+} from "@theo/ui/card";
+import { Separator } from "@theo/ui/separator";
+import { passkeyPlugin } from "@theo/ui/auth/plugins/passkey-plugin";
 
-import { AddPasskeyDialog } from "./add-passkey-dialog";
-import { Passkey } from "./passkey";
-import { PasskeySkeleton } from "./passkey-skeleton";
-import { PasskeysEmpty } from "./passkeys-empty";
+import { AddPasskeyDialog } from "@theo/ui/auth/passkey/add-passkey-dialog";
+import { Passkey } from "@theo/ui/auth/passkey/passkey";
+import { PasskeySkeleton } from "@theo/ui/auth/passkey/passkey-skeleton";
+import { PasskeysEmpty } from "@theo/ui/auth/passkey/passkeys-empty";
 
 export type PasskeysProps = {
   className?: string;

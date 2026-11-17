@@ -23,7 +23,7 @@ import {
 import { ChevronDown, UserPlus } from "lucide-react";
 import { useEffect, useMemo, useRef } from "react";
 import { toast } from "sonner";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
+import { Button, buttonVariants } from "@theo/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -33,15 +33,15 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
+} from "@theo/ui/dialog";
 import {
   Menu,
   MenuCheckboxItem,
   MenuPopup,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/menu";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   Select,
   SelectGroup,
@@ -49,14 +49,14 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/select";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,
   useAuthForm,
-} from "../auth-form";
+} from "@theo/ui/auth/auth-form";
 
 /** Props for the `InviteMemberDialog` component. */
 export type InviteMemberDialogProps = {

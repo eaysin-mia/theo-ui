@@ -22,25 +22,25 @@ import { useIsMutating } from "@tanstack/react-query";
 import { CircleAlertIcon, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+import { Button } from "@theo/ui/button";
+import { Checkbox } from "@theo/ui/checkbox";
 import {
   Field,
   FieldLabel,
   FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
-import { isAuthFormFieldInvalid, useAuthForm } from "./auth-form";
-import { AuthFormContainer } from "./auth-layout";
-import { LastUsedBadge } from "./last-login-method/last-used-badge";
-import { ProviderButtons, type SocialLayout } from "./provider-buttons";
-import { ReauthenticationNotice } from "./reauthentication";
+} from "@theo/ui/input-group";
+import { useSignInContinuation } from "#internal/lib/auth/use-sign-in-continuation";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { LastUsedBadge } from "@theo/ui/auth/last-login-method/last-used-badge";
+import { ProviderButtons, type SocialLayout } from "@theo/ui/auth/provider-buttons";
+import { ReauthenticationNotice } from "@theo/ui/auth/reauthentication";
 
 export type SignInProps = {
   className?: string;

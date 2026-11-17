@@ -57,8 +57,8 @@ import {
   UserRound,
 } from "lucide-react";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
-import { UserAvatar } from "@workspace/ui/components/auth/user/user-avatar";
-import { Alert, AlertDescription } from "@workspace/ui/components/alert";
+import { UserAvatar } from "@theo/ui/auth/user/user-avatar";
+import { Alert, AlertDescription } from "@theo/ui/alert";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -67,10 +67,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+} from "@theo/ui/alert-dialog";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
+import { Checkbox } from "@theo/ui/checkbox";
 import {
   Dialog,
   DialogClose,
@@ -80,40 +80,40 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
+} from "@theo/ui/dialog";
 import {
   Menu,
   MenuGroup,
   MenuItem,
   MenuPopup,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
+} from "@theo/ui/menu";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "@workspace/ui/components/field";
-import { Fieldset, FieldsetLegend } from "@workspace/ui/components/fieldset";
+} from "@theo/ui/field";
+import { Fieldset, FieldsetLegend } from "@theo/ui/fieldset";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
+} from "@theo/ui/input-group";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@workspace/ui/components/radio-group";
+} from "@theo/ui/radio-group";
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Separator } from "@workspace/ui/components/separator";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Switch } from "@workspace/ui/components/switch";
+} from "@theo/ui/select";
+import { Separator } from "@theo/ui/separator";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Switch } from "@theo/ui/switch";
 import {
   Table,
   TableBody,
@@ -121,25 +121,25 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@workspace/ui/components/table";
+} from "@theo/ui/table";
 import {
   Tabs,
   TabsList,
   TabsPanel,
   TabsTab,
-} from "@workspace/ui/components/tabs";
+} from "@theo/ui/tabs";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { adminPlugin } from "@workspace/ui/lib/auth/admin-plugin";
-import { getAuthAdditionalFieldValidators, useAuthForm } from "../auth-form";
-import { useServerTableState } from "../server-table-state";
+} from "@theo/ui/empty";
+import { adminPlugin } from "@theo/ui/auth/plugins/admin-plugin";
+import { getAuthAdditionalFieldValidators, useAuthForm } from "@theo/ui/auth/auth-form";
+import { useServerTableState } from "@theo/ui/auth/server-table-state";
 
-import { createAdminColumnHelper, useAdminTable } from "./admin-table";
+import { createAdminColumnHelper, useAdminTable } from "@theo/ui/auth/admin/admin-table";
 
 type SearchField = "email" | "name";
 type SearchOperator = "contains" | "ends_with" | "starts_with";

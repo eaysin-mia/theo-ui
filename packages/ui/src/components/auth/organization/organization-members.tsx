@@ -21,44 +21,44 @@ import { Filter, Search, X } from "lucide-react";
 import { type ComponentProps, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
-import { CardFrame, CardFrameFooter } from "@workspace/ui/components/card";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
+import { CardFrame, CardFrameFooter } from "@theo/ui/card";
 import {
   Menu,
   MenuPopup,
   MenuRadioGroup,
   MenuRadioItem,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
+} from "@theo/ui/menu";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
+} from "@theo/ui/input-group";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@workspace/ui/components/table";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { InviteMemberDialog } from "./invite-member-dialog";
-import { OrganizationMemberRow } from "./organization-member-row";
-import { OrganizationTableRowSkeleton } from "./organization-table-row-skeleton";
-import { OrganizationSortableTableHead } from "./organization-sortable-table-head";
+} from "@theo/ui/table";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { cn } from "@theo/ui/utils";
+import { InviteMemberDialog } from "@theo/ui/auth/organization/invite-member-dialog";
+import { OrganizationMemberRow } from "@theo/ui/auth/organization/organization-member-row";
+import { OrganizationTableRowSkeleton } from "@theo/ui/auth/organization/organization-table-row-skeleton";
+import { OrganizationSortableTableHead } from "@theo/ui/auth/organization/organization-sortable-table-head";
 import {
   createOrganizationColumnHelper,
   ORGANIZATION_TABLE_PAGE_SIZE,
   useOrganizationTable,
-} from "./organization-table";
-import { OrganizationTableBulkAction } from "./organization-table-bulk-action";
-import { OrganizationTablePagination } from "./organization-table-pagination";
-import { OrganizationTableSelectAll } from "./organization-table-selection";
-import { useOrganizationTableState } from "./organization-table-state";
-import { OrganizationTableViewOptions } from "./organization-table-view-options";
+} from "@theo/ui/auth/organization/organization-table";
+import { OrganizationTableBulkAction } from "@theo/ui/auth/organization/organization-table-bulk-action";
+import { OrganizationTablePagination } from "@theo/ui/auth/organization/organization-table-pagination";
+import { OrganizationTableSelectAll } from "@theo/ui/auth/organization/organization-table-selection";
+import { useOrganizationTableState } from "@theo/ui/auth/organization/organization-table-state";
+import { OrganizationTableViewOptions } from "@theo/ui/auth/organization/organization-table-view-options";
 
 type MemberRow = Member & { user: Partial<User> };
 

@@ -15,13 +15,13 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
-import { Card, CardPanel } from "@workspace/ui/components/card";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { UserView } from "../user/user-view";
+} from "@theo/ui/alert-dialog";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
+import { Card, CardPanel } from "@theo/ui/card";
+import { Spinner } from "@theo/ui/spinner";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { UserView } from "@theo/ui/auth/user/user-view";
 
 export type RemoveMemberDialogProps = {
   open: boolean;

@@ -1,7 +1,7 @@
 import type {
   ComposerPart,
   ComposerValue,
-} from "@workspace/ui/lib/composer-document";
+} from "#internal/lib/composer-document";
 
 export const COMPOSER_CLIPBOARD_TYPE = "application/x-coss-composer";
 

@@ -11,7 +11,7 @@ import type {
   ReactNode,
 } from "react";
 
-import { ErrorToaster } from "./error-toaster";
+import { ErrorToaster } from "@theo/ui/auth/error-toaster";
 
 declare module "@better-auth-ui/core" {
   interface AuthConfig {

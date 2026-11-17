@@ -21,18 +21,18 @@ import type { Member, Organization, User } from "better-auth/client";
 import { LogOut, Pencil, Trash2 } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { TableCell, TableRow } from "@workspace/ui/components/table";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { UserView } from "../user/user-view";
-import { EditMemberRolesDialog } from "./edit-member-roles-dialog";
-import { LeaveOrganizationDialog } from "./leave-organization-dialog";
+import { Button } from "@theo/ui/button";
+import { Skeleton } from "@theo/ui/skeleton";
+import { TableCell, TableRow } from "@theo/ui/table";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { UserView } from "@theo/ui/auth/user/user-view";
+import { EditMemberRolesDialog } from "@theo/ui/auth/organization/edit-member-roles-dialog";
+import { LeaveOrganizationDialog } from "@theo/ui/auth/organization/leave-organization-dialog";
 import {
   type OrganizationSelectableRow,
   OrganizationTableSelectRow,
-} from "./organization-table-selection";
-import { RemoveMemberDialog } from "./remove-member-dialog";
+} from "@theo/ui/auth/organization/organization-table-selection";
+import { RemoveMemberDialog } from "@theo/ui/auth/organization/remove-member-dialog";
 
 export type OrganizationMemberRowProps = {
   columnIds: readonly string[];

@@ -28,9 +28,9 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+} from "@theo/ui/alert-dialog";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardPanel,
@@ -38,10 +38,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { Progress } from "@workspace/ui/components/progress";
+} from "@theo/ui/card";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { Progress } from "@theo/ui/progress";
 import {
   Select,
   SelectGroup,
@@ -49,10 +49,10 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { billingPlugin } from "@workspace/ui/lib/auth/billing-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/select";
+import { Spinner } from "@theo/ui/spinner";
+import { billingPlugin } from "@theo/ui/auth/plugins/billing-plugin";
+import { cn } from "@theo/ui/utils";
 
 type SubscriptionAction = "cancel" | "restore";
 

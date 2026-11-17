@@ -10,9 +10,9 @@ import {
 } from "@better-auth-ui/react/plugins/email-otp";
 import { useSelector } from "@tanstack/react-form";
 import { useEffect, useReducer } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
+import { toastManager } from "@theo/ui/toast";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardDescription,
@@ -20,19 +20,19 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { emailOtpPlugin } from "@workspace/ui/lib/auth/email-otp-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/card";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { Skeleton } from "@theo/ui/skeleton";
+import { emailOtpPlugin } from "@theo/ui/auth/plugins/email-otp-plugin";
+import { cn } from "@theo/ui/utils";
 import {
   isAuthFormFieldInvalid,
   submitAuthForm,
   useAuthForm,
-} from "../auth-form";
-import { OpenEmailButton } from "../open-email-button";
-import { OtpField } from "../otp-field";
+} from "@theo/ui/auth/auth-form";
+import { OpenEmailButton } from "@theo/ui/auth/open-email-button";
+import { OtpField } from "@theo/ui/auth/otp-field";
 
 type ChangeEmailStep = "email" | "currentCode" | "newCode";
 

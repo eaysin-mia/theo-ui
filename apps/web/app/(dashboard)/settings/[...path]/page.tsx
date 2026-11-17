@@ -1,4 +1,4 @@
-import { Settings } from "@workspace/ui/components/auth/settings/settings";
+import { Settings } from "@theo/ui/auth/settings/settings";
 
 export default async function SettingsCatchAllPage({
   params,

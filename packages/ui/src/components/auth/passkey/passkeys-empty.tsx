@@ -3,7 +3,7 @@
 import { useAuthPlugin } from "@better-auth-ui/react";
 import { Fingerprint } from "lucide-react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -11,8 +11,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { passkeyPlugin } from "@workspace/ui/lib/auth/passkey-plugin";
+} from "@theo/ui/empty";
+import { passkeyPlugin } from "@theo/ui/auth/plugins/passkey-plugin";
 
 export type PasskeysEmptyProps = {
   onAddPress: () => void;

@@ -16,12 +16,12 @@ import {
   Text,
 } from "react-email";
 
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 import {
   type EmailClassNames,
   type EmailColors,
   EmailStyles,
-} from "./email-styles";
+} from "@theo/ui/auth/email/email-styles";
 
 const deleteAccountVerificationEmailLocalization = {
   ACCOUNT_DELETION_REQUESTED: "Account deletion requested",

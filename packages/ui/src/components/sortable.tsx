@@ -48,7 +48,7 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { createPortal } from "react-dom";
 
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 
 // Sortable Item Context
 const SortableItemContext = createContext<{

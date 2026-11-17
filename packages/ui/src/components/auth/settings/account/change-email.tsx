@@ -3,7 +3,7 @@
 import { getViewURL, validateEmailAddress } from "@better-auth-ui/core";
 import { useAuth, useChangeEmail, useSession } from "@better-auth-ui/react";
 import { useEffect } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
+import { toastManager } from "@theo/ui/toast";
 
 import {
   Card,
@@ -12,11 +12,11 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { isAuthFormFieldInvalid, useAuthForm } from "../../auth-form";
+} from "@theo/ui/card";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { Skeleton } from "@theo/ui/skeleton";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
 
 export type ChangeEmailProps = {
   className?: string;

@@ -16,12 +16,12 @@ import {
   Text,
 } from "react-email";
 
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 import {
   type EmailClassNames,
   type EmailColors,
   EmailStyles,
-} from "./email-styles";
+} from "@theo/ui/auth/email/email-styles";
 
 const magicLinkEmailLocalization = {
   SIGN_IN_TO_APP_NAME: "Sign in to {appName}",

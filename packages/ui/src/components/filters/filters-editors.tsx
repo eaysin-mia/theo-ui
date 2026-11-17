@@ -8,21 +8,21 @@ import {
   ComboboxItem,
   ComboboxList,
   ComboboxSeparator,
-} from "@workspace/ui/components/combobox";
-import { Button } from "@workspace/ui/components/button";
+} from "@theo/ui/combobox";
+import { Button } from "@theo/ui/button";
 import { CheckIcon, SearchIcon, XIcon } from "lucide-react";
 import {
   FilterActionsContext,
   filterControlSizes,
   type FilterResolutionStore,
-} from "@workspace/ui/components/filters/filters-context";
+} from "@theo/ui/filters/filters-context";
 import {
   applyFilterExclusiveSelection,
   filterFilterOptions,
   joinFilterPath,
   normalizeFilterQuery,
   warnFilterOnce,
-} from "@workspace/ui/components/filters/filters-lib";
+} from "@theo/ui/filters/filters-lib";
 import type {
   AnyFilterEditor,
   FilterEditorProps,
@@ -34,23 +34,23 @@ import type {
   FilterOperator,
   FilterOption,
   FilterOptionsState,
-} from "@workspace/ui/components/filters/filters-types";
+} from "@theo/ui/filters/filters-types";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { Field } from "@workspace/ui/components/field";
-import { Form } from "@workspace/ui/components/form";
-import { Textarea } from "@workspace/ui/components/textarea";
+import { cn } from "@theo/ui/utils";
+import { Field } from "@theo/ui/field";
+import { Form } from "@theo/ui/form";
+import { Textarea } from "@theo/ui/textarea";
 import {
   PopoverDescription,
   PopoverTitle,
-} from "@workspace/ui/components/popover";
+} from "@theo/ui/popover";
 import {
   Group,
   GroupSeparator,
   GroupText,
-} from "@workspace/ui/components/group";
-import { Input } from "@workspace/ui/components/input";
-import { Calendar } from "@workspace/ui/components/calendar";
+} from "@theo/ui/group";
+import { Input } from "@theo/ui/input";
+import { Calendar } from "@theo/ui/calendar";
 import type { DateRange } from "@daypicker/react";
 import {
   endOfMonth,
@@ -69,7 +69,7 @@ import {
   RELATIVE_TODAY,
   RELATIVE_TOMORROW,
   RELATIVE_YESTERDAY,
-} from "@workspace/ui/components/filters/filters-date";
+} from "@theo/ui/filters/filters-date";
 
 /* -------------------------------------------------------------------------- */
 /*                              The options service                           */
@@ -1277,7 +1277,7 @@ export function FilterDateRangeEditor<V, O>({
 export type {
   AnyFilterEditor,
   FilterEditorRegistry,
-} from "@workspace/ui/components/filters/filters-types";
+} from "@theo/ui/filters/filters-types";
 
 export const DEFAULT_FILTER_EDITORS: FilterEditorRegistry = {
   text: FilterTextEditor,

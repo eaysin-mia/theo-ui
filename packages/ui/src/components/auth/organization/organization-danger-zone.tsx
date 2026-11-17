@@ -5,12 +5,12 @@ import { useAuth } from "@better-auth-ui/react";
 import { useHasPermission } from "@better-auth-ui/react/plugins/organization";
 import type { ComponentProps } from "react";
 
-import { Card, CardPanel } from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { cn } from "@workspace/ui/lib/utils";
-import { DeleteOrganization } from "./delete-organization";
-import { DeleteOrganizationSkeleton } from "./delete-organization-skeleton";
-import { LeaveOrganization } from "./leave-organization";
+import { Card, CardPanel } from "@theo/ui/card";
+import { Separator } from "@theo/ui/separator";
+import { cn } from "@theo/ui/utils";
+import { DeleteOrganization } from "@theo/ui/auth/organization/delete-organization";
+import { DeleteOrganizationSkeleton } from "@theo/ui/auth/organization/delete-organization-skeleton";
+import { LeaveOrganization } from "@theo/ui/auth/organization/leave-organization";
 
 export type OrganizationDangerZoneProps = {
   className?: string;

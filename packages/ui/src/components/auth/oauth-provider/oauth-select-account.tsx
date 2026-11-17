@@ -23,21 +23,21 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+} from "@theo/ui/avatar";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardPanel,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { UserAvatar } from "../user/user-avatar";
+} from "@theo/ui/card";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Spinner } from "@theo/ui/spinner";
+import { oauthProviderPlugin } from "@theo/ui/auth/plugins/oauth-provider-plugin";
+import { cn } from "@theo/ui/utils";
+import { UserAvatar } from "@theo/ui/auth/user/user-avatar";
 
 export type OAuthSelectAccountProps = {
   className?: string;

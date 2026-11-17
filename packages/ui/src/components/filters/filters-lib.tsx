@@ -3,7 +3,7 @@ import type {
   FilterIndex,
   FilterOperator,
   FilterOption,
-} from "@workspace/ui/components/filters/filters-types";
+} from "@theo/ui/filters/filters-types";
 
 /* -------------------------------------------------------------------------- */
 /*                                    Menus                                   */

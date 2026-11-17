@@ -10,10 +10,10 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@workspace/ui/components/alert";
-import { Button } from "@workspace/ui/components/button";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/alert";
+import { Button } from "@theo/ui/button";
+import { Spinner } from "@theo/ui/spinner";
+import { cn } from "@theo/ui/utils";
 
 const subscribeToLocation = () => () => undefined;
 

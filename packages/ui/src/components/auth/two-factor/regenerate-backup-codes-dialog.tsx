@@ -5,7 +5,7 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useGenerateBackupCodes } from "@better-auth-ui/react/plugins/two-factor";
 import { KeyRound } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
+import { toastManager } from "@theo/ui/toast";
 
 import {
   AlertDialog,
@@ -15,14 +15,14 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Button } from "@workspace/ui/components/button";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { twoFactorPlugin } from "@workspace/ui/lib/auth/two-factor-plugin";
-import { useTwoFactorPasswordRequirement } from "@workspace/ui/lib/auth/use-two-factor-password";
-import { useAuthForm } from "../auth-form";
-import { BackupCodes } from "./backup-codes";
+} from "@theo/ui/alert-dialog";
+import { Button } from "@theo/ui/button";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { twoFactorPlugin } from "@theo/ui/auth/plugins/two-factor-plugin";
+import { useTwoFactorPasswordRequirement } from "#internal/lib/auth/use-two-factor-password";
+import { useAuthForm } from "@theo/ui/auth/auth-form";
+import { BackupCodes } from "@theo/ui/auth/two-factor/backup-codes";
 
 export type RegenerateBackupCodesDialogProps = {
   open: boolean;

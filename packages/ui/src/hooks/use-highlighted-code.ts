@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { loadHighlighter } from "@workspace/ui/lib/highlighter";
+import { loadHighlighter } from "#internal/lib/highlighter";
 
 export function useHighlightedCode(value: string, language: string) {
   // A trailing newline would render as an extra empty line.

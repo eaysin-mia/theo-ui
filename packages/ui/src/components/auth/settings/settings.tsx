@@ -10,11 +10,11 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@workspace/ui/components/tabs";
-import { cn } from "@workspace/ui/lib/utils";
-import { TabsScrollContainer } from "../tabs-scroll-container";
-import { AccountSettings } from "./account/account-settings";
-import { SecuritySettings } from "./security/security-settings";
+} from "@theo/ui/tabs";
+import { cn } from "@theo/ui/utils";
+import { TabsScrollContainer } from "@theo/ui/auth/tabs-scroll-container";
+import { AccountSettings } from "@theo/ui/auth/settings/account/account-settings";
+import { SecuritySettings } from "@theo/ui/auth/settings/security/security-settings";
 
 export type SettingsProps = {
   className?: string;

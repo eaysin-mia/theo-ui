@@ -10,7 +10,7 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useCreateOrganization } from "@better-auth-ui/react/plugins/organization";
 import { Briefcase } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -20,16 +20,16 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
+} from "@theo/ui/dialog";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,
   useAuthForm,
-} from "../auth-form";
-import { SlugField, sanitizeSlug } from "./slug-field";
+} from "@theo/ui/auth/auth-form";
+import { SlugField, sanitizeSlug } from "@theo/ui/auth/organization/slug-field";
 
 /** Props for the `CreateOrganizationDialog` component. */
 export type CreateOrganizationDialogProps = {

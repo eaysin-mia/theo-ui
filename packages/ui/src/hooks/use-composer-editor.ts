@@ -17,7 +17,7 @@ import {
 import {
   COMPOSER_CLIPBOARD_TYPE,
   parseComposerClipboard,
-} from "@workspace/ui/lib/composer-clipboard";
+} from "#internal/lib/composer-clipboard";
 import {
   type ActiveQuery,
   type ComposerItemValue,
@@ -39,7 +39,7 @@ import {
   readValue,
   restoreSelection,
   writeValue,
-} from "@workspace/ui/lib/composer-document";
+} from "#internal/lib/composer-document";
 
 type ComposerChangeDetails = {
   reason: "input" | "selection" | "history" | "reset";

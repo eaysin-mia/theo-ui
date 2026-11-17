@@ -25,32 +25,32 @@ import { useIsMutating } from "@tanstack/react-query";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+import { Button } from "@theo/ui/button";
+import { Checkbox } from "@theo/ui/checkbox";
 import {
   Field,
   FieldLabel,
   FieldSeparator,
-} from "@workspace/ui/components/field";
+} from "@theo/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { phoneNumberPlugin } from "@workspace/ui/lib/auth/phone-number-plugin";
-import { useResendCooldown } from "@workspace/ui/lib/auth/use-resend-cooldown";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
+} from "@theo/ui/input-group";
+import { phoneNumberPlugin } from "@theo/ui/auth/plugins/phone-number-plugin";
+import { useResendCooldown } from "#internal/lib/auth/use-resend-cooldown";
+import { useSignInContinuation } from "#internal/lib/auth/use-sign-in-continuation";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,
   submitAuthForm,
   useAuthForm,
-} from "../auth-form";
-import { AuthFormContainer } from "../auth-layout";
-import { OtpField } from "../otp-field";
-import { ProviderButtons, type SocialLayout } from "../provider-buttons";
-import { ReauthenticationNotice } from "../reauthentication";
-import { InternationalPhoneField } from "./international-phone-field";
+} from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { OtpField } from "@theo/ui/auth/otp-field";
+import { ProviderButtons, type SocialLayout } from "@theo/ui/auth/provider-buttons";
+import { ReauthenticationNotice } from "@theo/ui/auth/reauthentication";
+import { InternationalPhoneField } from "@theo/ui/auth/phone-number/international-phone-field";
 
 type PhoneNumberMode = "code" | "password";
 

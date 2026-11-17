@@ -25,9 +25,9 @@ import {
   useReducedMotion,
 } from "motion/react";
 
-import { Kbd } from "@workspace/ui/components/kbd";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { cn } from "@workspace/ui/lib/utils";
+import { Kbd } from "@theo/ui/kbd";
+import { Spinner } from "@theo/ui/spinner";
+import { cn } from "@theo/ui/utils";
 
 /** Placeholder line: snappy stagger. */
 const PLACEHOLDER_STAGGER_SEC = 0.018;

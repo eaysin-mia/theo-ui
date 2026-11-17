@@ -1,17 +1,31 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
+    "add": {
+      "source": "vercel/turborepo",
+      "commit": "c1333036f666fe81e438e806bd3052c47d6a1b29",
+      "sourceType": "github",
+      "skillPath": "skills/add/SKILL.md",
+      "computedHash": "ef75a72c0728dce1139062476492c7e916c0778e78a93ccb65c0195e22dfb534"
+    },
     "coss": {
       "source": "cosscom/ui",
       "sourceType": "github",
       "skillPath": "apps/ui/skills/coss/SKILL.md",
-      "computedHash": "e5de516b02283ef840af256bdbda72c4dc78d5012e8c3414b5355519fa7a15c1"
+      "computedHash": "b8ce9e8aa0db086eaf21aee001726cb129f9927267b1bf6e1e688dfbb4fb9b6f"
     },
     "coss-particles": {
       "source": "cosscom/ui",
       "sourceType": "github",
       "skillPath": "apps/ui/skills/coss-particles/SKILL.md",
-      "computedHash": "a3448e835713342e4625d1f97a38265fea03cf840723ad23eeef0b53dcc21609"
+      "computedHash": "d8dc7fa3991fc7d62d7f47dc1535091388f33ee282915ba46d7bef517c80ecef"
+    },
+    "turborepo": {
+      "source": "vercel/turborepo",
+      "commit": "c1333036f666fe81e438e806bd3052c47d6a1b29",
+      "sourceType": "github",
+      "skillPath": "skills/turborepo/SKILL.md",
+      "computedHash": "49bb6427015253ce5d93f15dfa6c9ade3f8528f0fbe54769b6da1e1458f058d4"
     }
   }
 }

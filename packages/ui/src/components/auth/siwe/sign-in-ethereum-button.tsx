@@ -15,8 +15,8 @@ import { useIsMutating } from "@tanstack/react-query";
 import { Wallet } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { LastUsedBadge } from "@workspace/ui/components/auth/last-login-method/last-used-badge";
+import { Button } from "@theo/ui/button";
+import { LastUsedBadge } from "@theo/ui/auth/last-login-method/last-used-badge";
 import {
   Dialog,
   DialogDescription,
@@ -25,21 +25,21 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
+} from "@theo/ui/dialog";
 import {
   Field,
   FieldDescription,
   FieldLabel,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { siwePlugin } from "@workspace/ui/lib/auth/siwe-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { Spinner } from "@theo/ui/spinner";
+import { siwePlugin } from "@theo/ui/auth/plugins/siwe-plugin";
+import { cn } from "@theo/ui/utils";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,
   useAuthForm,
-} from "../auth-form";
+} from "@theo/ui/auth/auth-form";
 
 export type SignInEthereumButtonProps = { view?: AuthView };
 

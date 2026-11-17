@@ -3,7 +3,7 @@ import type {
   FilterIssue,
   FilterIssueReason,
   FilterLabels,
-} from "@workspace/ui/components/filters/filters-types";
+} from "@theo/ui/filters/filters-types";
 
 /**
  * The shipped English copy. `stepAnnouncement` (consumer-composed create

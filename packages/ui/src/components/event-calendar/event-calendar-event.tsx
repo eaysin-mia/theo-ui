@@ -12,32 +12,32 @@ import {
   useEventCalendarSelector,
   useEventCalendarViewConfig,
   useEventCalendarViewContext,
-} from "@workspace/ui/components/event-calendar/event-calendar";
+} from "@theo/ui/event-calendar/event-calendar";
 import {
   markChipPress,
   useEventCalendarGestures,
   wasRecentDrag,
-} from "@workspace/ui/components/event-calendar/event-calendar-dnd";
+} from "@theo/ui/event-calendar/event-calendar-dnd";
 import {
   spansMultipleDays,
   toZoned,
   zonedStartOfDay,
-} from "@workspace/ui/components/event-calendar/event-calendar-lib";
+} from "@theo/ui/event-calendar/event-calendar-lib";
 import type {
   EventCalendarOccurrence,
   EventCalendarSegment,
-} from "@workspace/ui/components/event-calendar/event-calendar-types";
+} from "@theo/ui/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, format } from "date-fns";
 
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/utils";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip";
+} from "@theo/ui/tooltip";
 import { RepeatIcon } from "lucide-react";
 
 /** Event color presets; each stays legible on light and dark surfaces. */

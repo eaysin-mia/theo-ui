@@ -16,7 +16,7 @@ import {
 } from "@tanstack/react-table";
 import { Fragment, useEffect, useMemo, useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardAction,
@@ -25,7 +25,7 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
+} from "@theo/ui/card";
 import {
   Select,
   SelectGroup,
@@ -33,14 +33,14 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Separator } from "@workspace/ui/components/separator";
-import { apiKeyPlugin } from "@workspace/ui/lib/auth/api-key-plugin";
-import { useServerTableState } from "../server-table-state";
-import { ApiKey } from "./api-key";
-import { ApiKeySkeleton } from "./api-key-skeleton";
-import { ApiKeysEmpty } from "./api-keys-empty";
-import { CreateApiKeyDialog } from "./create-api-key-dialog";
+} from "@theo/ui/select";
+import { Separator } from "@theo/ui/separator";
+import { apiKeyPlugin } from "@theo/ui/auth/plugins/api-key-plugin";
+import { useServerTableState } from "@theo/ui/auth/server-table-state";
+import { ApiKey } from "@theo/ui/auth/api-key/api-key";
+import { ApiKeySkeleton } from "@theo/ui/auth/api-key/api-key-skeleton";
+import { ApiKeysEmpty } from "@theo/ui/auth/api-key/api-keys-empty";
+import { CreateApiKeyDialog } from "@theo/ui/auth/api-key/create-api-key-dialog";
 
 const { createAppColumnHelper, useAppTable: useApiKeyTable } = createTableHook({
   enableMultiSort: false,

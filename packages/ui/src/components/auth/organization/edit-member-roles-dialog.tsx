@@ -8,8 +8,8 @@ import { useUpdateMemberRole } from "@better-auth-ui/react/plugins/organization"
 import { ShieldCheck } from "lucide-react";
 import { useEffect } from "react";
 import { toast } from "sonner";
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+import { Button } from "@theo/ui/button";
+import { Checkbox } from "@theo/ui/checkbox";
 import {
   Dialog,
   DialogClose,
@@ -19,14 +19,14 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
-import { Fieldset, FieldsetLegend } from "@workspace/ui/components/fieldset";
+} from "@theo/ui/dialog";
+import { Fieldset, FieldsetLegend } from "@theo/ui/fieldset";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@workspace/ui/components/radio-group";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { useAuthForm } from "../auth-form";
+} from "@theo/ui/radio-group";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { useAuthForm } from "@theo/ui/auth/auth-form";
 
 export type EditMemberRolesDialogProps = {
   member: {

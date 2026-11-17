@@ -11,10 +11,10 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { multiSessionPlugin } from "@workspace/ui/lib/auth/multi-session-plugin";
-import { ManageAccount } from "./manage-account";
+} from "@theo/ui/card";
+import { Separator } from "@theo/ui/separator";
+import { multiSessionPlugin } from "@theo/ui/auth/plugins/multi-session-plugin";
+import { ManageAccount } from "@theo/ui/auth/multi-session/manage-account";
 
 export type ManageAccountsProps = {
   className?: string;

@@ -18,19 +18,19 @@ import {
 } from "@better-auth-ui/react";
 import type { Account } from "better-auth";
 import { Link2, Link2Off, Plug } from "lucide-react";
-import { toastManager } from "@workspace/ui/components/toast";
+import { toastManager } from "@theo/ui/toast";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Dialog,
   DialogHeader,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { cn } from "@workspace/ui/lib/utils";
-import { ReauthenticationAction } from "../../reauthentication";
+} from "@theo/ui/dialog";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Spinner } from "@theo/ui/spinner";
+import { cn } from "@theo/ui/utils";
+import { ReauthenticationAction } from "@theo/ui/auth/reauthentication";
 
 export type LinkedAccountProps = {
   account?: Account;

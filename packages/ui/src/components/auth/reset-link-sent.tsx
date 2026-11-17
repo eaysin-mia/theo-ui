@@ -4,9 +4,9 @@ import { getAuthLinkURL } from "@better-auth-ui/core";
 import { useAuth } from "@better-auth-ui/react";
 import { useEffect, useState } from "react";
 
-import { AuthFormContainer } from "./auth-layout";
-import { OpenEmailButton } from "./open-email-button";
-import { useIsHydrated } from "./use-is-hydrated";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { OpenEmailButton } from "@theo/ui/auth/open-email-button";
+import { useIsHydrated } from "@theo/ui/auth/use-is-hydrated";
 
 /** `sessionStorage` key the forgot-password form stores the submitted email under. */
 export const RESET_LINK_SENT_STORAGE_KEY = "better-auth-ui.reset-link-sent";

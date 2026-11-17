@@ -3,9 +3,9 @@
 import { getOrganizationCardKey, useAuth } from "@better-auth-ui/react";
 import type { ComponentProps } from "react";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { OrganizationDangerZone } from "./organization-danger-zone";
-import { OrganizationProfile } from "./organization-profile";
+import { cn } from "@theo/ui/utils";
+import { OrganizationDangerZone } from "@theo/ui/auth/organization/organization-danger-zone";
+import { OrganizationProfile } from "@theo/ui/auth/organization/organization-profile";
 
 export type OrganizationSettingsProps = {
   className?: string;

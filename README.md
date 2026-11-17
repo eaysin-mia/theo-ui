@@ -1,21 +1,25 @@
-# shadcn/ui monorepo template
+# Theo UI workspace
 
-This is a Next.js monorepo template with shadcn/ui.
+Private React UI package and Next.js example application.
 
 ## Adding components
 
-To add components to your app, run the following command at the root of your `web` app:
+To add shadcn components to the shared package, run this at the workspace root:
 
 ```bash
 pnpm dlx shadcn@latest add button -c apps/web
 ```
 
-This will place the ui components in the `packages/ui/src/components` directory.
+The configured aliases point component installation at `packages/ui/src/components`.
 
 ## Using components
 
 To use the components in your app, import them from the `ui` package.
 
 ```tsx
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 ```
+
+The private package is built from `packages/ui` and published to the restricted
+scope registry. See [packages/ui/README.md](./packages/ui/README.md) for
+installation, optional feature dependencies, and stylesheet usage.

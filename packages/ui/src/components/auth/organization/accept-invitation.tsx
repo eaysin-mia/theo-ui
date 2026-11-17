@@ -11,7 +11,7 @@ import {
 import type { Invitation } from "better-auth/client";
 import { BriefcaseBusiness } from "lucide-react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardPanel,
@@ -19,13 +19,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { UserAvatar } from "../user/user-avatar";
-import { cn } from "@workspace/ui/lib/utils";
-import { useIsHydrated } from "../use-is-hydrated";
+} from "@theo/ui/card";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Spinner } from "@theo/ui/spinner";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { UserAvatar } from "@theo/ui/auth/user/user-avatar";
+import { cn } from "@theo/ui/utils";
+import { useIsHydrated } from "@theo/ui/auth/use-is-hydrated";
 
 type UserInvitation = Invitation & { organizationName?: string };
 

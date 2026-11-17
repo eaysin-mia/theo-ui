@@ -12,12 +12,12 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { ReauthenticationAction } from "../../reauthentication";
-import { ActiveSession } from "./active-session";
-import { SessionActions } from "./session-actions";
+} from "@theo/ui/card";
+import { Separator } from "@theo/ui/separator";
+import { Skeleton } from "@theo/ui/skeleton";
+import { ReauthenticationAction } from "@theo/ui/auth/reauthentication";
+import { ActiveSession } from "@theo/ui/auth/settings/security/active-session";
+import { SessionActions } from "@theo/ui/auth/settings/security/session-actions";
 
 export type ActiveSessionsProps = {
   className?: string;

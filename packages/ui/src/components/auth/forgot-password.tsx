@@ -8,11 +8,11 @@ import {
 } from "@better-auth-ui/react";
 import { useId } from "react";
 
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { isAuthFormFieldInvalid, useAuthForm } from "./auth-form";
-import { AuthFormContainer } from "./auth-layout";
-import { RESET_LINK_SENT_STORAGE_KEY } from "./reset-link-sent";
+import { Field, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { RESET_LINK_SENT_STORAGE_KEY } from "@theo/ui/auth/reset-link-sent";
 
 export type ForgotPasswordProps = {
   className?: string;

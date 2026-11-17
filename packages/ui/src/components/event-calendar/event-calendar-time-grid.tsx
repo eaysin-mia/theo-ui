@@ -17,17 +17,17 @@ import {
   useEventCalendarViewConfig,
   useEventCalendarViewContext,
   useEventCalendarViewSettings,
-} from "@workspace/ui/components/event-calendar/event-calendar";
+} from "@theo/ui/event-calendar/event-calendar";
 import {
   useEventCalendarGestures,
   wasRecentChipPress,
   wasRecentDrag,
-} from "@workspace/ui/components/event-calendar/event-calendar-dnd";
+} from "@theo/ui/event-calendar/event-calendar-dnd";
 import {
   EVENT_CALENDAR_GHOST,
   EVENT_CALENDAR_SLOT_DRAFT,
   EventCalendarEvent,
-} from "@workspace/ui/components/event-calendar/event-calendar-event";
+} from "@theo/ui/event-calendar/event-calendar-event";
 import {
   getDayKey,
   getDayTotalMinutes,
@@ -37,20 +37,20 @@ import {
   snapMinutes,
   toZoned,
   zonedStartOfDay,
-} from "@workspace/ui/components/event-calendar/event-calendar-lib";
+} from "@theo/ui/event-calendar/event-calendar-lib";
 import type {
   CalendarView,
   EventCalendarDateRange,
   EventCalendarDragState,
   EventCalendarSegment,
   EventCalendarSlotDraft,
-} from "@workspace/ui/components/event-calendar/event-calendar-types";
+} from "@theo/ui/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, addMinutes, differenceInMinutes, format } from "date-fns";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { ScrollArea } from "@workspace/ui/components/scroll-area";
+import { cn } from "@theo/ui/utils";
+import { ScrollArea } from "@theo/ui/scroll-area";
 
 /** Current time, refreshed on an interval and on tab focus. */
 function useNow(intervalMs = 30_000): Date {

@@ -7,7 +7,7 @@ import {
 } from "@better-auth-ui/react";
 import { LogOut } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
+import { toastManager } from "@theo/ui/toast";
 
 import {
   AlertDialog,
@@ -17,10 +17,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Button } from "@workspace/ui/components/button";
-import { CardFooter } from "@workspace/ui/components/card";
-import { Spinner } from "@workspace/ui/components/spinner";
+} from "@theo/ui/alert-dialog";
+import { Button } from "@theo/ui/button";
+import { CardFooter } from "@theo/ui/card";
+import { Spinner } from "@theo/ui/spinner";
 
 type PendingAction = "other" | "all";
 

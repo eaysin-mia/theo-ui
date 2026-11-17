@@ -13,17 +13,17 @@ import {
 } from "lucide-react";
 import { isValidElement, type ReactElement, type ReactNode } from "react";
 
-import { buttonVariants } from "@workspace/ui/components/button";
+import { buttonVariants } from "@theo/ui/button";
 import {
   Menu,
   MenuItem,
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
-import { cn } from "@workspace/ui/lib/utils";
-import { UserAvatar } from "./user-avatar";
-import { UserView } from "./user-view";
+} from "@theo/ui/menu";
+import { cn } from "@theo/ui/utils";
+import { UserAvatar } from "@theo/ui/auth/user/user-avatar";
+import { UserView } from "@theo/ui/auth/user/user-view";
 
 /** Auth states a `UserButton` link can be visible in. */
 export type UserButtonLinkVisibility =

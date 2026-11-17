@@ -32,9 +32,9 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+} from "@theo/ui/alert-dialog";
+import { Badge } from "@theo/ui/badge";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardAction,
@@ -42,7 +42,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
+} from "@theo/ui/card";
 import {
   Dialog,
   DialogDescription,
@@ -51,25 +51,25 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
+} from "@theo/ui/dialog";
 import {
   Empty,
   EmptyContent,
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { Field, FieldError, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Textarea } from "@workspace/ui/components/textarea";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { ssoPlugin } from "@workspace/ui/lib/auth/sso-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
+} from "@theo/ui/empty";
+import { Field, FieldError, FieldLabel } from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
+import { Skeleton } from "@theo/ui/skeleton";
+import { Textarea } from "@theo/ui/textarea";
+import { organizationPlugin } from "@theo/ui/auth/plugins/organization-plugin";
+import { ssoPlugin } from "@theo/ui/auth/plugins/sso-plugin";
+import { cn } from "@theo/ui/utils";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
 
-import { SsoDomainVerification } from "./sso-domain-verification";
-import { SsoProviderSetup } from "./sso-provider-setup";
+import { SsoDomainVerification } from "@theo/ui/auth/sso/sso-domain-verification";
+import { SsoProviderSetup } from "@theo/ui/auth/sso/sso-provider-setup";
 
 export type OrganizationSsoProvidersProps = {
   className?: string;

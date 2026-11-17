@@ -11,8 +11,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/avatar";
+import { cn } from "@theo/ui/utils";
 
 type TickerContextValue = {
   formatter: Intl.NumberFormat;

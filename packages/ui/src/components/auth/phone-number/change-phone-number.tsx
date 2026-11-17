@@ -19,22 +19,22 @@ import { useSelector } from "@tanstack/react-form";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Card,
   CardPanel,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Alert, AlertDescription } from "@workspace/ui/components/alert";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { phoneNumberPlugin } from "@workspace/ui/lib/auth/phone-number-plugin";
-import { cn } from "@workspace/ui/lib/utils";
-import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
-import { OtpField } from "../otp-field";
-import { InternationalPhoneField } from "./international-phone-field";
-import { RemovePhoneNumberDialog } from "./remove-phone-number-dialog";
+} from "@theo/ui/card";
+import { Alert, AlertDescription } from "@theo/ui/alert";
+import { Skeleton } from "@theo/ui/skeleton";
+import { phoneNumberPlugin } from "@theo/ui/auth/plugins/phone-number-plugin";
+import { cn } from "@theo/ui/utils";
+import { isAuthFormFieldInvalid, useAuthForm } from "@theo/ui/auth/auth-form";
+import { OtpField } from "@theo/ui/auth/otp-field";
+import { InternationalPhoneField } from "@theo/ui/auth/phone-number/international-phone-field";
+import { RemovePhoneNumberDialog } from "@theo/ui/auth/phone-number/remove-phone-number-dialog";
 
 type PhoneNumberUser = {
   phoneNumber?: string | null;

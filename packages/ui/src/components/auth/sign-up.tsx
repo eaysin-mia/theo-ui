@@ -20,27 +20,27 @@ import {
 import { useIsMutating } from "@tanstack/react-query";
 import { CircleAlertIcon, Eye, EyeOff } from "lucide-react";
 import { useMemo, useState } from "react";
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/button";
 import {
   Field,
   FieldError,
   FieldLabel,
   FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/field";
+import { Input } from "@theo/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
+} from "@theo/ui/input-group";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,
   useAuthForm,
-} from "./auth-form";
-import { AuthFormContainer } from "./auth-layout";
-import { PasswordStrengthMeter } from "./password-strength-meter";
-import { ProviderButtons, type SocialLayout } from "./provider-buttons";
+} from "@theo/ui/auth/auth-form";
+import { AuthFormContainer } from "@theo/ui/auth/auth-layout";
+import { PasswordStrengthMeter } from "@theo/ui/auth/password-strength-meter";
+import { ProviderButtons, type SocialLayout } from "@theo/ui/auth/provider-buttons";
 
 export type SignUpProps = {
   className?: string;

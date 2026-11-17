@@ -9,14 +9,14 @@ import type { VariantProps } from "class-variance-authority";
 import { QrCode } from "lucide-react";
 import { useMemo } from "react";
 
-import { buttonVariants } from "@workspace/ui/components/button";
+import { buttonVariants } from "@theo/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/tooltip";
+import { cn } from "@theo/ui/utils";
 
 export type OpenEmailButtonProps = {
   /** Email address used to detect the provider, e.g. from the verify-email flow. */
