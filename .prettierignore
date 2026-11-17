@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Production & Build outputs
+.next/
+dist/
+build/
+out/
+
+# Caches and tooling
+.turbo/
+coverage/
+
+# Generated files and lockfiles
+pnpm-lock.yaml
+next-env.d.ts
+*.log
+
+# Agents and local skill indexes
+.agents/

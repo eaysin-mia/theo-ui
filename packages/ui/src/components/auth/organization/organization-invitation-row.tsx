@@ -1,0 +1,205 @@
+"use client";
+
+import type { ReactNode } from "react";
+
+import { formatAdditionalFieldValue } from "@better-auth-ui/core";
+import {
+  memberRoleLabels,
+  type OrganizationAuthClient,
+} from "@better-auth-ui/core/plugins/organization";
+import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
+import {
+  useCancelInvitation,
+  useHasPermission,
+  useInviteMember,
+} from "@better-auth-ui/react/plugins/organization";
+import type { Invitation } from "better-auth/client";
+import { Send, X } from "lucide-react";
+import { toast } from "sonner";
+
+import { Badge } from "@workspace/ui/components/badge";
+import { Button } from "@workspace/ui/components/button";
+import { Spinner } from "@workspace/ui/components/spinner";
+import { TableCell, TableRow } from "@workspace/ui/components/table";
+import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
+import { cn } from "@workspace/ui/lib/utils";
+import { OrganizationTableRowSkeleton } from "./organization-table-row-skeleton";
+import {
+  type OrganizationSelectableRow,
+  OrganizationTableSelectRow,
+} from "./organization-table-selection";
+
+export type OrganizationInvitationRowProps = {
+  columnIds: readonly string[];
+  invitation: Invitation;
+  selectableRow?: OrganizationSelectableRow<Invitation>;
+};
+
+const statusDotClasses: Record<string, string> = {
+  pending: "bg-amber-500",
+  accepted: "bg-emerald-500",
+  rejected: "bg-destructive",
+  canceled: "bg-muted-foreground",
+};
+
+export function OrganizationInvitationRow({
+  columnIds,
+  invitation,
+  selectableRow,
+}: OrganizationInvitationRowProps) {
+  const { authClient } = useAuth<OrganizationAuthClient>();
+  const {
+    modelFields: { invitation: invitationFields },
+    localization: organizationLocalization,
+    roles,
+  } = useAuthPlugin(organizationPlugin);
+
+  const {
+    data: cancelInvitationPermission,
+    isPending: cancelPermissionPending,
+  } = useHasPermission(authClient, {
+    permissions: { invitation: ["cancel"] },
+  });
+
+  const { mutate: cancelInvitation, isPending: cancelPending } =
+    useCancelInvitation(authClient);
+
+  const { data: inviteMemberPermission, isPending: invitePermissionPending } =
+    useHasPermission(authClient, {
+      permissions: { invitation: ["create"] },
+    });
+
+  // Better Auth treats a re-invite as a resend: it extends the existing
+  // invitation's expiry and sends the email again rather than creating a
+  // second row.
+  const { mutate: resendInvitation, isPending: resendPending } =
+    useInviteMember(authClient, {
+      onSuccess: () => toast.success(organizationLocalization.invitationResent),
+    });
+
+  const roleLabel = memberRoleLabels(invitation.role, roles).join(", ");
+
+  const statusLabel =
+    organizationLocalization[
+      invitation.status as keyof typeof organizationLocalization
+    ] ?? invitation.status;
+
+  if (cancelPermissionPending || invitePermissionPending) {
+    return <OrganizationTableRowSkeleton columnIds={columnIds} />;
+  }
+
+  const isPending = invitation.status === "pending";
+
+  const cells: Record<string, ReactNode> = {
+    select: selectableRow && (
+      <TableCell key="select">
+        <OrganizationTableSelectRow
+          localization={organizationLocalization}
+          row={selectableRow}
+        />
+      </TableCell>
+    ),
+    email: (
+      <TableCell key="email">
+        <div className="flex flex-col gap-1">
+          <span className="text-sm font-medium">{invitation.email}</span>
+          {invitationFields.map((field) => {
+            const value = formatAdditionalFieldValue(
+              (invitation as unknown as Record<string, unknown>)[field.name],
+            );
+            return value ? (
+              <span className="text-xs text-muted-foreground" key={field.name}>
+                {field.label}: {value}
+              </span>
+            ) : null;
+          })}
+        </div>
+      </TableCell>
+    ),
+    createdAt: (
+      <TableCell
+        key="createdAt"
+        className="text-xs whitespace-nowrap text-muted-foreground tabular-nums"
+      >
+        {new Date(invitation.createdAt).toLocaleString(undefined, {
+          dateStyle: "short",
+          timeStyle: "short",
+        })}
+      </TableCell>
+    ),
+    role: (
+      <TableCell key="role" className="text-sm">
+        {roleLabel}
+      </TableCell>
+    ),
+    status: (
+      <TableCell key="status" className="text-sm">
+        <Badge variant="outline">
+          <span
+            aria-hidden="true"
+            className={cn(
+              "size-1.5 rounded-full",
+              statusDotClasses[invitation.status] ?? "bg-muted-foreground",
+            )}
+          />
+          {String(statusLabel)}
+        </Badge>
+      </TableCell>
+    ),
+    actions: (
+      <TableCell key="actions" className="text-end">
+        <div className="flex justify-end gap-2">
+          {inviteMemberPermission?.success && isPending && (
+            <Button
+              size="icon-sm"
+              variant="outline"
+              disabled={resendPending}
+              onClick={() =>
+                resendInvitation({
+                  ...Object.fromEntries(
+                    invitationFields.flatMap((field) => {
+                      const value = (
+                        invitation as unknown as Record<string, unknown>
+                      )[field.name];
+                      return value === undefined ? [] : [[field.name, value]];
+                    }),
+                  ),
+                  email: invitation.email,
+                  organizationId: invitation.organizationId,
+                  role: invitation.role as Parameters<
+                    typeof resendInvitation
+                  >[0]["role"],
+                  resend: true,
+                })
+              }
+              aria-label={organizationLocalization.resendInvitation}
+            >
+              {resendPending ? <Spinner /> : <Send />}
+            </Button>
+          )}
+
+          {cancelInvitationPermission?.success && isPending && (
+            <Button
+              size="icon-sm"
+              variant="outline"
+              className="text-destructive"
+              disabled={cancelPending}
+              onClick={() => cancelInvitation({ invitationId: invitation.id })}
+              aria-label={organizationLocalization.cancelInvitation}
+            >
+              {cancelPending ? <Spinner /> : <X />}
+            </Button>
+          )}
+        </div>
+      </TableCell>
+    ),
+  };
+
+  return (
+    <TableRow
+      data-state={selectableRow?.getIsSelected() ? "selected" : undefined}
+    >
+      {columnIds.map((id) => cells[id])}
+    </TableRow>
+  );
+}
