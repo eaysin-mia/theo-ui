@@ -62,7 +62,7 @@ export function Pattern() {
           <TimelineHeader>
             <TimelineSeparator className="group-data-[orientation=vertical]/timeline:-inset-s-7 group-data-[orientation=vertical]/timeline:h-[calc(100%-1.5rem-0.25rem)] group-data-[orientation=vertical]/timeline:translate-y-6.5" />
             <TimelineTitle className="mt-0.5">{item.title}</TimelineTitle>
-            <TimelineIndicator className="flex size-6 items-center justify-center border-none bg-primary/10 group-data-completed/timeline-item:bg-primary group-data-completed/timeline-item:text-primary-foreground group-data-[orientation=vertical]/timeline:-inset-s-7">
+            <TimelineIndicator className="group-data-[orientation=vertical]/timeline:-inset-s-7 flex size-6 items-center justify-center border-none bg-primary/10 group-data-completed/timeline-item:bg-primary group-data-completed/timeline-item:text-primary-foreground">
               {item.icon}
             </TimelineIndicator>
           </TimelineHeader>

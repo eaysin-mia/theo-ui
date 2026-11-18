@@ -3,7 +3,7 @@
 import { createContext, useContext } from "react";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
-import type { ItemInstance } from "@headless-tree/core";
+import type { ItemInstance, TreeInstance } from "@headless-tree/core";
 
 import { cn } from "@workspace/ui/lib/utils";
 import { MinusIcon, PlusIcon, ChevronDownIcon } from "lucide-react";
@@ -13,11 +13,11 @@ type ToggleIconType = "chevron" | "plus-minus";
 interface TreeContextValue<T = any> {
   indent: number;
   currentItem?: ItemInstance<T>;
-  tree?: any;
+  tree?: TreeInstance<T>;
   toggleIconType?: ToggleIconType;
 }
 
-const TreeContext = createContext<TreeContextValue>({
+const TreeContext = createContext<TreeContextValue<any>>({
   indent: 20,
   currentItem: undefined,
   tree: undefined,
@@ -28,20 +28,20 @@ function useTreeContext<T = any>() {
   return useContext(TreeContext) as TreeContextValue<T>;
 }
 
-interface TreeProps extends useRender.ComponentProps<"div"> {
+interface TreeProps<T = any> extends useRender.ComponentProps<"div"> {
   indent?: number;
-  tree?: any;
+  tree?: TreeInstance<T>;
   toggleIconType?: ToggleIconType;
 }
 
-function Tree({
+function Tree<T = any>({
   indent = 20,
   tree,
   className,
   toggleIconType = "chevron",
   render,
   ...props
-}: TreeProps) {
+}: TreeProps<T>) {
   const containerProps =
     tree && typeof tree.getContainerProps === "function"
       ? tree.getContainerProps()

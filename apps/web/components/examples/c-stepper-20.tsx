@@ -7,6 +7,7 @@ import {
   hotkeysCoreFeature,
   selectionFeature,
   syncDataLoaderFeature,
+  type ItemInstance,
 } from "@headless-tree/core";
 import { useTree } from "@headless-tree/react";
 import { cn } from "@workspace/ui/lib/utils";
@@ -204,20 +205,21 @@ export function Pattern() {
     indent,
     rootItemId: "root",
     // Rows are named by aria-label, so it carries the badge and status too.
-    getItemName: (item) => {
+    getItemName: (item: ItemInstance<Item>) => {
       const { name, badge, status, issues } = item.getItemData();
       const state =
         status === "failed" ? `failed, ${issueCount(issues)}` : status;
       return [name, badge, state].filter(Boolean).join(", ");
     },
-    isItemFolder: (item) => Boolean(item.getItemData().children),
-    onPrimaryAction: (item) => {
+    isItemFolder: (item: ItemInstance<Item>) =>
+      Boolean(item.getItemData().children),
+    onPrimaryAction: (item: ItemInstance<Item>) => {
       // Only a check becomes the active step; a More link is plain navigation.
       if (item.getItemData().status) setActive(item.getId());
     },
     dataLoader: {
-      getItem: (itemId) => items[itemId] ?? { name: itemId },
-      getChildren: (itemId) => items[itemId]?.children ?? [],
+      getItem: (itemId: string) => items[itemId] ?? { name: itemId },
+      getChildren: (itemId: string) => items[itemId]?.children ?? [],
     },
     features: [syncDataLoaderFeature, selectionFeature, hotkeysCoreFeature],
   });
@@ -268,7 +270,7 @@ export function Pattern() {
           aria-labelledby={labelId}
           className="@lg:w-72 @lg:shrink-0"
         >
-          {tree.getItems().map((item) => {
+          {tree.getItems().map((item: ItemInstance<Item>) => {
             const data = item.getItemData();
             // Rows sit flush instead of 2px apart, so the guide line under an
             // order's chevron and the step connectors run unbroken.

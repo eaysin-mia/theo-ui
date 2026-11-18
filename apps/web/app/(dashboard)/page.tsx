@@ -26,8 +26,8 @@ import {
   Users,
 } from "lucide-react";
 import Link from "next/link";
-import { Pattern } from "@workspace/ui/components/examples/c-timeline-4";
-import { AutoHeightDemo } from "@workspace/ui/components/examples/c-auto-height-1";
+import { Pattern } from "@/components/examples/c-timeline-4";
+import { AutoHeightDemo } from "@/components/examples/c-auto-height-1";
 import { CartButton } from "@workspace/ui/components/buttons/cart-button";
 import { RainbowButton } from "@workspace/ui/components/buttons/rainbow-button";
 import { ShimmerButton } from "@workspace/ui/components/buttons/shimmer-button";

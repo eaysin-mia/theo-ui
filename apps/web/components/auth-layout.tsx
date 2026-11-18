@@ -3,14 +3,20 @@ import { Button } from "@workspace/ui/components/button";
 import { Input } from "@workspace/ui/components/input";
 import { Label } from "@workspace/ui/components/label";
 import { Separator } from "@workspace/ui/components/separator";
-import { CircleDashed } from "lucide-react";
+import { CircleDashed, GalleryVerticalEndIcon } from "lucide-react";
 
 export default function SplitContent() {
   return (
     <section className="grid w-full grid-cols-1 md:min-h-screen md:grid-cols-2">
       <div className="flex items-center justify-center bg-muted px-4 py-12 text-base md:border-r">
         <div className="mx-auto grid w-full max-w-md gap-8">
-          <AppBrand />
+          <AppBrand
+            app={{
+              name: "Theo UI",
+              logo: <GalleryVerticalEndIcon aria-hidden="true" />,
+              href: "/",
+            }}
+          />
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl font-thin tracking-tight">
               You&#39;re one step away from your dream.

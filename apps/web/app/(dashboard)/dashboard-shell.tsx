@@ -9,12 +9,13 @@ import {
   SidebarTrigger,
 } from "@workspace/ui/components/sidebar";
 import { cn } from "@workspace/ui/lib/utils";
-import { SearchIcon } from "lucide-react";
+import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import {
   CommandPaletteProvider,
   useCommandPalette,
 } from "@/components/command-palette";
+import { dashboardNavItems } from "@/lib/navigation";
 
 function MobileSearchTrigger() {
   const { setOpen } = useCommandPalette();
@@ -43,6 +44,13 @@ function DashboardInner({
   return (
     <SidebarProvider defaultOpen={defaultOpen}>
       <AppSidebar
+        app={{
+          name: "Theo UI",
+          logo: <GalleryVerticalEndIcon aria-hidden="true" />,
+          subtitle: "Workspace",
+          href: "/",
+        }}
+        items={dashboardNavItems}
         teams={[]}
         currentPath={pathname}
         onSearchClick={() => setOpen(true)}
