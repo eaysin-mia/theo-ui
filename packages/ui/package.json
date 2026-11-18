@@ -4,12 +4,10 @@
   "description": "Accessible, unstyled-first UI component library built on Base UI and Tailwind CSS v4",
   "license": "MIT",
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "src",
-    "globals.css",
-    "postcss.config.mjs",
+    "dist",
     "README.md"
   ],
   "sideEffects": [
@@ -19,37 +17,134 @@
     "access": "public"
   },
   "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepack": "node scripts/build.mjs",
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   },
   "exports": {
-    ".": "./src/index.ts",
-    "./globals.css": "./src/styles/globals.css",
-    "./postcss.config": "./postcss.config.mjs",
-    "./lib": "./src/lib/index.ts",
-    "./lib/*": "./src/lib/*.ts",
-    "./lib/highlighter": "./src/lib/highlighter.tsx",
-    "./lib/auth": "./src/lib/auth/index.ts",
-    "./lib/auth/*": "./src/lib/auth/*.ts",
-    "./lib/auth/organization-plugin": "./src/lib/auth/organization-plugin.tsx",
-    "./hooks": "./src/hooks/index.ts",
-    "./hooks/*": "./src/hooks/*.ts",
-    "./components/app-layout": "./src/components/app-layout/index.ts",
-    "./components/app-layout/*": "./src/components/app-layout/*.tsx",
-    "./components/auth": "./src/components/auth/index.ts",
-    "./components/auth/*": "./src/components/auth/*.tsx",
-    "./components/buttons": "./src/components/buttons/index.ts",
-    "./components/buttons/*": "./src/components/buttons/*.tsx",
-    "./components/event-calendar": "./src/components/event-calendar/index.ts",
-    "./components/event-calendar/*": "./src/components/event-calendar/*.tsx",
-    "./components/filters": "./src/components/filters/index.ts",
-    "./components/filters/*": "./src/components/filters/*.tsx",
-    "./components/gantt": "./src/components/gantt/index.ts",
-    "./components/gantt/*": "./src/components/gantt/*.tsx",
-    "./components/qr-code": "./src/components/qr-code/index.tsx",
-    "./components/qr-code/*": "./src/components/qr-code/*.tsx",
-    "./components/*": "./src/components/*.tsx"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./globals.css": "./dist/styles/globals.css",
+    "./lib": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js",
+      "default": "./dist/lib/index.js"
+    },
+    "./lib/*": {
+      "types": "./dist/lib/*.d.ts",
+      "import": "./dist/lib/*.js",
+      "default": "./dist/lib/*.js"
+    },
+    "./lib/highlighter": {
+      "types": "./dist/lib/highlighter.d.ts",
+      "import": "./dist/lib/highlighter.js",
+      "default": "./dist/lib/highlighter.js"
+    },
+    "./lib/auth": {
+      "types": "./dist/lib/auth/index.d.ts",
+      "import": "./dist/lib/auth/index.js",
+      "default": "./dist/lib/auth/index.js"
+    },
+    "./lib/auth/*": {
+      "types": "./dist/lib/auth/*.d.ts",
+      "import": "./dist/lib/auth/*.js",
+      "default": "./dist/lib/auth/*.js"
+    },
+    "./lib/auth/organization-plugin": {
+      "types": "./dist/lib/auth/organization-plugin.d.ts",
+      "import": "./dist/lib/auth/organization-plugin.js",
+      "default": "./dist/lib/auth/organization-plugin.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.js",
+      "default": "./dist/hooks/index.js"
+    },
+    "./hooks/*": {
+      "types": "./dist/hooks/*.d.ts",
+      "import": "./dist/hooks/*.js",
+      "default": "./dist/hooks/*.js"
+    },
+    "./components/app-layout": {
+      "types": "./dist/components/app-layout/index.d.ts",
+      "import": "./dist/components/app-layout/index.js",
+      "default": "./dist/components/app-layout/index.js"
+    },
+    "./components/app-layout/*": {
+      "types": "./dist/components/app-layout/*.d.ts",
+      "import": "./dist/components/app-layout/*.js",
+      "default": "./dist/components/app-layout/*.js"
+    },
+    "./components/auth": {
+      "types": "./dist/components/auth/index.d.ts",
+      "import": "./dist/components/auth/index.js",
+      "default": "./dist/components/auth/index.js"
+    },
+    "./components/auth/*": {
+      "types": "./dist/components/auth/*.d.ts",
+      "import": "./dist/components/auth/*.js",
+      "default": "./dist/components/auth/*.js"
+    },
+    "./components/buttons": {
+      "types": "./dist/components/buttons/index.d.ts",
+      "import": "./dist/components/buttons/index.js",
+      "default": "./dist/components/buttons/index.js"
+    },
+    "./components/buttons/*": {
+      "types": "./dist/components/buttons/*.d.ts",
+      "import": "./dist/components/buttons/*.js",
+      "default": "./dist/components/buttons/*.js"
+    },
+    "./components/event-calendar": {
+      "types": "./dist/components/event-calendar/index.d.ts",
+      "import": "./dist/components/event-calendar/index.js",
+      "default": "./dist/components/event-calendar/index.js"
+    },
+    "./components/event-calendar/*": {
+      "types": "./dist/components/event-calendar/*.d.ts",
+      "import": "./dist/components/event-calendar/*.js",
+      "default": "./dist/components/event-calendar/*.js"
+    },
+    "./components/filters": {
+      "types": "./dist/components/filters/index.d.ts",
+      "import": "./dist/components/filters/index.js",
+      "default": "./dist/components/filters/index.js"
+    },
+    "./components/filters/*": {
+      "types": "./dist/components/filters/*.d.ts",
+      "import": "./dist/components/filters/*.js",
+      "default": "./dist/components/filters/*.js"
+    },
+    "./components/gantt": {
+      "types": "./dist/components/gantt/index.d.ts",
+      "import": "./dist/components/gantt/index.js",
+      "default": "./dist/components/gantt/index.js"
+    },
+    "./components/gantt/*": {
+      "types": "./dist/components/gantt/*.d.ts",
+      "import": "./dist/components/gantt/*.js",
+      "default": "./dist/components/gantt/*.js"
+    },
+    "./components/qr-code": {
+      "types": "./dist/components/qr-code/index.d.ts",
+      "import": "./dist/components/qr-code/index.js",
+      "default": "./dist/components/qr-code/index.js"
+    },
+    "./components/qr-code/*": {
+      "types": "./dist/components/qr-code/*.d.ts",
+      "import": "./dist/components/qr-code/*.js",
+      "default": "./dist/components/qr-code/*.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*.d.ts",
+      "import": "./dist/components/*.js",
+      "default": "./dist/components/*.js"
+    }
   },
   "peerDependencies": {
     "react": ">=19.0.0",
@@ -117,6 +212,7 @@
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "tailwindcss": "^4",
+    "tsc-alias": "^1.8.16",
     "typescript": "^5"
   }
 }

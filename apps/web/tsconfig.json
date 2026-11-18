@@ -4,8 +4,7 @@
     "declaration": false,
     "declarationMap": false,
     "paths": {
-      "@/*": ["./*"],
-      "@workspace/ui/*": ["../../packages/ui/src/*"]
+      "@/*": ["./*"]
     }
   },
   "include": [
@@ -15,8 +14,7 @@
     "**/*.tsx",
     "**/*.mts",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "../../packages/ui/src/lib/auth/auth-plugin.ts"
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

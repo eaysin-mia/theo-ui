@@ -1,104 +1,95 @@
 # @workspace/ui
 
-An accessible, unstyled-first UI component library built on [Base UI](https://base-ui.com) and styled with [Tailwind CSS v4](https://tailwindcss.com).
+An accessible React component library built on [Base UI](https://base-ui.com)
+and styled with [Tailwind CSS v4](https://tailwindcss.com).
 
-## Highlights
+The package publishes ESM JavaScript, TypeScript declarations, and a Tailwind
+stylesheet. `apps/web` is the workspace consumer and showcase application.
 
-- **Base UI Primitives**: Built entirely with `@base-ui/react` unstyled primitives using the `render` prop composition model (`useRender` & `mergeProps`).
-- **Tailwind CSS v4**: Modern CSS-first architecture using native `@theme`, `@source`, and `--alpha()` color tokens.
-- **Tree-shakeable**: Modular subpath exports (`@workspace/ui/components/*`, `@workspace/ui/hooks`, `@workspace/ui/lib`).
-- **Better Auth UI**: Integrated first-class authentication views and plugins powered by `@better-auth-ui/react`.
-- **Zero Mock / Hardcoded State**: Pure presenter components with fully decoupled caller props and strict TypeScript types.
+## Requirements
 
----
+- React and React DOM 19 or later
+- Tailwind CSS v4 with a CSS pipeline that processes Tailwind directives
 
-## Installation
+## Install
 
 ```bash
-# Using pnpm
 pnpm add @workspace/ui
-
-# Using npm
-npm install @workspace/ui
-
-# Using yarn
-yarn add @workspace/ui
 ```
 
-### Peer Dependencies
+## Styles
 
-Ensure your project has React 19 installed:
-
-```json
-{
-  "peerDependencies": {
-    "react": ">=19.0.0",
-    "react-dom": ">=19.0.0"
-  }
-}
-```
-
----
-
-## Tailwind CSS v4 Configuration
-
-In your main CSS entrypoint (e.g. `globals.css` or `app.css`), include the styles and ensure Tailwind scans the UI package:
+Import the package stylesheet once from your application's global CSS entry:
 
 ```css
-@import "tailwindcss";
 @import "@workspace/ui/globals.css";
-
-/* Ensure Tailwind v4 scans the library source for utility classes */
-@source "../node_modules/@workspace/ui/src/**/*.{ts,tsx}";
 ```
 
----
+The stylesheet imports Tailwind, the library theme tokens, font and animation
+styles, and scans the package's built components for utility classes. Tailwind
+scans your application sources automatically when the CSS build runs from the
+application directory. If your build runs from the monorepo root, configure the
+application source path with Tailwind's `source()` or `@source` directives.
 
-## Usage
+The stylesheet includes global base styles, so import it only once. You can
+override the theme through the CSS variables defined by the library.
 
-### 1. Root Imports
+## Import components
+
+Use the root entry point for convenience:
 
 ```tsx
-import { Button, Input, Dialog, Tooltip } from "@workspace/ui";
+import { Button, Dialog, Input, Tooltip } from "@workspace/ui";
 ```
 
-### 2. Subpath Imports (Optimized Tree-Shaking)
+Or import a focused component group:
 
 ```tsx
-// Components
 import { Button } from "@workspace/ui/components/button";
-import { Tree, TreeItem, TreeItemLabel } from "@workspace/ui/components/tree";
-import { Gantt, GanttView } from "@workspace/ui/components/gantt";
 import { EventCalendar } from "@workspace/ui/components/event-calendar";
-
-// Utilities & Hooks
+import { Gantt, GanttView } from "@workspace/ui/components/gantt";
+import { Tree, TreeItem, TreeItemLabel } from "@workspace/ui/components/tree";
 import { cn } from "@workspace/ui/lib/utils";
 import { useMediaQuery } from "@workspace/ui/hooks";
+```
 
-// Auth Components & Plugins
-import { AuthProvider } from "@workspace/ui/components/auth";
+Authentication components and helpers are separate entry points:
+
+```tsx
+import { AuthProvider, SignIn } from "@workspace/ui/components/auth";
 import { adminPlugin, passkeyPlugin } from "@workspace/ui/lib/auth";
 ```
 
-### 3. Composition with `render` Prop
+These authentication entry points use Better Auth UI and Better Auth APIs.
+Specialized components may also require their documented integration
+dependencies.
 
-All Coss UI components use the Base UI `render` prop pattern rather than Radix `asChild`:
+## Composition
+
+Components built on Base UI use its `render` prop for element composition:
 
 ```tsx
-import { Button } from "@workspace/ui/components/button";
 import Link from "next/link";
+import { Button } from "@workspace/ui/components/button";
 
 export function NavLink() {
-  return (
-    <Button render={<Link href="/dashboard" />}>
-      Go to Dashboard
-    </Button>
-  );
+  return <Button render={<Link href="/dashboard" />}>Go to Dashboard</Button>;
 }
 ```
 
----
+## Workspace development
 
-## License
+From the repository root:
 
-MIT
+```bash
+pnpm install
+pnpm dev
+```
+
+The package can also be built, checked, and linted independently:
+
+```bash
+pnpm --filter @workspace/ui build
+pnpm --filter @workspace/ui typecheck
+pnpm --filter @workspace/ui lint
+```

@@ -1,21 +1,23 @@
-# shadcn/ui monorepo template
+# UI workspace
 
-This is a Next.js monorepo template with shadcn/ui.
+This pnpm/Turborepo workspace contains an installable React UI package and a
+Next.js application that consumes and demonstrates it.
 
-## Adding components
+- [`packages/ui`](./packages/ui/README.md) contains the UI library, build
+  instructions, component imports, and Tailwind setup.
+- `apps/web` is the example consumer and application.
 
-To add components to your app, run the following command at the root of your `web` app:
+## Development
 
 ```bash
-pnpm dlx shadcn@latest add button -c apps/web
+pnpm install
+pnpm dev
 ```
 
-This will place the ui components in the `packages/ui/src/components` directory.
+## Package checks
 
-## Using components
-
-To use the components in your app, import them from the `ui` package.
-
-```tsx
-import { Button } from "@workspace/ui/components/button";
+```bash
+pnpm --filter @workspace/ui build
+pnpm --filter @workspace/ui typecheck
+pnpm --filter @workspace/ui lint
 ```
