@@ -1,6 +1,6 @@
 import { Geist_Mono, Inter } from "next/font/google";
 
-import "@workspace/ui/globals.css";
+import "./globals.css";
 import {
   AnchoredToastProvider,
   ToastProvider,
@@ -35,7 +35,7 @@ export default function RootLayout({
         className="relative min-h-screen bg-background font-sans text-foreground"
         suppressHydrationWarning
       >
-        <div className="isolate relative flex min-h-svh flex-col">
+        <div className="relative isolate flex min-h-svh flex-col">
           <ThemeProvider>
             <QueryProvider>
               <ToastProvider>

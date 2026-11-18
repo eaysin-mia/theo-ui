@@ -75,7 +75,7 @@ export function SegmentedControlItem({
 
   const defaultProps = {
     className: cn(
-      "relative inline-flex shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent text-base font-medium whitespace-nowrap text-muted-foreground/72 outline-2 outline-transparent transition-[color,outline-color] select-none hover:bg-transparent hover:text-muted-foreground focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-64 sm:text-sm data-disabled:pointer-events-none data-disabled:opacity-64",
+      "relative inline-flex shrink-0 cursor-pointer items-center justify-center rounded-md border border-transparent text-base font-medium whitespace-nowrap text-muted-foreground/72 outline-2 outline-transparent transition-[color,outline-color] select-none hover:bg-transparent hover:text-muted-foreground focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-64 data-disabled:pointer-events-none data-disabled:opacity-64 sm:text-sm",
       "data-checked:bg-background data-checked:text-foreground data-checked:shadow-sm/5 dark:data-checked:bg-input",
       "aria-[current=page]:bg-background aria-[current=page]:text-foreground aria-[current=page]:shadow-sm/5 dark:aria-[current=page]:bg-input",
       "data-pressed:bg-background data-pressed:text-foreground data-pressed:shadow-sm/5 dark:data-pressed:bg-input",

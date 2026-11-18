@@ -158,7 +158,7 @@ function NavMainCollapsibleItem({
         )}
         <ChevronDownIcon
           aria-hidden="true"
-          className="ms-auto size-4 shrink-0 opacity-70 transition-transform duration-200 group-data-[collapsible=icon]:hidden group-data-[state=open]/collapsible:rotate-180 group-data-open/collapsible:rotate-180"
+          className="ms-auto size-4 shrink-0 opacity-70 transition-transform duration-200 group-data-open/collapsible:rotate-180 group-data-[collapsible=icon]:hidden group-data-[state=open]/collapsible:rotate-180"
         />
       </CollapsibleTrigger>
       <CollapsibleContent>

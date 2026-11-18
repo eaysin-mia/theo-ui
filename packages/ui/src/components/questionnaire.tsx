@@ -119,15 +119,15 @@ function QuestionnaireChoice({
       <span
         aria-hidden="true"
         data-slot="questionnaire-choice-indicator"
-        className="pointer-events-none relative flex size-4.5 shrink-0 translate-y-0.5 items-center justify-center rounded-lg border border-input bg-background transition-colors group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-[type=radio]/questionnaire-choice:rounded-full group-data-checked/questionnaire-choice:border-primary group-data-checked/questionnaire-choice:bg-primary group-data-checked/questionnaire-choice:text-primary-foreground sm:size-4 dark:bg-input/30 dark:group-data-checked/questionnaire-choice:bg-primary"
+        className="pointer-events-none relative flex size-4.5 shrink-0 translate-y-0.5 items-center justify-center rounded-lg border border-input bg-background transition-colors group-has-data-[slot=questionnaire-choice-description]/questionnaire-choice:translate-y-0.5 group-data-checked/questionnaire-choice:border-primary group-data-checked/questionnaire-choice:bg-primary group-data-checked/questionnaire-choice:text-primary-foreground group-data-[type=radio]/questionnaire-choice:rounded-full sm:size-4 dark:bg-input/30 dark:group-data-checked/questionnaire-choice:bg-primary"
       >
         <span
           data-slot="questionnaire-choice-indicator-dot"
-          className="hidden size-2 rounded-full bg-primary-foreground group-data-[type=checkbox]/questionnaire-choice:hidden group-data-checked/questionnaire-choice:block sm:size-1.5"
+          className="hidden size-2 rounded-full bg-primary-foreground group-data-checked/questionnaire-choice:block group-data-[type=checkbox]/questionnaire-choice:hidden sm:size-1.5"
         />
         <CheckIcon
           data-slot="questionnaire-choice-indicator-check"
-          className="hidden size-3.5 stroke-3 group-data-[type=radio]/questionnaire-choice:hidden group-data-checked/questionnaire-choice:block sm:size-3"
+          className="hidden size-3.5 stroke-3 group-data-checked/questionnaire-choice:block group-data-[type=radio]/questionnaire-choice:hidden sm:size-3"
         />
       </span>
       <QuestionnairePrimitive.ChoiceLabel

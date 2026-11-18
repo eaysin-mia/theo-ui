@@ -330,7 +330,7 @@ export function ChatView() {
                     <MessageScrollerItem messageId="generating" scrollAnchor>
                       <Message align="start">
                         <MessageContent className="items-start">
-                          <div className="flex shimmer items-center gap-2 text-xs text-muted-foreground">
+                          <div className="shimmer flex items-center gap-2 text-xs text-muted-foreground">
                             <SparklesIcon className="size-3.5 animate-spin text-primary" />
                             <span>Generating response...</span>
                           </div>

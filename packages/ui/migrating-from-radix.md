@@ -892,7 +892,7 @@ The API is significantly different from shadcn/ui (Sonner). Please review both d
 **shadcn/ui (Sonner)**
 
 ```tsx title="app/layout.tsx"
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
 
 export default function RootLayout({ children }) {
   return (
@@ -903,7 +903,7 @@ export default function RootLayout({ children }) {
         <Toaster />
       </body>
     </html>
-  )
+  );
 }
 ```
 
@@ -913,13 +913,13 @@ toast("Event has been created", {
   cancel: {
     label: "Undo",
   },
-})
+});
 ```
 
 **coss ui (Base UI)**
 
 ```tsx title="app/layout.tsx"
-import { ToastProvider } from "@/components/ui/toast"
+import { ToastProvider } from "@/components/ui/toast";
 
 export default function RootLayout({ children }) {
   return (
@@ -931,7 +931,7 @@ export default function RootLayout({ children }) {
         </ToastProvider>
       </body>
     </html>
-  )
+  );
 }
 ```
 

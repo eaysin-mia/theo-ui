@@ -2,6 +2,11 @@
   "extends": "@workspace/typescript-config/react-library.json",
   "compilerOptions": {
     "paths": {
+      "#components/*": ["./src/components/*"],
+      "#patterns/*": ["./src/patterns/*"],
+      "#hooks/*": ["./src/hooks/*"],
+      "#lib/*": ["./src/lib/*"],
+      "#base-ui/*": ["./src/base-ui/*"],
       "@workspace/ui/*": ["./src/*"]
     }
   },

@@ -8,9 +8,13 @@
     "lint": "turbo lint",
     "format": "turbo format",
     "format:check": "prettier --check .",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build lint typecheck --filter=@workspace/ui && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^3.0.3",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
     "prettier": "^3.9.10",

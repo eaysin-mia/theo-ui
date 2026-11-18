@@ -8,21 +8,33 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "COSS_SYNC.md",
+    "THIRD_PARTY_LICENSES.md"
   ],
   "sideEffects": [
     "**/*.css"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
+  },
+  "imports": {
+    "#components/*": "./dist/components/*.js",
+    "#patterns/*": "./dist/patterns/*.js",
+    "#hooks/*": "./dist/hooks/*.js",
+    "#lib/*": "./dist/lib/*.js",
+    "#base-ui/*": "./dist/base-ui/*.js"
   },
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build:js": "tsc -p tsconfig.build.json",
+    "build:css": "tailwindcss -i src/styles/globals.css -o dist/styles.css --minify",
+    "build": "pnpm build:js && pnpm build:css",
     "dev": "tsc -p tsconfig.build.json --watch",
-    "prepack": "node scripts/build.mjs",
+    "prepack": "pnpm build",
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "package:check": "publint"
   },
   "exports": {
     ".": {
@@ -30,7 +42,29 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
-    "./globals.css": "./dist/styles/globals.css",
+    "./styles.css": "./dist/styles.css",
+    "./globals.css": "./dist/styles.css",
+    "./theme.css": "./dist/styles.css",
+    "./base-ui": {
+      "types": "./dist/base-ui/index.d.ts",
+      "import": "./dist/base-ui/index.js",
+      "default": "./dist/base-ui/index.js"
+    },
+    "./base-ui/*": {
+      "types": "./dist/base-ui/*.d.ts",
+      "import": "./dist/base-ui/*.js",
+      "default": "./dist/base-ui/*.js"
+    },
+    "./patterns": {
+      "types": "./dist/patterns/index.d.ts",
+      "import": "./dist/patterns/index.js",
+      "default": "./dist/patterns/index.js"
+    },
+    "./patterns/*": {
+      "types": "./dist/patterns/*.d.ts",
+      "import": "./dist/patterns/*.js",
+      "default": "./dist/patterns/*.js"
+    },
     "./lib": {
       "types": "./dist/lib/index.d.ts",
       "import": "./dist/lib/index.js",
@@ -148,8 +182,20 @@
     }
   },
   "peerDependencies": {
+    "@better-auth-ui/core": ">=1.0.0",
+    "@better-auth-ui/react": ">=1.0.0",
+    "@headless-tree/core": ">=1.0.0",
+    "@headless-tree/react": ">=1.0.0",
+    "@tanstack/react-table": ">=8.0.0 || >=9.0.0",
+    "better-auth": ">=1.0.0",
+    "bowser": ">=2.15.0",
+    "culori": ">=4.0.0",
+    "motion": ">=11.0.0 || >=12.0.0 || >=14.0.0",
+    "qrcode": ">=1.5.0",
     "react": ">=19.0.0",
-    "react-dom": ">=19.0.0"
+    "react-dom": ">=19.0.0",
+    "recharts": ">=2.0.0 || >=3.0.0",
+    "shiki": ">=1.0.0 || >=3.0.0 || >=4.0.0"
   },
   "peerDependenciesMeta": {
     "react": {
@@ -157,50 +203,81 @@
     },
     "react-dom": {
       "optional": false
+    },
+    "better-auth": {
+      "optional": true
+    },
+    "@better-auth-ui/core": {
+      "optional": true
+    },
+    "@better-auth-ui/react": {
+      "optional": true
+    },
+    "recharts": {
+      "optional": true
+    },
+    "@tanstack/react-table": {
+      "optional": true
+    },
+    "@headless-tree/core": {
+      "optional": true
+    },
+    "@headless-tree/react": {
+      "optional": true
+    },
+    "motion": {
+      "optional": true
+    },
+    "qrcode": {
+      "optional": true
+    },
+    "shiki": {
+      "optional": true
+    },
+    "culori": {
+      "optional": true
+    },
+    "bowser": {
+      "optional": true
     }
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
-    "@better-auth-ui/core": "^1.7.34",
-    "@better-auth-ui/react": "^1.7.34",
     "@date-fns/tz": "^1.5.0",
     "@daypicker/react": "^10.0.2",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@fontsource-variable/inter": "^5.3.0",
-    "@headless-tree/core": "^1.8.0",
-    "@headless-tree/react": "^1.8.0",
     "@paper-design/shaders-react": "^0.0.82",
     "@shadcn/react": "^0.3.1",
     "@tanstack/react-form": "^1.33.5",
     "@tanstack/react-pacer": "^0.24.1",
     "@tanstack/react-query": "^5.107.1",
     "@tanstack/react-store": "^0.11.2",
-    "@tanstack/react-table": "^9.3.1",
-    "better-auth": "^1.7.18",
-    "bowser": "^2.15.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "culori": "^4.0.2",
     "date-fns": "^4.4.0",
     "input-otp": "^1.5.0",
     "libphonenumber-js": "^1.13.16",
     "lucide-react": "^1.66.0",
-    "motion": "^14.14.0",
     "next-themes": "^0.4.6",
-    "qrcode": "^1.5.4",
     "react-email": "^6.11.8",
-    "recharts": "3.8.0",
     "shadcn": "^4.23.0",
-    "shiki": "^4.6.0",
     "sonner": "^2.0.8",
     "tailwind-merge": "^3.7.0",
     "tw-animate-css": "^1.4.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
+    "@better-auth-ui/core": "^1.7.34",
+    "@better-auth-ui/react": "^1.7.34",
+    "@headless-tree/core": "^1.8.0",
+    "@headless-tree/react": "^1.8.0",
+    "@tailwindcss/cli": "^4.3.5",
     "@tailwindcss/postcss": "^4",
+    "@tanstack/react-table": "^9.3.1",
     "@turbo/gen": "^2.11.10",
     "@types/culori": "^4.0.1",
     "@types/node": "^20",
@@ -209,11 +286,18 @@
     "@types/react-dom": "^19",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
+    "better-auth": "^1.7.18",
+    "bowser": "^2.15.0",
+    "culori": "^4.0.2",
     "eslint": "^10",
+    "motion": "^14.14.0",
+    "publint": "^0.3.8",
+    "qrcode": "^1.5.4",
     "react": "19.3.1",
     "react-dom": "19.3.1",
+    "recharts": "3.8.0",
+    "shiki": "^4.6.0",
     "tailwindcss": "^4",
-    "tsc-alias": "^1.8.16",
     "typescript": "^5"
   }
 }
