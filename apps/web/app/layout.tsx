@@ -32,18 +32,20 @@ export default function RootLayout({
       className={cn("antialiased", fontSans.variable, fontMono.variable)}
     >
       <body
-        className="min-h-screen bg-background font-sans text-foreground"
+        className="relative min-h-screen bg-background font-sans text-foreground"
         suppressHydrationWarning
       >
-        <ThemeProvider>
-          <QueryProvider>
-            <ToastProvider>
-              <AnchoredToastProvider>
-                <AppAuthProvider>{children}</AppAuthProvider>
-              </AnchoredToastProvider>
-            </ToastProvider>
-          </QueryProvider>
-        </ThemeProvider>
+        <div className="isolate relative flex min-h-svh flex-col">
+          <ThemeProvider>
+            <QueryProvider>
+              <ToastProvider>
+                <AnchoredToastProvider>
+                  <AppAuthProvider>{children}</AppAuthProvider>
+                </AnchoredToastProvider>
+              </ToastProvider>
+            </QueryProvider>
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );
