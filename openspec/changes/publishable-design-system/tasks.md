@@ -16,13 +16,13 @@
 ## 3. Packaging, Subpath Imports & Build Pipeline
 
 - [x] 3.1 Reclassify domain-heavy dependencies (`better-auth`, `@better-auth-ui/core`, `@better-auth-ui/react`, `recharts`, `@tanstack/react-table`, `@headless-tree/core`, `motion`, `qrcode`, `shiki`, `culori`, `bowser`) as `peerDependencies` with `peerDependenciesMeta: { optional: true }`, maintaining core dependencies minimal in `dependencies` and concrete versions in `devDependencies`.
-- [x] 3.2 Update `packages/ui/package.json` to define standard Node `imports` (`#components/*`, `#patterns/*`, `#hooks/*`, `#lib/*`), map `"./globals.css": "./src/styles/globals.css"` (with `"./theme.css"` alias), and set `sideEffects: ["**/*.css"]`; verify package manifest validity.
-- [x] 3.3 Delete `packages/ui/scripts/build.mjs` and update `packages/ui/package.json` to compile directly with `"build": "tsc -p tsconfig.build.json"`; verify `pnpm --filter @workspace/ui build` emits clean JS and types to `dist/`.
+- [x] 3.2 Update `packages/ui/package.json` to define standard Node `imports` (`#components/*`, `#patterns/*`, `#hooks/*`, `#lib/*`), map `"./styles.css": "./dist/styles.css"` (with `"./globals.css"` and `"./theme.css"` aliases), and set `sideEffects: ["**/*.css"]`; verify package manifest validity.
+- [x] 3.3 Delete `packages/ui/scripts/build.mjs` and configure standard Turborepo build pipeline (`"build:js": "tsc -p tsconfig.build.json"`, `"build:css": "tailwindcss -i src/styles/globals.css -o dist/styles.css --minify"`, `"build": "pnpm build:js && pnpm build:css"`); verify `pnpm --filter @workspace/ui build` emits clean JS, types, and minified CSS to `dist/`.
 - [x] 3.4 Add `publint` and `@arethetypeswrong/cli` to `packages/ui` devDependencies and add a `package:check` script; run verification to confirm all exported subpaths, auth modules, and types resolve properly under Node and bundler profiles.
 
 ## 4. Consumer Application (`apps/web`) Integration & Verification
 
-- [x] 4.1 Update `apps/web` CSS to import `@workspace/ui/globals.css` after `@import "tailwindcss"` with encapsulated `@source` handling; verify Tailwind v4 scans classes and builds without manual `@source` directives.
+- [x] 4.1 Update `apps/web` CSS to import `@workspace/ui/styles.css`; verify Tailwind v4 and Turbopack build cleanly with zero `@source` directives.
 - [x] 4.2 Verify `apps/web/app/layout.tsx` maintains the required `isolate relative min-h-svh flex-col` portal stacking wrapper and satisfies font variable bindings (`--font-sans`, `--font-mono`); verify layout renders without styling regressions.
 - [x] 4.3 Verify that `apps/web` authentication flows (login, signup, organization, settings pages) and auth client provider resolve cleanly from `@workspace/ui/components/auth` and `@workspace/ui/lib/auth` without circular imports or bundler errors.
 - [x] 4.4 Run end-to-end workspace verification via `pnpm turbo build lint typecheck`; confirm Next.js build succeeds with zero transpile issues or `"use client"` boundary failures.

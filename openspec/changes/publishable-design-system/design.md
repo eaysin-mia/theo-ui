@@ -27,23 +27,22 @@ Previously, `packages/ui` used a custom `scripts/build.mjs` script, `tsc-alias`,
 
 ## Decisions
 
-### 1. Pure `tsc` Compilation & Deletion of `scripts/build.mjs`
-- **Decision**: Define `"build": "tsc -p tsconfig.build.json"` and completely delete `scripts/build.mjs`.
-- **Rationale**: `scripts/build.mjs` was a legacy workaround to run `tsc-alias` and copy `globals.css` to `dist/`. Since CSS is now exported directly from source (`"./theme.css": "./src/styles/theme.css"`), and subpath imports (`#...`) require no alias re-writing, `tsc` alone is sufficient to build all `.ts`/`.tsx` files.
+### 1. Modular Compilation Pipeline (`build:js` + `build:css`)
+- **Decision**: Define `"build:js": "tsc -p tsconfig.build.json"`, `"build:css": "tailwindcss -i src/styles/globals.css -o dist/styles.css --minify"`, and `"build": "pnpm build:js && pnpm build:css"`. Completely delete legacy `scripts/build.mjs`.
+- **Rationale**: Follows official Turborepo `with-tailwind` conventions by cleanly separating component compilation (`tsc`) from stylesheet compilation (`tailwindcss`). This produces type-safe JS/DTS in `dist/` and an optimized, production-ready `dist/styles.css`.
 - **Alternatives Considered**:
-  - Keeping `scripts/build.mjs` to copy CSS: Adds maintenance overhead and an extra process layer with zero benefit over direct source export.
+  - Chaining commands into one brittle shell string: Harder to debug and maintain.
+  - Using a custom Node script (`build.mjs`): Unnecessary maintenance overhead.
 
 ### 2. Single Authoritative Stylesheet: `src/styles/globals.css`
-- **Decision**: Retain `src/styles/globals.css` as the unique, authoritative design system stylesheet matching the shadcn `components.json` CLI configuration (`"css": "src/styles/globals.css"`). Export it via `package.json#exports` as `"./globals.css": "./src/styles/globals.css"` (with `"./theme.css"` alias for backward compatibility).
-- **Rationale**: Eliminates having two conflicting stylesheets (`globals.css` and `theme.css`) with duplicate `:root`, `.dark`, and `@theme inline` definitions. Standardizing on `globals.css` keeps the package aligned with shadcn CLI contracts.
-- **Alternatives Considered**:
-  - Renaming to `theme.css`: Breaks shadcn CLI expectations unless `components.json` is remapped, and causes confusion for consumers accustomed to standard shadcn conventions.
+- **Decision**: Retain `src/styles/globals.css` as the single source stylesheet matching the shadcn `components.json` CLI configuration (`"css": "src/styles/globals.css"`).
+- **Rationale**: Eliminates having multiple conflicting stylesheets (`theme.css`, `styles.css`, `globals.css`). The single `globals.css` file contains `@import "tailwindcss"`, `@custom-variant dark`, and the complete `@theme inline` design tokens.
 
-### 3. Encapsulated Tailwind CSS v4 `@source` Inside `globals.css`
-- **Decision**: Declare `@source "../";` and `@source "../../dist";` directly inside `packages/ui/src/styles/globals.css`.
-- **Rationale**: In Tailwind CSS v4, `@source` directives declared inside imported library stylesheets resolve relative to that stylesheet. This completely frees consumer applications (`apps/web` and external apps) from writing awkward, brittle relative paths like `@source "../node_modules/@workspace/ui/dist"`. Consumers simply write `@import "@workspace/ui/globals.css";`, and Tailwind v4 automatically scans the library components both in local monorepo development (`../`) and when consumed via npm (`../../dist`).
+### 3. Pre-Compiled Zero-Config Stylesheet Export
+- **Decision**: Export `./styles.css` pointing to `./dist/styles.css` (with backwards-compatible `./globals.css` and `./theme.css` aliases).
+- **Rationale**: The industry-standard approach for published npm component libraries. Consuming applications (Vite, Next.js, etc.) simply write `@import "@workspace/ui/styles.css";` and immediately receive all required styling without configuring `@source`, without declaring `node_modules` paths in CSS, and without needing Tailwind installed in the consuming project.
 - **Alternatives Considered**:
-  - Forcing every consumer to write `@source "../node_modules/@workspace/ui/dist"`: Brittle, leaks internal folder layouts to consumers, and creates confusion between `src` and `dist` paths.
+  - Requiring consumers to write `@source "../node_modules/@workspace/ui"`: Brittle, exposes package manager internal directory layouts, and degrades developer experience.
 
 ### 4. Node Subpath Imports (`#...`) Over TSConfig Paths
 - **Decision**: Define `#components/*`, `#patterns/*`, `#hooks/*`, and `#lib/*` in `package.json#imports` pointing to `./dist/*.js`.
