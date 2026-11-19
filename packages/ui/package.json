@@ -4,9 +4,9 @@
   "description": "Accessible, unstyled-first UI component library built on Base UI and Tailwind CSS v4",
   "license": "MIT",
   "author": "Eaysin",
-  "homepage": "https://github.com/eaysin-mia/ui#readme",
+  "homepage": "https://github.com/eaysin-mia/theo-ui#readme",
   "bugs": {
-    "url": "https://github.com/eaysin-mia/ui/issues"
+    "url": "https://github.com/eaysin-mia/theo-ui/issues"
   },
   "keywords": [
     "react",
@@ -30,12 +30,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eaysin-mia/ui.git",
+    "url": "git+https://github.com/eaysin-mia/theo-ui.git",
     "directory": "packages/ui"
   },
   "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "imports": {
     "#components/*": "./dist/components/*.js",

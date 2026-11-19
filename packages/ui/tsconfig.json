@@ -6,6 +6,7 @@
       "#patterns/*": ["./src/patterns/*"],
       "#hooks/*": ["./src/hooks/*"],
       "#lib/*": ["./src/lib/*"],
+      "theo-ui/*": ["./src/*"],
       "@theo/ui/*": ["./src/*"]
     }
   },
