@@ -4,7 +4,6 @@ import * as React from "react";
 import {
   motion,
   type HTMLMotionProps,
-  type LegacyAnimationControls,
   type TargetAndTransition,
   type Transition,
   useReducedMotionConfig,
@@ -36,7 +35,7 @@ export interface AutoHeightProps extends Omit<
   /**
    * Extra values to animate along with the height.
    */
-  animate?: TargetAndTransition | LegacyAnimationControls;
+  animate?: TargetAndTransition;
   /**
    * Transition configuration for the height spring.
    */

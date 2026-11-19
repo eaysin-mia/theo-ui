@@ -286,9 +286,9 @@ function FieldStep<V, O>() {
 
   return (
     <FilterFieldPicker<V, O>
-      path={draft?.cascaderPath ?? []}
+      path={draft?.browsePath ?? draft?.cascaderPath ?? []}
       onPathChange={(next) =>
-        actions.dispatchDraft({ type: "setCascaderPath", path: next })
+        actions.dispatchDraft({ type: "setBrowsePath", path: next })
       }
       query={draft?.query ?? ""}
       onQueryChange={(query) =>
