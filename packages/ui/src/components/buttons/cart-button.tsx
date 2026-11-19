@@ -20,7 +20,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 /** Pill widths: "Add +" at rest, "− n +" once something is in the cart. */

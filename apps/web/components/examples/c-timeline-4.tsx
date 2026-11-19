@@ -7,7 +7,7 @@ import {
   TimelineItem,
   TimelineSeparator,
   TimelineTitle,
-} from "@workspace/ui/components/timeline";
+} from "@theo/ui/components/timeline";
 import {
   GitForkIcon,
   GitPullRequestArrowIcon,

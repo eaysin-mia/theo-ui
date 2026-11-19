@@ -10,7 +10,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
 const HEIGHT = 68;
 const BODY_WIDTH = 236;

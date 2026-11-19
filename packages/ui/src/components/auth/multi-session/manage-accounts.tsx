@@ -11,9 +11,9 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Separator } from "@workspace/ui/components/separator";
-import { multiSessionPlugin } from "@workspace/ui/lib/auth/multi-session-plugin";
+} from "@theo/ui/components/card";
+import { Separator } from "@theo/ui/components/separator";
+import { multiSessionPlugin } from "@theo/ui/lib/auth/multi-session-plugin";
 import { ManageAccount } from "./manage-account";
 
 export type ManageAccountsProps = {

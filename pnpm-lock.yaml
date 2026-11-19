@@ -217,7 +217,7 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.107.1
         version: 5.107.1(@types/react@19.3.0)(react@19.3.1)
-      '@workspace/ui':
+      '@theo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       better-auth:

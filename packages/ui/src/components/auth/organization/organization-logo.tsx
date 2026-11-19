@@ -8,9 +8,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/avatar";
+import { Skeleton } from "@theo/ui/components/skeleton";
+import { cn } from "@theo/ui/lib/utils";
 
 export type OrganizationLogoSize = "sm" | "md" | "lg";
 

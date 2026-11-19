@@ -57,8 +57,8 @@ import {
   UserRound,
 } from "lucide-react";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
-import { UserAvatar } from "@workspace/ui/components/auth/user/user-avatar";
-import { Alert, AlertDescription } from "@workspace/ui/components/alert";
+import { UserAvatar } from "@theo/ui/components/auth/user/user-avatar";
+import { Alert, AlertDescription } from "@theo/ui/components/alert";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -67,10 +67,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
+} from "@theo/ui/components/alert-dialog";
+import { Badge } from "@theo/ui/components/badge";
+import { Button } from "@theo/ui/components/button";
+import { Checkbox } from "@theo/ui/components/checkbox";
 import {
   Dialog,
   DialogClose,
@@ -80,40 +80,37 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
+} from "@theo/ui/components/dialog";
 import {
   Menu,
   MenuGroup,
   MenuItem,
   MenuPopup,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
+} from "@theo/ui/components/menu";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "@workspace/ui/components/field";
-import { Fieldset, FieldsetLegend } from "@workspace/ui/components/fieldset";
+} from "@theo/ui/components/field";
+import { Fieldset, FieldsetLegend } from "@theo/ui/components/fieldset";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@workspace/ui/components/radio-group";
+} from "@theo/ui/components/input-group";
+import { RadioGroup, RadioGroupItem } from "@theo/ui/components/radio-group";
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Separator } from "@workspace/ui/components/separator";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Switch } from "@workspace/ui/components/switch";
+} from "@theo/ui/components/select";
+import { Separator } from "@theo/ui/components/separator";
+import { Skeleton } from "@theo/ui/components/skeleton";
+import { Switch } from "@theo/ui/components/switch";
 import {
   Table,
   TableBody,
@@ -121,21 +118,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@workspace/ui/components/table";
-import {
-  Tabs,
-  TabsList,
-  TabsPanel,
-  TabsTab,
-} from "@workspace/ui/components/tabs";
+} from "@theo/ui/components/table";
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@theo/ui/components/tabs";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { adminPlugin } from "@workspace/ui/lib/auth/admin-plugin";
+} from "@theo/ui/components/empty";
+import { adminPlugin } from "@theo/ui/lib/auth/admin-plugin";
 import { getAuthAdditionalFieldValidators, useAuthForm } from "../auth-form";
 import { useServerTableState } from "../server-table-state";
 

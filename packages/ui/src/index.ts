@@ -1,4 +1,4 @@
-// Root entrypoint for @workspace/ui
+// Root entrypoint for @theo/ui
 
 // Lib & Utilities
 export * from "./lib/utils";

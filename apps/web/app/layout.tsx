@@ -4,11 +4,11 @@ import "./globals.css";
 import {
   AnchoredToastProvider,
   ToastProvider,
-} from "@workspace/ui/components/toast";
+} from "@theo/ui/components/toast";
 import { AppAuthProvider } from "@/components/auth-provider";
 import { QueryProvider } from "@/components/query-provider";
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
 const fontSans = Inter({
   subsets: ["latin"],

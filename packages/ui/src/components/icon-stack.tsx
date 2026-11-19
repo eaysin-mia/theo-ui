@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
 const iconStackVariants = cva(
   "relative text-foreground **:data-[slot=icon-stack-layer]:fill-background",

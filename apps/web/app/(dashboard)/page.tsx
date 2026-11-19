@@ -1,19 +1,16 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import {
-  useActiveOrganization,
-  useSession,
-} from "@workspace/ui/components/auth";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+import { useActiveOrganization, useSession } from "@theo/ui/components/auth";
+import { Badge } from "@theo/ui/components/badge";
+import { Button } from "@theo/ui/components/button";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
+} from "@theo/ui/components/card";
 import {
   Building2,
   Database,
@@ -28,21 +25,21 @@ import {
 import Link from "next/link";
 import { Pattern } from "@/components/examples/c-timeline-4";
 import { AutoHeightDemo } from "@/components/examples/c-auto-height-1";
-import { CartButton } from "@workspace/ui/components/buttons/cart-button";
-import { RainbowButton } from "@workspace/ui/components/buttons/rainbow-button";
-import { ShimmerButton } from "@workspace/ui/components/buttons/shimmer-button";
-import { UndoButton } from "@workspace/ui/components/buttons/undo-button";
-import { HoldButton } from "@workspace/ui/components/buttons/hold-button";
-import { HaloSearch } from "@workspace/ui/components/halo-search";
-import { TipSelector } from "@workspace/ui/components/tip-selector";
-import { UptimeCard } from "@workspace/ui/components/uptime-card";
+import { CartButton } from "@theo/ui/components/buttons/cart-button";
+import { RainbowButton } from "@theo/ui/components/buttons/rainbow-button";
+import { ShimmerButton } from "@theo/ui/components/buttons/shimmer-button";
+import { UndoButton } from "@theo/ui/components/buttons/undo-button";
+import { HoldButton } from "@theo/ui/components/buttons/hold-button";
+import { HaloSearch } from "@theo/ui/components/halo-search";
+import { TipSelector } from "@theo/ui/components/tip-selector";
+import { UptimeCard } from "@theo/ui/components/uptime-card";
 import {
   RelativeTime,
   RelativeTimeZone,
   RelativeTimeZoneDate,
   RelativeTimeZoneDisplay,
   RelativeTimeZoneLabel,
-} from "@workspace/ui/components/relative-time";
+} from "@theo/ui/components/relative-time";
 
 export default function DashboardOverviewPage() {
   const { data: session } = useSession(authClient);

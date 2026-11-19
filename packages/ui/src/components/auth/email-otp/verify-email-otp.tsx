@@ -11,14 +11,14 @@ import { useSelector } from "@tanstack/react-form";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@workspace/ui/components/button";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { emailOtpPlugin } from "@workspace/ui/lib/auth/email-otp-plugin";
+import { Button } from "@theo/ui/components/button";
+import { Field, FieldLabel } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
+import { emailOtpPlugin } from "@theo/ui/lib/auth/email-otp-plugin";
 import {
   RESEND_COOLDOWN_SECONDS,
   useResendCooldown,
-} from "@workspace/ui/lib/auth/use-resend-cooldown";
+} from "@theo/ui/lib/auth/use-resend-cooldown";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,

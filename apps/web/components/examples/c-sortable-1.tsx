@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Badge } from "@workspace/ui/components/badge";
+import { Badge } from "@theo/ui/components/badge";
 import {
   Sortable,
   SortableItem,
   SortableItemHandle,
-} from "@workspace/ui/components/sortable";
+} from "@theo/ui/components/sortable";
 import { toast } from "sonner";
 import {
   ImageIcon,

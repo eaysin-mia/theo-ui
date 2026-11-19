@@ -19,25 +19,25 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/components/button";
 import {
   Card,
   CardPanel,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Alert, AlertDescription } from "@workspace/ui/components/alert";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/components/card";
+import { Alert, AlertDescription } from "@theo/ui/components/alert";
+import { Field, FieldLabel } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { ssoPlugin } from "@workspace/ui/lib/auth/sso-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/input-group";
+import { Spinner } from "@theo/ui/components/spinner";
+import { ssoPlugin } from "@theo/ui/lib/auth/sso-plugin";
+import { cn } from "@theo/ui/lib/utils";
 import { useAuthForm } from "../auth-form";
 
 export type SsoDomainVerificationProps = {

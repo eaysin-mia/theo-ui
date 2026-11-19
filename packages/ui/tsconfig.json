@@ -7,7 +7,7 @@
       "#hooks/*": ["./src/hooks/*"],
       "#lib/*": ["./src/lib/*"],
       "#base-ui/*": ["./src/base-ui/*"],
-      "@workspace/ui/*": ["./src/*"]
+      "@theo/ui/*": ["./src/*"]
     }
   },
   "include": ["."],

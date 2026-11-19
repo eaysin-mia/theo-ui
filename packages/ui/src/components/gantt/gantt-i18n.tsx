@@ -1,7 +1,7 @@
 import type {
   GanttDateRange,
   GanttScale,
-} from "@workspace/ui/components/gantt/gantt-types";
+} from "@theo/ui/components/gantt/gantt-types";
 import {
   format,
   isSameMonth,

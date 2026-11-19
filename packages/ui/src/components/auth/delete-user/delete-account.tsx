@@ -14,7 +14,7 @@ import {
 import { useQueryClient } from "@tanstack/react-query";
 import { Eye, EyeOff, TriangleAlert } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
+import { toastManager } from "@theo/ui/components/toast";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -24,8 +24,8 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@workspace/ui/components/alert-dialog";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
+} from "@theo/ui/components/alert-dialog";
+import { Button, buttonVariants } from "@theo/ui/components/button";
 import {
   Card,
   CardDescription,
@@ -33,15 +33,15 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
+} from "@theo/ui/components/card";
+import { Field, FieldLabel } from "@theo/ui/components/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { deleteUserPlugin } from "@workspace/ui/lib/auth/delete-user-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/input-group";
+import { deleteUserPlugin } from "@theo/ui/lib/auth/delete-user-plugin";
+import { cn } from "@theo/ui/lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { ReauthenticationAction } from "../reauthentication";
 

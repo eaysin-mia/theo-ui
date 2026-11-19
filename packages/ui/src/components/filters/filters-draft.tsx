@@ -2,7 +2,7 @@ import type {
   FilterDraft,
   FilterDraftStep,
   FilterOperatorArity,
-} from "@workspace/ui/components/filters/filters-types";
+} from "@theo/ui/components/filters/filters-types";
 
 /** Reducer actions for the filter builder draft machine. */
 export type FilterDraftAction<V = unknown> =

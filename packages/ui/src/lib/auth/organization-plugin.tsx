@@ -6,8 +6,8 @@ import {
 } from "@better-auth-ui/core/plugins/organization";
 import { Briefcase } from "lucide-react";
 
-import { AcceptInvitation } from "@workspace/ui/components/auth/organization/accept-invitation";
-import { OrganizationsSettings } from "@workspace/ui/components/auth/organization/organizations-settings";
+import { AcceptInvitation } from "@theo/ui/components/auth/organization/accept-invitation";
+import { OrganizationsSettings } from "@theo/ui/components/auth/organization/organizations-settings";
 
 export const organizationPlugin = createAuthPlugin(
   coreOrganizationPlugin.id,

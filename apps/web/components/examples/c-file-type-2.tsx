@@ -2,7 +2,7 @@ import {
   FileType,
   type FileTypeName,
   type FileTypeVariant,
-} from "@workspace/ui/components/file-type";
+} from "@theo/ui/components/file-type";
 
 const variants: FileTypeVariant[] = ["outline", "solid", "light", "mono"];
 

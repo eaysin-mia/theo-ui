@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+import { Badge } from "@theo/ui/components/badge";
+import { Button } from "@theo/ui/components/button";
 import {
   Empty,
   EmptyContent,
@@ -10,14 +10,14 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { IconTile } from "@workspace/ui/components/icon-tile";
+} from "@theo/ui/components/empty";
+import { IconTile } from "@theo/ui/components/icon-tile";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/input-group";
+import { cn } from "@theo/ui/lib/utils";
 import {
   BellIcon,
   Building2Icon,

@@ -46,10 +46,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button, buttonVariants } from "@workspace/ui/components/button";
-import { Card, CardPanel } from "@workspace/ui/components/card";
+} from "@theo/ui/components/alert-dialog";
+import { Badge } from "@theo/ui/components/badge";
+import { Button, buttonVariants } from "@theo/ui/components/button";
+import { Card, CardPanel } from "@theo/ui/components/card";
 import {
   Dialog,
   DialogClose,
@@ -59,18 +59,14 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
-import {
-  Field,
-  FieldDescription,
-  FieldLabel,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/components/dialog";
+import { Field, FieldDescription, FieldLabel } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
+} from "@theo/ui/components/input-group";
 import {
   Select,
   SelectGroup,
@@ -78,12 +74,12 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { Switch } from "@workspace/ui/components/switch";
-import { Textarea } from "@workspace/ui/components/textarea";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/select";
+import { Spinner } from "@theo/ui/components/spinner";
+import { Switch } from "@theo/ui/components/switch";
+import { Textarea } from "@theo/ui/components/textarea";
+import { oauthProviderPlugin } from "@theo/ui/lib/auth/oauth-provider-plugin";
+import { cn } from "@theo/ui/lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 
 type ClientAction =

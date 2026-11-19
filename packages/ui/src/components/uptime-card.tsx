@@ -20,8 +20,8 @@ import {
   useRef,
   useState,
 } from "react";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+import { Badge } from "@theo/ui/components/badge";
+import { Button } from "@theo/ui/components/button";
 import {
   Card,
   CardAction,
@@ -29,12 +29,9 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import {
-  Collapsible,
-  CollapsiblePanel,
-} from "@workspace/ui/components/collapsible";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/card";
+import { Collapsible, CollapsiblePanel } from "@theo/ui/components/collapsible";
+import { cn } from "@theo/ui/lib/utils";
 
 // How much wider the bar under the pointer gets, and how far the swell
 // spreads, in bars.

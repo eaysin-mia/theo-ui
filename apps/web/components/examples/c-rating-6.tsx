@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Rating } from "@workspace/ui/components/rating";
-import { Button } from "@workspace/ui/components/button";
-import { Card, CardPanel } from "@workspace/ui/components/card";
-import { Label } from "@workspace/ui/components/label";
-import { Textarea } from "@workspace/ui/components/textarea";
+import { Rating } from "@theo/ui/components/rating";
+import { Button } from "@theo/ui/components/button";
+import { Card, CardPanel } from "@theo/ui/components/card";
+import { Label } from "@theo/ui/components/label";
+import { Textarea } from "@theo/ui/components/textarea";
 
 export function Pattern() {
   const [rating, setRating] = useState(0);

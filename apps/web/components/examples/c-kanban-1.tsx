@@ -6,10 +6,10 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
-import { Card } from "@workspace/ui/components/card";
+} from "@theo/ui/components/avatar";
+import { Badge } from "@theo/ui/components/badge";
+import { Button } from "@theo/ui/components/button";
+import { Card } from "@theo/ui/components/card";
 import {
   Kanban,
   KanbanBoard,
@@ -19,8 +19,8 @@ import {
   KanbanItem,
   KanbanItemHandle,
   KanbanOverlay,
-} from "@workspace/ui/components/kanban";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/kanban";
+import { cn } from "@theo/ui/lib/utils";
 import { GripVerticalIcon } from "lucide-react";
 
 interface Task {

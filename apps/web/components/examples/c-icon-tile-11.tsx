@@ -1,5 +1,5 @@
-import { Frame, FramePanel } from "@workspace/ui/components/frame";
-import { IconTile } from "@workspace/ui/components/icon-tile";
+import { Frame, FramePanel } from "@theo/ui/components/frame";
+import { IconTile } from "@theo/ui/components/icon-tile";
 import { LayoutDashboardIcon } from "lucide-react";
 
 export function Pattern() {

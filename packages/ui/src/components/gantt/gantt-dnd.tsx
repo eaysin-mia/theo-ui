@@ -6,18 +6,18 @@ import {
   useGantt,
   useGanttViewConfig,
   type GanttInstance,
-} from "@workspace/ui/components/gantt/gantt";
+} from "@theo/ui/components/gantt/gantt";
 import {
   findResource,
   snapMinutes,
   toZoned,
   zonedStartOfDay,
-} from "@workspace/ui/components/gantt/gantt-lib";
+} from "@theo/ui/components/gantt/gantt-lib";
 import type {
   GanttProposedUpdate,
   GanttScheduleMode,
   GanttSegment,
-} from "@workspace/ui/components/gantt/gantt-types";
+} from "@theo/ui/components/gantt/gantt-types";
 import { addDays, differenceInCalendarDays } from "date-fns";
 
 /**

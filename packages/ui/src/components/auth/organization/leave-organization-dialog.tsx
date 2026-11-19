@@ -15,11 +15,11 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@workspace/ui/components/alert-dialog";
-import { Button } from "@workspace/ui/components/button";
-import { Card, CardPanel } from "@workspace/ui/components/card";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
+} from "@theo/ui/components/alert-dialog";
+import { Button } from "@theo/ui/components/button";
+import { Card, CardPanel } from "@theo/ui/components/card";
+import { Spinner } from "@theo/ui/components/spinner";
+import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
 import { OrganizationView } from "./organization-view";
 
 export type LeaveOrganizationDialogProps = {

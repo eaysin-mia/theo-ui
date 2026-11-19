@@ -10,7 +10,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@workspace/ui/components/trace";
+} from "@theo/ui/components/trace";
 
 export function ReasoningPart({
   text,

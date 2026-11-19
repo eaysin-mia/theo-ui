@@ -10,9 +10,9 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useIsMutating } from "@tanstack/react-query";
 import { Lock, Smartphone } from "lucide-react";
 
-import { buttonVariants } from "@workspace/ui/components/button";
-import { phoneNumberPlugin } from "@workspace/ui/lib/auth/phone-number-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+import { buttonVariants } from "@theo/ui/components/button";
+import { phoneNumberPlugin } from "@theo/ui/lib/auth/phone-number-plugin";
+import { cn } from "@theo/ui/lib/utils";
 
 export type PhoneNumberButtonProps = {
   /** @remarks `AuthView` */

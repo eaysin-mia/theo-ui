@@ -19,7 +19,7 @@ import {
   QuestionnaireSkip,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@workspace/ui/components/questionnaire";
+} from "@theo/ui/components/questionnaire";
 
 const questionnaireItems = [
   {

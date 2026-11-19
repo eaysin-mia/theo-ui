@@ -9,7 +9,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@workspace/ui/components/trace";
+} from "@theo/ui/components/trace";
 
 export interface SourceItem {
   title: string;

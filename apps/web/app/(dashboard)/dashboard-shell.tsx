@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AppSidebar } from "@workspace/ui/components/app-layout";
+import { AppSidebar } from "@theo/ui/components/app-layout";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@workspace/ui/components/sidebar";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/sidebar";
+import { cn } from "@theo/ui/lib/utils";
 import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import {
@@ -54,8 +54,15 @@ function DashboardInner({
         teams={[]}
         currentPath={pathname}
         onSearchClick={() => setOpen(true)}
-        renderLink={({ href, children, ...rest }) => (
-          <Link href={href} {...rest}>
+        renderLink={({
+          href,
+          children,
+          ...rest
+        }: {
+          href?: string;
+          children?: React.ReactNode;
+        }) => (
+          <Link href={href ?? "/"} {...rest}>
             {children}
           </Link>
         )}

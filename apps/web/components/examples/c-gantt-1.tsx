@@ -1,48 +1,42 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { Gantt, type GanttApi } from "@workspace/ui/components/gantt/gantt";
-import type { GanttI18nOverrides } from "@workspace/ui/components/gantt/gantt-i18n";
-import {
-  GanttNav,
-  GanttToolbar,
-} from "@workspace/ui/components/gantt/gantt-nav";
+import { Gantt, type GanttApi } from "@theo/ui/components/gantt/gantt";
+import type { GanttI18nOverrides } from "@theo/ui/components/gantt/gantt-i18n";
+import { GanttNav, GanttToolbar } from "@theo/ui/components/gantt/gantt-nav";
 import type {
   GanttEvent,
   GanttInteractions,
   GanttResource,
   GanttSlotDraft,
-} from "@workspace/ui/components/gantt/gantt-types";
-import { GanttView } from "@workspace/ui/components/gantt/gantt-view";
+} from "@theo/ui/components/gantt/gantt-types";
+import { GanttView } from "@theo/ui/components/gantt/gantt-view";
 import { addDays, startOfDay, startOfWeek, type Locale } from "date-fns";
 import { ar, de, es, fr, ja } from "date-fns/locale";
 
-import { Button } from "@workspace/ui/components/button";
-import { Card, CardContent } from "@workspace/ui/components/card";
-import { Label } from "@workspace/ui/components/label";
+import { Button } from "@theo/ui/components/button";
+import { Card, CardContent } from "@theo/ui/components/card";
+import { Label } from "@theo/ui/components/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@workspace/ui/components/popover";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@workspace/ui/components/radio-group";
+} from "@theo/ui/components/popover";
+import { RadioGroup, RadioGroupItem } from "@theo/ui/components/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Switch } from "@workspace/ui/components/switch";
+} from "@theo/ui/components/select";
+import { Switch } from "@theo/ui/components/switch";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@workspace/ui/components/tabs";
+} from "@theo/ui/components/tabs";
 import { SettingsIcon, RotateCcwIcon } from "lucide-react";
 
 /**

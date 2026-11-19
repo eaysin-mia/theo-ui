@@ -16,7 +16,7 @@ import {
 } from "@tanstack/react-table";
 import { Fragment, useEffect, useMemo, useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/components/button";
 import {
   Card,
   CardAction,
@@ -25,7 +25,7 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
+} from "@theo/ui/components/card";
 import {
   Select,
   SelectGroup,
@@ -33,9 +33,9 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Separator } from "@workspace/ui/components/separator";
-import { apiKeyPlugin } from "@workspace/ui/lib/auth/api-key-plugin";
+} from "@theo/ui/components/select";
+import { Separator } from "@theo/ui/components/separator";
+import { apiKeyPlugin } from "@theo/ui/lib/auth/api-key-plugin";
 import { useServerTableState } from "../server-table-state";
 import { ApiKey } from "./api-key";
 import { ApiKeySkeleton } from "./api-key-skeleton";

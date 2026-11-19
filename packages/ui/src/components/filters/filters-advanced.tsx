@@ -1,14 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { FilterFieldPicker } from "@workspace/ui/components/filters/filters-builder";
+import { FilterFieldPicker } from "@theo/ui/components/filters/filters-builder";
 import {
   FilterMoveToMenuItems,
   FilterOperatorPopover,
   FilterRuleMenuItems,
   FilterValuePopover,
   useFilterRuleDisplay,
-} from "@workspace/ui/components/filters/filters-chip";
+} from "@theo/ui/components/filters/filters-chip";
 import {
   filterControlSizes,
   filterReadOnlyProps,
@@ -26,12 +26,12 @@ import {
   useFilterSegmentFocus,
   useFilterState,
   type FilterActionsContextValue,
-} from "@workspace/ui/components/filters/filters-context";
+} from "@theo/ui/components/filters/filters-context";
 import {
   FILTER_ROW_SELECTOR,
   useFilterRowDrag,
-} from "@workspace/ui/components/filters/filters-dnd";
-import { filterIssueLabel } from "@workspace/ui/components/filters/filters-i18n";
+} from "@theo/ui/components/filters/filters-dnd";
+import { filterIssueLabel } from "@theo/ui/components/filters/filters-i18n";
 import {
   FILTER_FIELD_PICKER_CLASS,
   FILTER_MENU_CLASS,
@@ -40,17 +40,17 @@ import {
   getFilterField,
   isFilterFieldPickable,
   joinFilterPath,
-} from "@workspace/ui/components/filters/filters-lib";
+} from "@theo/ui/components/filters/filters-lib";
 import {
   getFilterArity,
   getFilterOperator,
   operatorTakesValue,
-} from "@workspace/ui/components/filters/filters-operators";
+} from "@theo/ui/components/filters/filters-operators";
 import {
   collectFilterIssues,
   createFilterRule,
   isFilterRule,
-} from "@workspace/ui/components/filters/filters-query";
+} from "@theo/ui/components/filters/filters-query";
 import type {
   FilterCombinator,
   FilterEmptyStateContext,
@@ -61,29 +61,29 @@ import type {
   FilterOperator,
   FilterQuery,
   FilterRule,
-} from "@workspace/ui/components/filters/filters-types";
+} from "@theo/ui/components/filters/filters-types";
 
-import { cn } from "@workspace/ui/lib/utils";
-import { Button } from "@workspace/ui/components/button";
+import { cn } from "@theo/ui/lib/utils";
+import { Button } from "@theo/ui/components/button";
 import {
   Menu,
   MenuPopup,
   MenuItem,
   MenuSeparator,
   MenuTrigger,
-} from "@workspace/ui/components/menu";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/components/menu";
+import { Input } from "@theo/ui/components/input";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "@workspace/ui/components/popover";
+} from "@theo/ui/components/popover";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip";
+} from "@theo/ui/components/tooltip";
 import {
   RefreshCwIcon,
   CircleAlertIcon,

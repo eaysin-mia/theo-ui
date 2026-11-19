@@ -7,9 +7,9 @@ import {
   useMessageScrollerScrollable,
   useMessageScrollerVisibility,
 } from "@shadcn/react/message-scroller";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/components/button";
 import { ArrowDownIcon } from "lucide-react";
 
 function MessageScrollerProvider(
@@ -87,7 +87,7 @@ function MessageScrollerButton({
   size = "icon-sm",
   ...props
 }: React.ComponentProps<typeof MessageScrollerPrimitive.Button> &
-  Pick<React.ComponentProps<typeof Button>, "variant" | "size">) {
+  Partial<Pick<React.ComponentProps<typeof Button>, "variant" | "size">>) {
   return (
     <MessageScrollerPrimitive.Button
       data-slot="message-scroller-button"

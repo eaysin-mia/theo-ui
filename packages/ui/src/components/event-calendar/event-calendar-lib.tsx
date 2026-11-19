@@ -1,4 +1,4 @@
-import { expandRecurrence } from "@workspace/ui/components/event-calendar/event-calendar-recurrence";
+import { expandRecurrence } from "@theo/ui/components/event-calendar/event-calendar-recurrence";
 import type {
   CalendarEvent,
   CalendarView,
@@ -7,7 +7,7 @@ import type {
   EventCalendarOffDaysConfig,
   EventCalendarResource,
   EventCalendarSegment,
-} from "@workspace/ui/components/event-calendar/event-calendar-types";
+} from "@theo/ui/components/event-calendar/event-calendar-types";
 import { TZDate } from "@date-fns/tz";
 import {
   addDays,

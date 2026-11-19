@@ -1,4 +1,4 @@
-# @workspace/ui
+# @theo/ui
 
 An accessible React component library built on [Base UI](https://base-ui.com)
 and styled with [Tailwind CSS v4](https://tailwindcss.com).
@@ -14,7 +14,7 @@ stylesheet. `apps/web` is the workspace consumer and showcase application.
 ## Install
 
 ```bash
-pnpm add @workspace/ui
+pnpm add @theo/ui
 ```
 
 ## Styles
@@ -22,7 +22,7 @@ pnpm add @workspace/ui
 Import the package stylesheet once from your application's global CSS entry:
 
 ```css
-@import "@workspace/ui/globals.css";
+@import "@theo/ui/globals.css";
 ```
 
 The stylesheet imports Tailwind, the library theme tokens, font and animation
@@ -39,25 +39,25 @@ override the theme through the CSS variables defined by the library.
 Use the root entry point for convenience:
 
 ```tsx
-import { Button, Dialog, Input, Tooltip } from "@workspace/ui";
+import { Button, Dialog, Input, Tooltip } from "@theo/ui";
 ```
 
 Or import a focused component group:
 
 ```tsx
-import { Button } from "@workspace/ui/components/button";
-import { EventCalendar } from "@workspace/ui/components/event-calendar";
-import { Gantt, GanttView } from "@workspace/ui/components/gantt";
-import { Tree, TreeItem, TreeItemLabel } from "@workspace/ui/components/tree";
-import { cn } from "@workspace/ui/lib/utils";
-import { useMediaQuery } from "@workspace/ui/hooks";
+import { Button } from "@theo/ui/components/button";
+import { EventCalendar } from "@theo/ui/components/event-calendar";
+import { Gantt, GanttView } from "@theo/ui/components/gantt";
+import { Tree, TreeItem, TreeItemLabel } from "@theo/ui/components/tree";
+import { cn } from "@theo/ui/lib/utils";
+import { useMediaQuery } from "@theo/ui/hooks";
 ```
 
 Authentication components and helpers are separate entry points:
 
 ```tsx
-import { AuthProvider, SignIn } from "@workspace/ui/components/auth";
-import { adminPlugin, passkeyPlugin } from "@workspace/ui/lib/auth";
+import { AuthProvider, SignIn } from "@theo/ui/components/auth";
+import { adminPlugin, passkeyPlugin } from "@theo/ui/lib/auth";
 ```
 
 These authentication entry points use Better Auth UI and Better Auth APIs.
@@ -70,7 +70,7 @@ Components built on Base UI use its `render` prop for element composition:
 
 ```tsx
 import Link from "next/link";
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/components/button";
 
 export function NavLink() {
   return <Button render={<Link href="/dashboard" />}>Go to Dashboard</Button>;
@@ -89,7 +89,7 @@ pnpm dev
 The package can also be built, checked, and linted independently:
 
 ```bash
-pnpm --filter @workspace/ui build
-pnpm --filter @workspace/ui typecheck
-pnpm --filter @workspace/ui lint
+pnpm --filter @theo/ui build
+pnpm --filter @theo/ui typecheck
+pnpm --filter @theo/ui lint
 ```

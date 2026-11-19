@@ -1,4 +1,4 @@
-import type { NavMainItem } from "@workspace/ui/components/app-layout";
+import type { NavMainItem } from "@theo/ui/components/app-layout";
 import {
   HomeIcon,
   SettingsIcon,

@@ -1,7 +1,7 @@
 "use client";
 
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { TableCell, TableRow } from "@workspace/ui/components/table";
+import { Skeleton } from "@theo/ui/components/skeleton";
+import { TableCell, TableRow } from "@theo/ui/components/table";
 import { UserView } from "../user/user-view";
 import type { ReactNode } from "react";
 
