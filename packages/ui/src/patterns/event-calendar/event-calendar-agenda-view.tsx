@@ -7,25 +7,25 @@ import {
   useEventCalendarSelector,
   useEventCalendarSettings,
   useEventCalendarViewConfig,
-} from "@theo/ui/patterns/event-calendar/event-calendar";
-import { EventCalendarEvent } from "@theo/ui/patterns/event-calendar/event-calendar-event";
+} from "theo-ui/patterns/event-calendar/event-calendar";
+import { EventCalendarEvent } from "theo-ui/patterns/event-calendar/event-calendar-event";
 import {
   getDayKey,
   getRangeKey,
   toZoned,
   zonedStartOfDay,
-} from "@theo/ui/patterns/event-calendar/event-calendar-lib";
+} from "theo-ui/patterns/event-calendar/event-calendar-lib";
 import type {
   EventCalendarDateRange,
   EventCalendarSegment,
-} from "@theo/ui/patterns/event-calendar/event-calendar-types";
-import { IconStack } from "@theo/ui/components/icon-stack";
+} from "theo-ui/patterns/event-calendar/event-calendar-types";
+import { IconStack } from "theo-ui/components/icon-stack";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, format } from "date-fns";
 
-import { cn } from "@theo/ui/lib/utils";
-import { ScrollArea } from "@theo/ui/components/scroll-area";
+import { cn } from "theo-ui/lib/utils";
+import { ScrollArea } from "theo-ui/components/scroll-area";
 import { CalendarIcon } from "lucide-react";
 
 // The agenda window length is the agendaDayCount SETTING (the store derives

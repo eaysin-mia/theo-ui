@@ -3,7 +3,7 @@
 import * as React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { cn } from "@theo/ui/lib/utils";
+import { cn } from "theo-ui/lib/utils";
 import {
   CheckIcon,
   CopyIcon,
@@ -17,8 +17,8 @@ import {
   MessageContent,
   MessageFooter,
   MessageHeader,
-} from "@theo/ui/components/message";
-import { Bubble, BubbleContent } from "@theo/ui/components/bubble";
+} from "theo-ui/components/message";
+import { Bubble, BubbleContent } from "theo-ui/components/bubble";
 import {
   Attachment,
   AttachmentContent,
@@ -26,16 +26,16 @@ import {
   AttachmentGroup,
   AttachmentMedia,
   AttachmentTitle,
-} from "@theo/ui/components/attachment";
-import { FileType, getFileType } from "@theo/ui/components/file-type";
-import { Button } from "@theo/ui/components/button";
+} from "theo-ui/components/attachment";
+import { FileType, getFileType } from "theo-ui/components/file-type";
+import { Button } from "theo-ui/components/button";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "@theo/ui/components/tooltip";
-import { Trace } from "@theo/ui/components/trace";
+} from "theo-ui/components/tooltip";
+import { Trace } from "theo-ui/components/trace";
 import { MarkdownPre } from "@/components/chat/markdown-code";
 import { ReasoningPart } from "@/components/chat/parts/reasoning-part";
 import {

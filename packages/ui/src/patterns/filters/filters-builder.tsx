@@ -7,42 +7,42 @@ import {
   useFilterActions,
   useFilterFocusStore,
   useFilterState,
-} from "@theo/ui/patterns/filters/filters-context";
+} from "theo-ui/patterns/filters/filters-context";
 import {
   FILTER_FIELD_PICKER_CLASS,
   getFilterField,
   getFilterFieldChain,
   getFilterFieldCount,
   joinFilterPath,
-} from "@theo/ui/patterns/filters/filters-lib";
-import { getDefaultFilterOperator } from "@theo/ui/patterns/filters/filters-operators";
-import { isFilterRule } from "@theo/ui/patterns/filters/filters-query";
+} from "theo-ui/patterns/filters/filters-lib";
+import { getDefaultFilterOperator } from "theo-ui/patterns/filters/filters-operators";
+import { isFilterRule } from "theo-ui/patterns/filters/filters-query";
 import type {
   FilterField,
   FilterNode,
-} from "@theo/ui/patterns/filters/filters-types";
+} from "theo-ui/patterns/filters/filters-types";
 
-import { cn } from "@theo/ui/lib/utils";
-import { Button } from "@theo/ui/components/button";
+import { cn } from "theo-ui/lib/utils";
+import { Button } from "theo-ui/components/button";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@theo/ui/components/breadcrumb";
+} from "theo-ui/components/breadcrumb";
 import {
   Combobox,
   ComboboxEmpty,
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@theo/ui/components/combobox";
+} from "theo-ui/components/combobox";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "@theo/ui/components/popover";
+} from "theo-ui/components/popover";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,

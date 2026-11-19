@@ -4,8 +4,8 @@ import {
   type ThemeLocalization,
 } from "@better-auth-ui/core/plugins/theme";
 
-import { Appearance } from "@theo/ui/components/auth/theme/appearance";
-import { ThemeToggleItem } from "@theo/ui/components/auth/theme/theme-toggle-item";
+import { Appearance } from "theo-ui/components/auth/theme/appearance";
+import { ThemeToggleItem } from "theo-ui/components/auth/theme/theme-toggle-item";
 
 /**
  * Hook shape compatible with `next-themes`' `useTheme` and similar APIs. The

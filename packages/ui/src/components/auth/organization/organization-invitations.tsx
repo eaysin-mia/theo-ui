@@ -18,21 +18,21 @@ import { Filter, Search, X } from "lucide-react";
 import { type ComponentProps, useState } from "react";
 import { toast } from "sonner";
 
-import { Badge } from "@theo/ui/components/badge";
-import { Button } from "@theo/ui/components/button";
-import { CardFrame, CardFrameFooter } from "@theo/ui/components/card";
+import { Badge } from "theo-ui/components/badge";
+import { Button } from "theo-ui/components/button";
+import { CardFrame, CardFrameFooter } from "theo-ui/components/card";
 import {
   Menu,
   MenuPopup,
   MenuRadioGroup,
   MenuRadioItem,
   MenuTrigger,
-} from "@theo/ui/components/menu";
+} from "theo-ui/components/menu";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@theo/ui/components/input-group";
+} from "theo-ui/components/input-group";
 import {
   Table,
   TableBody,
@@ -40,9 +40,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@theo/ui/components/table";
-import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
-import { cn } from "@theo/ui/lib/utils";
+} from "theo-ui/components/table";
+import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+import { cn } from "theo-ui/lib/utils";
 import { InviteMemberDialog } from "./invite-member-dialog";
 import { OrganizationInvitationRow } from "./organization-invitation-row";
 import { OrganizationTableRowSkeleton } from "./organization-table-row-skeleton";

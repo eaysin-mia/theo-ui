@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@theo/ui/lib/utils";
+import { cn } from "theo-ui/lib/utils";
 
-import { Button } from "@theo/ui/components/button";
+import { Button } from "theo-ui/components/button";
 import { CheckIcon, CopyIcon } from "lucide-react";
 
 const codeBlockVariants = cva(

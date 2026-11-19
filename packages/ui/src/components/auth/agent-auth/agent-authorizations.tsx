@@ -21,19 +21,19 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@theo/ui/components/alert-dialog";
-import { Badge } from "@theo/ui/components/badge";
-import { Button } from "@theo/ui/components/button";
+} from "theo-ui/components/alert-dialog";
+import { Badge } from "theo-ui/components/badge";
+import { Button } from "theo-ui/components/button";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@theo/ui/components/card";
-import { Skeleton } from "@theo/ui/components/skeleton";
-import { Spinner } from "@theo/ui/components/spinner";
-import { agentAuthPlugin } from "@theo/ui/lib/auth/agent-auth-plugin";
+} from "theo-ui/components/card";
+import { Skeleton } from "theo-ui/components/skeleton";
+import { Spinner } from "theo-ui/components/spinner";
+import { agentAuthPlugin } from "theo-ui/lib/auth/agent-auth-plugin";
 
 type RevokeTarget = {
   agent: AgentAuthorization;

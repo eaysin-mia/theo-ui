@@ -17,12 +17,12 @@ import type { Invitation } from "better-auth/client";
 import { Send, X } from "lucide-react";
 import { toast } from "sonner";
 
-import { Badge } from "@theo/ui/components/badge";
-import { Button } from "@theo/ui/components/button";
-import { Spinner } from "@theo/ui/components/spinner";
-import { TableCell, TableRow } from "@theo/ui/components/table";
-import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
-import { cn } from "@theo/ui/lib/utils";
+import { Badge } from "theo-ui/components/badge";
+import { Button } from "theo-ui/components/button";
+import { Spinner } from "theo-ui/components/spinner";
+import { TableCell, TableRow } from "theo-ui/components/table";
+import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+import { cn } from "theo-ui/lib/utils";
 import { OrganizationTableRowSkeleton } from "./organization-table-row-skeleton";
 import {
   type OrganizationSelectableRow,

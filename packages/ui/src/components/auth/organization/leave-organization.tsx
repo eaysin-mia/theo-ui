@@ -5,8 +5,8 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useActiveOrganization } from "@better-auth-ui/react/plugins/organization";
 import { useState } from "react";
 
-import { Button } from "@theo/ui/components/button";
-import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
+import { Button } from "theo-ui/components/button";
+import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
 import { LeaveOrganizationDialog } from "./leave-organization-dialog";
 
 /**

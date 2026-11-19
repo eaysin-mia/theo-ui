@@ -8,21 +8,21 @@ import {
   ComboboxItem,
   ComboboxList,
   ComboboxSeparator,
-} from "@theo/ui/components/combobox";
-import { Button } from "@theo/ui/components/button";
+} from "theo-ui/components/combobox";
+import { Button } from "theo-ui/components/button";
 import { CheckIcon, SearchIcon, XIcon } from "lucide-react";
 import {
   FilterActionsContext,
   filterControlSizes,
   type FilterResolutionStore,
-} from "@theo/ui/patterns/filters/filters-context";
+} from "theo-ui/patterns/filters/filters-context";
 import {
   applyFilterExclusiveSelection,
   filterFilterOptions,
   joinFilterPath,
   normalizeFilterQuery,
   warnFilterOnce,
-} from "@theo/ui/patterns/filters/filters-lib";
+} from "theo-ui/patterns/filters/filters-lib";
 import type {
   AnyFilterEditor,
   FilterEditorProps,
@@ -34,16 +34,16 @@ import type {
   FilterOperator,
   FilterOption,
   FilterOptionsState,
-} from "@theo/ui/patterns/filters/filters-types";
+} from "theo-ui/patterns/filters/filters-types";
 
-import { cn } from "@theo/ui/lib/utils";
-import { Field } from "@theo/ui/components/field";
-import { Form } from "@theo/ui/components/form";
-import { Textarea } from "@theo/ui/components/textarea";
-import { PopoverDescription, PopoverTitle } from "@theo/ui/components/popover";
-import { Group, GroupSeparator, GroupText } from "@theo/ui/components/group";
-import { Input } from "@theo/ui/components/input";
-import { Calendar } from "@theo/ui/components/calendar";
+import { cn } from "theo-ui/lib/utils";
+import { Field } from "theo-ui/components/field";
+import { Form } from "theo-ui/components/form";
+import { Textarea } from "theo-ui/components/textarea";
+import { PopoverDescription, PopoverTitle } from "theo-ui/components/popover";
+import { Group, GroupSeparator, GroupText } from "theo-ui/components/group";
+import { Input } from "theo-ui/components/input";
+import { Calendar } from "theo-ui/components/calendar";
 import type { DateRange } from "@daypicker/react";
 import {
   endOfMonth,
@@ -62,7 +62,7 @@ import {
   RELATIVE_TODAY,
   RELATIVE_TOMORROW,
   RELATIVE_YESTERDAY,
-} from "@theo/ui/patterns/filters/filters-date";
+} from "theo-ui/patterns/filters/filters-date";
 
 /* -------------------------------------------------------------------------- */
 /*                              The options service                           */
@@ -1270,7 +1270,7 @@ export function FilterDateRangeEditor<V, O>({
 export type {
   AnyFilterEditor,
   FilterEditorRegistry,
-} from "@theo/ui/patterns/filters/filters-types";
+} from "theo-ui/patterns/filters/filters-types";
 
 export const DEFAULT_FILTER_EDITORS: FilterEditorRegistry = {
   text: FilterTextEditor,

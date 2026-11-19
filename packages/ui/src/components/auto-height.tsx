@@ -12,8 +12,8 @@ import {
 import {
   useAutoHeight,
   type AutoHeightOptions,
-} from "@theo/ui/hooks/use-auto-height";
-import { cn } from "@theo/ui/lib/utils";
+} from "theo-ui/hooks/use-auto-height";
+import { cn } from "theo-ui/lib/utils";
 
 const DEFAULT_TRANSITION: Transition = {
   type: "spring",

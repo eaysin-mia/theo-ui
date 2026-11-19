@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
-import { RainbowButton } from "@theo/ui/patterns/buttons/rainbow-button";
+import { RainbowButton } from "theo-ui/patterns/buttons/rainbow-button";
 
 describe("RainbowButton Pattern", () => {
   it("renders with default label and children", () => {

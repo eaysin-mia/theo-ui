@@ -4,8 +4,8 @@ import {
   apiKeyPlugin as coreApiKeyPlugin,
 } from "@better-auth-ui/core/plugins/api-key";
 
-import { ApiKeys } from "@theo/ui/components/auth/api-key/api-keys";
-import { OrganizationApiKeys } from "@theo/ui/components/auth/api-key/organization-api-keys";
+import { ApiKeys } from "theo-ui/components/auth/api-key/api-keys";
+import { OrganizationApiKeys } from "theo-ui/components/auth/api-key/organization-api-keys";
 
 export const apiKeyPlugin = createAuthPlugin(
   coreApiKeyPlugin.id,

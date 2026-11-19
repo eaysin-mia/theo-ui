@@ -1,4 +1,4 @@
-import { expandRecurrence } from "@theo/ui/patterns/gantt/gantt-recurrence";
+import { expandRecurrence } from "theo-ui/patterns/gantt/gantt-recurrence";
 import type {
   GanttBaseline,
   GanttBaselineVariance,
@@ -10,7 +10,7 @@ import type {
   GanttResource,
   GanttScale,
   GanttSegment,
-} from "@theo/ui/patterns/gantt/gantt-types";
+} from "theo-ui/patterns/gantt/gantt-types";
 import { TZDate } from "@date-fns/tz";
 import {
   addDays,

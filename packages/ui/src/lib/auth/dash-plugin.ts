@@ -11,7 +11,7 @@ import {
   AdminUserActivity,
   OrganizationActivity,
   UserActivity,
-} from "@theo/ui/components/auth/dash/activity";
+} from "theo-ui/components/auth/dash/activity";
 
 const activityLabel = (label: string) =>
   createElement(

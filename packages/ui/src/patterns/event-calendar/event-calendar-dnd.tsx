@@ -5,16 +5,16 @@ import {
   useEventCalendar,
   useEventCalendarViewConfig,
   type EventCalendarInstance,
-} from "@theo/ui/patterns/event-calendar/event-calendar";
+} from "theo-ui/patterns/event-calendar/event-calendar";
 import {
   snapMinutes,
   toZoned,
   zonedStartOfDay,
-} from "@theo/ui/patterns/event-calendar/event-calendar-lib";
+} from "theo-ui/patterns/event-calendar/event-calendar-lib";
 import type {
   EventCalendarProposedUpdate,
   EventCalendarSegment,
-} from "@theo/ui/patterns/event-calendar/event-calendar-types";
+} from "theo-ui/patterns/event-calendar/event-calendar-types";
 import { addDays, addMinutes, differenceInCalendarDays } from "date-fns";
 
 /**

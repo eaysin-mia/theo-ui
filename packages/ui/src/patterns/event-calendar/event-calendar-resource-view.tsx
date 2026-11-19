@@ -15,17 +15,17 @@ import {
   useEventCalendarSettings,
   useEventCalendarViewConfig,
   useEventCalendarViewSettings,
-} from "@theo/ui/patterns/event-calendar/event-calendar";
+} from "theo-ui/patterns/event-calendar/event-calendar";
 import {
   useEventCalendarGestures,
   wasRecentChipPress,
   wasRecentDrag,
-} from "@theo/ui/patterns/event-calendar/event-calendar-dnd";
+} from "theo-ui/patterns/event-calendar/event-calendar-dnd";
 import {
   EVENT_CALENDAR_GHOST,
   EVENT_CALENDAR_SLOT_DRAFT,
   EventCalendarEvent,
-} from "@theo/ui/patterns/event-calendar/event-calendar-event";
+} from "theo-ui/patterns/event-calendar/event-calendar-event";
 import {
   flattenResources,
   getDayKey,
@@ -35,23 +35,23 @@ import {
   snapMinutes,
   toZoned,
   zonedStartOfDay,
-} from "@theo/ui/patterns/event-calendar/event-calendar-lib";
+} from "theo-ui/patterns/event-calendar/event-calendar-lib";
 import {
   EVENT_TRACK_WIDTH,
   EventCalendarNowIndicator,
   EventCalendarTimeGutter,
   minuteBlockStyle,
-} from "@theo/ui/patterns/event-calendar/event-calendar-time-grid";
+} from "theo-ui/patterns/event-calendar/event-calendar-time-grid";
 import type {
   EventCalendarResource,
   EventCalendarSegment,
-} from "@theo/ui/patterns/event-calendar/event-calendar-types";
+} from "theo-ui/patterns/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, addMinutes } from "date-fns";
 
-import { cn } from "@theo/ui/lib/utils";
-import { ScrollArea } from "@theo/ui/components/scroll-area";
+import { cn } from "theo-ui/lib/utils";
+import { ScrollArea } from "theo-ui/components/scroll-area";
 
 const EMPTY_ALL_DAY_SEGMENTS: EventCalendarSegment[] = [];
 

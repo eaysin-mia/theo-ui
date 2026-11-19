@@ -13,12 +13,12 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@theo/ui/components/alert-dialog";
-import { Button } from "@theo/ui/components/button";
-import { Field, FieldLabel } from "@theo/ui/components/field";
-import { Input } from "@theo/ui/components/input";
-import { Spinner } from "@theo/ui/components/spinner";
-import { passkeyPlugin } from "@theo/ui/lib/auth/passkey-plugin";
+} from "theo-ui/components/alert-dialog";
+import { Button } from "theo-ui/components/button";
+import { Field, FieldLabel } from "theo-ui/components/field";
+import { Input } from "theo-ui/components/input";
+import { Spinner } from "theo-ui/components/spinner";
+import { passkeyPlugin } from "theo-ui/lib/auth/passkey-plugin";
 
 export type ListedPasskey = {
   id: string;

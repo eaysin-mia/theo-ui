@@ -1,8 +1,8 @@
 "use client";
 
 import { useId, useRef, useState, type ReactNode } from "react";
-import { Badge } from "@theo/ui/components/badge";
-import { Tree, TreeItem, TreeItemLabel } from "@theo/ui/patterns/tree";
+import { Badge } from "theo-ui/components/badge";
+import { Tree, TreeItem, TreeItemLabel } from "theo-ui/patterns/tree";
 import {
   hotkeysCoreFeature,
   selectionFeature,
@@ -10,16 +10,16 @@ import {
   type ItemInstance,
 } from "@headless-tree/core";
 import { useTree } from "@headless-tree/react";
-import { cn } from "@theo/ui/lib/utils";
+import { cn } from "theo-ui/lib/utils";
 
-import { Button } from "@theo/ui/components/button";
+import { Button } from "theo-ui/components/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@theo/ui/components/menu";
-import { Separator } from "@theo/ui/components/separator";
+} from "theo-ui/components/menu";
+import { Separator } from "theo-ui/components/separator";
 import {
   CalendarClockIcon,
   BookOpenIcon,

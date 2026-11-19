@@ -32,9 +32,9 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@theo/ui/components/alert-dialog";
-import { Badge } from "@theo/ui/components/badge";
-import { Button } from "@theo/ui/components/button";
+} from "theo-ui/components/alert-dialog";
+import { Badge } from "theo-ui/components/badge";
+import { Button } from "theo-ui/components/button";
 import {
   Card,
   CardAction,
@@ -42,7 +42,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@theo/ui/components/card";
+} from "theo-ui/components/card";
 import {
   Dialog,
   DialogDescription,
@@ -51,21 +51,21 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@theo/ui/components/dialog";
+} from "theo-ui/components/dialog";
 import {
   Empty,
   EmptyContent,
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "@theo/ui/components/empty";
-import { Field, FieldError, FieldLabel } from "@theo/ui/components/field";
-import { Input } from "@theo/ui/components/input";
-import { Skeleton } from "@theo/ui/components/skeleton";
-import { Textarea } from "@theo/ui/components/textarea";
-import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
-import { ssoPlugin } from "@theo/ui/lib/auth/sso-plugin";
-import { cn } from "@theo/ui/lib/utils";
+} from "theo-ui/components/empty";
+import { Field, FieldError, FieldLabel } from "theo-ui/components/field";
+import { Input } from "theo-ui/components/input";
+import { Skeleton } from "theo-ui/components/skeleton";
+import { Textarea } from "theo-ui/components/textarea";
+import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+import { ssoPlugin } from "theo-ui/lib/auth/sso-plugin";
+import { cn } from "theo-ui/lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 
 import { SsoDomainVerification } from "./sso-domain-verification";

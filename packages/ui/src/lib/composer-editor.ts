@@ -28,7 +28,7 @@ import {
   type ComposerValue,
   type UseComposerEditorOptions,
   useComposerEditor,
-} from "@theo/ui/hooks/use-composer-editor";
+} from "theo-ui/hooks/use-composer-editor";
 
 type ComposerEditorOptions = Omit<
   UseComposerEditorOptions,
@@ -499,7 +499,7 @@ export {
   type ComposerValue,
   getComposerText,
   useComposerFilter,
-} from "@theo/ui/hooks/use-composer-editor";
+} from "theo-ui/hooks/use-composer-editor";
 export type { ComposerEditorOptions };
 export {
   ComposerEditorProvider,

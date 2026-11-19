@@ -4,11 +4,11 @@ import {
   type PhoneNumberPluginOptions,
 } from "@better-auth-ui/core/plugins/phone-number";
 
-import { ChangePhoneNumber } from "@theo/ui/components/auth/phone-number/change-phone-number";
-import { ForgotPhoneNumberPassword } from "@theo/ui/components/auth/phone-number/forgot-phone-number-password";
-import { PhoneNumber } from "@theo/ui/components/auth/phone-number/phone-number";
-import { PhoneNumberButton } from "@theo/ui/components/auth/phone-number/phone-number-button";
-import { ResetPhoneNumberPassword } from "@theo/ui/components/auth/phone-number/reset-phone-number-password";
+import { ChangePhoneNumber } from "theo-ui/components/auth/phone-number/change-phone-number";
+import { ForgotPhoneNumberPassword } from "theo-ui/components/auth/phone-number/forgot-phone-number-password";
+import { PhoneNumber } from "theo-ui/components/auth/phone-number/phone-number";
+import { PhoneNumberButton } from "theo-ui/components/auth/phone-number/phone-number-button";
+import { ResetPhoneNumberPassword } from "theo-ui/components/auth/phone-number/reset-phone-number-password";
 
 export const phoneNumberPlugin = createAuthPlugin(
   corePhoneNumberPlugin.id,

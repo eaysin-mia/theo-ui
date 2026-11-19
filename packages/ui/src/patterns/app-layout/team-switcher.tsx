@@ -10,13 +10,13 @@ import {
   MenuSeparator,
   MenuShortcut,
   MenuTrigger,
-} from "@theo/ui/components/menu";
+} from "theo-ui/components/menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@theo/ui/components/sidebar";
+} from "theo-ui/components/sidebar";
 import { ChevronsUpDownIcon, PlusIcon } from "lucide-react";
 
 export function TeamSwitcher({

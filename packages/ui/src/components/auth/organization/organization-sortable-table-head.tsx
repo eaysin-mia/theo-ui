@@ -4,9 +4,9 @@ import { type Column, type RowData, Subscribe } from "@tanstack/react-table";
 import { ChevronUp } from "lucide-react";
 import type { MouseEvent, ReactNode } from "react";
 
-import { Button } from "@theo/ui/components/button";
-import { TableHead } from "@theo/ui/components/table";
-import { cn } from "@theo/ui/lib/utils";
+import { Button } from "theo-ui/components/button";
+import { TableHead } from "theo-ui/components/table";
+import { cn } from "theo-ui/lib/utils";
 import type { organizationTableFeatures } from "./organization-table";
 
 export function OrganizationSortableTableHead<TData extends RowData>({

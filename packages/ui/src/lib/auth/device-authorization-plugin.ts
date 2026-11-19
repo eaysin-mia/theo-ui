@@ -4,7 +4,7 @@ import {
   type DeviceAuthorizationPluginOptions,
 } from "@better-auth-ui/core/plugins/device-authorization";
 
-import { DeviceAuthorization } from "@theo/ui/components/auth/device-authorization/device-authorization";
+import { DeviceAuthorization } from "theo-ui/components/auth/device-authorization/device-authorization";
 
 export const deviceAuthorizationPlugin = createAuthPlugin(
   coreDeviceAuthorizationPlugin.id,

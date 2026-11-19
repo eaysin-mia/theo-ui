@@ -4,12 +4,12 @@ import {
   type EmailOtpPluginOptions,
 } from "@better-auth-ui/core/plugins/email-otp";
 
-import { ChangeEmailOtp } from "@theo/ui/components/auth/email-otp/change-email-otp";
-import { EmailOtp } from "@theo/ui/components/auth/email-otp/email-otp";
-import { EmailOtpButton } from "@theo/ui/components/auth/email-otp/email-otp-button";
-import { ForgotPasswordOtp } from "@theo/ui/components/auth/email-otp/forgot-password-otp";
-import { ResetPasswordOtp } from "@theo/ui/components/auth/email-otp/reset-password-otp";
-import { VerifyEmailOtp } from "@theo/ui/components/auth/email-otp/verify-email-otp";
+import { ChangeEmailOtp } from "theo-ui/components/auth/email-otp/change-email-otp";
+import { EmailOtp } from "theo-ui/components/auth/email-otp/email-otp";
+import { EmailOtpButton } from "theo-ui/components/auth/email-otp/email-otp-button";
+import { ForgotPasswordOtp } from "theo-ui/components/auth/email-otp/forgot-password-otp";
+import { ResetPasswordOtp } from "theo-ui/components/auth/email-otp/reset-password-otp";
+import { VerifyEmailOtp } from "theo-ui/components/auth/email-otp/verify-email-otp";
 
 export const emailOtpPlugin = createAuthPlugin(
   coreEmailOtpPlugin.id,

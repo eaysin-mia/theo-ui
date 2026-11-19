@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "@theo/ui/components/skeleton";
+import { Skeleton } from "theo-ui/components/skeleton";
 
 export function AuthorizedApplicationSkeleton() {
   return (

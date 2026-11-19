@@ -9,8 +9,8 @@ import {
   MenuSub,
   MenuSubPopup,
   MenuSubTrigger,
-} from "@theo/ui/components/menu";
-import { themePlugin } from "@theo/ui/lib/auth/theme-plugin";
+} from "theo-ui/components/menu";
+import { themePlugin } from "theo-ui/lib/auth/theme-plugin";
 
 /**
  * Theme toggle dropdown item used inside `UserButton`.

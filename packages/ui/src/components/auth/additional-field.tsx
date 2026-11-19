@@ -12,9 +12,9 @@ import { CalendarIcon, Check, ChevronDownIcon, Copy } from "lucide-react";
 import { type ComponentType, useRef, useState } from "react";
 import { toast } from "sonner";
 
-import { Button, buttonVariants } from "@theo/ui/components/button";
-import { Calendar } from "@theo/ui/components/calendar";
-import { Checkbox } from "@theo/ui/components/checkbox";
+import { Button, buttonVariants } from "theo-ui/components/button";
+import { Calendar } from "theo-ui/components/calendar";
+import { Checkbox } from "theo-ui/components/checkbox";
 import {
   Combobox,
   ComboboxEmpty,
@@ -22,31 +22,31 @@ import {
   ComboboxItem,
   ComboboxList,
   ComboboxPopup,
-} from "@theo/ui/components/combobox";
-import { Field, FieldLabel } from "@theo/ui/components/field";
-import { AuthFieldError } from "@theo/ui/components/auth/auth-field-error";
-import { Input } from "@theo/ui/components/input";
+} from "theo-ui/components/combobox";
+import { Field, FieldLabel } from "theo-ui/components/field";
+import { AuthFieldError } from "theo-ui/components/auth/auth-field-error";
+import { Input } from "theo-ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@theo/ui/components/input-group";
+} from "theo-ui/components/input-group";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "@theo/ui/components/popover";
+} from "theo-ui/components/popover";
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@theo/ui/components/select";
-import { Slider } from "@theo/ui/components/slider";
-import { Switch } from "@theo/ui/components/switch";
-import { Textarea } from "@theo/ui/components/textarea";
-import { cn } from "@theo/ui/lib/utils";
+} from "theo-ui/components/select";
+import { Slider } from "theo-ui/components/slider";
+import { Switch } from "theo-ui/components/switch";
+import { Textarea } from "theo-ui/components/textarea";
+import { cn } from "theo-ui/lib/utils";
 
 export type AdditionalFieldProps = {
   name: string;

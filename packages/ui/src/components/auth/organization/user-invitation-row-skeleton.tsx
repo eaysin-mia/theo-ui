@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "@theo/ui/components/skeleton";
+import { Skeleton } from "theo-ui/components/skeleton";
 
 /**
  * Placeholder row matching `UserInvitationRow` while invitations load.

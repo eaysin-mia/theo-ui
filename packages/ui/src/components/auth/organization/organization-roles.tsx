@@ -30,16 +30,16 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@theo/ui/components/alert-dialog";
-import { Badge } from "@theo/ui/components/badge";
-import { Button, buttonVariants } from "@theo/ui/components/button";
+} from "theo-ui/components/alert-dialog";
+import { Badge } from "theo-ui/components/badge";
+import { Button, buttonVariants } from "theo-ui/components/button";
 import {
   Card,
   CardFrame,
   CardFrameFooter,
   CardPanel,
-} from "@theo/ui/components/card";
-import { Checkbox } from "@theo/ui/components/checkbox";
+} from "theo-ui/components/card";
+import { Checkbox } from "theo-ui/components/checkbox";
 import {
   Dialog,
   DialogDescription,
@@ -48,22 +48,22 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@theo/ui/components/dialog";
+} from "theo-ui/components/dialog";
 import {
   Menu,
   MenuPopup,
   MenuRadioGroup,
   MenuRadioItem,
   MenuTrigger,
-} from "@theo/ui/components/menu";
-import { Field, FieldLabel } from "@theo/ui/components/field";
-import { Input } from "@theo/ui/components/input";
+} from "theo-ui/components/menu";
+import { Field, FieldLabel } from "theo-ui/components/field";
+import { Input } from "theo-ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@theo/ui/components/input-group";
-import { Spinner } from "@theo/ui/components/spinner";
+} from "theo-ui/components/input-group";
+import { Spinner } from "theo-ui/components/spinner";
 import {
   Table,
   TableBody,
@@ -71,9 +71,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@theo/ui/components/table";
-import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
-import { cn } from "@theo/ui/lib/utils";
+} from "theo-ui/components/table";
+import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+import { cn } from "theo-ui/lib/utils";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

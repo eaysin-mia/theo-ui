@@ -5,7 +5,7 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useListPasskeys } from "@better-auth-ui/react/plugins/passkey";
 import { Fragment, useState } from "react";
 
-import { Button } from "@theo/ui/components/button";
+import { Button } from "theo-ui/components/button";
 import {
   Card,
   CardAction,
@@ -13,9 +13,9 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@theo/ui/components/card";
-import { Separator } from "@theo/ui/components/separator";
-import { passkeyPlugin } from "@theo/ui/lib/auth/passkey-plugin";
+} from "theo-ui/components/card";
+import { Separator } from "theo-ui/components/separator";
+import { passkeyPlugin } from "theo-ui/lib/auth/passkey-plugin";
 
 import { AddPasskeyDialog } from "./add-passkey-dialog";
 import { Passkey } from "./passkey";

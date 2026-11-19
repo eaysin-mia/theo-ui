@@ -7,16 +7,16 @@ import {
   useGanttSelector,
   useGanttSettings,
   useGanttViewConfig,
-} from "@theo/ui/patterns/gantt/gantt";
-import { toZoned } from "@theo/ui/patterns/gantt/gantt-lib";
-import type { GanttScale } from "@theo/ui/patterns/gantt/gantt-types";
+} from "theo-ui/patterns/gantt/gantt";
+import { toZoned } from "theo-ui/patterns/gantt/gantt-lib";
+import type { GanttScale } from "theo-ui/patterns/gantt/gantt-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { format } from "date-fns";
 
-import { cn } from "@theo/ui/lib/utils";
-import { Button } from "@theo/ui/components/button";
-import { Calendar } from "@theo/ui/components/calendar";
+import { cn } from "theo-ui/lib/utils";
+import { Button } from "theo-ui/components/button";
+import { Calendar } from "theo-ui/components/calendar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,18 +24,18 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@theo/ui/components/menu";
+} from "theo-ui/components/menu";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@theo/ui/components/popover";
+} from "theo-ui/components/popover";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@theo/ui/components/tooltip";
+} from "theo-ui/components/tooltip";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,

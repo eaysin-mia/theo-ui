@@ -2,7 +2,7 @@ import type {
   FilterField,
   FilterOperator,
   FilterValueType,
-} from "@theo/ui/patterns/filters/filters-types";
+} from "theo-ui/patterns/filters/filters-types";
 
 /**
  * Every operator label, keyed by value. Split from `FilterLabels`: operator

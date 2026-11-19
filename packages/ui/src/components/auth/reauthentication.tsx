@@ -6,10 +6,10 @@ import {
 } from "@better-auth-ui/core";
 import { useAuth, useSignOut } from "@better-auth-ui/react";
 import { useSyncExternalStore } from "react";
-import { Alert, AlertDescription, AlertTitle } from "@theo/ui/components/alert";
-import { Button } from "@theo/ui/components/button";
-import { Spinner } from "@theo/ui/components/spinner";
-import { cn } from "@theo/ui/lib/utils";
+import { Alert, AlertDescription, AlertTitle } from "theo-ui/components/alert";
+import { Button } from "theo-ui/components/button";
+import { Spinner } from "theo-ui/components/spinner";
+import { cn } from "theo-ui/lib/utils";
 
 const subscribeToLocation = () => () => undefined;
 

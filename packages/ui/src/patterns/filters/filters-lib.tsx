@@ -3,7 +3,7 @@ import type {
   FilterIndex,
   FilterOperator,
   FilterOption,
-} from "@theo/ui/patterns/filters/filters-types";
+} from "theo-ui/patterns/filters/filters-types";
 
 /* -------------------------------------------------------------------------- */
 /*                                    Menus                                   */

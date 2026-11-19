@@ -15,7 +15,7 @@ import {
   mergeGanttI18n,
   type GanttI18nConfig,
   type GanttI18nOverrides,
-} from "@theo/ui/patterns/gantt/gantt-i18n";
+} from "theo-ui/patterns/gantt/gantt-i18n";
 import {
   buildEventIndex,
   defaultEventOrder,
@@ -27,7 +27,7 @@ import {
   toZoned,
   type GanttIndex,
   type WeekStartsOn,
-} from "@theo/ui/patterns/gantt/gantt-lib";
+} from "theo-ui/patterns/gantt/gantt-lib";
 import type {
   GanttBarId,
   GanttBaseline,
@@ -52,12 +52,12 @@ import type {
   GanttSlotInfo,
   GanttState,
   GanttUpdateResult,
-} from "@theo/ui/patterns/gantt/gantt-types";
+} from "theo-ui/patterns/gantt/gantt-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import type { Locale } from "date-fns";
 
-import { cn } from "@theo/ui/lib/utils";
+import { cn } from "theo-ui/lib/utils";
 
 const DEFAULT_INTERACTIONS: GanttInteractions = {
   drag: true,

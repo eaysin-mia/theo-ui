@@ -1,4 +1,4 @@
-import { IconStack } from "@theo/ui/components/icon-stack";
+import { IconStack } from "theo-ui/components/icon-stack";
 import { ArchiveIcon, PackageIcon, LayersIcon } from "lucide-react";
 
 const sizes = [

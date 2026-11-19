@@ -31,7 +31,7 @@ pnpm dev
 
 This repository is structured as a Turborepo monorepo:
 
-- **`packages/ui`**: The publishable component library (`@theo/ui`). Contains primitives in `src/components/`, compositions in `src/patterns/`, and tests in `tests/`.
+- **`packages/ui`**: The publishable component library (`theo-ui`). Contains primitives in `src/components/`, compositions in `src/patterns/`, and tests in `tests/`.
 - **`apps/web`**: Interactive playground and documentation demo application built with Next.js 16.
 
 ---
@@ -74,7 +74,7 @@ pnpm build
 
 1. Create a descriptive branch: `git checkout -b feat/your-feature-name`.
 2. Commit your changes following conventional commit syntax.
-3. If your change affects the published `@theo/ui` package, create a changeset:
+3. If your change affects the published `theo-ui` package, create a changeset:
    ```bash
    pnpm changeset
    ```

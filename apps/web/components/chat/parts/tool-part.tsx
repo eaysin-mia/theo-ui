@@ -1,7 +1,7 @@
 "use client";
 
 import { StatusIcon } from "@/components/chat/status-icon";
-import { CodeBlock, CodeBlockContent } from "@theo/ui/patterns/code-block";
+import { CodeBlock, CodeBlockContent } from "theo-ui/patterns/code-block";
 import {
   TraceCollapsible,
   TraceCollapsibleContent,
@@ -10,7 +10,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "@theo/ui/components/trace";
+} from "theo-ui/components/trace";
 
 export interface ToolPartProps {
   toolName: string;

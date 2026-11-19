@@ -4,7 +4,7 @@ import type { OrganizationLocalization } from "@better-auth-ui/core/plugins/orga
 import { type Row, type RowData, Subscribe } from "@tanstack/react-table";
 import type { MouseEvent } from "react";
 
-import { Checkbox } from "@theo/ui/components/checkbox";
+import { Checkbox } from "theo-ui/components/checkbox";
 import type { organizationTableFeatures } from "./organization-table";
 
 export type OrganizationSelectableRow<TData extends RowData> = Row<

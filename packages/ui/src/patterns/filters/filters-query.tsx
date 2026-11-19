@@ -6,7 +6,7 @@ import type {
   FilterOperator,
   FilterQuery,
   FilterRule,
-} from "@theo/ui/patterns/filters/filters-types";
+} from "theo-ui/patterns/filters/filters-types";
 
 export function isFilterRule<V>(node: FilterNode<V>): node is FilterRule<V> {
   return node.type === "rule";

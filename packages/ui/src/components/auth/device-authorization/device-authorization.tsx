@@ -24,7 +24,7 @@ import {
   useState,
 } from "react";
 
-import { Button } from "@theo/ui/components/button";
+import { Button } from "theo-ui/components/button";
 import {
   Card,
   CardPanel,
@@ -32,17 +32,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@theo/ui/components/card";
-import { Field, FieldError, FieldLabel } from "@theo/ui/components/field";
+} from "theo-ui/components/card";
+import { Field, FieldError, FieldLabel } from "theo-ui/components/field";
 import {
   OTPField,
   OTPFieldInput,
   OTPFieldSeparator,
-} from "@theo/ui/components/otp-field";
-import { Spinner } from "@theo/ui/components/spinner";
-import { deviceAuthorizationPlugin } from "@theo/ui/lib/auth/device-authorization-plugin";
+} from "theo-ui/components/otp-field";
+import { Spinner } from "theo-ui/components/spinner";
+import { deviceAuthorizationPlugin } from "theo-ui/lib/auth/device-authorization-plugin";
 import { UserAvatar } from "../user/user-avatar";
-import { cn } from "@theo/ui/lib/utils";
+import { cn } from "theo-ui/lib/utils";
 import { useAuthForm } from "../auth-form";
 
 type DeviceAuthorizationStep = "code" | "approval" | "approved" | "denied";

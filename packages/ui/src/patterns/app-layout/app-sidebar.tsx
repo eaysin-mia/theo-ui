@@ -1,13 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { UserButton } from "@theo/ui/components/auth/user/user-button";
+import { UserButton } from "theo-ui/components/auth/user/user-button";
 import {
   NavMain,
   type NavMainItem,
-} from "@theo/ui/patterns/app-layout/nav-main";
-import { TeamSwitcher } from "@theo/ui/patterns/app-layout/team-switcher";
-import { Kbd } from "@theo/ui/components/kbd";
+} from "theo-ui/patterns/app-layout/nav-main";
+import { TeamSwitcher } from "theo-ui/patterns/app-layout/team-switcher";
+import { Kbd } from "theo-ui/components/kbd";
 import {
   Sidebar,
   SidebarContent,
@@ -19,7 +19,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "@theo/ui/components/sidebar";
+} from "theo-ui/components/sidebar";
 import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 
 export function SidebarUser() {

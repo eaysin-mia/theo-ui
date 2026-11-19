@@ -7,12 +7,8 @@ import { TrendingDown, TrendingUp } from "lucide-react";
 import type React from "react";
 import { createContext, useContext, useMemo } from "react";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@theo/ui/components/avatar";
-import { cn } from "@theo/ui/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "theo-ui/components/avatar";
+import { cn } from "theo-ui/lib/utils";
 
 type TickerContextValue = {
   formatter: Intl.NumberFormat;

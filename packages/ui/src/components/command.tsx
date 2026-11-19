@@ -3,7 +3,7 @@
 import { Dialog as CommandDialogPrimitive } from "@base-ui/react/dialog";
 import { SearchIcon } from "lucide-react";
 import type * as React from "react";
-import { cn } from "@theo/ui/lib/utils";
+import { cn } from "theo-ui/lib/utils";
 import {
   Autocomplete,
   AutocompleteCollection,
@@ -14,7 +14,7 @@ import {
   AutocompleteItem,
   AutocompleteList,
   AutocompleteSeparator,
-} from "@theo/ui/components/autocomplete";
+} from "theo-ui/components/autocomplete";
 
 export const CommandDialog: typeof CommandDialogPrimitive.Root =
   CommandDialogPrimitive.Root;

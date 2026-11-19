@@ -6,5 +6,5 @@ export * from "./composer-editor";
 export * from "./composer-query";
 
 // Note: Domain-specific modules with optional peer dependencies are exported via dedicated subpaths:
-// - Syntax Highlighter: "@theo/ui/lib/highlighter" (requires shiki)
-// - Authentication Plugins: "@theo/ui/lib/auth" (requires better-auth)
+// - Syntax Highlighter: "theo-ui/lib/highlighter" (requires shiki)
+// - Authentication Plugins: "theo-ui/lib/auth" (requires better-auth)

@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@theo/ui/components/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "theo-ui/components/avatar";
 import {
   Menu,
   MenuGroup,
@@ -12,13 +8,13 @@ import {
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "@theo/ui/components/menu";
+} from "theo-ui/components/menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@theo/ui/components/sidebar";
+} from "theo-ui/components/sidebar";
 import {
   BadgeCheckIcon,
   BellIcon,

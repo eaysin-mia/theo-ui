@@ -1,4 +1,4 @@
-import type { NavMainItem } from "@theo/ui/patterns/app-layout";
+import type { NavMainItem } from "theo-ui/patterns/app-layout";
 import {
   HomeIcon,
   SettingsIcon,

@@ -22,9 +22,9 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@theo/ui/components/tabs";
-import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
-import { cn } from "@theo/ui/lib/utils";
+} from "theo-ui/components/tabs";
+import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+import { cn } from "theo-ui/lib/utils";
 import { TabsScrollContainer } from "../tabs-scroll-container";
 import { OrganizationPeople } from "./organization-people";
 import { OrganizationRoles } from "./organization-roles";

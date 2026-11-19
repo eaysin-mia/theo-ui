@@ -5,25 +5,25 @@ import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
 import { PanelLeftIcon } from "lucide-react";
 import * as React from "react";
-import { useMediaQuery } from "@theo/ui/hooks/use-media-query";
-import { cn } from "@theo/ui/lib/utils";
-import { Button } from "@theo/ui/components/button";
-import { Input } from "@theo/ui/components/input";
-import { ScrollArea } from "@theo/ui/components/scroll-area";
-import { Separator } from "@theo/ui/components/separator";
+import { useMediaQuery } from "theo-ui/hooks/use-media-query";
+import { cn } from "theo-ui/lib/utils";
+import { Button } from "theo-ui/components/button";
+import { Input } from "theo-ui/components/input";
+import { ScrollArea } from "theo-ui/components/scroll-area";
+import { Separator } from "theo-ui/components/separator";
 import {
   Drawer,
   DrawerDescription,
   DrawerHeader,
   DrawerPopup,
   DrawerTitle,
-} from "@theo/ui/components/drawer";
-import { Skeleton } from "@theo/ui/components/skeleton";
+} from "theo-ui/components/drawer";
+import { Skeleton } from "theo-ui/components/skeleton";
 import {
   Tooltip,
   TooltipPopup,
   TooltipTrigger,
-} from "@theo/ui/components/tooltip";
+} from "theo-ui/components/tooltip";
 
 const SIDEBAR_COOKIE_NAME: string = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE: number = 60 * 60 * 24 * 7;

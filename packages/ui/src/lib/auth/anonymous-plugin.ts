@@ -4,7 +4,7 @@ import {
   anonymousPlugin as coreAnonymousPlugin,
 } from "@better-auth-ui/core/plugins/anonymous";
 
-import { AnonymousButton } from "@theo/ui/components/auth/anonymous/anonymous-button";
+import { AnonymousButton } from "theo-ui/components/auth/anonymous/anonymous-button";
 
 export const anonymousPlugin = createAuthPlugin(
   coreAnonymousPlugin.id,

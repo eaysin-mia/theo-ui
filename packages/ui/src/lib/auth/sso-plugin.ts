@@ -11,8 +11,8 @@ import {
 import { ShieldCheck } from "lucide-react";
 import { createElement } from "react";
 
-import { EmailFirstSignIn } from "@theo/ui/components/auth/sso/email-first-sign-in";
-import { OrganizationSsoProviders } from "@theo/ui/components/auth/sso/organization-sso-providers";
+import { EmailFirstSignIn } from "theo-ui/components/auth/sso/email-first-sign-in";
+import { OrganizationSsoProviders } from "theo-ui/components/auth/sso/organization-sso-providers";
 
 export const ssoPlugin = createAuthPlugin(
   coreSsoPlugin.id,

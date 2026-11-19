@@ -1,9 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { FiltersAdvanced } from "@theo/ui/patterns/filters/filters-advanced";
-import { FiltersBuilder } from "@theo/ui/patterns/filters/filters-builder";
-import { FilterChip } from "@theo/ui/patterns/filters/filters-chip";
+import { FiltersAdvanced } from "theo-ui/patterns/filters/filters-advanced";
+import { FiltersBuilder } from "theo-ui/patterns/filters/filters-builder";
+import { FilterChip } from "theo-ui/patterns/filters/filters-chip";
 import {
   createFilterFocusStore,
   createFilterResolutionStore,
@@ -20,18 +20,18 @@ import {
   useFilterFocusStore,
   useFilterState,
   type FilterActionsContextValue,
-} from "@theo/ui/patterns/filters/filters-context";
+} from "theo-ui/patterns/filters/filters-context";
 import {
   filterDraftReducer,
   isFilterDraftCommittable,
   type FilterDraftAction,
-} from "@theo/ui/patterns/filters/filters-draft";
+} from "theo-ui/patterns/filters/filters-draft";
 import {
   DEFAULT_FILTER_EDITORS,
   resolveFilterEditor,
   type FilterEditorRegistry,
-} from "@theo/ui/patterns/filters/filters-editors";
-import { resolveFilterLabels } from "@theo/ui/patterns/filters/filters-i18n";
+} from "theo-ui/patterns/filters/filters-editors";
+import { resolveFilterLabels } from "theo-ui/patterns/filters/filters-i18n";
 import {
   buildFilterIndex,
   computeFilterSchemaSignature,
@@ -41,7 +41,7 @@ import {
   getFilterField,
   warnFilterOnce,
   type FilterPathCollapse,
-} from "@theo/ui/patterns/filters/filters-lib";
+} from "theo-ui/patterns/filters/filters-lib";
 import {
   createFilterOperators,
   DEFAULT_FILTER_OPERATOR_LABELS,
@@ -51,7 +51,7 @@ import {
   operatorTakesValue,
   resolveFilterOperators,
   type FilterOperatorLabels,
-} from "@theo/ui/patterns/filters/filters-operators";
+} from "theo-ui/patterns/filters/filters-operators";
 import {
   clearFilterQuery,
   copyFilterNodeTo,
@@ -74,7 +74,7 @@ import {
   unwrapFilterGroup,
   updateFilterRule,
   wrapFilterNodeInGroup,
-} from "@theo/ui/patterns/filters/filters-query";
+} from "theo-ui/patterns/filters/filters-query";
 import type {
   FilterChangeDetails,
   FilterCombinator,
@@ -87,11 +87,11 @@ import type {
   FilterQuery,
   FilterRule,
   FilterValueDisplayContext,
-} from "@theo/ui/patterns/filters/filters-types";
+} from "theo-ui/patterns/filters/filters-types";
 import { cva } from "class-variance-authority";
 
-import { cn } from "@theo/ui/lib/utils";
-import { Button } from "@theo/ui/components/button";
+import { cn } from "theo-ui/lib/utils";
+import { Button } from "theo-ui/components/button";
 
 /* -------------------------------------------------------------------------- */
 /*                                  Variants                                  */
@@ -1165,13 +1165,13 @@ export {
   pruneFilterQuery,
   unwrapFilterGroup,
   wrapFilterNodeInGroup,
-} from "@theo/ui/patterns/filters/filters-query";
+} from "theo-ui/patterns/filters/filters-query";
 
 // The two resolver signatures `collectFilterIssues` takes.
 export type {
   FilterArityResolver,
   FilterValidateResolver,
-} from "@theo/ui/patterns/filters/filters-query";
+} from "theo-ui/patterns/filters/filters-query";
 
 export {
   // The read-only contract: the gate, and the props a mutating control wears.
@@ -1187,7 +1187,7 @@ export {
   useFilterFocusStore,
   useFilterRender,
   useFilterSegmentFocus,
-} from "@theo/ui/patterns/filters/filters-context";
+} from "theo-ui/patterns/filters/filters-context";
 
 export {
   FilterChip,
@@ -1195,28 +1195,28 @@ export {
   FilterRuleMenuItems,
   FilterValuePopover,
   useFilterRuleDisplay,
-} from "@theo/ui/patterns/filters/filters-chip";
+} from "theo-ui/patterns/filters/filters-chip";
 export {
   FiltersAdvanced,
   FiltersAdvancedPanel,
   FilterAdvancedRow,
-} from "@theo/ui/patterns/filters/filters-advanced";
+} from "theo-ui/patterns/filters/filters-advanced";
 export {
   FiltersBuilder,
   FilterFieldPicker,
-} from "@theo/ui/patterns/filters/filters-builder";
-export { DEFAULT_FILTER_LABELS } from "@theo/ui/patterns/filters/filters-i18n";
+} from "theo-ui/patterns/filters/filters-builder";
+export { DEFAULT_FILTER_LABELS } from "theo-ui/patterns/filters/filters-i18n";
 export {
   DEFAULT_FILTER_OPERATORS,
   DEFAULT_FILTER_OPERATOR_LABELS,
-} from "@theo/ui/patterns/filters/filters-operators";
+} from "theo-ui/patterns/filters/filters-operators";
 export {
   DEFAULT_FILTER_EDITORS,
   FilterDateEditor,
   FilterDateRangeEditor,
   useFilterOptions,
   useFilterValueResolution,
-} from "@theo/ui/patterns/filters/filters-editors";
+} from "theo-ui/patterns/filters/filters-editors";
 export {
   formatFilterDate,
   parseFilterDate,
@@ -1224,6 +1224,6 @@ export {
   toFilterDateValue,
   type FilterDateValue,
   type FilterRelativeDate,
-} from "@theo/ui/patterns/filters/filters-date";
+} from "theo-ui/patterns/filters/filters-date";
 
-export type * from "@theo/ui/patterns/filters/filters-types";
+export type * from "theo-ui/patterns/filters/filters-types";

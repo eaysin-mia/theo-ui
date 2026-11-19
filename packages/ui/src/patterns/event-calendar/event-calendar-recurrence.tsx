@@ -4,7 +4,7 @@ import type {
   EventCalendarOccurrence,
   EventCalendarRecurrenceRule,
   EventCalendarWeekday,
-} from "@theo/ui/patterns/event-calendar/event-calendar-types";
+} from "theo-ui/patterns/event-calendar/event-calendar-types";
 import { TZDate } from "@date-fns/tz";
 import { addDays, addMonths, addWeeks, addYears } from "date-fns";
 

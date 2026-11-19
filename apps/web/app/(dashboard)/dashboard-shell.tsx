@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AppSidebar } from "@theo/ui/patterns/app-layout";
+import { AppSidebar } from "theo-ui/patterns/app-layout";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@theo/ui/components/sidebar";
-import { cn } from "@theo/ui/lib/utils";
+} from "theo-ui/components/sidebar";
+import { cn } from "theo-ui/lib/utils";
 import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import {

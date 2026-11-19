@@ -8,7 +8,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@theo/ui/components/sidebar";
+} from "theo-ui/components/sidebar";
 import {
   MoreHorizontalIcon,
   FolderIcon,
@@ -21,7 +21,7 @@ import {
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "@theo/ui/components/menu";
+} from "theo-ui/components/menu";
 
 export function NavProjects({
   projects,

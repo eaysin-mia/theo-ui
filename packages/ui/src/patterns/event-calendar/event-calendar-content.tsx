@@ -4,20 +4,20 @@ import { type ComponentType, type ReactNode } from "react";
 import {
   useEventCalendarSelector,
   useEventCalendarViewConfig,
-} from "@theo/ui/patterns/event-calendar/event-calendar";
-import { EventCalendarAgendaView } from "@theo/ui/patterns/event-calendar/event-calendar-agenda-view";
-import { EventCalendarMonthView } from "@theo/ui/patterns/event-calendar/event-calendar-month-view";
-import { EventCalendarResourceView } from "@theo/ui/patterns/event-calendar/event-calendar-resource-view";
+} from "theo-ui/patterns/event-calendar/event-calendar";
+import { EventCalendarAgendaView } from "theo-ui/patterns/event-calendar/event-calendar-agenda-view";
+import { EventCalendarMonthView } from "theo-ui/patterns/event-calendar/event-calendar-month-view";
+import { EventCalendarResourceView } from "theo-ui/patterns/event-calendar/event-calendar-resource-view";
 import {
   EventCalendarDaysView,
   EventCalendarDayView,
   EventCalendarWeekView,
-} from "@theo/ui/patterns/event-calendar/event-calendar-time-grid";
-import type { CalendarView } from "@theo/ui/patterns/event-calendar/event-calendar-types";
+} from "theo-ui/patterns/event-calendar/event-calendar-time-grid";
+import type { CalendarView } from "theo-ui/patterns/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 
-import { cn } from "@theo/ui/lib/utils";
+import { cn } from "theo-ui/lib/utils";
 
 const DEFAULT_VIEW_COMPONENTS: Record<CalendarView, ComponentType> = {
   month: EventCalendarMonthView,

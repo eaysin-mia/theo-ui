@@ -4,8 +4,8 @@ import type { UsernameAuthClient } from "@better-auth-ui/core/plugins/username";
 import { useAuth, useSession } from "@better-auth-ui/react";
 import type { User } from "better-auth";
 
-import { Skeleton } from "@theo/ui/components/skeleton";
-import { cn } from "@theo/ui/lib/utils";
+import { Skeleton } from "theo-ui/components/skeleton";
+import { cn } from "theo-ui/lib/utils";
 import { UserAvatar } from "./user-avatar";
 
 export type UserViewProps = {

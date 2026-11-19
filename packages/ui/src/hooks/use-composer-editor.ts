@@ -17,7 +17,7 @@ import {
 import {
   COMPOSER_CLIPBOARD_TYPE,
   parseComposerClipboard,
-} from "@theo/ui/lib/composer-clipboard";
+} from "theo-ui/lib/composer-clipboard";
 import {
   type ActiveQuery,
   type ComposerItemValue,
@@ -39,7 +39,7 @@ import {
   readValue,
   restoreSelection,
   writeValue,
-} from "@theo/ui/lib/composer-document";
+} from "theo-ui/lib/composer-document";
 
 type ComposerChangeDetails = {
   reason: "input" | "selection" | "history" | "reset";

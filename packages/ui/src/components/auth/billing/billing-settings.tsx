@@ -28,9 +28,9 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@theo/ui/components/alert-dialog";
-import { Badge } from "@theo/ui/components/badge";
-import { Button } from "@theo/ui/components/button";
+} from "theo-ui/components/alert-dialog";
+import { Badge } from "theo-ui/components/badge";
+import { Button } from "theo-ui/components/button";
 import {
   Card,
   CardPanel,
@@ -38,10 +38,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@theo/ui/components/card";
-import { Field, FieldLabel } from "@theo/ui/components/field";
-import { Input } from "@theo/ui/components/input";
-import { Progress } from "@theo/ui/components/progress";
+} from "theo-ui/components/card";
+import { Field, FieldLabel } from "theo-ui/components/field";
+import { Input } from "theo-ui/components/input";
+import { Progress } from "theo-ui/components/progress";
 import {
   Select,
   SelectGroup,
@@ -49,10 +49,10 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@theo/ui/components/select";
-import { Spinner } from "@theo/ui/components/spinner";
-import { billingPlugin } from "@theo/ui/lib/auth/billing-plugin";
-import { cn } from "@theo/ui/lib/utils";
+} from "theo-ui/components/select";
+import { Spinner } from "theo-ui/components/spinner";
+import { billingPlugin } from "theo-ui/lib/auth/billing-plugin";
+import { cn } from "theo-ui/lib/utils";
 
 type SubscriptionAction = "cancel" | "restore";
 

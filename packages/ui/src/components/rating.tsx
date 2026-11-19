@@ -5,7 +5,7 @@ import { useState } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { StarIcon } from "lucide-react";
 
-import { cn } from "@theo/ui/lib/utils";
+import { cn } from "theo-ui/lib/utils";
 
 const ratingVariants = cva("inline-flex items-center", {
   variants: {

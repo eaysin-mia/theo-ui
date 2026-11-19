@@ -1,16 +1,16 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { useActiveOrganization, useSession } from "@theo/ui/components/auth";
-import { Badge } from "@theo/ui/components/badge";
-import { Button } from "@theo/ui/components/button";
+import { useActiveOrganization, useSession } from "theo-ui/components/auth";
+import { Badge } from "theo-ui/components/badge";
+import { Button } from "theo-ui/components/button";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@theo/ui/components/card";
+} from "theo-ui/components/card";
 import {
   Building2,
   Database,
@@ -25,21 +25,21 @@ import {
 import Link from "next/link";
 import { Pattern } from "@/components/examples/c-timeline-4";
 import { AutoHeightDemo } from "@/components/examples/c-auto-height-1";
-import { CartButton } from "@theo/ui/patterns/buttons/cart-button";
-import { RainbowButton } from "@theo/ui/patterns/buttons/rainbow-button";
-import { ShimmerButton } from "@theo/ui/patterns/buttons/shimmer-button";
-import { UndoButton } from "@theo/ui/patterns/buttons/undo-button";
-import { HoldButton } from "@theo/ui/patterns/buttons/hold-button";
-import { HaloSearch } from "@theo/ui/patterns/halo-search";
-import { TipSelector } from "@theo/ui/patterns/tip-selector";
-import { UptimeCard } from "@theo/ui/patterns/uptime-card";
+import { CartButton } from "theo-ui/patterns/buttons/cart-button";
+import { RainbowButton } from "theo-ui/patterns/buttons/rainbow-button";
+import { ShimmerButton } from "theo-ui/patterns/buttons/shimmer-button";
+import { UndoButton } from "theo-ui/patterns/buttons/undo-button";
+import { HoldButton } from "theo-ui/patterns/buttons/hold-button";
+import { HaloSearch } from "theo-ui/patterns/halo-search";
+import { TipSelector } from "theo-ui/patterns/tip-selector";
+import { UptimeCard } from "theo-ui/patterns/uptime-card";
 import {
   RelativeTime,
   RelativeTimeZone,
   RelativeTimeZoneDate,
   RelativeTimeZoneDisplay,
   RelativeTimeZoneLabel,
-} from "@theo/ui/components/relative-time";
+} from "theo-ui/components/relative-time";
 
 export default function DashboardOverviewPage() {
   const { data: session } = useSession(authClient);

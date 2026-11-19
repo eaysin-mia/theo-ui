@@ -27,18 +27,18 @@ import { useState } from "react";
 import {
   ProviderButtons,
   type SocialLayout,
-} from "@theo/ui/components/auth/provider-buttons";
-import { Button } from "@theo/ui/components/button";
-import { Checkbox } from "@theo/ui/components/checkbox";
-import { Field, FieldLabel, FieldSeparator } from "@theo/ui/components/field";
-import { Input } from "@theo/ui/components/input";
+} from "theo-ui/components/auth/provider-buttons";
+import { Button } from "theo-ui/components/button";
+import { Checkbox } from "theo-ui/components/checkbox";
+import { Field, FieldLabel, FieldSeparator } from "theo-ui/components/field";
+import { Input } from "theo-ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@theo/ui/components/input-group";
-import { useSignInContinuation } from "@theo/ui/lib/auth/use-sign-in-continuation";
-import { usernamePlugin } from "@theo/ui/lib/auth/username-plugin";
+} from "theo-ui/components/input-group";
+import { useSignInContinuation } from "theo-ui/lib/auth/use-sign-in-continuation";
+import { usernamePlugin } from "theo-ui/lib/auth/username-plugin";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { AuthFormContainer } from "../auth-layout";
 import { LastUsedBadge } from "../last-login-method/last-used-badge";

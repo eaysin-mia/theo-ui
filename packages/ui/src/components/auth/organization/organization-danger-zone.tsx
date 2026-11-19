@@ -5,9 +5,9 @@ import { useAuth } from "@better-auth-ui/react";
 import { useHasPermission } from "@better-auth-ui/react/plugins/organization";
 import type { ComponentProps } from "react";
 
-import { Card, CardPanel } from "@theo/ui/components/card";
-import { Separator } from "@theo/ui/components/separator";
-import { cn } from "@theo/ui/lib/utils";
+import { Card, CardPanel } from "theo-ui/components/card";
+import { Separator } from "theo-ui/components/separator";
+import { cn } from "theo-ui/lib/utils";
 import { DeleteOrganization } from "./delete-organization";
 import { DeleteOrganizationSkeleton } from "./delete-organization-skeleton";
 import { LeaveOrganization } from "./leave-organization";

@@ -1,7 +1,7 @@
 import type {
   CalendarView,
   EventCalendarDateRange,
-} from "@theo/ui/patterns/event-calendar/event-calendar-types";
+} from "theo-ui/patterns/event-calendar/event-calendar-types";
 import {
   format,
   isSameMonth,

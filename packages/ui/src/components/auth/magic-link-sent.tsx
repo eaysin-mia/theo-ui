@@ -3,7 +3,7 @@
 import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useEffect, useState } from "react";
 
-import { magicLinkPlugin } from "@theo/ui/lib/auth/magic-link-plugin";
+import { magicLinkPlugin } from "theo-ui/lib/auth/magic-link-plugin";
 import { AuthFormContainer } from "./auth-layout";
 import { OpenEmailButton } from "./open-email-button";
 import { useIsHydrated } from "./use-is-hydrated";

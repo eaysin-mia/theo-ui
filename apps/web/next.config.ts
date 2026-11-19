@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   devIndicators: false,
-  transpilePackages: ["@theo/ui"],
+  transpilePackages: ["theo-ui"],
 };
 
 export default nextConfig;

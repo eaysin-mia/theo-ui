@@ -8,8 +8,8 @@ import {
 } from "@better-auth-ui/react/plugins/organization";
 import { useState } from "react";
 
-import { Button } from "@theo/ui/components/button";
-import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
+import { Button } from "theo-ui/components/button";
+import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
 import { DeleteOrganizationDialog } from "./delete-organization-dialog";
 import { DeleteOrganizationSkeleton } from "./delete-organization-skeleton";
 

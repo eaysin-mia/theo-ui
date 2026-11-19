@@ -20,19 +20,19 @@ import {
 import { useIsMutating } from "@tanstack/react-query";
 import { CircleAlertIcon, Eye, EyeOff } from "lucide-react";
 import { useMemo, useState } from "react";
-import { Button } from "@theo/ui/components/button";
+import { Button } from "theo-ui/components/button";
 import {
   Field,
   FieldError,
   FieldLabel,
   FieldSeparator,
-} from "@theo/ui/components/field";
-import { Input } from "@theo/ui/components/input";
+} from "theo-ui/components/field";
+import { Input } from "theo-ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@theo/ui/components/input-group";
+} from "theo-ui/components/input-group";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

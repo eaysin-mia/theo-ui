@@ -19,7 +19,7 @@ import {
   QuestionnaireSkip,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "@theo/ui/patterns/questionnaire";
+} from "theo-ui/patterns/questionnaire";
 
 const questionnaireItems = [
   {
