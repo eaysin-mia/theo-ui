@@ -2,24 +2,28 @@
 
 import { Tabs as TabsPrimitive } from "@base-ui/react/tabs";
 import * as React from "react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 import {
   type SegmentedControlSize,
   segmentedControlIndicatorSurfaceClassName,
   segmentedControlItemLayoutClassName,
   segmentedControlItemSizeClassNames,
-} from "@workspace/ui/components/segmented-control";
+} from "@theo/ui/components/segmented-control";
 
-type TabsVariant = "default" | "underline";
-type TabsSize = SegmentedControlSize;
+export type TabsVariant = "default" | "underline";
+export type TabsSize = SegmentedControlSize;
+export type TabsProps = TabsPrimitive.Root.Props;
+export type TabsListProps = TabsPrimitive.List.Props & {
+  size?: TabsSize;
+  variant?: TabsVariant;
+};
+export type TabProps = TabsPrimitive.Tab.Props;
+export type TabsPanelProps = TabsPrimitive.Panel.Props;
 
 const TabsListContext: React.Context<TabsSize> =
   React.createContext<TabsSize>("default");
 
-export function Tabs({
-  className,
-  ...props
-}: TabsPrimitive.Root.Props): React.ReactElement {
+export function Tabs({ className, ...props }: TabsProps): React.ReactElement {
   return (
     <TabsPrimitive.Root
       className={cn(
@@ -85,7 +89,7 @@ export function TabsTab({
   return (
     <TabsPrimitive.Tab
       className={cn(
-        "relative flex shrink-0 grow cursor-pointer items-center justify-center rounded-md border border-transparent text-base font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start sm:text-sm data-disabled:pointer-events-none data-disabled:opacity-64 data-active:text-foreground",
+        "relative flex shrink-0 grow cursor-pointer items-center justify-center rounded-md border border-transparent text-base font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring data-active:text-foreground data-disabled:pointer-events-none data-disabled:opacity-64 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start sm:text-sm",
         segmentedControlItemLayoutClassName,
         segmentedControlItemSizeClassNames[resolvedSize],
         className,
@@ -110,10 +114,4 @@ export function TabsPanel({
   );
 }
 
-export {
-  TabsPrimitive,
-  TabsTab as TabsTrigger,
-  TabsPanel as TabsContent,
-  type TabsSize,
-  type TabsVariant,
-};
+export { TabsPrimitive, TabsTab as TabsTrigger, TabsPanel as TabsContent };

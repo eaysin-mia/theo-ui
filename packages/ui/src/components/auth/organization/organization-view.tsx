@@ -9,9 +9,9 @@ import {
 import type { Organization } from "better-auth/client";
 import type { ComponentProps } from "react";
 
-import { Badge } from "@workspace/ui/components/badge";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+import { Badge } from "@theo/ui/components/badge";
+import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
+import { cn } from "@theo/ui/lib/utils";
 import {
   OrganizationLogo,
   type OrganizationLogoSize,

@@ -2,9 +2,12 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "React Library",
   "extends": "./base.json",
-    "compilerOptions": {
+  "compilerOptions": {
     "jsx": "react-jsx",
     "module": "ESNext",
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "lib": ["es2022", "DOM", "DOM.Iterable"],
+    "declaration": true,
+    "declarationMap": true
   }
 }

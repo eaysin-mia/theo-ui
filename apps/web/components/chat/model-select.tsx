@@ -8,9 +8,9 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
+} from "@theo/ui/components/select";
 import { SparklesIcon } from "lucide-react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
 export interface ModelOption {
   id: string;

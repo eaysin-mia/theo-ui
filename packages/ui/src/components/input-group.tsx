@@ -2,12 +2,9 @@
 
 import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
-import { cn } from "@workspace/ui/lib/utils";
-import { Input, type InputProps } from "@workspace/ui/components/input";
-import {
-  Textarea,
-  type TextareaProps,
-} from "@workspace/ui/components/textarea";
+import { cn } from "@theo/ui/lib/utils";
+import { Input, type InputProps } from "@theo/ui/components/input";
+import { Textarea, type TextareaProps } from "@theo/ui/components/textarea";
 
 const inputGroupAddonVariants = cva(
   "flex h-auto cursor-text items-center justify-center gap-2 select-none [&_svg]:-mx-0.5 in-[[data-slot=input-group]:has([data-slot=input-control],[data-slot=textarea-control])]:[&_svg:not([class*='size-'])]:size-4.5 sm:in-[[data-slot=input-group]:has([data-slot=input-control],[data-slot=textarea-control])]:[&_svg:not([class*='size-'])]:size-4 not-has-[button]:**:[svg:not([class*='opacity-'])]:opacity-80 [&>kbd]:rounded-[calc(var(--radius)-5px)]",

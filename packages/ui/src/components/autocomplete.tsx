@@ -3,9 +3,9 @@
 import { Autocomplete as AutocompletePrimitive } from "@base-ui/react/autocomplete";
 import { ChevronsUpDownIcon, XIcon } from "lucide-react";
 import type React from "react";
-import { cn } from "@workspace/ui/lib/utils";
-import { Input } from "@workspace/ui/components/input";
-import { ScrollArea } from "@workspace/ui/components/scroll-area";
+import { cn } from "@theo/ui/lib/utils";
+import { Input } from "@theo/ui/components/input";
+import { ScrollArea } from "@theo/ui/components/scroll-area";
 
 export const Autocomplete: typeof AutocompletePrimitive.Root =
   AutocompletePrimitive.Root;
@@ -141,7 +141,7 @@ export function AutocompleteItem({
   return (
     <AutocompletePrimitive.Item
       className={cn(
-        "flex min-h-8 cursor-default items-center rounded-sm px-2 py-1 text-base outline-none select-none data-highlighted:bg-accent data-highlighted:text-accent-foreground sm:min-h-7 sm:text-sm data-disabled:pointer-events-none data-disabled:opacity-64",
+        "flex min-h-8 cursor-default items-center rounded-sm px-2 py-1 text-base outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-64 data-highlighted:bg-accent data-highlighted:text-accent-foreground sm:min-h-7 sm:text-sm",
         className,
       )}
       data-slot="autocomplete-item"

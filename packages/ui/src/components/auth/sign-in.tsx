@@ -22,20 +22,16 @@ import { useIsMutating } from "@tanstack/react-query";
 import { CircleAlertIcon, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
-import {
-  Field,
-  FieldLabel,
-  FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+import { Button } from "@theo/ui/components/button";
+import { Checkbox } from "@theo/ui/components/checkbox";
+import { Field, FieldLabel, FieldSeparator } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
+} from "@theo/ui/components/input-group";
+import { useSignInContinuation } from "@theo/ui/lib/auth/use-sign-in-continuation";
 import { isAuthFormFieldInvalid, useAuthForm } from "./auth-form";
 import { AuthFormContainer } from "./auth-layout";
 import { LastUsedBadge } from "./last-login-method/last-used-badge";

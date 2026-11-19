@@ -15,10 +15,10 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar";
-import { Button } from "@workspace/ui/components/button";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { oauthProviderPlugin } from "@workspace/ui/lib/auth/oauth-provider-plugin";
+} from "@theo/ui/components/avatar";
+import { Button } from "@theo/ui/components/button";
+import { Skeleton } from "@theo/ui/components/skeleton";
+import { oauthProviderPlugin } from "@theo/ui/lib/auth/oauth-provider-plugin";
 import { RemoveAuthorizationDialog } from "./remove-authorization-dialog";
 
 export type AuthorizedApplicationProps = {
@@ -84,7 +84,7 @@ export function AuthorizedApplication({
             <a
               className="truncate text-xs text-muted-foreground underline-offset-4 hover:underline"
               href={websiteUrl}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
             >
               {websiteUrl}

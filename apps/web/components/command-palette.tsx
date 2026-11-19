@@ -22,8 +22,8 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { useAutocompleteFilter } from "@workspace/ui/components/autocomplete";
-import { Button } from "@workspace/ui/components/button";
+import { useAutocompleteFilter } from "@theo/ui/components/autocomplete";
+import { Button } from "@theo/ui/components/button";
 import {
   Command,
   CommandCollection,
@@ -40,13 +40,13 @@ import {
   CommandPanel,
   CommandSeparator,
   CommandShortcut,
-} from "@workspace/ui/components/command";
-import { EmptyMedia } from "@workspace/ui/components/empty";
-import { Input } from "@workspace/ui/components/input";
-import { Kbd, KbdGroup } from "@workspace/ui/components/kbd";
-import { ScrollArea } from "@workspace/ui/components/scroll-area";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
+} from "@theo/ui/components/command";
+import { EmptyMedia } from "@theo/ui/components/empty";
+import { Input } from "@theo/ui/components/input";
+import { Kbd, KbdGroup } from "@theo/ui/components/kbd";
+import { ScrollArea } from "@theo/ui/components/scroll-area";
+import { Skeleton } from "@theo/ui/components/skeleton";
+import { Spinner } from "@theo/ui/components/spinner";
 
 interface Item {
   value: string;
@@ -415,8 +415,10 @@ export function CommandPaletteProvider({ children }: { children: ReactNode }) {
             >
               <div className="relative flex items-center *:first:flex-1">
                 <CommandInput
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={(e) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setSearchQuery(e.target.value)
+                  }
+                  onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
                     if (e.key === "Tab") {
                       e.preventDefault();
                       handleAskAI();

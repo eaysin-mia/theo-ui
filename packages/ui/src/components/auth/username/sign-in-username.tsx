@@ -27,22 +27,18 @@ import { useState } from "react";
 import {
   ProviderButtons,
   type SocialLayout,
-} from "@workspace/ui/components/auth/provider-buttons";
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
-import {
-  Field,
-  FieldLabel,
-  FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/components/auth/provider-buttons";
+import { Button } from "@theo/ui/components/button";
+import { Checkbox } from "@theo/ui/components/checkbox";
+import { Field, FieldLabel, FieldSeparator } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
-import { usernamePlugin } from "@workspace/ui/lib/auth/username-plugin";
+} from "@theo/ui/components/input-group";
+import { useSignInContinuation } from "@theo/ui/lib/auth/use-sign-in-continuation";
+import { usernamePlugin } from "@theo/ui/lib/auth/username-plugin";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { AuthFormContainer } from "../auth-layout";
 import { LastUsedBadge } from "../last-login-method/last-used-badge";

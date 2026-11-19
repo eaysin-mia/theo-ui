@@ -1,21 +1,52 @@
-# shadcn/ui monorepo template
+# UI Workspace
 
-This is a Next.js monorepo template with shadcn/ui.
+This pnpm and Turborepo monorepo contains `@theo/ui`, an enterprise React 19 component library, and a Next.js 16 application (`apps/web`) demonstrating and validating all components and patterns.
 
-## Adding components
+- [`packages/ui`](./packages/ui/README.md) – Standalone, publishable UI library built on Base UI and Tailwind CSS v4.
+- `apps/web` – Next.js 16 showcase application and playground.
+- `packages/eslint-config` – Shared ESLint flat configurations.
+- `packages/typescript-config` – Shared TypeScript configurations.
 
-To add components to your app, run the following command at the root of your `web` app:
+## Development
 
 ```bash
-pnpm dlx shadcn@latest add button -c apps/web
+# Install dependencies
+pnpm install
+
+# Start development server (Turbopack)
+pnpm dev
+
+# Build all packages and apps
+pnpm build
 ```
 
-This will place the ui components in the `packages/ui/src/components` directory.
+## Quality & Checks
 
-## Using components
+```bash
+# Typecheck all packages
+pnpm typecheck
 
-To use the components in your app, import them from the `ui` package.
+# Lint all packages
+pnpm lint
 
-```tsx
-import { Button } from "@workspace/ui/components/button";
+# Format check
+pnpm format:check
+
+# Validate UI package exports and publish readiness
+pnpm --filter @theo/ui package:check
+```
+
+## Releasing & Publishing
+
+This repository uses [Changesets](https://github.com/changesets/changesets) for semantic versioning and changelog management:
+
+```bash
+# 1. Generate a changeset when making modifications
+pnpm changeset
+
+# 2. Bump versions across packages based on changesets
+pnpm version-packages
+
+# 3. Build, verify, and publish to npm / GitHub Packages
+pnpm release
 ```

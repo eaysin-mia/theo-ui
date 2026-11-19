@@ -12,16 +12,12 @@ import { useSelector } from "@tanstack/react-form";
 import { useIsMutating } from "@tanstack/react-query";
 import { useId, useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import {
-  Field,
-  FieldLabel,
-  FieldSeparator,
-} from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { emailOtpPlugin } from "@workspace/ui/lib/auth/email-otp-plugin";
-import { useResendCooldown } from "@workspace/ui/lib/auth/use-resend-cooldown";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
+import { Button } from "@theo/ui/components/button";
+import { Field, FieldLabel, FieldSeparator } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
+import { emailOtpPlugin } from "@theo/ui/lib/auth/email-otp-plugin";
+import { useResendCooldown } from "@theo/ui/lib/auth/use-resend-cooldown";
+import { useSignInContinuation } from "@theo/ui/lib/auth/use-sign-in-continuation";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,

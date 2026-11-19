@@ -4,9 +4,9 @@ import type { AdminView } from "@better-auth-ui/core";
 import { useAuth, useAuthenticate, useAuthPlugin } from "@better-auth-ui/react";
 import { ShieldAlertIcon, UsersIcon } from "lucide-react";
 
-import { Button } from "@workspace/ui/components/button";
-import { adminPlugin } from "@workspace/ui/lib/auth/admin-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+import { Button } from "@theo/ui/components/button";
+import { adminPlugin } from "@theo/ui/lib/auth/admin-plugin";
+import { cn } from "@theo/ui/lib/utils";
 
 import { AdminUsers } from "./admin-users";
 

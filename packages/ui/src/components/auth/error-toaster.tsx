@@ -16,7 +16,7 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 import { useEffect } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
+import { toastManager } from "@theo/ui/components/toast";
 
 export function ErrorToaster() {
   const { localization } = useAuth();

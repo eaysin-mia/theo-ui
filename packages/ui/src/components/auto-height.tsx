@@ -4,17 +4,16 @@ import * as React from "react";
 import {
   motion,
   type HTMLMotionProps,
-  type LegacyAnimationControls,
   type TargetAndTransition,
   type Transition,
-  useReducedMotion,
+  useReducedMotionConfig,
 } from "motion/react";
 
 import {
   useAutoHeight,
   type AutoHeightOptions,
-} from "@workspace/ui/hooks/use-auto-height";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/hooks/use-auto-height";
+import { cn } from "@theo/ui/lib/utils";
 
 const DEFAULT_TRANSITION: Transition = {
   type: "spring",
@@ -36,7 +35,7 @@ export interface AutoHeightProps extends Omit<
   /**
    * Extra values to animate along with the height.
    */
-  animate?: TargetAndTransition | LegacyAnimationControls;
+  animate?: TargetAndTransition;
   /**
    * Transition configuration for the height spring.
    */
@@ -49,11 +48,17 @@ export interface AutoHeightProps extends Omit<
    * Optional CSS class applied to the inner content wrapper measured by ResizeObserver.
    */
   innerClassName?: string;
+  /**
+   * Explicitly toggle reduced motion (defaults to Framer Motion's MotionConfigContext).
+   */
+  reduceMotion?: boolean;
 }
 
 /**
  * AutoHeight animates its container height smoothly whenever its content changes.
  * Measures content using ResizeObserver and integrates with Motion spring animations.
+ *
+ * @remarks Requires optional peer dependency `motion` (`pnpm add motion`).
  */
 export function AutoHeight({
   children,
@@ -64,9 +69,11 @@ export function AutoHeight({
   className,
   innerClassName,
   options,
+  reduceMotion: customReduceMotion,
   ...props
 }: AutoHeightProps) {
-  const shouldReduceMotion = useReducedMotion();
+  const systemReduceMotion = useReducedMotionConfig() ?? false;
+  const shouldReduceMotion = customReduceMotion ?? systemReduceMotion;
   const { ref, height } = useAutoHeight<HTMLDivElement>(deps, options);
 
   const effectiveTransition: Transition = shouldReduceMotion

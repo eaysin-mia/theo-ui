@@ -9,11 +9,34 @@ import { useRender } from "@base-ui/react/use-render";
 import { ChevronRightIcon, XIcon } from "lucide-react";
 import type React from "react";
 import { createContext, useContext } from "react";
-import { cn } from "@workspace/ui/lib/utils";
-import { Button } from "@workspace/ui/components/button";
-import { ScrollArea } from "@workspace/ui/components/scroll-area";
+import { cn } from "@theo/ui/lib/utils";
+import { Button } from "@theo/ui/components/button";
+import { ScrollArea } from "@theo/ui/components/scroll-area";
 
-type DrawerPosition = "right" | "left" | "top" | "bottom";
+export type DrawerPosition = "right" | "left" | "top" | "bottom";
+
+export type DrawerProps = DrawerPrimitive.Root.Props & {
+  position?: DrawerPosition;
+};
+export type DrawerTriggerProps = DrawerPrimitive.Trigger.Props;
+export type DrawerPortalProps = DrawerPrimitive.Portal.Props;
+export type DrawerBackdropProps = DrawerPrimitive.Backdrop.Props;
+export type DrawerViewportProps = DrawerPrimitive.Viewport.Props;
+export type DrawerPopupProps = DrawerPrimitive.Popup.Props & {
+  showCloseButton?: boolean;
+  closeProps?: DrawerPrimitive.Close.Props;
+  portalProps?: DrawerPrimitive.Portal.Props;
+};
+export type DrawerHeaderProps = useRender.ComponentProps<"div">;
+export type DrawerFooterProps = useRender.ComponentProps<"div"> & {
+  variant?: "default" | "bare";
+};
+export type DrawerTitleProps = DrawerPrimitive.Title.Props;
+export type DrawerDescriptionProps = DrawerPrimitive.Description.Props;
+export type DrawerPanelProps = useRender.ComponentProps<"div"> & {
+  scrollFade?: boolean;
+};
+export type DrawerCloseProps = DrawerPrimitive.Close.Props;
 
 const DrawerContext: React.Context<{ position: DrawerPosition }> =
   createContext<{ position: DrawerPosition }>({
@@ -37,9 +60,7 @@ export function Drawer({
   swipeDirection,
   position = "bottom",
   ...props
-}: DrawerPrimitive.Root.Props & {
-  position?: DrawerPosition;
-}): React.ReactElement {
+}: DrawerProps): React.ReactElement {
   return (
     <DrawerContext.Provider value={{ position }}>
       <DrawerPrimitive.Root
@@ -532,7 +553,7 @@ export function DrawerMenuCheckboxItem({
     <CheckboxPrimitive.Root
       checked={checked}
       className={cn(
-        "grid min-h-9 w-full cursor-default items-center gap-2 rounded-sm px-2 py-1 text-base text-foreground outline-none select-none hover:bg-accent hover:text-accent-foreground sm:min-h-8 sm:text-sm data-disabled:pointer-events-none data-disabled:opacity-64 [&_svg]:pointer-events-none [&_svg]:-mx-0.5 [&_svg]:shrink-0 [&_svg:not([class*='opacity-'])]:opacity-80 [&_svg:not([class*='size-'])]:size-4.5 sm:[&_svg:not([class*='size-'])]:size-4",
+        "grid min-h-9 w-full cursor-default items-center gap-2 rounded-sm px-2 py-1 text-base text-foreground outline-none select-none hover:bg-accent hover:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-64 sm:min-h-8 sm:text-sm [&_svg]:pointer-events-none [&_svg]:-mx-0.5 [&_svg]:shrink-0 [&_svg:not([class*='opacity-'])]:opacity-80 [&_svg:not([class*='size-'])]:size-4.5 sm:[&_svg:not([class*='size-'])]:size-4",
         variant === "switch"
           ? "grid-cols-[minmax(0,1fr)_auto] gap-4 pe-1.5"
           : "grid-cols-[1rem_minmax(0,1fr)] pe-4",
@@ -549,7 +570,7 @@ export function DrawerMenuCheckboxItem({
         <>
           <span className="col-start-1 min-w-0 wrap-anywhere">{children}</span>
           <CheckboxPrimitive.Indicator
-            className="col-start-2 inline-flex h-[calc(var(--thumb-size)+2px)] w-[calc(var(--thumb-size)*2-2px)] shrink-0 items-center rounded-full p-px inset-shadow-[0_1px_--theme(--color-black/4%)] transition-[background-color,box-shadow] duration-200 outline-none [--thumb-size:--spacing(4)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background sm:[--thumb-size:--spacing(3)] data-checked:bg-primary data-unchecked:bg-input data-disabled:opacity-64"
+            className="col-start-2 inline-flex h-[calc(var(--thumb-size)+2px)] w-[calc(var(--thumb-size)*2-2px)] shrink-0 items-center rounded-full p-px inset-shadow-[0_1px_--theme(--color-black/4%)] transition-[background-color,box-shadow] duration-200 outline-none [--thumb-size:--spacing(4)] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background data-checked:bg-primary data-disabled:opacity-64 data-unchecked:bg-input sm:[--thumb-size:--spacing(3)]"
             keepMounted
           >
             <span className="pointer-events-none block aspect-square h-full origin-left rounded-(--thumb-size) bg-background shadow-sm/5 will-change-transform [transition:translate_.15s,border-radius_.15s,scale_.1s_.1s,transform-origin_.15s] in-[[data-slot=drawer-menu-checkbox-item]:active]:rounded-[var(--thumb-size)/calc(var(--thumb-size)*1.10)] in-[[data-slot=drawer-menu-checkbox-item]:active]:not-data-disabled:scale-x-110 in-[[data-slot=drawer-menu-checkbox-item][data-checked]]:origin-[var(--thumb-size)_50%] in-[[data-slot=drawer-menu-checkbox-item][data-checked]]:translate-x-[calc(var(--thumb-size)-4px)] rtl:origin-right rtl:in-[[data-slot=drawer-menu-checkbox-item][data-checked]]:origin-left rtl:in-[[data-slot=drawer-menu-checkbox-item][data-checked]]:-translate-x-[calc(var(--thumb-size)-4px)]" />
@@ -606,7 +627,7 @@ export function DrawerMenuRadioItem({
   return (
     <RadioPrimitive.Root
       className={cn(
-        "grid min-h-9 w-full cursor-default items-center gap-2 rounded-sm px-2 py-1 text-base text-foreground outline-none select-none hover:bg-accent hover:text-accent-foreground sm:min-h-8 sm:text-sm data-disabled:pointer-events-none data-disabled:opacity-64 [&_svg]:pointer-events-none [&_svg]:-mx-0.5 [&_svg]:shrink-0 [&_svg:not([class*='opacity-'])]:opacity-80 [&_svg:not([class*='size-'])]:size-4.5 sm:[&_svg:not([class*='size-'])]:size-4",
+        "grid min-h-9 w-full cursor-default items-center gap-2 rounded-sm px-2 py-1 text-base text-foreground outline-none select-none hover:bg-accent hover:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-64 sm:min-h-8 sm:text-sm [&_svg]:pointer-events-none [&_svg]:-mx-0.5 [&_svg]:shrink-0 [&_svg:not([class*='opacity-'])]:opacity-80 [&_svg:not([class*='size-'])]:size-4.5 sm:[&_svg:not([class*='size-'])]:size-4",
         "grid-cols-[1rem_minmax(0,1fr)] items-center pe-4",
         className,
       )}

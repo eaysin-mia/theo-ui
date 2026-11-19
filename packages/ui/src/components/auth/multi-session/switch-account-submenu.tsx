@@ -3,8 +3,8 @@
 import { useAuth, useAuthPlugin, useSession } from "@better-auth-ui/react";
 import { ArrowLeftRight } from "lucide-react";
 
-import { MenuSub, MenuSubTrigger } from "@workspace/ui/components/menu";
-import { multiSessionPlugin } from "@workspace/ui/lib/auth/multi-session-plugin";
+import { MenuSub, MenuSubTrigger } from "@theo/ui/components/menu";
+import { multiSessionPlugin } from "@theo/ui/lib/auth/multi-session-plugin";
 import { SwitchAccountSubmenuContent } from "./switch-account-submenu-content";
 
 export type SwitchAccountSubmenuProps = {

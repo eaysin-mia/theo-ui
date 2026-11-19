@@ -2,7 +2,7 @@
 
 import { Slider as SliderPrimitive } from "@base-ui/react/slider";
 import * as React from "react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
 export function Slider({
   className,
@@ -37,7 +37,7 @@ export function Slider({
     >
       {children}
       <SliderPrimitive.Control
-        className="flex touch-none select-none data-[orientation=horizontal]:w-full data-[orientation=horizontal]:min-w-44 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:flex-col data-disabled:pointer-events-none data-disabled:opacity-64"
+        className="flex touch-none select-none data-disabled:pointer-events-none data-disabled:opacity-64 data-[orientation=horizontal]:w-full data-[orientation=horizontal]:min-w-44 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:flex-col"
         data-slot="slider-control"
       >
         <SliderPrimitive.Track

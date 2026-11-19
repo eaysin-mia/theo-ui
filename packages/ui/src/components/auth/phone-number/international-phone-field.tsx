@@ -9,9 +9,9 @@ import {
 } from "@better-auth-ui/core/plugins/phone-number";
 import { useId, useMemo } from "react";
 
-import { Field, FieldError, FieldLabel } from "@workspace/ui/components/field";
-import { Group, GroupSeparator } from "@workspace/ui/components/group";
-import { Input } from "@workspace/ui/components/input";
+import { Field, FieldError, FieldLabel } from "@theo/ui/components/field";
+import { Group, GroupSeparator } from "@theo/ui/components/group";
+import { Input } from "@theo/ui/components/input";
 import {
   Select,
   SelectGroup,
@@ -19,7 +19,7 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
+} from "@theo/ui/components/select";
 
 type InternationalPhoneFieldProps = {
   adapter: PhoneNumberAdapter;

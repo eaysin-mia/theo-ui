@@ -8,8 +8,8 @@ import {
 } from "@better-auth-ui/react";
 import { useId } from "react";
 
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+import { Field, FieldLabel } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
 import { isAuthFormFieldInvalid, useAuthForm } from "./auth-form";
 import { AuthFormContainer } from "./auth-layout";
 import { RESET_LINK_SENT_STORAGE_KEY } from "./reset-link-sent";

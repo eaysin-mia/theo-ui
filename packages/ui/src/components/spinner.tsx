@@ -1,6 +1,6 @@
 import { Loader2Icon } from "lucide-react";
 import type React from "react";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
 export function Spinner({
   className,

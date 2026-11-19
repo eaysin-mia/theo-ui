@@ -3,9 +3,9 @@
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox";
 import { ChevronsUpDownIcon, XIcon } from "lucide-react";
 import * as React from "react";
-import { cn } from "@workspace/ui/lib/utils";
-import { Input } from "@workspace/ui/components/input";
-import { ScrollArea } from "@workspace/ui/components/scroll-area";
+import { cn } from "@theo/ui/lib/utils";
+import { Input } from "@theo/ui/components/input";
+import { ScrollArea } from "@theo/ui/components/scroll-area";
 
 export const ComboboxContext: React.Context<{
   chipsRef: React.RefObject<Element | null> | null;
@@ -214,7 +214,7 @@ export function ComboboxItem({
   return (
     <ComboboxPrimitive.Item
       className={cn(
-        "grid min-h-8 cursor-default grid-cols-[1rem_minmax(0,1fr)] items-center gap-2 rounded-sm py-1 ps-2 pe-4 text-base outline-none in-data-[side=none]:min-w-[calc(var(--anchor-width)+1.25rem)] data-highlighted:bg-accent data-highlighted:text-accent-foreground sm:min-h-7 sm:text-sm data-disabled:pointer-events-none data-disabled:opacity-64 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4.5 sm:[&_svg:not([class*='size-'])]:size-4",
+        "grid min-h-8 cursor-default grid-cols-[1rem_minmax(0,1fr)] items-center gap-2 rounded-sm py-1 ps-2 pe-4 text-base outline-none in-data-[side=none]:min-w-[calc(var(--anchor-width)+1.25rem)] data-disabled:pointer-events-none data-disabled:opacity-64 data-highlighted:bg-accent data-highlighted:text-accent-foreground sm:min-h-7 sm:text-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4.5 sm:[&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       data-slot="combobox-item"

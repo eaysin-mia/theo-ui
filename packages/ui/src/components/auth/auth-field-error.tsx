@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { FieldError } from "@workspace/ui/components/field";
+import { FieldError } from "@theo/ui/components/field";
 
 export interface AuthFieldErrorProps {
   errors?: Array<string | { message?: string } | undefined | null>;

@@ -1,14 +1,15 @@
 import { Geist_Mono, Inter } from "next/font/google";
 
-import "@workspace/ui/globals.css";
+import "./globals.css";
 import {
   AnchoredToastProvider,
   ToastProvider,
-} from "@workspace/ui/components/toast";
+} from "@theo/ui/components/toast";
 import { AppAuthProvider } from "@/components/auth-provider";
+import { MotionProvider } from "@/components/motion-provider";
 import { QueryProvider } from "@/components/query-provider";
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -32,18 +33,22 @@ export default function RootLayout({
       className={cn("antialiased", fontSans.variable, fontMono.variable)}
     >
       <body
-        className="min-h-screen bg-background font-sans text-foreground"
+        className="relative min-h-screen bg-background font-sans text-foreground"
         suppressHydrationWarning
       >
-        <ThemeProvider>
-          <QueryProvider>
-            <ToastProvider>
-              <AnchoredToastProvider>
-                <AppAuthProvider>{children}</AppAuthProvider>
-              </AnchoredToastProvider>
-            </ToastProvider>
-          </QueryProvider>
-        </ThemeProvider>
+        <div className="relative isolate flex min-h-svh flex-col">
+          <MotionProvider>
+            <ThemeProvider>
+              <QueryProvider>
+                <ToastProvider>
+                  <AnchoredToastProvider>
+                    <AppAuthProvider>{children}</AppAuthProvider>
+                  </AnchoredToastProvider>
+                </ToastProvider>
+              </QueryProvider>
+            </ThemeProvider>
+          </MotionProvider>
+        </div>
       </body>
     </html>
   );

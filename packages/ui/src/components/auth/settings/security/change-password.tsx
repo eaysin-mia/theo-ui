@@ -23,8 +23,8 @@ import {
 } from "@better-auth-ui/react";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "@workspace/ui/components/toast";
-import { Button } from "@workspace/ui/components/button";
+import { toastManager } from "@theo/ui/components/toast";
+import { Button } from "@theo/ui/components/button";
 import {
   Card,
   CardDescription,
@@ -32,17 +32,17 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@workspace/ui/components/card";
-import { Field, FieldError, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+} from "@theo/ui/components/card";
+import { Field, FieldError, FieldLabel } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/input-group";
+import { Skeleton } from "@theo/ui/components/skeleton";
+import { Spinner } from "@theo/ui/components/spinner";
+import { cn } from "@theo/ui/lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../../auth-form";
 import { OpenEmailButton } from "../../open-email-button";
 import { PasswordStrengthMeter } from "../../password-strength-meter";

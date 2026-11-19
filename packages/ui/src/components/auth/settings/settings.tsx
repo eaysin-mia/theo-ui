@@ -10,8 +10,8 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@workspace/ui/components/tabs";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/tabs";
+import { cn } from "@theo/ui/lib/utils";
 import { TabsScrollContainer } from "../tabs-scroll-container";
 import { AccountSettings } from "./account/account-settings";
 import { SecuritySettings } from "./security/security-settings";

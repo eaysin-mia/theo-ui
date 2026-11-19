@@ -2,19 +2,20 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AppSidebar } from "@workspace/ui/components/app-layout";
+import { AppSidebar } from "@theo/ui/patterns/app-layout";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@workspace/ui/components/sidebar";
-import { cn } from "@workspace/ui/lib/utils";
-import { SearchIcon } from "lucide-react";
+} from "@theo/ui/components/sidebar";
+import { cn } from "@theo/ui/lib/utils";
+import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import {
   CommandPaletteProvider,
   useCommandPalette,
 } from "@/components/command-palette";
+import { dashboardNavItems } from "@/lib/navigation";
 
 function MobileSearchTrigger() {
   const { setOpen } = useCommandPalette();
@@ -43,11 +44,25 @@ function DashboardInner({
   return (
     <SidebarProvider defaultOpen={defaultOpen}>
       <AppSidebar
+        app={{
+          name: "Theo UI",
+          logo: <GalleryVerticalEndIcon aria-hidden="true" />,
+          subtitle: "Workspace",
+          href: "/",
+        }}
+        items={dashboardNavItems}
         teams={[]}
         currentPath={pathname}
         onSearchClick={() => setOpen(true)}
-        renderLink={({ href, children, ...rest }) => (
-          <Link href={href} {...rest}>
+        renderLink={({
+          href,
+          children,
+          ...rest
+        }: {
+          href?: string;
+          children?: React.ReactNode;
+        }) => (
+          <Link href={href ?? "/"} {...rest}>
             {children}
           </Link>
         )}

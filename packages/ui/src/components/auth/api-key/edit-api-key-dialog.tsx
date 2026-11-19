@@ -7,7 +7,7 @@ import type {
 import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useUpdateApiKey } from "@better-auth-ui/react/plugins/api-key";
 import { useEffect } from "react";
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/components/button";
 import {
   Dialog,
   DialogClose,
@@ -17,10 +17,10 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@workspace/ui/components/dialog";
-import { Field, FieldError, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
-import { apiKeyPlugin } from "@workspace/ui/lib/auth/api-key-plugin";
+} from "@theo/ui/components/dialog";
+import { Field, FieldError, FieldLabel } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
+import { apiKeyPlugin } from "@theo/ui/lib/auth/api-key-plugin";
 import { useAuthForm } from "../auth-form";
 
 export function EditApiKeyDialog({

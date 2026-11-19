@@ -3,7 +3,7 @@
 import { useAuthPlugin } from "@better-auth-ui/react";
 import { Key } from "lucide-react";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/components/button";
 import {
   Empty,
   EmptyContent,
@@ -11,8 +11,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { apiKeyPlugin } from "@workspace/ui/lib/auth/api-key-plugin";
+} from "@theo/ui/components/empty";
+import { apiKeyPlugin } from "@theo/ui/lib/auth/api-key-plugin";
 
 export type ApiKeysEmptyProps = {
   onCreatePress: () => void;

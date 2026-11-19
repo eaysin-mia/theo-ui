@@ -25,21 +25,17 @@ import { useIsMutating } from "@tanstack/react-query";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@workspace/ui/components/button";
-import { Checkbox } from "@workspace/ui/components/checkbox";
-import {
-  Field,
-  FieldLabel,
-  FieldSeparator,
-} from "@workspace/ui/components/field";
+import { Button } from "@theo/ui/components/button";
+import { Checkbox } from "@theo/ui/components/checkbox";
+import { Field, FieldLabel, FieldSeparator } from "@theo/ui/components/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { phoneNumberPlugin } from "@workspace/ui/lib/auth/phone-number-plugin";
-import { useResendCooldown } from "@workspace/ui/lib/auth/use-resend-cooldown";
-import { useSignInContinuation } from "@workspace/ui/lib/auth/use-sign-in-continuation";
+} from "@theo/ui/components/input-group";
+import { phoneNumberPlugin } from "@theo/ui/lib/auth/phone-number-plugin";
+import { useResendCooldown } from "@theo/ui/lib/auth/use-resend-cooldown";
+import { useSignInContinuation } from "@theo/ui/lib/auth/use-sign-in-continuation";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,

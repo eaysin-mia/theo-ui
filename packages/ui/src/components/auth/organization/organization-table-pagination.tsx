@@ -2,21 +2,21 @@
 
 import type { OrganizationLocalization } from "@better-auth-ui/core/plugins/organization";
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@theo/ui/components/button";
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationNext,
   PaginationPrevious,
-} from "@workspace/ui/components/pagination";
+} from "@theo/ui/components/pagination";
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
+} from "@theo/ui/components/select";
 import { ORGANIZATION_TABLE_PAGE_SIZE_OPTIONS } from "./organization-table-state";
 
 /**

@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@workspace/ui"],
   devIndicators: false,
+  transpilePackages: ["@theo/ui"],
 };
 
 export default nextConfig;

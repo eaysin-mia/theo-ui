@@ -4,7 +4,7 @@ import {
   type DeleteUserPluginOptions,
 } from "@better-auth-ui/core/plugins/delete-user";
 
-import { DangerZone } from "@workspace/ui/components/auth/delete-user/danger-zone";
+import { DangerZone } from "@theo/ui/components/auth/delete-user/danger-zone";
 
 export const deleteUserPlugin = createAuthPlugin(
   coreDeleteUserPlugin.id,

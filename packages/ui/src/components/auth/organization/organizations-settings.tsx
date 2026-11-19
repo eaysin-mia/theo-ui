@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from "react";
 
-import { cn } from "@workspace/ui/lib/utils";
+import { cn } from "@theo/ui/lib/utils";
 import { Organizations } from "./organizations";
 import { UserInvitations } from "./user-invitations";
 

@@ -13,15 +13,15 @@ import { Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@workspace/ui/components/button";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
-import { Input } from "@workspace/ui/components/input";
+import { Button } from "@theo/ui/components/button";
+import { Field, FieldLabel } from "@theo/ui/components/field";
+import { Input } from "@theo/ui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
-import { phoneNumberPlugin } from "@workspace/ui/lib/auth/phone-number-plugin";
+} from "@theo/ui/components/input-group";
+import { phoneNumberPlugin } from "@theo/ui/lib/auth/phone-number-plugin";
 import {
   isAuthFormFieldInvalid,
   setAuthFormServerError,

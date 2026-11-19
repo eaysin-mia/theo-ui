@@ -45,8 +45,8 @@ import {
 } from "lucide-react";
 import { Fragment, useEffect, useMemo } from "react";
 
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
+import { Badge } from "@theo/ui/components/badge";
+import { Button } from "@theo/ui/components/button";
 import {
   Card,
   CardAction,
@@ -55,7 +55,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card";
+} from "@theo/ui/components/card";
 import {
   Empty,
   EmptyContent,
@@ -63,13 +63,13 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty";
-import { Field, FieldLabel } from "@workspace/ui/components/field";
+} from "@theo/ui/components/empty";
+import { Field, FieldLabel } from "@theo/ui/components/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group";
+} from "@theo/ui/components/input-group";
 import {
   Select,
   SelectGroup,
@@ -77,13 +77,13 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select";
-import { Separator } from "@workspace/ui/components/separator";
-import { Skeleton } from "@workspace/ui/components/skeleton";
-import { Spinner } from "@workspace/ui/components/spinner";
-import { dashPlugin } from "@workspace/ui/lib/auth/dash-plugin";
-import { organizationPlugin } from "@workspace/ui/lib/auth/organization-plugin";
-import { cn } from "@workspace/ui/lib/utils";
+} from "@theo/ui/components/select";
+import { Separator } from "@theo/ui/components/separator";
+import { Skeleton } from "@theo/ui/components/skeleton";
+import { Spinner } from "@theo/ui/components/spinner";
+import { dashPlugin } from "@theo/ui/lib/auth/dash-plugin";
+import { organizationPlugin } from "@theo/ui/lib/auth/organization-plugin";
+import { cn } from "@theo/ui/lib/utils";
 import { useServerTableState } from "../server-table-state";
 
 type ActivityAccess = "admin" | "admin-user" | "organization" | "user";

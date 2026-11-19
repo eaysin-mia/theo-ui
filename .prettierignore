@@ -18,3 +18,12 @@ next-env.d.ts
 
 # Agents and local skill indexes
 .agents/
+.gemini/
+skills-lock.json
+
+# OpenSpec planning, changes, and archives
+openspec/
+
+# Workspace configuration
+pnpm-workspace.yaml
+

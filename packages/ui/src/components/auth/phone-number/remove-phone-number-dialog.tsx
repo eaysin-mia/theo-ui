@@ -9,9 +9,9 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@workspace/ui/components/alert-dialog";
-import { Button } from "@workspace/ui/components/button";
-import { Spinner } from "@workspace/ui/components/spinner";
+} from "@theo/ui/components/alert-dialog";
+import { Button } from "@theo/ui/components/button";
+import { Spinner } from "@theo/ui/components/spinner";
 
 export type RemovePhoneNumberDialogProps = {
   description: string;
