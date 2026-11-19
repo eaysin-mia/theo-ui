@@ -42,14 +42,14 @@ All core primitives (Button, Dialog, Select, Tabs, Input, Tooltip, Form, etc.) w
 
 `@theo/ui` isolates heavy or domain-specific libraries behind optional peer dependencies and subpath exports. Install these only when using the respective feature in your application:
 
-| Feature / Subpath | Required Peer Package(s) | Install Command |
-| :--- | :--- | :--- |
-| **Motion & Micro-interactions**<br>_(`CartButton`, `HoldButton`, `UndoButton`, `AutoHeight`, `HaloSearchInput`, `TipSelector`)_ | `motion` | `pnpm add motion` |
-| **Authentication UI**<br>_(`AuthProvider`, `SignIn`, `OAuthConsent`, Passkeys)_ | `better-auth`<br>`@better-auth-ui/react`<br>`@better-auth-ui/core` | `pnpm add better-auth @better-auth-ui/react @better-auth-ui/core` |
-| **Data Tables**<br>_(`DataTable`)_ | `@tanstack/react-table` | `pnpm add @tanstack/react-table` |
-| **Charts**<br>_(`ChartContainer`, `ChartTooltip`)_ | `recharts` | `pnpm add recharts` |
-| **Code Highlighting**<br>_(`CodeBlock`, `useHighlightedCode`)_ | `shiki` | `pnpm add shiki` |
-| **QR Code Generation**<br>_(`QrCode`)_ | `qrcode`<br>`@types/qrcode` | `pnpm add qrcode` |
+| Feature / Subpath                                                                                                               | Required Peer Package(s)                                           | Install Command                                                   |
+| :------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------- | :---------------------------------------------------------------- |
+| **Motion & Micro-interactions**<br>_(`CartButton`, `HoldButton`, `UndoButton`, `AutoHeight`, `HaloSearchInput`, `TipSelector`)_ | `motion`                                                           | `pnpm add motion`                                                 |
+| **Authentication UI**<br>_(`AuthProvider`, `SignIn`, `OAuthConsent`, Passkeys)_                                                 | `better-auth`<br>`@better-auth-ui/react`<br>`@better-auth-ui/core` | `pnpm add better-auth @better-auth-ui/react @better-auth-ui/core` |
+| **Data Tables**<br>_(`DataTable`)_                                                                                              | `@tanstack/react-table`                                            | `pnpm add @tanstack/react-table`                                  |
+| **Charts**<br>_(`ChartContainer`, `ChartTooltip`)_                                                                              | `recharts`                                                         | `pnpm add recharts`                                               |
+| **Code Highlighting**<br>_(`CodeBlock`, `useHighlightedCode`)_                                                                  | `shiki`                                                            | `pnpm add shiki`                                                  |
+| **QR Code Generation**<br>_(`QrCode`)_                                                                                          | `qrcode`<br>`@types/qrcode`                                        | `pnpm add qrcode`                                                 |
 
 #### Feature Installation Quick Recipes
 
