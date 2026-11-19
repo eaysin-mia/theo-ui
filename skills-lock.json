@@ -230,6 +230,11 @@
       "skillPath": "skills/engineering/triage/SKILL.md",
       "computedHash": "4342a07c9ebe0696713ec93a883c46e56503a587a34d824fabab5ca61e3bdfbb"
     },
+    "vitest-skill": {
+      "source": "LambdaTest/agent-skills",
+      "sourceType": "github",
+      "computedHash": "9cb1a9880a3d8763b93b8a83634ea31aca1d37ea1d8ca053e7b2c120f8594267"
+    },
     "wait-what": {
       "source": "mattpocock/skills",
       "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
