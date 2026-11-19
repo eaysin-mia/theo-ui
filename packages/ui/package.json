@@ -52,6 +52,8 @@
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "package:check": "publint"
   },
   "exports": {
@@ -390,18 +392,22 @@
     "@tailwindcss/cli": "^4.3.5",
     "@tailwindcss/postcss": "^4",
     "@tanstack/react-table": "^9.3.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
     "@turbo/gen": "^2.11.12",
     "@types/culori": "^4.0.1",
     "@types/node": "^20",
     "@types/qrcode": "^1.5.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.3.0",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
     "better-auth": "^1.7.25",
     "bowser": "^2.15.0",
     "culori": "^4.0.2",
     "eslint": "^10",
+    "jsdom": "^31.0.1",
     "motion": "^14.14.0",
     "publint": "^0.3.8",
     "qrcode": "^1.5.4",
@@ -411,6 +417,7 @@
     "shadcn": "^4.23.0",
     "shiki": "^4.6.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.1.1"
   }
 }

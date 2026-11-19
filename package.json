@@ -9,6 +9,7 @@
     "format": "turbo format",
     "format:check": "prettier --check .",
     "typecheck": "turbo typecheck",
+    "test": "turbo test",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build lint typecheck --filter=@theo/ui && changeset publish"
