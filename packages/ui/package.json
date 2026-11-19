@@ -28,8 +28,7 @@
     "#components/*": "./dist/components/*.js",
     "#patterns/*": "./dist/patterns/*.js",
     "#hooks/*": "./dist/hooks/*.js",
-    "#lib/*": "./dist/lib/*.js",
-    "#base-ui/*": "./dist/base-ui/*.js"
+    "#lib/*": "./dist/lib/*.js"
   },
   "scripts": {
     "build:js": "tsc -p tsconfig.build.json",
@@ -51,21 +50,6 @@
     "./styles.css": "./dist/styles.css",
     "./globals.css": "./dist/styles.css",
     "./theme.css": "./dist/styles.css",
-    "./components/*": {
-      "types": "./dist/components/*.d.ts",
-      "import": "./dist/components/*.js",
-      "default": "./dist/components/*.js"
-    },
-    "./base-ui": {
-      "types": "./dist/base-ui/index.d.ts",
-      "import": "./dist/base-ui/index.js",
-      "default": "./dist/base-ui/index.js"
-    },
-    "./base-ui/*": {
-      "types": "./dist/base-ui/*.d.ts",
-      "import": "./dist/base-ui/*.js",
-      "default": "./dist/base-ui/*.js"
-    },
     "./patterns": {
       "types": "./dist/patterns/index.d.ts",
       "import": "./dist/patterns/index.js",

@@ -4,6 +4,10 @@
 export * from "./lib/utils";
 export * from "./lib/highlighter";
 
+// Global Providers
+export { DirectionProvider } from "@base-ui/react/direction-provider";
+export { CSPProvider } from "@base-ui/react/csp-provider";
+
 // Hooks
 export * from "./hooks";
 

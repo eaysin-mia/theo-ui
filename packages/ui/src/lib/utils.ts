@@ -4,3 +4,6 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
 }
+
+export { useRender } from "@base-ui/react/use-render";
+export { mergeProps } from "@base-ui/react/merge-props";
