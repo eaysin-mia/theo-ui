@@ -366,9 +366,8 @@ export function HoldButton({
 
   const handlePointerDown = (e: PointerEvent<HTMLButtonElement>) => {
     onPointerDown?.(e);
-    if (e.button !== 0) {
-      return;
-    }
+    if (e.button !== 0) return;
+
     // Touch pointers are captured implicitly, which would keep the hold
     // going after the finger slides off. Release so pointerleave cancels it.
     if (e.currentTarget.hasPointerCapture(e.pointerId)) {
