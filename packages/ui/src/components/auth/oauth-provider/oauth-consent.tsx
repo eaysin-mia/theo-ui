@@ -255,7 +255,7 @@ export function OAuthConsent({ className, oauthQuery }: OAuthConsentProps) {
                   <a
                     className="text-primary underline underline-offset-4"
                     href={policyUrl}
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     {localization.privacyPolicy}
@@ -265,7 +265,7 @@ export function OAuthConsent({ className, oauthQuery }: OAuthConsentProps) {
                   <a
                     className="text-primary underline underline-offset-4"
                     href={termsUrl}
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     {localization.termsOfService}

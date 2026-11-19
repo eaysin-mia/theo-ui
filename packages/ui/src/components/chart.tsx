@@ -89,20 +89,30 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
     return null;
   }
 
+  // Sanitize CSS selector ID to prevent style breakout / selector injection
+  const safeId = id.replace(/[^\w-]/g, "");
+
   return (
     <style
       dangerouslySetInnerHTML={{
         __html: Object.entries(THEMES)
           .map(
             ([theme, prefix]) => `
-${prefix} [data-chart=${id}] {
+${prefix} [data-chart=${safeId}] {
 ${colorConfig
   .map(([key, itemConfig]) => {
-    const color =
+    const rawColor =
       itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??
       itemConfig.color;
-    return color ? `  --color-${key}: ${color};` : null;
+    if (!rawColor) return null;
+    const safeKey = key.replace(/[^\w-]/g, "");
+    // Strip closing tags and declaration delimiters to prevent style breakouts
+    const safeColor = String(rawColor)
+      .replace(/<\/style/gi, "")
+      .replace(/[;{}]/g, "");
+    return `  --color-${safeKey}: ${safeColor};`;
   })
+  .filter(Boolean)
   .join("\n")}
 }
 `,

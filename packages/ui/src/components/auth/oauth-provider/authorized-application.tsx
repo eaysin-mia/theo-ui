@@ -84,7 +84,7 @@ export function AuthorizedApplication({
             <a
               className="truncate text-xs text-muted-foreground underline-offset-4 hover:underline"
               href={websiteUrl}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
             >
               {websiteUrl}
