@@ -32,11 +32,11 @@ jobs:
       - name: Format check
         run: pnpm format:check
 
-      - name: Typecheck
-        run: pnpm turbo typecheck
-
       - name: Build
         run: pnpm turbo build
+
+      - name: Typecheck
+        run: pnpm turbo typecheck
 
       - name: Package check
         run: pnpm --filter @theo/ui run package:check
