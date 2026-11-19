@@ -52,6 +52,8 @@ export interface CartButtonProps {
  * "Add +" that opens into a "− n +" stepper in place. The + never moves, so a
  * second tap lands where the first did. At one, − turns into a bin; holding
  * + or − repeats, and a hold on − stops at one rather than emptying the line.
+ *
+ * @remarks Requires optional peer dependency `motion` (`pnpm add motion`).
  */
 export function CartButton({
   quantity,

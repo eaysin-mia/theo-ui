@@ -152,6 +152,8 @@ function Ticks({ max, percents }: { max: number; percents: number[] }) {
  * A tip picker for checkout, set on a tape you drag. Flick it and it coasts
  * to a whole percent; the ticks you've passed fill in, the tip and total roll,
  * and Round up picks the tip that makes the total a whole amount.
+ *
+ * @remarks Requires optional peer dependency `motion` (`pnpm add motion`).
  */
 export function TipSelector({
   subtotal = 42.6,

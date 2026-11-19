@@ -57,6 +57,8 @@ export interface AutoHeightProps extends Omit<
 /**
  * AutoHeight animates its container height smoothly whenever its content changes.
  * Measures content using ResizeObserver and integrates with Motion spring animations.
+ *
+ * @remarks Requires optional peer dependency `motion` (`pnpm add motion`).
  */
 export function AutoHeight({
   children,

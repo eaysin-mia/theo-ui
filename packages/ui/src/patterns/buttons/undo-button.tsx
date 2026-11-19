@@ -103,6 +103,11 @@ function DrawnCheck({ className }: { className?: string }) {
   );
 }
 
+/**
+ * UndoButton provides an optimistic action trigger with a countdown timer allowing the user to undo.
+ *
+ * @remarks Requires optional peer dependency `motion` (`pnpm add motion`).
+ */
 export function UndoButton({
   label = "Archive",
   doneLabel = "Archived",

@@ -281,6 +281,11 @@ function AnimatedPlaceholder({
   );
 }
 
+/**
+ * HaloSearchInput provides an interactive animated search input with rotating suggestion prompts and halo highlights.
+ *
+ * @remarks Requires optional peer dependency `motion` (`pnpm add motion`).
+ */
 export function HaloSearchInput({
   className,
   value,

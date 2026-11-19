@@ -233,6 +233,11 @@ function DrawnCheck() {
   );
 }
 
+/**
+ * HoldButton requires continuous press/hold to confirm critical actions.
+ *
+ * @remarks Requires optional peer dependency `motion` (`pnpm add motion`).
+ */
 export function HoldButton({
   className,
   variant = "destructive",

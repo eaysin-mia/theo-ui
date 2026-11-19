@@ -12,37 +12,65 @@ Published as modern ES Modules (ESM) with first-class TypeScript declarations, s
 - **React & React DOM**: `^19.0.0`
 - **Tailwind CSS**: `^4.0.0` (with CSS pipeline processing `@import` directives)
 
-### Optional Dependencies
-
-Depending on the components used in your application, install the corresponding optional peer dependencies:
-
-| Feature / Components                                                                                         | Required Peer Package                                          | Install Command                                                   |
-| :----------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :---------------------------------------------------------------- |
-| **Motion & Micro-interactions** (`CartButton`, `HoldButton`, `TipSelector`, `HaloSearchInput`, `AutoHeight`) | `motion`                                                       | `pnpm add motion`                                                 |
-| **Authentication UI** (`AuthProvider`, `SignIn`, `OAuthConsent`, Passkeys)                                   | `better-auth`, `@better-auth-ui/react`, `@better-auth-ui/core` | `pnpm add better-auth @better-auth-ui/react @better-auth-ui/core` |
-| **Data Tables** (`DataTable`)                                                                                | `@tanstack/react-table`                                        | `pnpm add @tanstack/react-table`                                  |
-| **Charts** (`ChartContainer`, `ChartTooltip`)                                                                | `recharts`                                                     | `pnpm add recharts`                                               |
-| **Code Highlighting** (`CodeBlock`)                                                                          | `shiki`                                                        | `pnpm add shiki`                                                  |
-| **QR Code Generation** (`QrCode`)                                                                            | `qrcode`, `@types/qrcode`                                      | `pnpm add qrcode`                                                 |
-
 ---
 
 ## Installation
 
-Install `@theo/ui` along with your preferred package manager:
+### Core Package
+
+Install `@theo/ui` into your project using your preferred package manager:
 
 ```bash
 # pnpm
-pnpm add @theo/ui motion
+pnpm add @theo/ui
 
 # npm
-npm install @theo/ui motion
+npm install @theo/ui
 
 # yarn
-yarn add @theo/ui motion
+yarn add @theo/ui
 
 # bun
-bun add @theo/ui motion
+bun add @theo/ui
+```
+
+All core primitives (Button, Dialog, Select, Tabs, Input, Tooltip, Form, etc.) work immediately with zero additional dependencies.
+
+---
+
+### Optional Feature Dependencies
+
+`@theo/ui` isolates heavy or domain-specific libraries behind optional peer dependencies and subpath exports. Install these only when using the respective feature in your application:
+
+| Feature / Subpath | Required Peer Package(s) | Install Command |
+| :--- | :--- | :--- |
+| **Motion & Micro-interactions**<br>_(`CartButton`, `HoldButton`, `UndoButton`, `AutoHeight`, `HaloSearchInput`, `TipSelector`)_ | `motion` | `pnpm add motion` |
+| **Authentication UI**<br>_(`AuthProvider`, `SignIn`, `OAuthConsent`, Passkeys)_ | `better-auth`<br>`@better-auth-ui/react`<br>`@better-auth-ui/core` | `pnpm add better-auth @better-auth-ui/react @better-auth-ui/core` |
+| **Data Tables**<br>_(`DataTable`)_ | `@tanstack/react-table` | `pnpm add @tanstack/react-table` |
+| **Charts**<br>_(`ChartContainer`, `ChartTooltip`)_ | `recharts` | `pnpm add recharts` |
+| **Code Highlighting**<br>_(`CodeBlock`, `useHighlightedCode`)_ | `shiki` | `pnpm add shiki` |
+| **QR Code Generation**<br>_(`QrCode`)_ | `qrcode`<br>`@types/qrcode` | `pnpm add qrcode` |
+
+#### Feature Installation Quick Recipes
+
+```bash
+# 1. Motion & Interactive Animations
+pnpm add motion
+
+# 2. Better Auth UI
+pnpm add better-auth @better-auth-ui/react @better-auth-ui/core
+
+# 3. Data Tables
+pnpm add @tanstack/react-table
+
+# 4. Charts & Analytics
+pnpm add recharts
+
+# 5. Syntax Highlighting
+pnpm add shiki
+
+# 6. QR Code Generation
+pnpm add qrcode
 ```
 
 ---
