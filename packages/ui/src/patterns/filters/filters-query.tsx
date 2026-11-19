@@ -504,14 +504,15 @@ export function moveFilterNode<V>(
 ): FilterQuery<V> {
   const found = findFilterNode(query, id);
   if (!found || !found.parent) return query;
+  const parent = found.parent;
 
   const from = found.index;
   const to = from + delta;
-  if (to < 0 || to >= found.parent.rules.length || delta === 0) return query;
+  if (to < 0 || to >= parent.rules.length || delta === 0) return query;
 
   return rewriteGroup(
     query,
-    (group) => group.id === found.parent!.id,
+    (group) => group.id === parent.id,
     (group) => {
       const rules = [...group.rules];
       const moved = rules.splice(from, 1).at(0);
@@ -628,10 +629,11 @@ export function wrapFilterNodeInGroup<V>(
 ): FilterQuery<V> {
   const found = findFilterNode(query, id);
   if (!found || !found.parent) return query;
+  const parent = found.parent;
 
   return rewriteGroup(
     query,
-    (group) => group.id === found.parent!.id,
+    (group) => group.id === parent.id,
     (group) => ({
       ...group,
       rules: group.rules.map((child) =>
@@ -655,11 +657,12 @@ export function unwrapFilterGroup<V>(
   if (query.id === groupId) return query;
   const found = findFilterNode(query, groupId);
   if (!found || !found.parent || !isFilterGroup(found.node)) return query;
+  const parent = found.parent;
 
   const dissolved = found.node;
   return rewriteGroup(
     query,
-    (group) => group.id === found.parent!.id,
+    (group) => group.id === parent.id,
     (group) => {
       const rules = [...group.rules];
       rules.splice(found.index, 1, ...dissolved.rules);

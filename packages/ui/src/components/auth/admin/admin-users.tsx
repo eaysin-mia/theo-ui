@@ -1096,7 +1096,7 @@ function UserInspector({
     () =>
       fieldsWithModelValues(
         auth.additionalFields ?? [],
-        user ? (user as unknown as Record<string, unknown>) : {},
+        user ? Object.fromEntries(Object.entries(user)) : {},
       ),
     [auth.additionalFields, user],
   );

@@ -655,9 +655,10 @@ function beginGesture<TData>(config: BeginGestureConfig<TData>) {
       internals.setSlotDraft(draft);
       return;
     }
+    if (!occurrence) return;
     const update: GanttProposedUpdate<TData> = {
-      event: occurrence!.event,
-      occurrence: occurrence!,
+      event: occurrence.event,
+      occurrence: occurrence,
       ...proposal,
       source:
         kind === "move" ? "drag" : (kind as "resize-start" | "resize-end"),
@@ -692,13 +693,13 @@ function beginGesture<TData>(config: BeginGestureConfig<TData>) {
     }
     if (resizeLine) {
       resizeLine.style.background = valid
-        ? (occurrence!.event.color ?? "var(--color-primary)")
+        ? (occurrence.event.color ?? "var(--color-primary)")
         : "var(--color-destructive)";
     }
     setBodyDragging(true, !valid);
     internals.setDrag({
       kind: kind === "move" ? "move" : (kind as "resize-start" | "resize-end"),
-      occurrence: occurrence!,
+      occurrence: occurrence,
       proposedStart: proposal.start,
       proposedEnd: proposal.end,
       proposedAllDay: proposal.allDay,

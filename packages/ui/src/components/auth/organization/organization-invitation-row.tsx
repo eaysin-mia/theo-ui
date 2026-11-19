@@ -105,7 +105,7 @@ export function OrganizationInvitationRow({
           <span className="text-sm font-medium">{invitation.email}</span>
           {invitationFields.map((field) => {
             const value = formatAdditionalFieldValue(
-              (invitation as unknown as Record<string, unknown>)[field.name],
+              Reflect.get(invitation, field.name),
             );
             return value ? (
               <span className="text-xs text-muted-foreground" key={field.name}>
@@ -158,9 +158,7 @@ export function OrganizationInvitationRow({
                 resendInvitation({
                   ...Object.fromEntries(
                     invitationFields.flatMap((field) => {
-                      const value = (
-                        invitation as unknown as Record<string, unknown>
-                      )[field.name];
+                      const value = Reflect.get(invitation, field.name);
                       return value === undefined ? [] : [[field.name, value]];
                     }),
                   ),

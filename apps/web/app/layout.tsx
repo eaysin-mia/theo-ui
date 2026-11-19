@@ -6,6 +6,7 @@ import {
   ToastProvider,
 } from "@theo/ui/components/toast";
 import { AppAuthProvider } from "@/components/auth-provider";
+import { MotionProvider } from "@/components/motion-provider";
 import { QueryProvider } from "@/components/query-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@theo/ui/lib/utils";
@@ -36,15 +37,17 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <div className="relative isolate flex min-h-svh flex-col">
-          <ThemeProvider>
-            <QueryProvider>
-              <ToastProvider>
-                <AnchoredToastProvider>
-                  <AppAuthProvider>{children}</AppAuthProvider>
-                </AnchoredToastProvider>
-              </ToastProvider>
-            </QueryProvider>
-          </ThemeProvider>
+          <MotionProvider>
+            <ThemeProvider>
+              <QueryProvider>
+                <ToastProvider>
+                  <AnchoredToastProvider>
+                    <AppAuthProvider>{children}</AppAuthProvider>
+                  </AnchoredToastProvider>
+                </ToastProvider>
+              </QueryProvider>
+            </ThemeProvider>
+          </MotionProvider>
         </div>
       </body>
     </html>

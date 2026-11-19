@@ -68,9 +68,8 @@ interface GanttBarContextValue<TData = unknown> {
   isSelected: boolean;
 }
 
-const GanttBarContext =
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  createContext<GanttBarContextValue<any> | null>(null);
+// Internal unexported transport carrier for generic bar context
+const GanttBarContext = createContext<GanttBarContextValue<any> | null>(null);
 
 /** The bar's subject; usable inside renderEvent content and bar children. */
 function useGanttBarContext<TData = unknown>(): GanttBarContextValue<TData> {
@@ -78,7 +77,7 @@ function useGanttBarContext<TData = unknown>(): GanttBarContextValue<TData> {
   if (!ctx) {
     throw new Error("useGanttBarContext must be used within <GanttBar>");
   }
-  return ctx as GanttBarContextValue<TData>;
+  return ctx;
 }
 
 interface GanttBarProps<TData = unknown> extends Omit<

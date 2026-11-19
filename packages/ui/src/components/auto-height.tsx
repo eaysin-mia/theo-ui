@@ -7,7 +7,7 @@ import {
   type LegacyAnimationControls,
   type TargetAndTransition,
   type Transition,
-  useReducedMotion,
+  useReducedMotionConfig,
 } from "motion/react";
 
 import {
@@ -49,6 +49,10 @@ export interface AutoHeightProps extends Omit<
    * Optional CSS class applied to the inner content wrapper measured by ResizeObserver.
    */
   innerClassName?: string;
+  /**
+   * Explicitly toggle reduced motion (defaults to Framer Motion's MotionConfigContext).
+   */
+  reduceMotion?: boolean;
 }
 
 /**
@@ -64,9 +68,11 @@ export function AutoHeight({
   className,
   innerClassName,
   options,
+  reduceMotion: customReduceMotion,
   ...props
 }: AutoHeightProps) {
-  const shouldReduceMotion = useReducedMotion();
+  const systemReduceMotion = useReducedMotionConfig() ?? false;
+  const shouldReduceMotion = customReduceMotion ?? systemReduceMotion;
   const { ref, height } = useAutoHeight<HTMLDivElement>(deps, options);
 
   const effectiveTransition: Transition = shouldReduceMotion

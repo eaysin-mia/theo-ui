@@ -5,16 +5,19 @@ import { ChevronDownIcon } from "lucide-react";
 import type React from "react";
 import { cn } from "@theo/ui/lib/utils";
 
-export function Accordion(
-  props: AccordionPrimitive.Root.Props,
-): React.ReactElement {
+export type AccordionProps = AccordionPrimitive.Root.Props;
+export type AccordionItemProps = AccordionPrimitive.Item.Props;
+export type AccordionTriggerProps = AccordionPrimitive.Trigger.Props;
+export type AccordionPanelProps = AccordionPrimitive.Panel.Props;
+
+export function Accordion(props: AccordionProps): React.ReactElement {
   return <AccordionPrimitive.Root data-slot="accordion" {...props} />;
 }
 
 export function AccordionItem({
   className,
   ...props
-}: AccordionPrimitive.Item.Props): React.ReactElement {
+}: AccordionItemProps): React.ReactElement {
   return (
     <AccordionPrimitive.Item
       className={cn("border-b last:border-b-0", className)}
@@ -28,7 +31,7 @@ export function AccordionTrigger({
   className,
   children,
   ...props
-}: AccordionPrimitive.Trigger.Props): React.ReactElement {
+}: AccordionTriggerProps): React.ReactElement {
   return (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger

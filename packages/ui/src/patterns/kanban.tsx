@@ -66,14 +66,15 @@ interface KanbanContextProps<T> {
   modifiers?: Modifiers;
 }
 
-const KanbanContext = createContext<KanbanContextProps<unknown> | null>(null);
+// Internal unexported transport carrier for generic kanban context
+const KanbanContext = createContext<KanbanContextProps<any> | null>(null);
 
 function useKanban<T = unknown>(): KanbanContextProps<T> {
   const context = useContext(KanbanContext);
   if (!context) {
     throw new Error("useKanban must be used within a <Kanban /> provider");
   }
-  return context as unknown as KanbanContextProps<T>;
+  return context;
 }
 
 interface ColumnContextProps {
@@ -611,9 +612,7 @@ function Kanban<T>({
   };
 
   return (
-    <KanbanContext.Provider
-      value={contextValue as unknown as KanbanContextProps<unknown>}
-    >
+    <KanbanContext.Provider value={contextValue}>
       <DndContext
         sensors={sensors}
         modifiers={modifiers}

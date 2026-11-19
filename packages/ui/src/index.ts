@@ -1,13 +1,14 @@
 // Root entrypoint for @theo/ui
 // Contains core primitives, utilities, providers, and hooks.
-// Domain modules and composite patterns are exported via dedicated subpaths:
+// Domain modules, heavy optional peer-dependent widgets, and composite patterns are exported via dedicated subpaths:
 // - Patterns: "@theo/ui/patterns" or "@theo/ui/patterns/<pattern>"
 // - Auth: "@theo/ui/components/auth" and "@theo/ui/lib/auth"
-// - Charts: "@theo/ui/components/chart"
+// - Charts: "@theo/ui/components/chart" (requires recharts)
+// - Syntax Highlighting: "@theo/ui/lib/highlighter" & "@theo/ui/hooks/use-highlighted-code" (requires shiki)
+// - Motion Animations: "@theo/ui/components/auto-height" (requires motion)
 
 // Lib & Utilities
 export * from "./lib/utils";
-export * from "./lib/highlighter";
 
 // Global Providers
 export { DirectionProvider } from "@base-ui/react/direction-provider";
@@ -23,7 +24,6 @@ export * from "./components/alert-dialog";
 export * from "./components/animated-gradient-text";
 export * from "./components/attachment";
 export * from "./components/autocomplete";
-export * from "./components/auto-height";
 export * from "./components/avatar";
 export * from "./components/badge";
 export * from "./components/breadcrumb";

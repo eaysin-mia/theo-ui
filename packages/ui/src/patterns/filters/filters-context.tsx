@@ -226,6 +226,7 @@ export interface FilterStateContextValue<V = unknown> {
   announcementSeq: number;
 }
 
+// Internal unexported transport carrier for generic filter state
 const FilterStateContext =
   React.createContext<FilterStateContextValue<any> | null>(null);
 
@@ -234,7 +235,7 @@ export function useFilterState<V = unknown>(): FilterStateContextValue<V> {
   if (!context) {
     throw new Error("useFilterState must be used inside <Filters>");
   }
-  return context as FilterStateContextValue<V>;
+  return context;
 }
 
 /* -------------------------------------------------------------------------- */

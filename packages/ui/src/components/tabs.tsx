@@ -10,16 +10,20 @@ import {
   segmentedControlItemSizeClassNames,
 } from "@theo/ui/components/segmented-control";
 
-type TabsVariant = "default" | "underline";
-type TabsSize = SegmentedControlSize;
+export type TabsVariant = "default" | "underline";
+export type TabsSize = SegmentedControlSize;
+export type TabsProps = TabsPrimitive.Root.Props;
+export type TabsListProps = TabsPrimitive.List.Props & {
+  size?: TabsSize;
+  variant?: TabsVariant;
+};
+export type TabProps = TabsPrimitive.Tab.Props;
+export type TabsPanelProps = TabsPrimitive.Panel.Props;
 
 const TabsListContext: React.Context<TabsSize> =
   React.createContext<TabsSize>("default");
 
-export function Tabs({
-  className,
-  ...props
-}: TabsPrimitive.Root.Props): React.ReactElement {
+export function Tabs({ className, ...props }: TabsProps): React.ReactElement {
   return (
     <TabsPrimitive.Root
       className={cn(
@@ -110,10 +114,4 @@ export function TabsPanel({
   );
 }
 
-export {
-  TabsPrimitive,
-  TabsTab as TabsTrigger,
-  TabsPanel as TabsContent,
-  type TabsSize,
-  type TabsVariant,
-};
+export { TabsPrimitive, TabsTab as TabsTrigger, TabsPanel as TabsContent };

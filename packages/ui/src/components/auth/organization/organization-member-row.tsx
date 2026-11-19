@@ -127,7 +127,7 @@ export function OrganizationMemberRow({
           <UserView user={member.user} />
           {memberFields.map((field) => {
             const value = formatAdditionalFieldValue(
-              (member as unknown as Record<string, unknown>)[field.name],
+              Reflect.get(member, field.name),
             );
             return value ? (
               <span className="text-xs text-muted-foreground" key={field.name}>

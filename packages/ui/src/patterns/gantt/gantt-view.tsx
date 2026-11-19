@@ -493,8 +493,8 @@ function GanttView({
         const isGroup = !!resource.children?.length;
         const collapsed = collapsedGroups.has(resource.id);
         result.push({ resource, parentId, depth, isGroup, collapsed });
-        if (isGroup && !collapsed)
-          walk(resource.children!, depth + 1, resource.id);
+        if (resource.children && !collapsed)
+          walk(resource.children, depth + 1, resource.id);
       }
     };
     walk(settings.resources, 0, null);

@@ -484,8 +484,23 @@ function createGanttStore<TData>(
       invalidate();
     }
     if (!controlled) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (internal as any)[key] = value;
+      switch (key) {
+        case "scale":
+          internal.scale = value as GanttScale;
+          break;
+        case "date":
+          internal.date = value as Date;
+          break;
+        case "events":
+          internal.events = value as GanttEvent<TData>[];
+          break;
+        case "selection":
+          internal.selection = value as GanttSelection;
+          break;
+        case "interactions":
+          internal.interactions = value as GanttInteractions;
+          break;
+      }
       invalidate();
     }
     const callbacks: Record<ControlledKey, ((v: never) => void) | undefined> = {
@@ -884,9 +899,8 @@ function useGanttState<TData = unknown>(
   return store.instance;
 }
 
-const GanttContext =
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  createContext<GanttInstance<any> | null>(null);
+// Internal unexported transport carrier for gantt instance
+const GanttContext = createContext<GanttInstance<any> | null>(null);
 
 /** The stable calendar instance; throws outside <Gantt>. */
 function useGantt<TData = unknown>(): GanttInstance<TData> {
@@ -894,7 +908,7 @@ function useGantt<TData = unknown>(): GanttInstance<TData> {
   if (!instance) {
     throw new Error("useGantt must be used within <Gantt>");
   }
-  return instance as GanttInstance<TData>;
+  return instance;
 }
 
 interface UseGanttSelectorOptions<TData, TSelected> {
@@ -1564,10 +1578,9 @@ const DEFAULT_VIEW_CONFIG: GanttViewConfig = {
   rowAlign: "start",
 };
 
-const GanttViewConfigContext = createContext<
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  GanttViewConfig<any>
->(DEFAULT_VIEW_CONFIG);
+// Internal unexported transport carrier for view config
+const GanttViewConfigContext =
+  createContext<GanttViewConfig<any>>(DEFAULT_VIEW_CONFIG);
 
 /** Root-level display props + render overrides, for view components. */
 function useGanttViewConfig<TData = unknown>(): GanttViewConfig<TData> {
@@ -1688,14 +1701,13 @@ const OPTION_KEYS: Array<keyof UseGanttStateOptions> = [
   "canReorderResource",
 ];
 
-function shallowEqualRecord(
-  a: Record<string, unknown>,
-  b: Record<string, unknown>,
-): boolean {
-  const aKeys = Object.keys(a);
-  if (aKeys.length !== Object.keys(b).length) return false;
+function shallowEqualRecord<T extends object>(a: T, b: T): boolean {
+  const aRec = a as Record<string, unknown>;
+  const bRec = b as Record<string, unknown>;
+  const aKeys = Object.keys(aRec);
+  if (aKeys.length !== Object.keys(bRec).length) return false;
   for (const key of aKeys) {
-    if (!Object.is(a[key], b[key])) return false;
+    if (!Object.is(aRec[key], bRec[key])) return false;
   }
   return true;
 }
@@ -1706,17 +1718,17 @@ function splitOptions<TData>(props: Record<string, unknown>): {
   rest: Record<string, unknown>;
 } {
   const options: Record<string, unknown> = {};
-  const viewConfig: Record<string, unknown> = { ...DEFAULT_VIEW_CONFIG };
+  const viewConfig: GanttViewConfig<TData> = { ...DEFAULT_VIEW_CONFIG };
   const rest: Record<string, unknown> = {};
   for (const [key, value] of Object.entries(props)) {
     if ((OPTION_KEYS as string[]).includes(key)) options[key] = value;
     else if ((VIEW_CONFIG_KEYS as string[]).includes(key)) {
-      if (value !== undefined) viewConfig[key] = value;
+      if (value !== undefined) Reflect.set(viewConfig, key, value);
     } else rest[key] = value;
   }
   return {
     options: options as UseGanttStateOptions<TData>,
-    viewConfig: viewConfig as unknown as GanttViewConfig<TData>,
+    viewConfig,
     rest,
   };
 }
@@ -1741,12 +1753,7 @@ function Gantt<TData = unknown>({
   // and every row subscribes to this context - hand out the previous object
   // unless a config value actually changed.
   const viewConfigRef = useRef(viewConfig);
-  if (
-    !shallowEqualRecord(
-      viewConfigRef.current as unknown as Record<string, unknown>,
-      viewConfig as unknown as Record<string, unknown>,
-    )
-  ) {
+  if (!shallowEqualRecord(viewConfigRef.current, viewConfig)) {
     viewConfigRef.current = viewConfig;
   }
   const stableViewConfig = viewConfigRef.current;

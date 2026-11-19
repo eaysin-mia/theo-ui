@@ -12,11 +12,35 @@ export const Menu: typeof MenuPrimitive.Root = MenuPrimitive.Root;
 
 export const MenuPortal: typeof MenuPrimitive.Portal = MenuPrimitive.Portal;
 
+export type MenuTriggerProps = MenuPrimitive.Trigger.Props;
+export type MenuPopupProps = MenuPrimitive.Popup.Props & {
+  align?: MenuPrimitive.Positioner.Props["align"];
+  sideOffset?: MenuPrimitive.Positioner.Props["sideOffset"];
+  alignOffset?: MenuPrimitive.Positioner.Props["alignOffset"];
+  side?: MenuPrimitive.Positioner.Props["side"];
+  anchor?: MenuPrimitive.Positioner.Props["anchor"];
+  portalProps?: MenuPrimitive.Portal.Props;
+};
+export type MenuItemProps = MenuPrimitive.Item.Props & {
+  variant?: "default" | "destructive";
+};
+export type MenuSeparatorProps = MenuPrimitive.Separator.Props;
+export type MenuGroupProps = MenuPrimitive.Group.Props;
+export type MenuGroupLabelProps = MenuPrimitive.GroupLabel.Props;
+export type MenuCheckboxItemProps = MenuPrimitive.CheckboxItem.Props & {
+  variant?: "default" | "destructive";
+};
+export type MenuRadioGroupProps = MenuPrimitive.RadioGroup.Props;
+export type MenuRadioItemProps = MenuPrimitive.RadioItem.Props & {
+  variant?: "default" | "destructive";
+};
+export type MenuSubmenuTriggerProps = MenuPrimitive.SubmenuTrigger.Props;
+
 export function MenuTrigger({
   className,
   children,
   ...props
-}: MenuPrimitive.Trigger.Props): React.ReactElement {
+}: MenuTriggerProps): React.ReactElement {
   return (
     <MenuPrimitive.Trigger
       className={className}
@@ -38,14 +62,7 @@ export function MenuPopup({
   anchor,
   portalProps,
   ...props
-}: MenuPrimitive.Popup.Props & {
-  align?: MenuPrimitive.Positioner.Props["align"];
-  sideOffset?: MenuPrimitive.Positioner.Props["sideOffset"];
-  alignOffset?: MenuPrimitive.Positioner.Props["alignOffset"];
-  side?: MenuPrimitive.Positioner.Props["side"];
-  anchor?: MenuPrimitive.Positioner.Props["anchor"];
-  portalProps?: MenuPrimitive.Portal.Props;
-}): React.ReactElement {
+}: MenuPopupProps): React.ReactElement {
   return (
     <MenuPortal {...portalProps}>
       <MenuPrimitive.Positioner

@@ -13,7 +13,30 @@ import { cn } from "@theo/ui/lib/utils";
 import { Button } from "@theo/ui/components/button";
 import { ScrollArea } from "@theo/ui/components/scroll-area";
 
-type DrawerPosition = "right" | "left" | "top" | "bottom";
+export type DrawerPosition = "right" | "left" | "top" | "bottom";
+
+export type DrawerProps = DrawerPrimitive.Root.Props & {
+  position?: DrawerPosition;
+};
+export type DrawerTriggerProps = DrawerPrimitive.Trigger.Props;
+export type DrawerPortalProps = DrawerPrimitive.Portal.Props;
+export type DrawerBackdropProps = DrawerPrimitive.Backdrop.Props;
+export type DrawerViewportProps = DrawerPrimitive.Viewport.Props;
+export type DrawerPopupProps = DrawerPrimitive.Popup.Props & {
+  showCloseButton?: boolean;
+  closeProps?: DrawerPrimitive.Close.Props;
+  portalProps?: DrawerPrimitive.Portal.Props;
+};
+export type DrawerHeaderProps = useRender.ComponentProps<"div">;
+export type DrawerFooterProps = useRender.ComponentProps<"div"> & {
+  variant?: "default" | "bare";
+};
+export type DrawerTitleProps = DrawerPrimitive.Title.Props;
+export type DrawerDescriptionProps = DrawerPrimitive.Description.Props;
+export type DrawerPanelProps = useRender.ComponentProps<"div"> & {
+  scrollFade?: boolean;
+};
+export type DrawerCloseProps = DrawerPrimitive.Close.Props;
 
 const DrawerContext: React.Context<{ position: DrawerPosition }> =
   createContext<{ position: DrawerPosition }>({
@@ -37,9 +60,7 @@ export function Drawer({
   swipeDirection,
   position = "bottom",
   ...props
-}: DrawerPrimitive.Root.Props & {
-  position?: DrawerPosition;
-}): React.ReactElement {
+}: DrawerProps): React.ReactElement {
   return (
     <DrawerContext.Provider value={{ position }}>
       <DrawerPrimitive.Root

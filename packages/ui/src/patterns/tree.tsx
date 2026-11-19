@@ -10,13 +10,14 @@ import { MinusIcon, PlusIcon, ChevronDownIcon } from "lucide-react";
 
 type ToggleIconType = "chevron" | "plus-minus";
 
-interface TreeContextValue<T = any> {
+interface TreeContextValue<T = unknown> {
   indent: number;
   currentItem?: ItemInstance<T>;
   tree?: TreeInstance<T>;
   toggleIconType?: ToggleIconType;
 }
 
+// Internal unexported transport carrier for generic tree state
 const TreeContext = createContext<TreeContextValue<any>>({
   indent: 20,
   currentItem: undefined,
@@ -24,17 +25,17 @@ const TreeContext = createContext<TreeContextValue<any>>({
   toggleIconType: "plus-minus",
 });
 
-function useTreeContext<T = any>() {
-  return useContext(TreeContext) as TreeContextValue<T>;
+function useTreeContext<T = unknown>(): TreeContextValue<T> {
+  return useContext(TreeContext);
 }
 
-interface TreeProps<T = any> extends useRender.ComponentProps<"div"> {
+interface TreeProps<T = unknown> extends useRender.ComponentProps<"div"> {
   indent?: number;
   tree?: TreeInstance<T>;
   toggleIconType?: ToggleIconType;
 }
 
-function Tree<T = any>({
+function Tree<T = unknown>({
   indent = 20,
   tree,
   className,
@@ -62,7 +63,13 @@ function Tree<T = any>({
   };
 
   return (
-    <TreeContext.Provider value={{ indent, tree, toggleIconType }}>
+    <TreeContext.Provider
+      value={{
+        indent,
+        tree,
+        toggleIconType,
+      }}
+    >
       {useRender({
         defaultTagName: "div",
         render,
@@ -72,7 +79,7 @@ function Tree<T = any>({
   );
 }
 
-interface TreeItemProps<T = any> extends Omit<
+interface TreeItemProps<T = unknown> extends Omit<
   useRender.ComponentProps<"button">,
   "indent"
 > {
@@ -80,7 +87,7 @@ interface TreeItemProps<T = any> extends Omit<
   indent?: number;
 }
 
-function TreeItem<T = any>({
+function TreeItem<T = unknown>({
   item,
   className,
   render,
@@ -133,7 +140,12 @@ function TreeItem<T = any>({
   };
 
   return (
-    <TreeContext.Provider value={{ ...parentContext, currentItem: item }}>
+    <TreeContext.Provider
+      value={{
+        ...parentContext,
+        currentItem: item,
+      }}
+    >
       {useRender({
         defaultTagName: "button",
         render,
@@ -143,11 +155,13 @@ function TreeItem<T = any>({
   );
 }
 
-interface TreeItemLabelProps<T = any> extends useRender.ComponentProps<"span"> {
+interface TreeItemLabelProps<
+  T = unknown,
+> extends useRender.ComponentProps<"span"> {
   item?: ItemInstance<T>;
 }
 
-function TreeItemLabel<T = any>({
+function TreeItemLabel<T = unknown>({
   item: propItem,
   children,
   className,

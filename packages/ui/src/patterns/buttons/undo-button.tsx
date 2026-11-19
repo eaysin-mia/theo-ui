@@ -1,7 +1,7 @@
 "use client";
 
 import { Archive, Check, type LucideIcon, Undo2 } from "lucide-react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotionConfig } from "motion/react";
 import {
   type PointerEvent,
   useCallback,
@@ -44,6 +44,8 @@ export interface UndoButtonProps {
   onUndo?: () => void;
   className?: string;
   disabled?: boolean;
+  /** Explicitly toggle reduced motion (defaults to Framer Motion's MotionConfigContext). */
+  reduceMotion?: boolean;
 }
 
 // Traces the perimeter of a rounded rectangle starting at the top centre
@@ -113,12 +115,14 @@ export function UndoButton({
   onUndo,
   className,
   disabled,
+  reduceMotion: customReduceMotion,
 }: UndoButtonProps) {
   const [phase, setPhase] = useState<Phase>("idle");
   const [seconds, setSeconds] = useState(Math.ceil(duration / 1000));
   const [width, setWidth] = useState<number>();
   const [isMac, setIsMac] = useState(true);
-  const reduceMotion = Boolean(useReducedMotion());
+  const systemReduceMotion = useReducedMotionConfig() ?? false;
+  const reduceMotion = customReduceMotion ?? systemReduceMotion;
 
   const buttonRef = useRef<HTMLButtonElement>(null);
   const contentRef = useRef<HTMLSpanElement>(null);

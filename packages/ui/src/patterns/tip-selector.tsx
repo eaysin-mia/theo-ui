@@ -16,7 +16,7 @@ import {
   animate,
   motion,
   useMotionValue,
-  useReducedMotion,
+  useReducedMotionConfig,
   useTransform,
 } from "motion/react";
 import { type PointerEvent, useRef, useState } from "react";
@@ -43,6 +43,8 @@ export interface TipSelectorProps {
   onChange?: (tip: number) => void;
   onPay?: (total: number) => void;
   className?: string;
+  /** Explicitly toggle reduced motion (defaults to Framer Motion's MotionConfigContext). */
+  reduceMotion?: boolean;
 }
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
@@ -161,13 +163,15 @@ export function TipSelector({
   onChange,
   onPay,
   className,
+  reduceMotion: customReduceMotion,
 }: TipSelectorProps) {
   const [percent, setPercent] = useState(defaultPercent);
   // Round up sets the tip itself, so the total lands on a whole amount.
   const [exactTip, setExactTip] = useState<number | null>(null);
   const [dragging, setDragging] = useState(false);
   const [paid, setPaid] = useState(false);
-  const reduceMotion = Boolean(useReducedMotion());
+  const systemReduceMotion = useReducedMotionConfig() ?? false;
+  const reduceMotion = customReduceMotion ?? systemReduceMotion;
 
   const position = useMotionValue(defaultPercent);
   const x = useTransform(position, (v) => -v * TICK);

@@ -13,10 +13,9 @@ import {
   AnimatePresence,
   type AnimationPlaybackControls,
   animate,
-  MotionConfig,
   motion,
   useMotionValue,
-  useReducedMotion,
+  useReducedMotionConfig,
   useTransform,
 } from "motion/react";
 import {
@@ -198,6 +197,8 @@ export interface HoldButtonProps
    * A short click or an early release never calls it.
    */
   onHoldComplete?: () => void;
+  /** Explicitly toggle reduced motion (defaults to Framer Motion's MotionConfigContext). */
+  reduceMotion?: boolean;
 }
 
 type Phase = "idle" | "holding" | "complete";
@@ -252,6 +253,7 @@ export function HoldButton({
   onKeyDown,
   onKeyUp,
   onBlur,
+  reduceMotion: customReduceMotion,
   ...props
 }: HoldButtonProps) {
   const [phase, setPhase] = useState<Phase>("idle");
@@ -262,7 +264,8 @@ export function HoldButton({
   const animationRef = useRef<AnimationPlaybackControls | null>(null);
   const resetRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const onHoldCompleteRef = useRef(onHoldComplete);
-  const shouldReduceMotion = useReducedMotion();
+  const systemReduceMotion = useReducedMotionConfig() ?? false;
+  const shouldReduceMotion = customReduceMotion ?? systemReduceMotion;
 
   // Progress fill: advances horizontally from left to right.
   // Parent's `overflow-hidden rounded-lg` clips it to the button's boundary,
@@ -397,107 +400,105 @@ export function HoldButton({
   const labelKey = phase === "holding" && !showHoldingLabel ? "idle" : phase;
 
   return (
-    <MotionConfig reducedMotion="user">
-      <button
-        {...props}
-        aria-disabled={phase === "complete" || undefined}
-        className={cn(holdButtonVariants({ variant, size }), className)}
-        data-complete={phase === "complete" || undefined}
-        data-holding={phase === "holding" || undefined}
-        data-phase={phase}
-        data-slot="hold-button"
-        disabled={disabled}
-        onBlur={(e) => {
-          onBlur?.(e);
-          endHold();
-        }}
-        onKeyDown={handleKeyDown}
-        onKeyUp={handleKeyUp}
-        onPointerCancel={(e) => {
-          onPointerCancel?.(e);
-          endHold();
-        }}
-        onPointerDown={handlePointerDown}
-        onPointerLeave={(e) => {
-          onPointerLeave?.(e);
-          endHold();
-        }}
-        onPointerUp={(e) => {
-          onPointerUp?.(e);
-          endHold();
-        }}
-        type={type}
-      >
-        {/* The fill is the button's ink at low strength, revealed left to
+    <button
+      {...props}
+      aria-disabled={phase === "complete" || undefined}
+      className={cn(holdButtonVariants({ variant, size }), className)}
+      data-complete={phase === "complete" || undefined}
+      data-holding={phase === "holding" || undefined}
+      data-phase={phase}
+      data-slot="hold-button"
+      disabled={disabled}
+      onBlur={(e) => {
+        onBlur?.(e);
+        endHold();
+      }}
+      onKeyDown={handleKeyDown}
+      onKeyUp={handleKeyUp}
+      onPointerCancel={(e) => {
+        onPointerCancel?.(e);
+        endHold();
+      }}
+      onPointerDown={handlePointerDown}
+      onPointerLeave={(e) => {
+        onPointerLeave?.(e);
+        endHold();
+      }}
+      onPointerUp={(e) => {
+        onPointerUp?.(e);
+        endHold();
+      }}
+      type={type}
+    >
+      {/* The fill is the button's ink at low strength, revealed left to
             right. It only renders while holding and fades out once complete. */}
-        <motion.span
-          animate={{ opacity: phase === "holding" ? 1 : 0 }}
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-current/15 dark:bg-current/20"
-          style={{ clipPath }}
-          transition={{ duration: 0.15 }}
-        />
+      <motion.span
+        animate={{ opacity: phase === "holding" ? 1 : 0 }}
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-current/15 dark:bg-current/20"
+        style={{ clipPath }}
+        transition={{ duration: 0.15 }}
+      />
 
-        {/* Place-stable single-cell grid anchor:
+      {/* Place-stable single-cell grid anchor:
             All states are placed in row 1, col 1. Invisible ghost items calculate
             max natural content width at render time so the button never shifts or shrinks. */}
+      <span
+        className="relative grid items-center justify-center"
+        data-slot="hold-button-content"
+      >
+        {/* Ghost 1: Idle label */}
         <span
-          className="relative grid items-center justify-center"
-          data-slot="hold-button-content"
+          aria-hidden="true"
+          className="pointer-events-none invisible col-start-1 row-start-1 inline-flex items-center gap-2 px-0.5 whitespace-nowrap"
         >
-          {/* Ghost 1: Idle label */}
-          <span
-            aria-hidden="true"
-            className="pointer-events-none invisible col-start-1 row-start-1 inline-flex items-center gap-2 px-0.5 whitespace-nowrap"
-          >
-            <Icon aria-hidden="true" className="size-4 shrink-0" />
-            <span>{idleLabel}</span>
-          </span>
-
-          {/* Ghost 2: Holding label */}
-          <span
-            aria-hidden="true"
-            className="pointer-events-none invisible col-start-1 row-start-1 inline-flex items-center gap-2 px-0.5 whitespace-nowrap"
-          >
-            <Icon aria-hidden="true" className="size-4 shrink-0" />
-            <span>{holdingLabel}</span>
-          </span>
-
-          {/* Ghost 3: Complete label */}
-          <span
-            aria-hidden="true"
-            className="pointer-events-none invisible col-start-1 row-start-1 inline-flex items-center gap-2 px-0.5 whitespace-nowrap"
-          >
-            <DrawnCheck />
-            <span>{finalCompleteLabel}</span>
-          </span>
-
-          {/* Active animated label */}
-          <span className="col-start-1 row-start-1 inline-flex items-center justify-center overflow-y-clip px-0.5">
-            <AnimatePresence initial={false} mode="popLayout">
-              <motion.span
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                className="inline-flex items-center gap-2 whitespace-nowrap"
-                exit={{ opacity: 0, y: -8, filter: "blur(2px)" }}
-                initial={{ opacity: 0, y: 8, filter: "blur(2px)" }}
-                key={labelKey}
-                transition={LABEL_TRANSITION}
-              >
-                {labelKey === "complete" ? (
-                  <DrawnCheck />
-                ) : (
-                  <Icon aria-hidden="true" className="size-4 shrink-0" />
-                )}
-                <span>{activeLabel}</span>
-              </motion.span>
-            </AnimatePresence>
-          </span>
+          <Icon aria-hidden="true" className="size-4 shrink-0" />
+          <span>{idleLabel}</span>
         </span>
 
-        <span aria-live="polite" className="sr-only">
-          {phase === "complete" ? finalCompleteLabel : ""}
+        {/* Ghost 2: Holding label */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none invisible col-start-1 row-start-1 inline-flex items-center gap-2 px-0.5 whitespace-nowrap"
+        >
+          <Icon aria-hidden="true" className="size-4 shrink-0" />
+          <span>{holdingLabel}</span>
         </span>
-      </button>
-    </MotionConfig>
+
+        {/* Ghost 3: Complete label */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none invisible col-start-1 row-start-1 inline-flex items-center gap-2 px-0.5 whitespace-nowrap"
+        >
+          <DrawnCheck />
+          <span>{finalCompleteLabel}</span>
+        </span>
+
+        {/* Active animated label */}
+        <span className="col-start-1 row-start-1 inline-flex items-center justify-center overflow-y-clip px-0.5">
+          <AnimatePresence initial={false} mode="popLayout">
+            <motion.span
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              className="inline-flex items-center gap-2 whitespace-nowrap"
+              exit={{ opacity: 0, y: -8, filter: "blur(2px)" }}
+              initial={{ opacity: 0, y: 8, filter: "blur(2px)" }}
+              key={labelKey}
+              transition={LABEL_TRANSITION}
+            >
+              {labelKey === "complete" ? (
+                <DrawnCheck />
+              ) : (
+                <Icon aria-hidden="true" className="size-4 shrink-0" />
+              )}
+              <span>{activeLabel}</span>
+            </motion.span>
+          </AnimatePresence>
+        </span>
+      </span>
+
+      <span aria-live="polite" className="sr-only">
+        {phase === "complete" ? finalCompleteLabel : ""}
+      </span>
+    </button>
   );
 }

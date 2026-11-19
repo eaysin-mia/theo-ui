@@ -11,7 +11,7 @@
  */
 
 import { Minus, Plus, Trash2 } from "lucide-react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotionConfig } from "motion/react";
 import {
   type MouseEvent,
   type PointerEvent,
@@ -44,6 +44,8 @@ export interface CartButtonProps {
   label?: string;
   onQuantityChange?: (quantity: number) => void;
   className?: string;
+  /** Explicitly toggle reduced motion (defaults to Framer Motion's MotionConfigContext). */
+  reduceMotion?: boolean;
 }
 
 /**
@@ -59,13 +61,15 @@ export function CartButton({
   label = "Add",
   onQuantityChange,
   className,
+  reduceMotion: customReduceMotion,
 }: CartButtonProps) {
   const [ownQuantity, setOwnQuantity] = useState(defaultQuantity);
   const value = quantity ?? ownQuantity;
   const [direction, setDirection] = useState(1);
   const [showLimit, setShowLimit] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
-  const reduceMotion = Boolean(useReducedMotion());
+  const systemReduceMotion = useReducedMotionConfig() ?? false;
+  const reduceMotion = customReduceMotion ?? systemReduceMotion;
 
   const valueRef = useRef(value);
   valueRef.current = value;

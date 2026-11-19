@@ -403,8 +403,10 @@ function packTimedSegments<TData>(
     };
     const release = (item: Working) => {
       const occupants = laneIntervals[item.lane] ?? [];
-      const at = occupants.indexOf(item.interval!);
-      if (at >= 0) occupants.splice(at, 1);
+      if (item.interval) {
+        const at = occupants.indexOf(item.interval);
+        if (at >= 0) occupants.splice(at, 1);
+      }
     };
 
     // pass 1: schedules that did not move keep the lane they had. The one the
@@ -631,15 +633,16 @@ function reorderResources(
 
   const stripped = strip(resources);
   if (!moved) return null;
+  const movedNode: GanttResource = moved;
 
   const contains = (node: GanttResource, id: string): boolean =>
     node.id === id || !!node.children?.some((child) => contains(child, id));
-  if (parentId !== null && contains(moved, parentId)) return null;
+  if (parentId !== null && contains(movedNode, parentId)) return null;
 
   const insert = (nodes: GanttResource[]): GanttResource[] => {
     if (parentId === null) {
       const next = [...nodes];
-      next.splice(Math.min(Math.max(index, 0), next.length), 0, moved!);
+      next.splice(Math.min(Math.max(index, 0), next.length), 0, movedNode);
       return next;
     }
     return nodes.map((node) => {
@@ -648,7 +651,7 @@ function reorderResources(
         children.splice(
           Math.min(Math.max(index, 0), children.length),
           0,
-          moved!,
+          movedNode,
         );
         return { ...node, children };
       }

@@ -145,10 +145,12 @@ export function createDemoBillingAdapter(): BillingAdapter {
     },
     async getState(scope: BillingScope): Promise<BillingState> {
       const key = getScopeKey(scope);
-      if (!stateMap.has(key)) {
-        stateMap.set(key, getInitialState());
+      let state = stateMap.get(key);
+      if (!state) {
+        state = getInitialState();
+        stateMap.set(key, state);
       }
-      return stateMap.get(key)!;
+      return state;
     },
     async checkout(
       scope: BillingScope,

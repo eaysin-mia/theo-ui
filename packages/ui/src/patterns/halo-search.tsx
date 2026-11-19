@@ -22,7 +22,7 @@ import {
   AnimatePresence,
   motion,
   useInView,
-  useReducedMotion,
+  useReducedMotionConfig,
 } from "motion/react";
 
 import { Kbd } from "@theo/ui/components/kbd";
@@ -104,6 +104,8 @@ export interface HaloSearchProps extends InputHTMLAttributes<HTMLInputElement> {
   loadingStaggerSec?: number;
   /** Duration of each loading character’s fade-in (seconds). Default 0.36. */
   loadingCharDurationSec?: number;
+  /** Explicitly toggle reduced motion (defaults to Framer Motion's MotionConfigContext). */
+  reduceMotion?: boolean;
 }
 
 export type HaloSearchInputProps = HaloSearchProps;
@@ -115,12 +117,12 @@ const trailingMotionTransition = (reduceMotion: boolean) => ({
 
 const trailingCrossfade = (reduceMotion: boolean) => ({
   exit: {
-    opacity: reduceMotion ? 1 : 0,
+    opacity: reduceMotion ? 0 : 0,
     scale: reduceMotion ? 1 : 0.88,
   },
   initial: {
-    opacity: reduceMotion ? 1 : 0,
-    scale: reduceMotion ? 1 : 0.88,
+    opacity: 0,
+    scale: 0.88,
   },
 });
 
@@ -268,7 +270,7 @@ function AnimatedPlaceholder({
             ease: "easeOut",
           }}
           variants={{
-            hidden: { opacity: reduceMotion ? 1 : 0 },
+            hidden: { opacity: 0 },
             visible: { opacity: 1 },
           }}
         >
@@ -293,6 +295,7 @@ export function HaloSearchInput({
   loadingCharDurationSec = DEFAULT_LOADING_CHAR_DURATION_SEC,
   disabled,
   readOnly,
+  reduceMotion: reduceMotionProp,
   ...props
 }: HaloSearchInputProps) {
   const showBlobTranslucent = blobTranslucent || isLoading;
@@ -315,7 +318,8 @@ export function HaloSearchInput({
   const [isTypingBurst, setIsTypingBurst] = useState(false);
   const wasDeletingRef = useRef(false);
   const wasLoadingRef = useRef(false);
-  const reduceMotion = useReducedMotion() ?? false;
+  const systemReduceMotion = useReducedMotionConfig() ?? false;
+  const reduceMotion = reduceMotionProp ?? systemReduceMotion;
   const deleteClipDurationMs = 340;
   const deleteSweepDurationMs = deleteClipDurationMs + deleteClipDurationMs / 2;
 
@@ -907,7 +911,8 @@ export const AiBlobWarpAvatar = forwardRef<
     ...restWarpProps
   } = warpProps ?? {};
   const rootRef = useRef<HTMLDivElement>(null);
-  const reduceMotion = useReducedMotion();
+  const systemReduceMotion = useReducedMotionConfig() ?? false;
+  const reduceMotion = warpSpeed !== undefined ? false : systemReduceMotion;
   const inView = useInView(rootRef, {
     amount: 0.2,
     margin: "0px 0px -10% 0px",
