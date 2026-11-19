@@ -13,6 +13,7 @@ jobs:
       contents: write
       packages: write
       pull-requests: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
 
@@ -22,8 +23,7 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@theo"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -36,4 +36,4 @@ jobs:
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,19 +1,79 @@
-# Third Party Licenses
+# Third Party Notices and Licenses
 
-This package includes software derived from open source projects:
+This library incorporates and adapts components and patterns derived from the following open-source projects:
 
-## coss UI
+---
 
-- Source: `https://github.com/cosscom/ui`
-- Components in `src/components/` originate from coss UI registry (`apps/ui` - MIT License).
-- License: MIT License (Copyright (c) cosscom)
+### coss UI
 
-## Base UI
+- **Project**: coss UI
+- **Repository**: `https://github.com/cosscom/ui`
+- **License**: MIT License
+- **Copyright**: (c) cosscom
 
-- Source: `@base-ui/react` (MUI / Material-UI team)
-- License: MIT License (Copyright (c) Material-UI SAS)
+---
 
-## Better Auth UI
+### Base UI
 
-- Source: `https://better-auth-ui.com`
-- License: MIT License
+- **Project**: Base UI
+- **Repository**: `https://github.com/mui/base-ui`
+- **Package**: `@base-ui/react`
+- **License**: MIT License
+- **Copyright**: (c) Material-UI SAS
+
+---
+
+### Better Auth UI
+
+- **Project**: Better Auth UI
+- **Website**: `https://better-auth-ui.com`
+- **License**: MIT License
+
+---
+
+### ReUI
+
+- **Project**: ReUI
+- **Website**: `https://reui.io`
+- **License**: MIT License
+
+---
+
+### Magic UI
+
+- **Project**: Magic UI
+- **Website**: `https://magicui.design`
+- **License**: MIT License
+
+---
+
+### Kokonut UI
+
+- **Project**: Kokonut UI
+- **Website**: `https://kokonutui.com`
+- **License**: MIT License
+
+---
+
+### Cult UI
+
+- **Project**: Cult UI
+- **Website**: `https://cult-ui.com`
+- **License**: MIT License
+
+---
+
+### Kibo UI
+
+- **Project**: Kibo UI
+- **Website**: `https://www.kibo-ui.com`
+- **License**: MIT License
+
+---
+
+### shadcn/ui
+
+- **Project**: shadcn/ui
+- **Website**: `https://ui.shadcn.com`
+- **License**: MIT License
+- **Copyright**: (c) shadcn

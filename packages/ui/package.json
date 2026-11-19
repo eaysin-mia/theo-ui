@@ -23,6 +23,7 @@
   "files": [
     "dist",
     "README.md",
+    "LICENSE",
     "THIRD_PARTY_LICENSES.md"
   ],
   "sideEffects": [
@@ -34,7 +35,8 @@
     "directory": "packages/ui"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "imports": {
     "#components/*": "./dist/components/*.js",
