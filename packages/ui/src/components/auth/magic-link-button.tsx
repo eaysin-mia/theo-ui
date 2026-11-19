@@ -5,10 +5,10 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useIsMutating } from "@tanstack/react-query";
 import { Lock, Mail } from "lucide-react";
 
-import { buttonVariants } from "theo-ui/components/button";
-import { LastUsedBadge } from "theo-ui/components/auth/last-login-method/last-used-badge";
-import { magicLinkPlugin } from "theo-ui/lib/auth/magic-link-plugin";
-import { cn } from "theo-ui/lib/utils";
+import { buttonVariants } from "theoui/components/button";
+import { LastUsedBadge } from "theoui/components/auth/last-login-method/last-used-badge";
+import { magicLinkPlugin } from "theoui/lib/auth/magic-link-plugin";
+import { cn } from "theoui/lib/utils";
 
 export type MagicLinkButtonProps = {
   /** @remarks `AuthView` */

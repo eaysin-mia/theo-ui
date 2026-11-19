@@ -7,9 +7,9 @@ import {
   useMessageScrollerScrollable,
   useMessageScrollerVisibility,
 } from "@shadcn/react/message-scroller";
-import { cn } from "theo-ui/lib/utils";
+import { cn } from "theoui/lib/utils";
 
-import { Button } from "theo-ui/components/button";
+import { Button } from "theoui/components/button";
 import { ArrowDownIcon } from "lucide-react";
 
 function MessageScrollerProvider(

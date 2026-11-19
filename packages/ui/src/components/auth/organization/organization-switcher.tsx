@@ -15,16 +15,16 @@ import {
 } from "lucide-react";
 import { type ComponentProps, type ReactElement, useState } from "react";
 
-import { buttonVariants } from "theo-ui/components/button";
+import { buttonVariants } from "theoui/components/button";
 import {
   Menu,
   MenuItem,
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "theo-ui/components/menu";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/menu";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+import { cn } from "theoui/lib/utils";
 import { UserView } from "../user/user-view";
 import { CreateOrganizationDialog } from "./create-organization-dialog";
 import { OrganizationView } from "./organization-view";

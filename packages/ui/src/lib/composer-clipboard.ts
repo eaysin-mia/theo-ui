@@ -1,7 +1,4 @@
-import type {
-  ComposerPart,
-  ComposerValue,
-} from "theo-ui/lib/composer-document";
+import type { ComposerPart, ComposerValue } from "theoui/lib/composer-document";
 
 export const COMPOSER_CLIPBOARD_TYPE = "application/x-coss-composer";
 

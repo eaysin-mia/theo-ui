@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import type { ExtraProps } from "react-markdown";
-import { useHighlightedCode } from "theo-ui/hooks/use-highlighted-code";
+import { useHighlightedCode } from "theoui/hooks/use-highlighted-code";
 import {
   CodeBlock,
   CodeBlockActions,
@@ -11,7 +11,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "theo-ui/patterns/code-block";
+} from "theoui/patterns/code-block";
 
 export function MarkdownPre({
   node,

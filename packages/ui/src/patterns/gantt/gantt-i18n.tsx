@@ -1,7 +1,7 @@
 import type {
   GanttDateRange,
   GanttScale,
-} from "theo-ui/patterns/gantt/gantt-types";
+} from "theoui/patterns/gantt/gantt-types";
 import {
   format,
   isSameMonth,

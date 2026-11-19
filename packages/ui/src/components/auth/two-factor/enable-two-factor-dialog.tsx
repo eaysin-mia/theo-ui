@@ -16,8 +16,8 @@ import {
 } from "@better-auth-ui/react/plugins/two-factor";
 import { Check, Copy, Mail, ShieldCheck, Smartphone } from "lucide-react";
 import { useMemo, useState } from "react";
-import { toastManager } from "theo-ui/components/toast";
-import { Button } from "theo-ui/components/button";
+import { toastManager } from "theoui/components/toast";
+import { Button } from "theoui/components/button";
 import {
   Dialog,
   DialogClose,
@@ -27,17 +27,17 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theo-ui/components/dialog";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
+} from "theoui/components/dialog";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theo-ui/components/input-group";
-import { Tabs, TabsList, TabsTab } from "theo-ui/components/tabs";
-import { twoFactorPlugin } from "theo-ui/lib/auth/two-factor-plugin";
-import { useTwoFactorPasswordRequirement } from "theo-ui/lib/auth/use-two-factor-password";
+} from "theoui/components/input-group";
+import { Tabs, TabsList, TabsTab } from "theoui/components/tabs";
+import { twoFactorPlugin } from "theoui/lib/auth/two-factor-plugin";
+import { useTwoFactorPasswordRequirement } from "theoui/lib/auth/use-two-factor-password";
 import { submitAuthForm, useAuthForm } from "../auth-form";
 import { OtpField } from "../otp-field";
 import { BackupCodes } from "./backup-codes";

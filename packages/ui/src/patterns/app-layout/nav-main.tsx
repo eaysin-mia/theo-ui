@@ -5,7 +5,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "theo-ui/components/collapsible";
+} from "theoui/components/collapsible";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -16,7 +16,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   useSidebar,
-} from "theo-ui/components/sidebar";
+} from "theoui/components/sidebar";
 import { ChevronDownIcon } from "lucide-react";
 
 export interface NavMainItem {

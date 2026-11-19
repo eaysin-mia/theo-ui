@@ -5,8 +5,8 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { Key, Pencil, X } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "theo-ui/components/button";
-import { apiKeyPlugin } from "theo-ui/lib/auth/api-key-plugin";
+import { Button } from "theoui/components/button";
+import { apiKeyPlugin } from "theoui/lib/auth/api-key-plugin";
 import { DeleteApiKeyDialog } from "./delete-api-key-dialog";
 import { EditApiKeyDialog } from "./edit-api-key-dialog";
 

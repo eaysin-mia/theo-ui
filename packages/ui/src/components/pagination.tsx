@@ -8,8 +8,8 @@ import {
   MoreHorizontalIcon,
 } from "lucide-react";
 import type * as React from "react";
-import { cn } from "theo-ui/lib/utils";
-import { type Button, buttonVariants } from "theo-ui/components/button";
+import { cn } from "theoui/lib/utils";
+import { type Button, buttonVariants } from "theoui/components/button";
 
 export function Pagination({
   className,

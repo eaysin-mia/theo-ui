@@ -25,17 +25,17 @@ import { useIsMutating } from "@tanstack/react-query";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "theo-ui/components/button";
-import { Checkbox } from "theo-ui/components/checkbox";
-import { Field, FieldLabel, FieldSeparator } from "theo-ui/components/field";
+import { Button } from "theoui/components/button";
+import { Checkbox } from "theoui/components/checkbox";
+import { Field, FieldLabel, FieldSeparator } from "theoui/components/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theo-ui/components/input-group";
-import { phoneNumberPlugin } from "theo-ui/lib/auth/phone-number-plugin";
-import { useResendCooldown } from "theo-ui/lib/auth/use-resend-cooldown";
-import { useSignInContinuation } from "theo-ui/lib/auth/use-sign-in-continuation";
+} from "theoui/components/input-group";
+import { phoneNumberPlugin } from "theoui/lib/auth/phone-number-plugin";
+import { useResendCooldown } from "theoui/lib/auth/use-resend-cooldown";
+import { useSignInContinuation } from "theoui/lib/auth/use-sign-in-continuation";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,

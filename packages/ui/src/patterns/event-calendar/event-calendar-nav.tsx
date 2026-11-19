@@ -7,16 +7,16 @@ import {
   useEventCalendarSettings,
   useEventCalendarView,
   useEventCalendarViewConfig,
-} from "theo-ui/patterns/event-calendar/event-calendar";
-import { toZoned } from "theo-ui/patterns/event-calendar/event-calendar-lib";
-import type { CalendarView } from "theo-ui/patterns/event-calendar/event-calendar-types";
+} from "theoui/patterns/event-calendar/event-calendar";
+import { toZoned } from "theoui/patterns/event-calendar/event-calendar-lib";
+import type { CalendarView } from "theoui/patterns/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, format } from "date-fns";
 
-import { cn } from "theo-ui/lib/utils";
-import { Button } from "theo-ui/components/button";
-import { Calendar } from "theo-ui/components/calendar";
+import { cn } from "theoui/lib/utils";
+import { Button } from "theoui/components/button";
+import { Calendar } from "theoui/components/calendar";
 import {
   Menu,
   MenuGroup,
@@ -24,18 +24,18 @@ import {
   MenuItem,
   MenuPopup,
   MenuTrigger,
-} from "theo-ui/components/menu";
+} from "theoui/components/menu";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "theo-ui/components/popover";
+} from "theoui/components/popover";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "theo-ui/components/tooltip";
+} from "theoui/components/tooltip";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,

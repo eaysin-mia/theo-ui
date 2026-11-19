@@ -13,17 +13,17 @@ import {
 } from "@better-auth-ui/react/plugins/oauth-provider";
 import { useEffect, useState } from "react";
 
-import { Button } from "theo-ui/components/button";
+import { Button } from "theoui/components/button";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theo-ui/components/card";
-import { Spinner } from "theo-ui/components/spinner";
-import { oauthProviderPlugin } from "theo-ui/lib/auth/oauth-provider-plugin";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/card";
+import { Spinner } from "theoui/components/spinner";
+import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
+import { cn } from "theoui/lib/utils";
 import type { SocialLayout } from "../provider-buttons";
 import { SignUp } from "../sign-up";
 

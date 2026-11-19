@@ -7,7 +7,7 @@ import type {
 import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useUpdateApiKey } from "@better-auth-ui/react/plugins/api-key";
 import { useEffect } from "react";
-import { Button } from "theo-ui/components/button";
+import { Button } from "theoui/components/button";
 import {
   Dialog,
   DialogClose,
@@ -17,10 +17,10 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theo-ui/components/dialog";
-import { Field, FieldError, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { apiKeyPlugin } from "theo-ui/lib/auth/api-key-plugin";
+} from "theoui/components/dialog";
+import { Field, FieldError, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { apiKeyPlugin } from "theoui/lib/auth/api-key-plugin";
 import { useAuthForm } from "../auth-form";
 
 export function EditApiKeyDialog({

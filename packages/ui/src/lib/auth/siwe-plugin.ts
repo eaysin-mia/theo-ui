@@ -4,8 +4,8 @@ import {
   type SiwePluginOptions,
 } from "@better-auth-ui/core/plugins/siwe";
 
-import { SignInEthereumButton } from "theo-ui/components/auth/siwe/sign-in-ethereum-button";
-import { WalletAccounts } from "theo-ui/components/auth/siwe/wallet-accounts";
+import { SignInEthereumButton } from "theoui/components/auth/siwe/sign-in-ethereum-button";
+import { WalletAccounts } from "theoui/components/auth/siwe/wallet-accounts";
 
 export {
   createEip1193WalletConnector,

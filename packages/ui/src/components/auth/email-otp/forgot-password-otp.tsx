@@ -6,9 +6,9 @@ import { useAuth, useAuthPlugin, useFetchOptions } from "@better-auth-ui/react";
 import { useRequestPasswordResetOtp } from "@better-auth-ui/react/plugins/email-otp";
 import { useId } from "react";
 
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { emailOtpPlugin } from "theo-ui/lib/auth/email-otp-plugin";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { emailOtpPlugin } from "theoui/lib/auth/email-otp-plugin";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { AuthFormContainer } from "../auth-layout";
 

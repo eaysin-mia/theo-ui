@@ -9,8 +9,8 @@ import {
   TriangleAlertIcon,
 } from "lucide-react";
 import type React from "react";
-import { cn } from "theo-ui/lib/utils";
-import { buttonVariants } from "theo-ui/components/button";
+import { cn } from "theoui/lib/utils";
+import { buttonVariants } from "theoui/components/button";
 
 const TOAST_ICONS = {
   error: CircleAlertIcon,

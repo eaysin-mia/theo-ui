@@ -11,14 +11,14 @@ import { useSelector } from "@tanstack/react-form";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "theo-ui/components/button";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { emailOtpPlugin } from "theo-ui/lib/auth/email-otp-plugin";
+import { Button } from "theoui/components/button";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { emailOtpPlugin } from "theoui/lib/auth/email-otp-plugin";
 import {
   RESEND_COOLDOWN_SECONDS,
   useResendCooldown,
-} from "theo-ui/lib/auth/use-resend-cooldown";
+} from "theoui/lib/auth/use-resend-cooldown";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,

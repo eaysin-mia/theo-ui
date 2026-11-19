@@ -12,9 +12,9 @@ import { CalendarIcon, Check, ChevronDownIcon, Copy } from "lucide-react";
 import { type ComponentType, useRef, useState } from "react";
 import { toast } from "sonner";
 
-import { Button, buttonVariants } from "theo-ui/components/button";
-import { Calendar } from "theo-ui/components/calendar";
-import { Checkbox } from "theo-ui/components/checkbox";
+import { Button, buttonVariants } from "theoui/components/button";
+import { Calendar } from "theoui/components/calendar";
+import { Checkbox } from "theoui/components/checkbox";
 import {
   Combobox,
   ComboboxEmpty,
@@ -22,31 +22,31 @@ import {
   ComboboxItem,
   ComboboxList,
   ComboboxPopup,
-} from "theo-ui/components/combobox";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { AuthFieldError } from "theo-ui/components/auth/auth-field-error";
-import { Input } from "theo-ui/components/input";
+} from "theoui/components/combobox";
+import { Field, FieldLabel } from "theoui/components/field";
+import { AuthFieldError } from "theoui/components/auth/auth-field-error";
+import { Input } from "theoui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theo-ui/components/input-group";
+} from "theoui/components/input-group";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "theo-ui/components/popover";
+} from "theoui/components/popover";
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "theo-ui/components/select";
-import { Slider } from "theo-ui/components/slider";
-import { Switch } from "theo-ui/components/switch";
-import { Textarea } from "theo-ui/components/textarea";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/select";
+import { Slider } from "theoui/components/slider";
+import { Switch } from "theoui/components/switch";
+import { Textarea } from "theoui/components/textarea";
+import { cn } from "theoui/lib/utils";
 
 export type AdditionalFieldProps = {
   name: string;

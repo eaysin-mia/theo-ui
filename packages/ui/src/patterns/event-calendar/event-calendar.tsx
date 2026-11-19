@@ -17,7 +17,7 @@ import {
   mergeEventCalendarI18n,
   type EventCalendarI18nConfig,
   type EventCalendarI18nOverrides,
-} from "theo-ui/patterns/event-calendar/event-calendar-i18n";
+} from "theoui/patterns/event-calendar/event-calendar-i18n";
 import {
   buildEventIndex,
   defaultEventOrder,
@@ -31,7 +31,7 @@ import {
   type EventCalendarDayBucket,
   type EventCalendarIndex,
   type WeekStartsOn,
-} from "theo-ui/patterns/event-calendar/event-calendar-lib";
+} from "theoui/patterns/event-calendar/event-calendar-lib";
 import type {
   CalendarEvent,
   CalendarView,
@@ -51,12 +51,12 @@ import type {
   EventCalendarState,
   EventCalendarUpdateResult,
   EventCalendarViewSettings,
-} from "theo-ui/patterns/event-calendar/event-calendar-types";
+} from "theoui/patterns/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, type Locale } from "date-fns";
 
-import { cn } from "theo-ui/lib/utils";
+import { cn } from "theoui/lib/utils";
 
 const BASE_VIEWS: CalendarView[] = ["month", "week", "day", "days", "agenda"];
 const ALL_VIEWS: CalendarView[] = [...BASE_VIEWS, "resource"];

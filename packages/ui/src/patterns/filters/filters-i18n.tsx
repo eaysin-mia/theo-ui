@@ -3,7 +3,7 @@ import type {
   FilterIssue,
   FilterIssueReason,
   FilterLabels,
-} from "theo-ui/patterns/filters/filters-types";
+} from "theoui/patterns/filters/filters-types";
 
 /**
  * The shipped English copy. `stepAnnouncement` (consumer-composed create

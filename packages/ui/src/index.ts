@@ -1,11 +1,11 @@
-// Root entrypoint for theo-ui
+// Root entrypoint for theoui
 // Contains core primitives, utilities, providers, and hooks.
 // Domain modules, heavy optional peer-dependent widgets, and composite patterns are exported via dedicated subpaths:
-// - Patterns: "theo-ui/patterns" or "theo-ui/patterns/<pattern>"
-// - Auth: "theo-ui/components/auth" and "theo-ui/lib/auth"
-// - Charts: "theo-ui/components/chart" (requires recharts)
-// - Syntax Highlighting: "theo-ui/lib/highlighter" & "theo-ui/hooks/use-highlighted-code" (requires shiki)
-// - Motion Animations: "theo-ui/components/auto-height" (requires motion)
+// - Patterns: "theoui/patterns" or "theoui/patterns/<pattern>"
+// - Auth: "theoui/components/auth" and "theoui/lib/auth"
+// - Charts: "theoui/components/chart" (requires recharts)
+// - Syntax Highlighting: "theoui/lib/highlighter" & "theoui/hooks/use-highlighted-code" (requires shiki)
+// - Motion Animations: "theoui/components/auto-height" (requires motion)
 
 // Lib & Utilities
 export * from "./lib/utils";

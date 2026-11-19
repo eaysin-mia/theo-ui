@@ -9,7 +9,7 @@ import {
 import type { UsernameAuthClient } from "@better-auth-ui/core/plugins/username";
 import { useAuth, useSession, useUpdateUser } from "@better-auth-ui/react";
 import { useEffect, useMemo } from "react";
-import { toastManager } from "theo-ui/components/toast";
+import { toastManager } from "theoui/components/toast";
 
 import {
   Card,
@@ -18,10 +18,10 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theo-ui/components/card";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { Skeleton } from "theo-ui/components/skeleton";
+} from "theoui/components/card";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { Skeleton } from "theoui/components/skeleton";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

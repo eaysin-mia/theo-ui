@@ -21,7 +21,7 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "theo-ui/components/message-scroller";
+} from "theoui/components/message-scroller";
 import {
   Composer,
   ComposerActionGroup,
@@ -35,7 +35,7 @@ import {
   type ComposerTrigger,
   type ComposerValue,
   getComposerText,
-} from "theo-ui/patterns/composer";
+} from "theoui/patterns/composer";
 import {
   Attachment,
   AttachmentContent,
@@ -45,7 +45,7 @@ import {
   AttachmentTitle,
   AttachmentAction,
   AttachmentActions,
-} from "theo-ui/components/attachment";
+} from "theoui/components/attachment";
 import {
   Empty,
   EmptyContent,
@@ -53,10 +53,10 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theo-ui/components/empty";
-import { Button } from "theo-ui/components/button";
-import { FileType, getFileType } from "theo-ui/components/file-type";
-import { Message, MessageContent } from "theo-ui/components/message";
+} from "theoui/components/empty";
+import { Button } from "theoui/components/button";
+import { FileType, getFileType } from "theoui/components/file-type";
+import { Message, MessageContent } from "theoui/components/message";
 import {
   ChatMessage,
   type ChatMessageItem,
@@ -79,7 +79,7 @@ const INITIAL_MESSAGES: ChatMessageItem[] = [
     role: "assistant",
     model: "Claude 3.7 Sonnet",
     reasoning:
-      "1. Inspecting workspace packages and `theo-ui` exports.\n2. Checking Base UI `useRender` primitives.\n3. Analyzing `Composer`, `MessageScroller`, `Bubble`, and `CodeBlock` composition.\n4. Evaluating layout integration with Next.js App Router.",
+      "1. Inspecting workspace packages and `theoui` exports.\n2. Checking Base UI `useRender` primitives.\n3. Analyzing `Composer`, `MessageScroller`, `Bubble`, and `CodeBlock` composition.\n4. Evaluating layout integration with Next.js App Router.",
     reasoningDuration: 2400,
     tools: [
       {
@@ -127,9 +127,9 @@ const INITIAL_MESSAGES: ChatMessageItem[] = [
 Here is an example snippet showing how you compose the feed:
 
 \`\`\`tsx
-import { MessageScroller, MessageScrollerContent } from "theo-ui/components/message-scroller";
-import { Message, MessageContent } from "theo-ui/components/message";
-import { Bubble, BubbleContent } from "theo-ui/components/bubble";
+import { MessageScroller, MessageScrollerContent } from "theoui/components/message-scroller";
+import { Message, MessageContent } from "theoui/components/message";
+import { Bubble, BubbleContent } from "theoui/components/bubble";
 
 export function ChatFeed({ messages }) {
   return (

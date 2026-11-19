@@ -11,16 +11,11 @@ import {
 } from "@better-auth-ui/react/plugins/organization";
 import { Check, ChevronsUpDown, Users } from "lucide-react";
 import { type ReactElement, useState } from "react";
-import { buttonVariants } from "theo-ui/components/button";
-import {
-  Menu,
-  MenuItem,
-  MenuPopup,
-  MenuTrigger,
-} from "theo-ui/components/menu";
-import { Skeleton } from "theo-ui/components/skeleton";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
-import { cn } from "theo-ui/lib/utils";
+import { buttonVariants } from "theoui/components/button";
+import { Menu, MenuItem, MenuPopup, MenuTrigger } from "theoui/components/menu";
+import { Skeleton } from "theoui/components/skeleton";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+import { cn } from "theoui/lib/utils";
 
 export type TeamSwitcherProps = {
   organizationId: string;

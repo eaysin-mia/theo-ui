@@ -12,9 +12,9 @@ import {
 } from "@better-auth-ui/react";
 import { Check, Copy, Download, Printer } from "lucide-react";
 
-import { Button } from "theo-ui/components/button";
-import { toastManager } from "theo-ui/components/toast";
-import { twoFactorPlugin } from "theo-ui/lib/auth/two-factor-plugin";
+import { Button } from "theoui/components/button";
+import { toastManager } from "theoui/components/toast";
+import { twoFactorPlugin } from "theoui/lib/auth/two-factor-plugin";
 
 export type BackupCodesProps = {
   codes: string[];

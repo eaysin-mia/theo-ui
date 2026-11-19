@@ -6,8 +6,8 @@ import { useAuth, useSendVerificationEmail } from "@better-auth-ui/react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "theo-ui/components/button";
-import { Spinner } from "theo-ui/components/spinner";
+import { Button } from "theoui/components/button";
+import { Spinner } from "theoui/components/spinner";
 import { AuthFormContainer } from "./auth-layout";
 import { OpenEmailButton } from "./open-email-button";
 import { useIsHydrated } from "./use-is-hydrated";

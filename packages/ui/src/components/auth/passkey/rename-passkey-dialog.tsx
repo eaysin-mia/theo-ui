@@ -5,7 +5,7 @@ import type { PasskeyAuthClient } from "@better-auth-ui/core/plugins/passkey";
 import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useUpdatePasskey } from "@better-auth-ui/react/plugins/passkey";
 import { useEffect } from "react";
-import { Button } from "theo-ui/components/button";
+import { Button } from "theoui/components/button";
 import {
   Dialog,
   DialogClose,
@@ -15,10 +15,10 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theo-ui/components/dialog";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { passkeyPlugin } from "theo-ui/lib/auth/passkey-plugin";
+} from "theoui/components/dialog";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { passkeyPlugin } from "theoui/lib/auth/passkey-plugin";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import type { ListedPasskey } from "./delete-passkey-dialog";
 

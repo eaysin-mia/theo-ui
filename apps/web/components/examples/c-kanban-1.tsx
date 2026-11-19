@@ -2,10 +2,10 @@
 
 import type { ComponentProps } from "react";
 import { useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "theo-ui/components/avatar";
-import { Badge } from "theo-ui/components/badge";
-import { Button } from "theo-ui/components/button";
-import { Card } from "theo-ui/components/card";
+import { Avatar, AvatarFallback, AvatarImage } from "theoui/components/avatar";
+import { Badge } from "theoui/components/badge";
+import { Button } from "theoui/components/button";
+import { Card } from "theoui/components/card";
 import {
   Kanban,
   KanbanBoard,
@@ -15,8 +15,8 @@ import {
   KanbanItem,
   KanbanItemHandle,
   KanbanOverlay,
-} from "theo-ui/patterns/kanban";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/patterns/kanban";
+import { cn } from "theoui/lib/utils";
 import { GripVerticalIcon } from "lucide-react";
 
 interface Task {

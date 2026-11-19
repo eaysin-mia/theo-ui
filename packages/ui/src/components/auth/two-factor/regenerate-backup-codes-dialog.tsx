@@ -5,7 +5,7 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useGenerateBackupCodes } from "@better-auth-ui/react/plugins/two-factor";
 import { KeyRound } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "theo-ui/components/toast";
+import { toastManager } from "theoui/components/toast";
 
 import {
   AlertDialog,
@@ -15,12 +15,12 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theo-ui/components/alert-dialog";
-import { Button } from "theo-ui/components/button";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { twoFactorPlugin } from "theo-ui/lib/auth/two-factor-plugin";
-import { useTwoFactorPasswordRequirement } from "theo-ui/lib/auth/use-two-factor-password";
+} from "theoui/components/alert-dialog";
+import { Button } from "theoui/components/button";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { twoFactorPlugin } from "theoui/lib/auth/two-factor-plugin";
+import { useTwoFactorPasswordRequirement } from "theoui/lib/auth/use-two-factor-password";
 import { useAuthForm } from "../auth-form";
 import { BackupCodes } from "./backup-codes";
 

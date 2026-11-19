@@ -5,14 +5,9 @@ import { useAuth, useAuthPlugin, useSession } from "@better-auth-ui/react";
 import { useListUserInvitations } from "@better-auth-ui/react/plugins/organization";
 import { Fragment } from "react";
 
-import {
-  Card,
-  CardHeader,
-  CardPanel,
-  CardTitle,
-} from "theo-ui/components/card";
-import { Separator } from "theo-ui/components/separator";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+import { Card, CardHeader, CardPanel, CardTitle } from "theoui/components/card";
+import { Separator } from "theoui/components/separator";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
 import { UserInvitationRow } from "./user-invitation-row";
 import { UserInvitationRowSkeleton } from "./user-invitation-row-skeleton";
 import { UserInvitationsEmpty } from "./user-invitations-empty";

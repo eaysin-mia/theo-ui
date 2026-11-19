@@ -3,14 +3,14 @@
 import type { OrganizationLocalization } from "@better-auth-ui/core/plugins/organization";
 import { Settings2 } from "lucide-react";
 
-import { Button } from "theo-ui/components/button";
+import { Button } from "theoui/components/button";
 import {
   Menu,
   MenuCheckboxItem,
   MenuGroup,
   MenuPopup,
   MenuTrigger,
-} from "theo-ui/components/menu";
+} from "theoui/components/menu";
 
 export type OrganizationTableViewColumn = {
   id: string;

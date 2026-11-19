@@ -7,7 +7,7 @@ import {
   TimelineItem,
   TimelineSeparator,
   TimelineTitle,
-} from "theo-ui/patterns/timeline";
+} from "theoui/patterns/timeline";
 import {
   GitForkIcon,
   GitPullRequestArrowIcon,

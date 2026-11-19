@@ -5,7 +5,7 @@ import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
 
-import { cn } from "theo-ui/lib/utils";
+import { cn } from "theoui/lib/utils";
 
 /**
  * CSS variable architecture:

@@ -16,10 +16,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theo-ui/components/alert-dialog";
-import { Button } from "theo-ui/components/button";
-import { Spinner } from "theo-ui/components/spinner";
-import { apiKeyPlugin } from "theo-ui/lib/auth/api-key-plugin";
+} from "theoui/components/alert-dialog";
+import { Button } from "theoui/components/button";
+import { Spinner } from "theoui/components/spinner";
+import { apiKeyPlugin } from "theoui/lib/auth/api-key-plugin";
 
 export type DeleteApiKeyDialogProps = {
   open: boolean;

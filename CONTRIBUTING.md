@@ -1,6 +1,6 @@
-# Contributing to theo-ui
+# Contributing to theoui
 
-Thank you for your interest in contributing to theo-ui! This project is an accessible, unstyled-first React 19 UI component library built with Base UI and Tailwind CSS v4.
+Thank you for your interest in contributing to theoui! This project is an accessible, unstyled-first React 19 UI component library built with Base UI and Tailwind CSS v4.
 
 ---
 
@@ -15,8 +15,8 @@ Thank you for your interest in contributing to theo-ui! This project is an acces
 
 ```bash
 # Clone the repository
-git clone https://github.com/eaysin-mia/theo-ui.git
-cd theo-ui
+git clone https://github.com/eaysin-mia/theoui.git
+cd theoui
 
 # Install dependencies across the workspace
 pnpm install
@@ -31,7 +31,7 @@ pnpm dev
 
 This repository is structured as a Turborepo monorepo:
 
-- **`packages/ui`**: The publishable component library (`theo-ui`). Contains primitives in `src/components/`, compositions in `src/patterns/`, and tests in `tests/`.
+- **`packages/ui`**: The publishable component library (`theoui`). Contains primitives in `src/components/`, compositions in `src/patterns/`, and tests in `tests/`.
 - **`apps/web`**: Interactive playground and documentation demo application built with Next.js 16.
 
 ---
@@ -74,7 +74,7 @@ pnpm build
 
 1. Create a descriptive branch: `git checkout -b feat/your-feature-name`.
 2. Commit your changes following conventional commit syntax.
-3. If your change affects the published `theo-ui` package, create a changeset:
+3. If your change affects the published `theoui` package, create a changeset:
    ```bash
    pnpm changeset
    ```

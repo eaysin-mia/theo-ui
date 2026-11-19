@@ -14,8 +14,8 @@
     "components": "@/components",
     "hooks": "@/hooks",
     "lib": "@/lib",
-    "utils": "theo-ui/lib/utils",
-    "ui": "theo-ui/components"
+    "utils": "theoui/lib/utils",
+    "ui": "theoui/components"
   },
   "rtl": false,
   "menuColor": "default",

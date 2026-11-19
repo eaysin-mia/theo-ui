@@ -1,4 +1,4 @@
-# theo-ui
+# theoui
 
 An accessible, unstyled-first React component library built on [Base UI](https://base-ui.com) and styled with [Tailwind CSS v4](https://tailwindcss.com).
 
@@ -18,20 +18,20 @@ Published as modern ES Modules (ESM) with first-class TypeScript declarations, s
 
 ### Core Package
 
-Install `theo-ui` into your project using your preferred package manager:
+Install `theoui` into your project using your preferred package manager:
 
 ```bash
 # pnpm
-pnpm add theo-ui
+pnpm add theoui
 
 # npm
-npm install theo-ui
+npm install theoui
 
 # yarn
-yarn add theo-ui
+yarn add theoui
 
 # bun
-bun add theo-ui
+bun add theoui
 ```
 
 All core primitives (Button, Dialog, Select, Tabs, Input, Tooltip, Form, etc.) work immediately with zero additional dependencies.
@@ -40,7 +40,7 @@ All core primitives (Button, Dialog, Select, Tabs, Input, Tooltip, Form, etc.) w
 
 ### Optional Feature Dependencies
 
-`theo-ui` isolates heavy or domain-specific libraries behind optional peer dependencies and subpath exports. Install these only when using the respective feature in your application:
+`theoui` isolates heavy or domain-specific libraries behind optional peer dependencies and subpath exports. Install these only when using the respective feature in your application:
 
 | Feature / Subpath                                                                                                               | Required Peer Package(s)                                           | Install Command                                                   |
 | :------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------- | :---------------------------------------------------------------- |
@@ -77,20 +77,20 @@ pnpm add qrcode
 
 ## Updating the Package
 
-To update `theo-ui` to the latest release in your project:
+To update `theoui` to the latest release in your project:
 
 ```bash
 # pnpm
-pnpm update theo-ui@latest
+pnpm update theoui@latest
 
 # npm
-npm install theo-ui@latest
+npm install theoui@latest
 
 # yarn
-yarn upgrade theo-ui@latest
+yarn upgrade theoui@latest
 
 # bun
-bun update theo-ui
+bun update theoui
 ```
 
 ---
@@ -102,7 +102,7 @@ bun update theo-ui
 Import the library stylesheet once in your application's root CSS entry point (e.g. `src/app/globals.css` in Next.js or `src/index.css` in Vite):
 
 ```css
-@import "theo-ui/globals.css";
+@import "theoui/globals.css";
 ```
 
 The stylesheet imports Tailwind CSS, design tokens, CSS custom properties, and animations. You can customize colors and variables directly via `:root` and `.dark` overrides in your CSS.
@@ -126,7 +126,7 @@ export function MotionProvider({ children }: { children: ReactNode }) {
 Add the provider in your root layout (`app/layout.tsx`):
 
 ```tsx
-import "theo-ui/globals.css";
+import "theoui/globals.css";
 import { MotionProvider } from "@/components/motion-provider";
 
 export default function RootLayout({
@@ -146,68 +146,68 @@ export default function RootLayout({
 
 ### 3. Next.js Monorepo Configuration
 
-When consuming `theo-ui` directly from a local monorepo workspace before publishing to npm, configure `transpilePackages` in `next.config.ts`:
+When consuming `theoui` directly from a local monorepo workspace before publishing to npm, configure `transpilePackages` in `next.config.ts`:
 
 ```ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["theo-ui"],
+  transpilePackages: ["theoui"],
 };
 
 export default nextConfig;
 ```
 
-_(Note: Once `theo-ui` is installed from the npm registry as a pre-built package, `transpilePackages` is not required)._
+_(Note: Once `theoui` is installed from the npm registry as a pre-built package, `transpilePackages` is not required)._
 
 ---
 
 ## Importing Components & Subpaths
 
-`theo-ui` provides fully typed subpath exports for optimal tree-shaking:
+`theoui` provides fully typed subpath exports for optimal tree-shaking:
 
 ### Root Entrypoint
 
 ```tsx
-import { Button, Dialog, Input, Tooltip, Badge } from "theo-ui";
+import { Button, Dialog, Input, Tooltip, Badge } from "theoui";
 ```
 
 ### Granular Primitive Imports
 
 ```tsx
-import { Button } from "theo-ui/components/button";
+import { Button } from "theoui/components/button";
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
-} from "theo-ui/components/dialog";
-import { Select, SelectItem, SelectTrigger } from "theo-ui/components/select";
+} from "theoui/components/dialog";
+import { Select, SelectItem, SelectTrigger } from "theoui/components/select";
 ```
 
 ### High-level Patterns & Interactive Organisms
 
 ```tsx
-import { CartButton } from "theo-ui/patterns/buttons/cart-button";
-import { HoldButton } from "theo-ui/patterns/buttons/hold-button";
-import { TipSelector } from "theo-ui/patterns/tip-selector";
-import { HaloSearchInput } from "theo-ui/patterns/halo-search";
-import { EventCalendar } from "theo-ui/patterns/event-calendar";
-import { Gantt, GanttView } from "theo-ui/patterns/gantt";
-import { Tree, TreeItem, TreeItemLabel } from "theo-ui/patterns/tree";
+import { CartButton } from "theoui/patterns/buttons/cart-button";
+import { HoldButton } from "theoui/patterns/buttons/hold-button";
+import { TipSelector } from "theoui/patterns/tip-selector";
+import { HaloSearchInput } from "theoui/patterns/halo-search";
+import { EventCalendar } from "theoui/patterns/event-calendar";
+import { Gantt, GanttView } from "theoui/patterns/gantt";
+import { Tree, TreeItem, TreeItemLabel } from "theoui/patterns/tree";
 ```
 
 ### Utility Hooks & Helpers
 
 ```tsx
-import { useMediaQuery, useIsMobile, useIsHydrated } from "theo-ui/hooks";
-import { cn } from "theo-ui/lib/utils";
+import { useMediaQuery, useIsMobile, useIsHydrated } from "theoui/hooks";
+import { cn } from "theoui/lib/utils";
 ```
 
 ### Authentication Primitives
 
 ```tsx
-import { AuthProvider, SignIn, SignUp } from "theo-ui/components/auth";
-import { adminPlugin, passkeyPlugin } from "theo-ui/lib/auth";
+import { AuthProvider, SignIn, SignUp } from "theoui/components/auth";
+import { adminPlugin, passkeyPlugin } from "theoui/lib/auth";
 ```
 
 ---
@@ -218,7 +218,7 @@ All components built on Base UI use the polymorphic `render` prop for element co
 
 ```tsx
 import Link from "next/link";
-import { Button } from "theo-ui/components/button";
+import { Button } from "theoui/components/button";
 
 export function NavLink() {
   return <Button render={<Link href="/dashboard" />}>Go to Dashboard</Button>;
@@ -233,16 +233,16 @@ From the monorepo root:
 
 ```bash
 # Build the package (TypeScript declarations + Tailwind CSS)
-pnpm --filter theo-ui build
+pnpm --filter theoui build
 
 # Typecheck
-pnpm --filter theo-ui typecheck
+pnpm --filter theoui typecheck
 
 # Lint
-pnpm --filter theo-ui lint
+pnpm --filter theoui lint
 
 # Validate exports and package structure with publint
-pnpm --filter theo-ui package:check
+pnpm --filter theoui package:check
 ```
 
 ### Publishing Releases

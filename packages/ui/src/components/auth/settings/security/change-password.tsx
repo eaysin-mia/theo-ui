@@ -23,8 +23,8 @@ import {
 } from "@better-auth-ui/react";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "theo-ui/components/toast";
-import { Button } from "theo-ui/components/button";
+import { toastManager } from "theoui/components/toast";
+import { Button } from "theoui/components/button";
 import {
   Card,
   CardDescription,
@@ -32,17 +32,17 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theo-ui/components/card";
-import { Field, FieldError, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
+} from "theoui/components/card";
+import { Field, FieldError, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theo-ui/components/input-group";
-import { Skeleton } from "theo-ui/components/skeleton";
-import { Spinner } from "theo-ui/components/spinner";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/input-group";
+import { Skeleton } from "theoui/components/skeleton";
+import { Spinner } from "theoui/components/spinner";
+import { cn } from "theoui/lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../../auth-form";
 import { OpenEmailButton } from "../../open-email-button";
 import { PasswordStrengthMeter } from "../../password-strength-meter";

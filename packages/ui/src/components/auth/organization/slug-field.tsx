@@ -7,14 +7,14 @@ import { useDebouncer } from "@tanstack/react-pacer";
 import { Check, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { Field, FieldError, FieldLabel } from "theo-ui/components/field";
+import { Field, FieldError, FieldLabel } from "theoui/components/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theo-ui/components/input-group";
-import { Spinner } from "theo-ui/components/spinner";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+} from "theoui/components/input-group";
+import { Spinner } from "theoui/components/spinner";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
 
 /** Props for the `SlugField` component. */
 export type SlugFieldProps = {

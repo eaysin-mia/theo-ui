@@ -6,9 +6,9 @@ import type { User } from "better-auth";
 import { User2 } from "lucide-react";
 import type { ReactNode } from "react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "theo-ui/components/avatar";
-import { Skeleton } from "theo-ui/components/skeleton";
-import { cn } from "theo-ui/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "theoui/components/avatar";
+import { Skeleton } from "theoui/components/skeleton";
+import { cn } from "theoui/lib/utils";
 
 export type UserAvatarProps = {
   className?: string;

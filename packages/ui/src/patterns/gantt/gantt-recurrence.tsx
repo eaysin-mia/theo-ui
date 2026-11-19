@@ -4,7 +4,7 @@ import type {
   GanttOccurrence,
   GanttRecurrenceRule,
   GanttWeekday,
-} from "theo-ui/patterns/gantt/gantt-types";
+} from "theoui/patterns/gantt/gantt-types";
 import { TZDate } from "@date-fns/tz";
 import { addDays, addMonths, addWeeks, addYears } from "date-fns";
 

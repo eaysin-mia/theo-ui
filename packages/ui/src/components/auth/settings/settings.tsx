@@ -10,8 +10,8 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "theo-ui/components/tabs";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/tabs";
+import { cn } from "theoui/lib/utils";
 import { TabsScrollContainer } from "../tabs-scroll-container";
 import { AccountSettings } from "./account/account-settings";
 import { SecuritySettings } from "./security/security-settings";

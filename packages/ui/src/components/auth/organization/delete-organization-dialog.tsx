@@ -15,10 +15,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theo-ui/components/alert-dialog";
-import { Button } from "theo-ui/components/button";
-import { Card, CardPanel } from "theo-ui/components/card";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+} from "theoui/components/alert-dialog";
+import { Button } from "theoui/components/button";
+import { Card, CardPanel } from "theoui/components/card";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
 import { useAuthForm } from "../auth-form";
 import { OrganizationView } from "./organization-view";
 

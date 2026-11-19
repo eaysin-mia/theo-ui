@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "theo-ui/lib/utils";
+import { cn } from "theoui/lib/utils";
 
 /* -------------------------------------------------------------------------------------------------
  * Context & Types

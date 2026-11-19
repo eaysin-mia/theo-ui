@@ -10,19 +10,14 @@ import {
   useSetActiveSession,
 } from "@better-auth-ui/react/plugins/multi-session";
 import { ArrowLeftRight, LogOut, MoreHorizontal } from "lucide-react";
-import { toastManager } from "theo-ui/components/toast";
-import { UserView } from "theo-ui/components/auth/user/user-view";
-import { Button, buttonVariants } from "theo-ui/components/button";
-import { Skeleton } from "theo-ui/components/skeleton";
-import {
-  Menu,
-  MenuItem,
-  MenuPopup,
-  MenuTrigger,
-} from "theo-ui/components/menu";
-import { Spinner } from "theo-ui/components/spinner";
-import { multiSessionPlugin } from "theo-ui/lib/auth/multi-session-plugin";
-import { cn } from "theo-ui/lib/utils";
+import { toastManager } from "theoui/components/toast";
+import { UserView } from "theoui/components/auth/user/user-view";
+import { Button, buttonVariants } from "theoui/components/button";
+import { Skeleton } from "theoui/components/skeleton";
+import { Menu, MenuItem, MenuPopup, MenuTrigger } from "theoui/components/menu";
+import { Spinner } from "theoui/components/spinner";
+import { multiSessionPlugin } from "theoui/lib/auth/multi-session-plugin";
+import { cn } from "theoui/lib/utils";
 
 export type ManageAccountProps = {
   deviceSession?: ListDeviceSession | null;

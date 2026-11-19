@@ -4,7 +4,7 @@ import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import type * as React from "react";
 
-import { cn } from "theo-ui/lib/utils";
+import { cn } from "theoui/lib/utils";
 
 export interface AnimatedGradientTextProps extends useRender.ComponentProps<"span"> {
   speed?: number;

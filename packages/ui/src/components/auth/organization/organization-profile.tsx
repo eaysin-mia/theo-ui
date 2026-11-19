@@ -22,12 +22,12 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theo-ui/components/card";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { Skeleton } from "theo-ui/components/skeleton";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/card";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { Skeleton } from "theoui/components/skeleton";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+import { cn } from "theoui/lib/utils";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

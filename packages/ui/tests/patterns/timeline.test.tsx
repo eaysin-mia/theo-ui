@@ -10,7 +10,7 @@ import {
   TimelineItem,
   TimelineSeparator,
   TimelineTitle,
-} from "theo-ui/patterns/timeline";
+} from "theoui/patterns/timeline";
 
 describe("Timeline Pattern", () => {
   it("renders timeline items, titles, and dates correctly", () => {

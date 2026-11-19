@@ -2,11 +2,11 @@
 
 import { use } from "react";
 import Link from "next/link";
-import { Auth } from "theo-ui/components/auth/auth";
+import { Auth } from "theoui/components/auth/auth";
 import {
   AuthLayout,
   AuthLegalNotice,
-} from "theo-ui/components/auth/auth-layout";
+} from "theoui/components/auth/auth-layout";
 
 const HEADER_ACTIONS: Record<
   string,

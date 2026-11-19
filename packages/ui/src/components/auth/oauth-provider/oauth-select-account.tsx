@@ -19,20 +19,20 @@ import {
 import { ShieldCheck, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "theo-ui/components/avatar";
-import { Badge } from "theo-ui/components/badge";
-import { Button } from "theo-ui/components/button";
+import { Avatar, AvatarFallback, AvatarImage } from "theoui/components/avatar";
+import { Badge } from "theoui/components/badge";
+import { Button } from "theoui/components/button";
 import {
   Card,
   CardPanel,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "theo-ui/components/card";
-import { Skeleton } from "theo-ui/components/skeleton";
-import { Spinner } from "theo-ui/components/spinner";
-import { oauthProviderPlugin } from "theo-ui/lib/auth/oauth-provider-plugin";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/card";
+import { Skeleton } from "theoui/components/skeleton";
+import { Spinner } from "theoui/components/spinner";
+import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
+import { cn } from "theoui/lib/utils";
 import { UserAvatar } from "../user/user-avatar";
 
 export type OAuthSelectAccountProps = {

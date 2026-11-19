@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Badge } from "theo-ui/components/badge";
+import { Badge } from "theoui/components/badge";
 import {
   Sortable,
   SortableItem,
   SortableItemHandle,
-} from "theo-ui/components/sortable";
+} from "theoui/components/sortable";
 import { toast } from "sonner";
 import {
   ImageIcon,

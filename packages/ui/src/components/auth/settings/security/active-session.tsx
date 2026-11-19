@@ -4,11 +4,11 @@ import { useAuth, useRevokeSession, useSession } from "@better-auth-ui/react";
 import type { Session } from "better-auth";
 import Bowser from "bowser";
 import { LogOut, Monitor, Smartphone, X } from "lucide-react";
-import { toastManager } from "theo-ui/components/toast";
+import { toastManager } from "theoui/components/toast";
 
-import { Badge } from "theo-ui/components/badge";
-import { Button } from "theo-ui/components/button";
-import { Spinner } from "theo-ui/components/spinner";
+import { Badge } from "theoui/components/badge";
+import { Button } from "theoui/components/button";
+import { Spinner } from "theoui/components/spinner";
 
 function timeAgo(date: Date) {
   const seconds = Math.floor((Date.now() - date.getTime()) / 1000);

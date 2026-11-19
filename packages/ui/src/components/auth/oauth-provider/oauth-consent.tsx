@@ -21,8 +21,8 @@ import {
 } from "lucide-react";
 import { useSyncExternalStore } from "react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "theo-ui/components/avatar";
-import { Button } from "theo-ui/components/button";
+import { Avatar, AvatarFallback, AvatarImage } from "theoui/components/avatar";
+import { Button } from "theoui/components/button";
 import {
   Card,
   CardPanel,
@@ -30,12 +30,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theo-ui/components/card";
-import { Separator } from "theo-ui/components/separator";
-import { Skeleton } from "theo-ui/components/skeleton";
-import { Spinner } from "theo-ui/components/spinner";
-import { oauthProviderPlugin } from "theo-ui/lib/auth/oauth-provider-plugin";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/card";
+import { Separator } from "theoui/components/separator";
+import { Skeleton } from "theoui/components/skeleton";
+import { Spinner } from "theoui/components/spinner";
+import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
+import { cn } from "theoui/lib/utils";
 import { UserAvatar } from "../user/user-avatar";
 
 export type OAuthConsentProps = {

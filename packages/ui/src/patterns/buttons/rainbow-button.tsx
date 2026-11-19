@@ -5,8 +5,8 @@ import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
 
-import { Spinner } from "theo-ui/components/spinner";
-import { cn } from "theo-ui/lib/utils";
+import { Spinner } from "theoui/components/spinner";
+import { cn } from "theoui/lib/utils";
 
 export const rainbowButtonVariants = cva(
   [

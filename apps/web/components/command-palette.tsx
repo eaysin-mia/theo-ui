@@ -22,8 +22,8 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { useAutocompleteFilter } from "theo-ui/components/autocomplete";
-import { Button } from "theo-ui/components/button";
+import { useAutocompleteFilter } from "theoui/components/autocomplete";
+import { Button } from "theoui/components/button";
 import {
   Command,
   CommandCollection,
@@ -40,13 +40,13 @@ import {
   CommandPanel,
   CommandSeparator,
   CommandShortcut,
-} from "theo-ui/components/command";
-import { EmptyMedia } from "theo-ui/components/empty";
-import { Input } from "theo-ui/components/input";
-import { Kbd, KbdGroup } from "theo-ui/components/kbd";
-import { ScrollArea } from "theo-ui/components/scroll-area";
-import { Skeleton } from "theo-ui/components/skeleton";
-import { Spinner } from "theo-ui/components/spinner";
+} from "theoui/components/command";
+import { EmptyMedia } from "theoui/components/empty";
+import { Input } from "theoui/components/input";
+import { Kbd, KbdGroup } from "theoui/components/kbd";
+import { ScrollArea } from "theoui/components/scroll-area";
+import { Skeleton } from "theoui/components/skeleton";
+import { Spinner } from "theoui/components/spinner";
 
 interface Item {
   value: string;

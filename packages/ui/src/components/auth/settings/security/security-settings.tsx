@@ -1,7 +1,7 @@
 "use client";
 
 import { useAuth } from "@better-auth-ui/react";
-import { cn } from "theo-ui/lib/utils";
+import { cn } from "theoui/lib/utils";
 import { ActiveSessions } from "./active-sessions";
 import { ChangePassword } from "./change-password";
 import { LinkedAccounts } from "./linked-accounts";

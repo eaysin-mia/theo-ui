@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { SettingsDirectory } from "theo-ui/components/auth/settings/settings-directory";
+import { SettingsDirectory } from "theoui/components/auth/settings/settings-directory";
 
 export default function SettingsIndexPage() {
   return (

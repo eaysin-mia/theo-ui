@@ -18,7 +18,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "theo-ui": path.resolve(import.meta.dirname, "./src"),
+      theoui: path.resolve(import.meta.dirname, "./src"),
     },
   },
 });

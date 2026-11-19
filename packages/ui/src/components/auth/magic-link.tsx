@@ -13,9 +13,9 @@ import { useSignInMagicLink } from "@better-auth-ui/react/plugins/magic-link";
 import { useIsMutating } from "@tanstack/react-query";
 import { useId } from "react";
 
-import { Field, FieldLabel, FieldSeparator } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { magicLinkPlugin } from "theo-ui/lib/auth/magic-link-plugin";
+import { Field, FieldLabel, FieldSeparator } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { magicLinkPlugin } from "theoui/lib/auth/magic-link-plugin";
 import { isAuthFormFieldInvalid, useAuthForm } from "./auth-form";
 import { AuthFormContainer } from "./auth-layout";
 import { MAGIC_LINK_SENT_STORAGE_KEY } from "./magic-link-sent";

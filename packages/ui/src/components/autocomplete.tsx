@@ -3,9 +3,9 @@
 import { Autocomplete as AutocompletePrimitive } from "@base-ui/react/autocomplete";
 import { ChevronsUpDownIcon, XIcon } from "lucide-react";
 import type React from "react";
-import { cn } from "theo-ui/lib/utils";
-import { Input } from "theo-ui/components/input";
-import { ScrollArea } from "theo-ui/components/scroll-area";
+import { cn } from "theoui/lib/utils";
+import { Input } from "theoui/components/input";
+import { ScrollArea } from "theoui/components/scroll-area";
 
 export const Autocomplete: typeof AutocompletePrimitive.Root =
   AutocompletePrimitive.Root;

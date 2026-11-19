@@ -41,9 +41,9 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "theo-ui/components/alert-dialog";
-import { Button, buttonVariants } from "theo-ui/components/button";
-import { Card, CardPanel } from "theo-ui/components/card";
+} from "theoui/components/alert-dialog";
+import { Button, buttonVariants } from "theoui/components/button";
+import { Card, CardPanel } from "theoui/components/card";
 import {
   Dialog,
   DialogClose,
@@ -53,9 +53,9 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theo-ui/components/dialog";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
+} from "theoui/components/dialog";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
 import {
   Select,
   SelectGroup,
@@ -63,9 +63,9 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "theo-ui/components/select";
-import { Spinner } from "theo-ui/components/spinner";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+} from "theoui/components/select";
+import { Spinner } from "theoui/components/spinner";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

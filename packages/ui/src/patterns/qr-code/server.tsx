@@ -1,7 +1,7 @@
 import QR from "qrcode";
 import type React from "react";
 import { formatHex } from "culori";
-import { cn } from "theo-ui/lib/utils";
+import { cn } from "theoui/lib/utils";
 
 export interface QRCodeProps extends React.ComponentProps<"div"> {
   data: string;

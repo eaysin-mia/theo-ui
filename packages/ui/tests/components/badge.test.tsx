@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { Badge } from "theo-ui/components/badge";
+import { Badge } from "theoui/components/badge";
 
 describe("Badge component", () => {
   it("renders with default content", () => {

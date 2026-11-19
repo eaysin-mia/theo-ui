@@ -5,4 +5,4 @@ export {
   HoverCardTrigger,
   HoverCardContent,
   PreviewCardPrimitive,
-} from "theo-ui/components/preview-card";
+} from "theoui/components/preview-card";

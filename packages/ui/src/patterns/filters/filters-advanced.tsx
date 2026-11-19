@@ -1,14 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { FilterFieldPicker } from "theo-ui/patterns/filters/filters-builder";
+import { FilterFieldPicker } from "theoui/patterns/filters/filters-builder";
 import {
   FilterMoveToMenuItems,
   FilterOperatorPopover,
   FilterRuleMenuItems,
   FilterValuePopover,
   useFilterRuleDisplay,
-} from "theo-ui/patterns/filters/filters-chip";
+} from "theoui/patterns/filters/filters-chip";
 import {
   filterControlSizes,
   filterReadOnlyProps,
@@ -26,12 +26,12 @@ import {
   useFilterSegmentFocus,
   useFilterState,
   type FilterActionsContextValue,
-} from "theo-ui/patterns/filters/filters-context";
+} from "theoui/patterns/filters/filters-context";
 import {
   FILTER_ROW_SELECTOR,
   useFilterRowDrag,
-} from "theo-ui/patterns/filters/filters-dnd";
-import { filterIssueLabel } from "theo-ui/patterns/filters/filters-i18n";
+} from "theoui/patterns/filters/filters-dnd";
+import { filterIssueLabel } from "theoui/patterns/filters/filters-i18n";
 import {
   FILTER_FIELD_PICKER_CLASS,
   FILTER_MENU_CLASS,
@@ -40,17 +40,17 @@ import {
   getFilterField,
   isFilterFieldPickable,
   joinFilterPath,
-} from "theo-ui/patterns/filters/filters-lib";
+} from "theoui/patterns/filters/filters-lib";
 import {
   getFilterArity,
   getFilterOperator,
   operatorTakesValue,
-} from "theo-ui/patterns/filters/filters-operators";
+} from "theoui/patterns/filters/filters-operators";
 import {
   collectFilterIssues,
   createFilterRule,
   isFilterRule,
-} from "theo-ui/patterns/filters/filters-query";
+} from "theoui/patterns/filters/filters-query";
 import type {
   FilterCombinator,
   FilterEmptyStateContext,
@@ -61,29 +61,29 @@ import type {
   FilterOperator,
   FilterQuery,
   FilterRule,
-} from "theo-ui/patterns/filters/filters-types";
+} from "theoui/patterns/filters/filters-types";
 
-import { cn } from "theo-ui/lib/utils";
-import { Button } from "theo-ui/components/button";
+import { cn } from "theoui/lib/utils";
+import { Button } from "theoui/components/button";
 import {
   Menu,
   MenuPopup,
   MenuItem,
   MenuSeparator,
   MenuTrigger,
-} from "theo-ui/components/menu";
-import { Input } from "theo-ui/components/input";
+} from "theoui/components/menu";
+import { Input } from "theoui/components/input";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "theo-ui/components/popover";
+} from "theoui/components/popover";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "theo-ui/components/tooltip";
+} from "theoui/components/tooltip";
 import {
   RefreshCwIcon,
   CircleAlertIcon,

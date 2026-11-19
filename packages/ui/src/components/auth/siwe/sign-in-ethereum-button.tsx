@@ -15,8 +15,8 @@ import { useIsMutating } from "@tanstack/react-query";
 import { Wallet } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "theo-ui/components/button";
-import { LastUsedBadge } from "theo-ui/components/auth/last-login-method/last-used-badge";
+import { Button } from "theoui/components/button";
+import { LastUsedBadge } from "theoui/components/auth/last-login-method/last-used-badge";
 import {
   Dialog,
   DialogDescription,
@@ -25,12 +25,12 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theo-ui/components/dialog";
-import { Field, FieldDescription, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { Spinner } from "theo-ui/components/spinner";
-import { siwePlugin } from "theo-ui/lib/auth/siwe-plugin";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/dialog";
+import { Field, FieldDescription, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { Spinner } from "theoui/components/spinner";
+import { siwePlugin } from "theoui/lib/auth/siwe-plugin";
+import { cn } from "theoui/lib/utils";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,

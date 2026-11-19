@@ -10,7 +10,7 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useCreateOrganization } from "@better-auth-ui/react/plugins/organization";
 import { Briefcase } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "theo-ui/components/button";
+import { Button } from "theoui/components/button";
 import {
   Dialog,
   DialogClose,
@@ -20,10 +20,10 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theo-ui/components/dialog";
-import { Field, FieldLabel } from "theo-ui/components/field";
-import { Input } from "theo-ui/components/input";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
+} from "theoui/components/dialog";
+import { Field, FieldLabel } from "theoui/components/field";
+import { Input } from "theoui/components/input";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

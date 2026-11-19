@@ -1,6 +1,6 @@
 # UI Workspace
 
-This pnpm and Turborepo monorepo contains `theo-ui`, an enterprise React 19 component library, and a Next.js 16 application (`apps/web`) demonstrating and validating all components and patterns.
+This pnpm and Turborepo monorepo contains `theoui`, an enterprise React 19 component library, and a Next.js 16 application (`apps/web`) demonstrating and validating all components and patterns.
 
 - [`packages/ui`](./packages/ui/README.md) – Standalone, publishable UI library built on Base UI and Tailwind CSS v4.
 - `apps/web` – Next.js 16 showcase application and playground.
@@ -33,7 +33,7 @@ pnpm lint
 pnpm format:check
 
 # Validate UI package exports and publish readiness
-pnpm --filter theo-ui package:check
+pnpm --filter theoui package:check
 ```
 
 ## Releasing & Publishing

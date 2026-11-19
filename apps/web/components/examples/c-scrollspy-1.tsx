@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef } from "react";
-import { Scrollspy } from "theo-ui/components/scrollspy";
+import { Scrollspy } from "theoui/components/scrollspy";
 
-import { Button } from "theo-ui/components/button";
-import { ScrollArea } from "theo-ui/components/scroll-area";
+import { Button } from "theoui/components/button";
+import { ScrollArea } from "theoui/components/scroll-area";
 
 export function Pattern() {
   const parentRef = useRef<HTMLDivElement | null>(null);

@@ -12,36 +12,36 @@ import {
   useGantt,
   useGanttSelector,
   useGanttViewConfig,
-} from "theo-ui/patterns/gantt/gantt";
+} from "theoui/patterns/gantt/gantt";
 import {
   useGanttGestures,
   wasRecentDrag,
-} from "theo-ui/patterns/gantt/gantt-dnd";
+} from "theoui/patterns/gantt/gantt-dnd";
 import {
   flattenResources,
   getBaselineVariance,
   resolveEventBaseline,
   toZoned,
-} from "theo-ui/patterns/gantt/gantt-lib";
+} from "theoui/patterns/gantt/gantt-lib";
 import type {
   GanttOccurrence,
   GanttSegment,
-} from "theo-ui/patterns/gantt/gantt-types";
+} from "theoui/patterns/gantt/gantt-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 
-import { cn } from "theo-ui/lib/utils";
+import { cn } from "theoui/lib/utils";
 import {
   ContextMenu,
   ContextMenuPopup,
   ContextMenuTrigger,
-} from "theo-ui/components/context-menu";
+} from "theoui/components/context-menu";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "theo-ui/components/tooltip";
+} from "theoui/components/tooltip";
 import { RepeatIcon, CheckIcon } from "lucide-react";
 
 /**

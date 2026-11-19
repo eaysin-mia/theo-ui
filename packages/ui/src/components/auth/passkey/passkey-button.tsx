@@ -15,11 +15,11 @@ import { useIsMutating, useQueryClient } from "@tanstack/react-query";
 import { Fingerprint } from "lucide-react";
 import { useCallback, useMemo } from "react";
 
-import { Button } from "theo-ui/components/button";
-import { Spinner } from "theo-ui/components/spinner";
-import { LastUsedBadge } from "theo-ui/components/auth/last-login-method/last-used-badge";
-import { passkeyPlugin } from "theo-ui/lib/auth/passkey-plugin";
-import { cn } from "theo-ui/lib/utils";
+import { Button } from "theoui/components/button";
+import { Spinner } from "theoui/components/spinner";
+import { LastUsedBadge } from "theoui/components/auth/last-login-method/last-used-badge";
+import { passkeyPlugin } from "theoui/lib/auth/passkey-plugin";
+import { cn } from "theoui/lib/utils";
 
 export type PasskeyButtonProps = {
   /** @remarks `AuthView` */

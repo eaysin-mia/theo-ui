@@ -2,8 +2,8 @@
 
 import type { ComponentProps } from "react";
 
-import { Skeleton } from "theo-ui/components/skeleton";
-import { cn } from "theo-ui/lib/utils";
+import { Skeleton } from "theoui/components/skeleton";
+import { cn } from "theoui/lib/utils";
 import {
   OrganizationLogo,
   type OrganizationLogoSize,

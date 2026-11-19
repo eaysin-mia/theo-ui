@@ -14,12 +14,12 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theo-ui/components/card";
-import { Field, FieldItem, FieldLabel } from "theo-ui/components/field";
-import { Fieldset, FieldsetLegend } from "theo-ui/components/fieldset";
-import { Radio, RadioGroup } from "theo-ui/components/radio-group";
-import { themePlugin } from "theo-ui/lib/auth/theme-plugin";
-import { cn } from "theo-ui/lib/utils";
+} from "theoui/components/card";
+import { Field, FieldItem, FieldLabel } from "theoui/components/field";
+import { Fieldset, FieldsetLegend } from "theoui/components/fieldset";
+import { Radio, RadioGroup } from "theoui/components/radio-group";
+import { themePlugin } from "theoui/lib/auth/theme-plugin";
+import { cn } from "theoui/lib/utils";
 
 export type AppearanceProps = {
   className?: string;

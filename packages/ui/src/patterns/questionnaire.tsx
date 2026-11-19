@@ -4,8 +4,8 @@ import * as React from "react";
 import { Questionnaire as QuestionnairePrimitive } from "@shadcn/react/questionnaire";
 import type { VariantProps } from "class-variance-authority";
 import { CheckIcon } from "lucide-react";
-import { buttonVariants } from "theo-ui/components/button";
-import { cn } from "theo-ui/lib/utils";
+import { buttonVariants } from "theoui/components/button";
+import { cn } from "theoui/lib/utils";
 
 function Questionnaire({
   className,

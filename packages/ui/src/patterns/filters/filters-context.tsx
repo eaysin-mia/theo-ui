@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import type { FilterDraftAction } from "theo-ui/patterns/filters/filters-draft";
-import type { FilterPathCollapse } from "theo-ui/patterns/filters/filters-lib";
+import type { FilterDraftAction } from "theoui/patterns/filters/filters-draft";
+import type { FilterPathCollapse } from "theoui/patterns/filters/filters-lib";
 import type {
   FilterCombinator,
   FilterDraft,
@@ -19,7 +19,7 @@ import type {
   FilterRule,
   FilterValueDisplayContext,
   FilterValueType,
-} from "theo-ui/patterns/filters/filters-types";
+} from "theoui/patterns/filters/filters-types";
 
 /* -------------------------------------------------------------------------- */
 /*                                   Actions                                  */

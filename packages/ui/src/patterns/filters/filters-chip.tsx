@@ -13,12 +13,12 @@ import {
   useFilterPopupOpen,
   useFilterRender,
   useFilterReorderable,
-} from "theo-ui/patterns/filters/filters-context";
+} from "theoui/patterns/filters/filters-context";
 import {
   FilterMenu,
   useFilterOptions,
   useFilterValueResolution,
-} from "theo-ui/patterns/filters/filters-editors";
+} from "theoui/patterns/filters/filters-editors";
 import {
   collapseFilterPath,
   FILTER_MENU_CLASS,
@@ -26,41 +26,41 @@ import {
   formatFilterPath,
   getFilterField,
   getFilterFieldChain,
-} from "theo-ui/patterns/filters/filters-lib";
+} from "theoui/patterns/filters/filters-lib";
 import {
   coerceFilterValue,
   getFilterArity,
   getFilterOperator,
   operatorTakesValue,
   visibleFilterOperators,
-} from "theo-ui/patterns/filters/filters-operators";
+} from "theoui/patterns/filters/filters-operators";
 import {
   findFilterNode,
   isFilterGroup,
-} from "theo-ui/patterns/filters/filters-query";
+} from "theoui/patterns/filters/filters-query";
 import {
   isFilterDateValue,
   formatFilterDate,
   type FilterDateValue,
-} from "theo-ui/patterns/filters/filters-date";
+} from "theoui/patterns/filters/filters-date";
 import type {
   FilterEditorProps,
   FilterField,
   FilterGroupNode,
   FilterOperator,
   FilterRule,
-} from "theo-ui/patterns/filters/filters-types";
+} from "theoui/patterns/filters/filters-types";
 
-import { cn } from "theo-ui/lib/utils";
-import { Button, buttonVariants } from "theo-ui/components/button";
+import { cn } from "theoui/lib/utils";
+import { Button, buttonVariants } from "theoui/components/button";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "theo-ui/components/breadcrumb";
-import { Group, GroupSeparator, GroupText } from "theo-ui/components/group";
+} from "theoui/components/breadcrumb";
+import { Group, GroupSeparator, GroupText } from "theoui/components/group";
 import {
   Menu,
   MenuPopup,
@@ -68,18 +68,18 @@ import {
   MenuRadioGroup,
   MenuRadioItem,
   MenuTrigger,
-} from "theo-ui/components/menu";
+} from "theoui/components/menu";
 import {
   Popover,
   PopoverPopup,
   PopoverTrigger,
-} from "theo-ui/components/popover";
+} from "theoui/components/popover";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "theo-ui/components/tooltip";
+} from "theoui/components/tooltip";
 import {
   ChevronRightIcon,
   CornerDownRightIcon,

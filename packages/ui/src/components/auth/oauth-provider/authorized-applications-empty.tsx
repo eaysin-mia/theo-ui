@@ -9,8 +9,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theo-ui/components/empty";
-import { oauthProviderPlugin } from "theo-ui/lib/auth/oauth-provider-plugin";
+} from "theoui/components/empty";
+import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
 
 export function AuthorizedApplicationsEmpty() {
   const { localization } = useAuthPlugin(oauthProviderPlugin);

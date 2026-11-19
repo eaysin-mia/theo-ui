@@ -23,9 +23,9 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theo-ui/components/alert-dialog";
-import { Badge } from "theo-ui/components/badge";
-import { Button } from "theo-ui/components/button";
+} from "theoui/components/alert-dialog";
+import { Badge } from "theoui/components/badge";
+import { Button } from "theoui/components/button";
 import {
   Card,
   CardAction,
@@ -33,10 +33,10 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theo-ui/components/card";
-import { Skeleton } from "theo-ui/components/skeleton";
-import { Spinner } from "theo-ui/components/spinner";
-import { siwePlugin } from "theo-ui/lib/auth/siwe-plugin";
+} from "theoui/components/card";
+import { Skeleton } from "theoui/components/skeleton";
+import { Spinner } from "theoui/components/spinner";
+import { siwePlugin } from "theoui/lib/auth/siwe-plugin";
 
 const shortAddress = (address: string) =>
   address.length > 14 ? `${address.slice(0, 8)}…${address.slice(-6)}` : address;

@@ -1,3 +1,3 @@
 "use client";
 
-export { useIsHydrated } from "theo-ui/hooks/use-is-hydrated";
+export { useIsHydrated } from "theoui/hooks/use-is-hydrated";

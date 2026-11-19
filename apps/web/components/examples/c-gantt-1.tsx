@@ -1,42 +1,42 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { Gantt, type GanttApi } from "theo-ui/patterns/gantt/gantt";
-import type { GanttI18nOverrides } from "theo-ui/patterns/gantt/gantt-i18n";
-import { GanttNav, GanttToolbar } from "theo-ui/patterns/gantt/gantt-nav";
+import { Gantt, type GanttApi } from "theoui/patterns/gantt/gantt";
+import type { GanttI18nOverrides } from "theoui/patterns/gantt/gantt-i18n";
+import { GanttNav, GanttToolbar } from "theoui/patterns/gantt/gantt-nav";
 import type {
   GanttEvent,
   GanttInteractions,
   GanttResource,
   GanttSlotDraft,
-} from "theo-ui/patterns/gantt/gantt-types";
-import { GanttView } from "theo-ui/patterns/gantt/gantt-view";
+} from "theoui/patterns/gantt/gantt-types";
+import { GanttView } from "theoui/patterns/gantt/gantt-view";
 import { addDays, startOfDay, startOfWeek, type Locale } from "date-fns";
 import { ar, de, es, fr, ja } from "date-fns/locale";
 
-import { Button } from "theo-ui/components/button";
-import { Card, CardContent } from "theo-ui/components/card";
-import { Label } from "theo-ui/components/label";
+import { Button } from "theoui/components/button";
+import { Card, CardContent } from "theoui/components/card";
+import { Label } from "theoui/components/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "theo-ui/components/popover";
-import { RadioGroup, RadioGroupItem } from "theo-ui/components/radio-group";
+} from "theoui/components/popover";
+import { RadioGroup, RadioGroupItem } from "theoui/components/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "theo-ui/components/select";
-import { Switch } from "theo-ui/components/switch";
+} from "theoui/components/select";
+import { Switch } from "theoui/components/switch";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "theo-ui/components/tabs";
+} from "theoui/components/tabs";
 import { SettingsIcon, RotateCcwIcon } from "lucide-react";
 
 /**

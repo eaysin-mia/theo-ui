@@ -12,17 +12,12 @@ import { Trash2, Upload } from "lucide-react";
 import { type ChangeEvent, useRef, useState } from "react";
 import { toast } from "sonner";
 
-import { Button, buttonVariants } from "theo-ui/components/button";
-import {
-  Menu,
-  MenuItem,
-  MenuPopup,
-  MenuTrigger,
-} from "theo-ui/components/menu";
-import { Label } from "theo-ui/components/label";
-import { Spinner } from "theo-ui/components/spinner";
-import { organizationPlugin } from "theo-ui/lib/auth/organization-plugin";
-import { cn } from "theo-ui/lib/utils";
+import { Button, buttonVariants } from "theoui/components/button";
+import { Menu, MenuItem, MenuPopup, MenuTrigger } from "theoui/components/menu";
+import { Label } from "theoui/components/label";
+import { Spinner } from "theoui/components/spinner";
+import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+import { cn } from "theoui/lib/utils";
 import { OrganizationLogo } from "./organization-logo";
 
 export type ChangeOrganizationLogoProps = {
