@@ -46,9 +46,9 @@ Or import a focused component group:
 
 ```tsx
 import { Button } from "@theo/ui/components/button";
-import { EventCalendar } from "@theo/ui/components/event-calendar";
-import { Gantt, GanttView } from "@theo/ui/components/gantt";
-import { Tree, TreeItem, TreeItemLabel } from "@theo/ui/components/tree";
+import { EventCalendar } from "@theo/ui/patterns/event-calendar";
+import { Gantt, GanttView } from "@theo/ui/patterns/gantt";
+import { Tree, TreeItem, TreeItemLabel } from "@theo/ui/patterns/tree";
 import { cn } from "@theo/ui/lib/utils";
 import { useMediaQuery } from "@theo/ui/hooks";
 ```

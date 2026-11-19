@@ -11,7 +11,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "@theo/ui/components/code-block";
+} from "@theo/ui/patterns/code-block";
 
 export function MarkdownPre({
   node,

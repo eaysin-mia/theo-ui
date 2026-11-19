@@ -25,14 +25,14 @@ import {
 import Link from "next/link";
 import { Pattern } from "@/components/examples/c-timeline-4";
 import { AutoHeightDemo } from "@/components/examples/c-auto-height-1";
-import { CartButton } from "@theo/ui/components/buttons/cart-button";
-import { RainbowButton } from "@theo/ui/components/buttons/rainbow-button";
-import { ShimmerButton } from "@theo/ui/components/buttons/shimmer-button";
-import { UndoButton } from "@theo/ui/components/buttons/undo-button";
-import { HoldButton } from "@theo/ui/components/buttons/hold-button";
-import { HaloSearch } from "@theo/ui/components/halo-search";
-import { TipSelector } from "@theo/ui/components/tip-selector";
-import { UptimeCard } from "@theo/ui/components/uptime-card";
+import { CartButton } from "@theo/ui/patterns/buttons/cart-button";
+import { RainbowButton } from "@theo/ui/patterns/buttons/rainbow-button";
+import { ShimmerButton } from "@theo/ui/patterns/buttons/shimmer-button";
+import { UndoButton } from "@theo/ui/patterns/buttons/undo-button";
+import { HoldButton } from "@theo/ui/patterns/buttons/hold-button";
+import { HaloSearch } from "@theo/ui/patterns/halo-search";
+import { TipSelector } from "@theo/ui/patterns/tip-selector";
+import { UptimeCard } from "@theo/ui/patterns/uptime-card";
 import {
   RelativeTime,
   RelativeTimeZone,

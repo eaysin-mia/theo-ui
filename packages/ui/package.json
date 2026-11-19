@@ -55,6 +55,66 @@
       "import": "./dist/patterns/index.js",
       "default": "./dist/patterns/index.js"
     },
+    "./patterns/app-layout": {
+      "types": "./dist/patterns/app-layout/index.d.ts",
+      "import": "./dist/patterns/app-layout/index.js",
+      "default": "./dist/patterns/app-layout/index.js"
+    },
+    "./patterns/app-layout/*": {
+      "types": "./dist/patterns/app-layout/*.d.ts",
+      "import": "./dist/patterns/app-layout/*.js",
+      "default": "./dist/patterns/app-layout/*.js"
+    },
+    "./patterns/buttons": {
+      "types": "./dist/patterns/buttons/index.d.ts",
+      "import": "./dist/patterns/buttons/index.js",
+      "default": "./dist/patterns/buttons/index.js"
+    },
+    "./patterns/buttons/*": {
+      "types": "./dist/patterns/buttons/*.d.ts",
+      "import": "./dist/patterns/buttons/*.js",
+      "default": "./dist/patterns/buttons/*.js"
+    },
+    "./patterns/event-calendar": {
+      "types": "./dist/patterns/event-calendar/index.d.ts",
+      "import": "./dist/patterns/event-calendar/index.js",
+      "default": "./dist/patterns/event-calendar/index.js"
+    },
+    "./patterns/event-calendar/*": {
+      "types": "./dist/patterns/event-calendar/*.d.ts",
+      "import": "./dist/patterns/event-calendar/*.js",
+      "default": "./dist/patterns/event-calendar/*.js"
+    },
+    "./patterns/filters": {
+      "types": "./dist/patterns/filters/index.d.ts",
+      "import": "./dist/patterns/filters/index.js",
+      "default": "./dist/patterns/filters/index.js"
+    },
+    "./patterns/filters/*": {
+      "types": "./dist/patterns/filters/*.d.ts",
+      "import": "./dist/patterns/filters/*.js",
+      "default": "./dist/patterns/filters/*.js"
+    },
+    "./patterns/gantt": {
+      "types": "./dist/patterns/gantt/index.d.ts",
+      "import": "./dist/patterns/gantt/index.js",
+      "default": "./dist/patterns/gantt/index.js"
+    },
+    "./patterns/gantt/*": {
+      "types": "./dist/patterns/gantt/*.d.ts",
+      "import": "./dist/patterns/gantt/*.js",
+      "default": "./dist/patterns/gantt/*.js"
+    },
+    "./patterns/qr-code": {
+      "types": "./dist/patterns/qr-code/index.d.ts",
+      "import": "./dist/patterns/qr-code/index.js",
+      "default": "./dist/patterns/qr-code/index.js"
+    },
+    "./patterns/qr-code/*": {
+      "types": "./dist/patterns/qr-code/*.d.ts",
+      "import": "./dist/patterns/qr-code/*.js",
+      "default": "./dist/patterns/qr-code/*.js"
+    },
     "./patterns/*": {
       "types": "./dist/patterns/*.d.ts",
       "import": "./dist/patterns/*.js",
@@ -101,14 +161,14 @@
       "default": "./dist/hooks/*.js"
     },
     "./components/app-layout": {
-      "types": "./dist/components/app-layout/index.d.ts",
-      "import": "./dist/components/app-layout/index.js",
-      "default": "./dist/components/app-layout/index.js"
+      "types": "./dist/patterns/app-layout/index.d.ts",
+      "import": "./dist/patterns/app-layout/index.js",
+      "default": "./dist/patterns/app-layout/index.js"
     },
     "./components/app-layout/*": {
-      "types": "./dist/components/app-layout/*.d.ts",
-      "import": "./dist/components/app-layout/*.js",
-      "default": "./dist/components/app-layout/*.js"
+      "types": "./dist/patterns/app-layout/*.d.ts",
+      "import": "./dist/patterns/app-layout/*.js",
+      "default": "./dist/patterns/app-layout/*.js"
     },
     "./components/auth": {
       "types": "./dist/components/auth/index.d.ts",
@@ -121,54 +181,99 @@
       "default": "./dist/components/auth/*.js"
     },
     "./components/buttons": {
-      "types": "./dist/components/buttons/index.d.ts",
-      "import": "./dist/components/buttons/index.js",
-      "default": "./dist/components/buttons/index.js"
+      "types": "./dist/patterns/buttons/index.d.ts",
+      "import": "./dist/patterns/buttons/index.js",
+      "default": "./dist/patterns/buttons/index.js"
     },
     "./components/buttons/*": {
-      "types": "./dist/components/buttons/*.d.ts",
-      "import": "./dist/components/buttons/*.js",
-      "default": "./dist/components/buttons/*.js"
+      "types": "./dist/patterns/buttons/*.d.ts",
+      "import": "./dist/patterns/buttons/*.js",
+      "default": "./dist/patterns/buttons/*.js"
     },
     "./components/event-calendar": {
-      "types": "./dist/components/event-calendar/index.d.ts",
-      "import": "./dist/components/event-calendar/index.js",
-      "default": "./dist/components/event-calendar/index.js"
+      "types": "./dist/patterns/event-calendar/index.d.ts",
+      "import": "./dist/patterns/event-calendar/index.js",
+      "default": "./dist/patterns/event-calendar/index.js"
     },
     "./components/event-calendar/*": {
-      "types": "./dist/components/event-calendar/*.d.ts",
-      "import": "./dist/components/event-calendar/*.js",
-      "default": "./dist/components/event-calendar/*.js"
+      "types": "./dist/patterns/event-calendar/*.d.ts",
+      "import": "./dist/patterns/event-calendar/*.js",
+      "default": "./dist/patterns/event-calendar/*.js"
     },
     "./components/filters": {
-      "types": "./dist/components/filters/index.d.ts",
-      "import": "./dist/components/filters/index.js",
-      "default": "./dist/components/filters/index.js"
+      "types": "./dist/patterns/filters/index.d.ts",
+      "import": "./dist/patterns/filters/index.js",
+      "default": "./dist/patterns/filters/index.js"
     },
     "./components/filters/*": {
-      "types": "./dist/components/filters/*.d.ts",
-      "import": "./dist/components/filters/*.js",
-      "default": "./dist/components/filters/*.js"
+      "types": "./dist/patterns/filters/*.d.ts",
+      "import": "./dist/patterns/filters/*.js",
+      "default": "./dist/patterns/filters/*.js"
     },
     "./components/gantt": {
-      "types": "./dist/components/gantt/index.d.ts",
-      "import": "./dist/components/gantt/index.js",
-      "default": "./dist/components/gantt/index.js"
+      "types": "./dist/patterns/gantt/index.d.ts",
+      "import": "./dist/patterns/gantt/index.js",
+      "default": "./dist/patterns/gantt/index.js"
     },
     "./components/gantt/*": {
-      "types": "./dist/components/gantt/*.d.ts",
-      "import": "./dist/components/gantt/*.js",
-      "default": "./dist/components/gantt/*.js"
+      "types": "./dist/patterns/gantt/*.d.ts",
+      "import": "./dist/patterns/gantt/*.js",
+      "default": "./dist/patterns/gantt/*.js"
     },
     "./components/qr-code": {
-      "types": "./dist/components/qr-code/index.d.ts",
-      "import": "./dist/components/qr-code/index.js",
-      "default": "./dist/components/qr-code/index.js"
+      "types": "./dist/patterns/qr-code/index.d.ts",
+      "import": "./dist/patterns/qr-code/index.js",
+      "default": "./dist/patterns/qr-code/index.js"
     },
     "./components/qr-code/*": {
-      "types": "./dist/components/qr-code/*.d.ts",
-      "import": "./dist/components/qr-code/*.js",
-      "default": "./dist/components/qr-code/*.js"
+      "types": "./dist/patterns/qr-code/*.d.ts",
+      "import": "./dist/patterns/qr-code/*.js",
+      "default": "./dist/patterns/qr-code/*.js"
+    },
+    "./components/code-block": {
+      "types": "./dist/patterns/code-block.d.ts",
+      "import": "./dist/patterns/code-block.js",
+      "default": "./dist/patterns/code-block.js"
+    },
+    "./components/composer": {
+      "types": "./dist/patterns/composer.d.ts",
+      "import": "./dist/patterns/composer.js",
+      "default": "./dist/patterns/composer.js"
+    },
+    "./components/halo-search": {
+      "types": "./dist/patterns/halo-search.d.ts",
+      "import": "./dist/patterns/halo-search.js",
+      "default": "./dist/patterns/halo-search.js"
+    },
+    "./components/kanban": {
+      "types": "./dist/patterns/kanban.d.ts",
+      "import": "./dist/patterns/kanban.js",
+      "default": "./dist/patterns/kanban.js"
+    },
+    "./components/questionnaire": {
+      "types": "./dist/patterns/questionnaire.d.ts",
+      "import": "./dist/patterns/questionnaire.js",
+      "default": "./dist/patterns/questionnaire.js"
+    },
+    "./components/timeline": {
+      "types": "./dist/patterns/timeline.d.ts",
+      "import": "./dist/patterns/timeline.js",
+      "default": "./dist/patterns/timeline.js"
+    },
+    "./components/tip-selector": {
+      "types": "./dist/patterns/tip-selector.d.ts",
+      "import": "./dist/patterns/tip-selector.js",
+      "default": "./dist/patterns/tip-selector.js"
+    },
+    "./components/tree": {
+      "types": "./dist/patterns/tree.d.ts",
+      "import": "./dist/patterns/tree.js",
+      "default": "./dist/patterns/tree.js"
+    },
+    "./components/uptime-card": {
+      "types": "./dist/patterns/uptime-card.d.ts",
+      "import": "./dist/patterns/uptime-card.js",
+      "default": "./dist/patterns/uptime-card.js"
     },
     "./components/*": {
       "types": "./dist/components/*.d.ts",

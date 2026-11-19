@@ -19,7 +19,7 @@ import {
   KanbanItem,
   KanbanItemHandle,
   KanbanOverlay,
-} from "@theo/ui/components/kanban";
+} from "@theo/ui/patterns/kanban";
 import { cn } from "@theo/ui/lib/utils";
 import { GripVerticalIcon } from "lucide-react";
 

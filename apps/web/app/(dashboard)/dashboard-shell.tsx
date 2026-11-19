@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AppSidebar } from "@theo/ui/components/app-layout";
+import { AppSidebar } from "@theo/ui/patterns/app-layout";
 import {
   SidebarInset,
   SidebarProvider,

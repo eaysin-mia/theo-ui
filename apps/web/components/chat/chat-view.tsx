@@ -35,7 +35,7 @@ import {
   type ComposerTrigger,
   type ComposerValue,
   getComposerText,
-} from "@theo/ui/components/composer";
+} from "@theo/ui/patterns/composer";
 import {
   Attachment,
   AttachmentContent,

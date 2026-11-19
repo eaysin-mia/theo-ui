@@ -1,7 +1,7 @@
 "use client";
 
 import { StatusIcon } from "@/components/chat/status-icon";
-import { CodeBlock, CodeBlockContent } from "@theo/ui/components/code-block";
+import { CodeBlock, CodeBlockContent } from "@theo/ui/patterns/code-block";
 import {
   TraceCollapsible,
   TraceCollapsibleContent,

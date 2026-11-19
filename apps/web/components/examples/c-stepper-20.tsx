@@ -2,7 +2,7 @@
 
 import { useId, useRef, useState, type ReactNode } from "react";
 import { Badge } from "@theo/ui/components/badge";
-import { Tree, TreeItem, TreeItemLabel } from "@theo/ui/components/tree";
+import { Tree, TreeItem, TreeItemLabel } from "@theo/ui/patterns/tree";
 import {
   hotkeysCoreFeature,
   selectionFeature,
