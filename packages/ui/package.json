@@ -77,6 +77,16 @@
       "import": "./dist/auth/index.js",
       "default": "./dist/auth/index.js"
     },
+    "./auth/plugins": {
+      "types": "./dist/lib/auth/index.d.ts",
+      "import": "./dist/lib/auth/index.js",
+      "default": "./dist/lib/auth/index.js"
+    },
+    "./auth/plugins/*": {
+      "types": "./dist/lib/auth/*.d.ts",
+      "import": "./dist/lib/auth/*.js",
+      "default": "./dist/lib/auth/*.js"
+    },
     "./auth/*": {
       "types": "./dist/auth/*.d.ts",
       "import": "./dist/auth/*.js",
@@ -96,6 +106,11 @@
       "types": "./dist/lib/utils.d.ts",
       "import": "./dist/lib/utils.js",
       "default": "./dist/lib/utils.js"
+    },
+    "./lib/*": {
+      "types": "./dist/lib/*.d.ts",
+      "import": "./dist/lib/*.js",
+      "default": "./dist/lib/*.js"
     },
     "./styles.css": "./dist/styles.css"
   },

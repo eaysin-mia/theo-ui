@@ -1,4 +1,4 @@
-import { Settings } from "theoui/components/auth/settings/settings";
+import { Settings } from "theoui/auth";
 
 export default async function SettingsCatchAllPage({
   params,

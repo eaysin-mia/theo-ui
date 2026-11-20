@@ -7,6 +7,7 @@ import { Badge } from "theoui/components/badge";
 import { Button } from "theoui/components/button";
 import { Card } from "theoui/components/card";
 import {
+  cn,
   Kanban,
   KanbanBoard,
   KanbanColumn,
@@ -15,8 +16,7 @@ import {
   KanbanItem,
   KanbanItemHandle,
   KanbanOverlay,
-} from "theoui/patterns/kanban";
-import { cn } from "theoui/lib/utils";
+} from "theoui";
 import { GripVerticalIcon } from "lucide-react";
 
 interface Task {

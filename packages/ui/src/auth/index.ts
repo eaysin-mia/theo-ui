@@ -145,6 +145,7 @@ export * from "./settings/security/linked-accounts";
 export * from "./settings/security/security-settings";
 export * from "./settings/security/session-actions";
 export * from "./settings/settings";
+export * from "./settings/settings-directory";
 export * from "./sign-in";
 export * from "./sign-out";
 export * from "./sign-up";

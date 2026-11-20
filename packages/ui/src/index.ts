@@ -22,6 +22,7 @@ export * from "./components/alert";
 export * from "./components/alert-dialog";
 export * from "./components/animated-gradient-text";
 export * from "./components/attachment";
+export * from "./components/auto-height";
 export * from "./components/autocomplete";
 export * from "./components/avatar";
 export * from "./components/badge";
@@ -111,18 +112,9 @@ export * from "./components/event-calendar/event-calendar-time-grid";
 export * from "./components/event-calendar/event-calendar-nav";
 export * from "./components/event-calendar/event-calendar-event";
 export * from "./components/filters";
-export {
-  Gantt,
-  useGantt,
-  useGanttState,
-  useGanttViewConfig,
-  type GanttProps,
-  type GanttViewConfig,
-} from "./components/gantt/gantt";
-export * from "./components/gantt/gantt-types";
-export * from "./components/gantt/gantt-view";
-export * from "./components/gantt/gantt-bar";
-export * from "./components/gantt/gantt-nav";
+export { DEFAULT_VIEW_CONFIG } from "./components/event-calendar/event-calendar";
+export { DEFAULT_VIEW_CONFIG as DEFAULT_GANTT_VIEW_CONFIG } from "./components/gantt/gantt";
+export * from "./components/gantt";
 export * from "./components/halo-search";
 export * from "./components/kanban";
 export * from "./components/qr-code";

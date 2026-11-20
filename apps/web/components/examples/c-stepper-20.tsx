@@ -1,8 +1,19 @@
 "use client";
 
 import { useId, useRef, useState, type ReactNode } from "react";
-import { Badge } from "theoui/components/badge";
-import { Tree, TreeItem, TreeItemLabel } from "theoui/patterns/tree";
+import {
+  Tree,
+  TreeItem,
+  TreeItemLabel,
+  Badge,
+  Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  Separator,
+  cn,
+} from "theoui";
 import {
   hotkeysCoreFeature,
   selectionFeature,
@@ -10,16 +21,6 @@ import {
   type ItemInstance,
 } from "@headless-tree/core";
 import { useTree } from "@headless-tree/react";
-import { cn } from "theoui/lib/utils";
-
-import { Button } from "theoui/components/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "theoui/components/menu";
-import { Separator } from "theoui/components/separator";
 import {
   CalendarClockIcon,
   BookOpenIcon,

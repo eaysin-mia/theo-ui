@@ -1,11 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Rating } from "theoui/components/rating";
-import { Button } from "theoui/components/button";
-import { Card, CardPanel } from "theoui/components/card";
-import { Label } from "theoui/components/label";
-import { Textarea } from "theoui/components/textarea";
+import { Button, Card, CardPanel, Label, Rating, Textarea } from "theoui";
 
 export function Pattern() {
   const [rating, setRating] = useState(0);

@@ -10,7 +10,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "theoui/components/trace";
+} from "theoui";
 
 export function ReasoningPart({
   text,

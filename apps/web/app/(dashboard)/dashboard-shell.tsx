@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AppSidebar } from "theoui/patterns/app-layout";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "theoui/components/sidebar";
-import { cn } from "theoui/lib/utils";
+  AppSidebar,
+} from "theoui";
+import { cn } from "theoui/utils";
 import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import {

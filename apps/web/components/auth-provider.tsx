@@ -1,43 +1,37 @@
 "use client";
 
-import { AuthProvider as CossAuthProvider } from "theoui/components/auth/auth-provider";
+import { AuthProvider as CossAuthProvider } from "theoui/auth";
+import {
+  adminPlugin,
+  agentAuthPlugin,
+  createAgentAuthClientAdapter,
+  anonymousPlugin,
+  apiKeyPlugin,
+  billingPlugin,
+  createDemoBillingAdapter,
+  deleteUserPlugin,
+  deviceAuthorizationPlugin,
+  emailOtpPlugin,
+  lastLoginMethodPlugin,
+  magicLinkPlugin,
+  multiSessionPlugin,
+  oauthProviderPlugin,
+  oneTapPlugin,
+  organizationPlugin,
+  passkeyPlugin,
+  phoneNumberPlugin,
+  createEip1193WalletConnector,
+  siwePlugin,
+  ssoPlugin,
+  themePlugin,
+  twoFactorPlugin,
+  usernamePlugin,
+} from "theoui/auth/plugins";
 import { authClient } from "@/lib/auth-client";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { type PropsWithChildren, useMemo } from "react";
-
-// Coss UI Auth Plugins from packages/ui
-import { adminPlugin } from "theoui/lib/auth/admin-plugin";
-import {
-  agentAuthPlugin,
-  createAgentAuthClientAdapter,
-} from "theoui/lib/auth/agent-auth-plugin";
-import { anonymousPlugin } from "theoui/lib/auth/anonymous-plugin";
-import { apiKeyPlugin } from "theoui/lib/auth/api-key-plugin";
-import {
-  billingPlugin,
-  createDemoBillingAdapter,
-} from "theoui/lib/auth/billing-plugin";
-import { deleteUserPlugin } from "theoui/lib/auth/delete-user-plugin";
-import { deviceAuthorizationPlugin } from "theoui/lib/auth/device-authorization-plugin";
-import { emailOtpPlugin } from "theoui/lib/auth/email-otp-plugin";
-import { lastLoginMethodPlugin } from "theoui/lib/auth/last-login-method-plugin";
-import { magicLinkPlugin } from "theoui/lib/auth/magic-link-plugin";
-import { multiSessionPlugin } from "theoui/lib/auth/multi-session-plugin";
-import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
-import { passkeyPlugin } from "theoui/lib/auth/passkey-plugin";
-import { phoneNumberPlugin } from "theoui/lib/auth/phone-number-plugin";
-import {
-  createEip1193WalletConnector,
-  siwePlugin,
-} from "theoui/lib/auth/siwe-plugin";
-import { ssoPlugin } from "theoui/lib/auth/sso-plugin";
-import { oneTapPlugin } from "theoui/lib/auth/one-tap-plugin";
-import { themePlugin } from "theoui/lib/auth/theme-plugin";
-import { twoFactorPlugin } from "theoui/lib/auth/two-factor-plugin";
-import { usernamePlugin } from "theoui/lib/auth/username-plugin";
 
 const normalizeParam = (param: string | string[] | undefined) =>
   (Array.isArray(param) ? param[0] : param)?.replace(/^@/, "") ?? null;

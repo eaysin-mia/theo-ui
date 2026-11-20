@@ -9,7 +9,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "theoui/components/trace";
+} from "theoui";
 
 export interface SourceItem {
   title: string;

@@ -35,7 +35,7 @@ import {
   type ComposerTrigger,
   type ComposerValue,
   getComposerText,
-} from "theoui/patterns/composer";
+} from "theoui";
 import {
   Attachment,
   AttachmentContent,

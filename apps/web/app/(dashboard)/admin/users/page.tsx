@@ -1,4 +1,4 @@
-import { AdminUsers } from "theoui/components/auth/admin/admin-users";
+import { AdminUsers } from "theoui/auth";
 
 export default function AdminUsersPage() {
   return (

@@ -1,5 +1,5 @@
-import { Organization } from "theoui/components/auth/organization/organization";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+import { Organization } from "theoui/auth";
+import { organizationPlugin } from "theoui/auth/plugins";
 import { notFound, redirect } from "next/navigation";
 
 const validOrganizationPaths = new Set([

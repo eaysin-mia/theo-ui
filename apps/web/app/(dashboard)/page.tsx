@@ -1,7 +1,6 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { useActiveOrganization, useSession } from "theoui/components/auth";
 import { Badge } from "theoui/components/badge";
 import { Button } from "theoui/components/button";
 import {
@@ -25,21 +24,22 @@ import {
 import Link from "next/link";
 import { Pattern } from "@/components/examples/c-timeline-4";
 import { AutoHeightDemo } from "@/components/examples/c-auto-height-1";
-import { CartButton } from "theoui/patterns/buttons/cart-button";
-import { RainbowButton } from "theoui/patterns/buttons/rainbow-button";
-import { ShimmerButton } from "theoui/patterns/buttons/shimmer-button";
-import { UndoButton } from "theoui/patterns/buttons/undo-button";
-import { HoldButton } from "theoui/patterns/buttons/hold-button";
-import { HaloSearch } from "theoui/patterns/halo-search";
-import { TipSelector } from "theoui/patterns/tip-selector";
-import { UptimeCard } from "theoui/patterns/uptime-card";
 import {
+  TipSelector,
+  HaloSearch,
+  HoldButton,
+  ShimmerButton,
+  RainbowButton,
+  CartButton,
+  UndoButton,
+  UptimeCard,
   RelativeTime,
   RelativeTimeZone,
   RelativeTimeZoneDate,
   RelativeTimeZoneDisplay,
   RelativeTimeZoneLabel,
-} from "theoui/components/relative-time";
+} from "theoui";
+import { useActiveOrganization, useSession } from "theoui/auth";
 
 export default function DashboardOverviewPage() {
   const { data: session } = useSession(authClient);

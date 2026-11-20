@@ -10,7 +10,7 @@ import {
   SelectValue,
 } from "theoui/components/select";
 import { SparklesIcon } from "lucide-react";
-import { cn } from "theoui/lib/utils";
+import { cn } from "theoui/utils";
 
 export interface ModelOption {
   id: string;

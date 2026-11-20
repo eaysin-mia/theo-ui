@@ -1,4 +1,4 @@
-import { Auth } from "theoui/components/auth/auth";
+import { Auth } from "theoui/auth";
 
 export default function OAuthSignUpPage() {
   return <Auth view="oauthSignUp" />;

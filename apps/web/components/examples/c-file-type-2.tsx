@@ -1,8 +1,4 @@
-import {
-  FileType,
-  type FileTypeName,
-  type FileTypeVariant,
-} from "theoui/components/file-type";
+import { FileType, type FileTypeName, type FileTypeVariant } from "theoui";
 
 const variants: FileTypeVariant[] = ["outline", "solid", "light", "mono"];
 

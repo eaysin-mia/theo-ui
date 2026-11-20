@@ -1,7 +1,6 @@
 import { GitBranchIcon, SearchIcon } from "lucide-react";
 
-import { Marker, MarkerContent, MarkerIcon } from "theoui/components/marker";
-import { Spinner } from "theoui/components/spinner";
+import { Marker, MarkerContent, MarkerIcon, Spinner } from "theoui";
 
 export function MarkerDemo() {
   return (

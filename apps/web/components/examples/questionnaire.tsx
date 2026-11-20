@@ -19,7 +19,7 @@ import {
   QuestionnaireSkip,
   QuestionnaireSubmit,
   QuestionnaireTitle,
-} from "theoui/patterns/questionnaire";
+} from "theoui";
 
 const questionnaireItems = [
   {

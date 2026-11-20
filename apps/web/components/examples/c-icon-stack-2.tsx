@@ -1,4 +1,4 @@
-import { IconStack } from "theoui/components/icon-stack";
+import { IconStack } from "theoui";
 import { ArchiveIcon, PackageIcon, LayersIcon } from "lucide-react";
 
 const sizes = [

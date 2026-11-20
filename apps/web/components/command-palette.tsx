@@ -40,13 +40,14 @@ import {
   CommandPanel,
   CommandSeparator,
   CommandShortcut,
-} from "theoui/components/command";
-import { EmptyMedia } from "theoui/components/empty";
-import { Input } from "theoui/components/input";
-import { Kbd, KbdGroup } from "theoui/components/kbd";
-import { ScrollArea } from "theoui/components/scroll-area";
-import { Skeleton } from "theoui/components/skeleton";
-import { Spinner } from "theoui/components/spinner";
+  EmptyMedia,
+  Input,
+  Kbd,
+  KbdGroup,
+  ScrollArea,
+  Skeleton,
+  Spinner,
+} from "theoui";
 
 interface Item {
   value: string;

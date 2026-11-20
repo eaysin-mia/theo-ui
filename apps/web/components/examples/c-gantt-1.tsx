@@ -1,16 +1,18 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { Gantt, type GanttApi } from "theoui/patterns/gantt/gantt";
-import type { GanttI18nOverrides } from "theoui/patterns/gantt/gantt-i18n";
-import { GanttNav, GanttToolbar } from "theoui/patterns/gantt/gantt-nav";
-import type {
+import {
   GanttEvent,
   GanttInteractions,
   GanttResource,
   GanttSlotDraft,
-} from "theoui/patterns/gantt/gantt-types";
-import { GanttView } from "theoui/patterns/gantt/gantt-view";
+  Gantt,
+  type GanttApi,
+  type GanttI18nOverrides,
+  GanttNav,
+  GanttToolbar,
+  GanttView,
+} from "theoui";
 import { addDays, startOfDay, startOfWeek, type Locale } from "date-fns";
 import { ar, de, es, fr, ja } from "date-fns/locale";
 

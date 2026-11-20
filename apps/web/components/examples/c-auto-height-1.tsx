@@ -2,9 +2,7 @@
 
 import * as React from "react";
 import { AnimatePresence, motion } from "motion/react";
-
-import { AutoHeight } from "theoui/components/auto-height";
-import { Button } from "theoui/components/button";
+import { AutoHeight, Button } from "theoui";
 
 const SHORT =
   "Animate UI is a set of animated primitives for React, built with Motion.";

@@ -11,7 +11,7 @@ import {
   CodeBlockHeader,
   CodeBlockLine,
   CodeBlockTitle,
-} from "theoui/patterns/code-block";
+} from "theoui";
 
 export function MarkdownPre({
   node,

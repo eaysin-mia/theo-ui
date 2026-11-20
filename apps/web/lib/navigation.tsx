@@ -1,4 +1,4 @@
-import type { NavMainItem } from "theoui/patterns/app-layout";
+import type { NavMainItem } from "theoui";
 import {
   HomeIcon,
   SettingsIcon,

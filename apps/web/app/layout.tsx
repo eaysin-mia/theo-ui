@@ -6,7 +6,7 @@ import { AppAuthProvider } from "@/components/auth-provider";
 import { MotionProvider } from "@/components/motion-provider";
 import { QueryProvider } from "@/components/query-provider";
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "theoui/lib/utils";
+import { cn } from "theoui/utils";
 
 const fontSans = Inter({
   subsets: ["latin"],
