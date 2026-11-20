@@ -1,0 +1,33 @@
+# theoui
+
+> Accessible, unstyled-first UI component and authentication library built on Base UI, Better Auth, and Tailwind CSS v4.
+
+`theoui` is an enterprise React UI and authentication framework. It follows a 3-tier architecture:
+
+1. **Layer 1: Base UI Primitives (Coss UI)**: General UI primitives (`Button`, `Dialog`, `Select`, `Drawer`, `Tabs`, `Input`, etc.) follow Base UI composition and are documented in `.agents/skills/coss/` (or Coss UI).
+2. **Layer 2: Pattern Blocks (Coss Particles)**: Composed UI sections and copy-paste recipes are indexed in `.agents/skills/coss-particles/` and `https://coss.com/ui/particles`.
+3. **Layer 3: theoui Domain Framework**: Exclusive complex components (`Gantt`, `Kanban`, `EventCalendar`, `Filters`, `Composer`, `Chat Feed`, `AutoHeight`, micro-buttons), full Better-Auth UI views & plugins (`theoui/auth`, `theoui/auth/lib`), and shared utilities (`theoui/lib`).
+
+## Public Subpaths
+
+Always import from the 5 designated public subpaths:
+
+- `theoui`: General UI primitives, layouts, tables, and advanced domain components (`Gantt`, `Kanban`, `EventCalendar`, `Filters`, `Composer`, `Chat Feed`, micro-buttons).
+- `theoui/auth`: Better Auth views (`SignIn`, `SignUp`, `Settings`, `Organization`, `AdminUsers`), user buttons, and client hooks (`useSession`, `useAuth`, `useActiveOrganization`). Has `"use client"`.
+- `theoui/auth/lib`: Better Auth client plugins and adapters (`adminPlugin`, `organizationPlugin`, `twoFactorPlugin`, `passkeyPlugin`, etc.).
+- `theoui/hooks`: Reusable hooks (`useMediaQuery`, `useAutoHeight`, `useComposerEditor`, `useIsHydrated`).
+- `theoui/lib`: Shared utilities (`cn`, `createSyntaxHighlighter`, composer helpers).
+- `theoui/styles.css`: Precompiled Tailwind CSS v4 stylesheet.
+
+## Core Invariants for AI Coding Agents
+
+1. **Primitives Delegate to coss**: Standard Base UI primitives (`Button`, `Dialog`, `Select`, `Tabs`, `Drawer`, etc.) follow the patterns in `.agents/skills/coss/`.
+2. **Polymorphic Render Prop**: Never use Radix `asChild`. Base UI uses `render`: `<Button render={<Link href="/path" />}>`.
+3. **Overlay Hierarchy**: `Dialog`, `Drawer`, `Menu`, `Select`, `Popover` follow strict `Trigger` + `Popup` + `Header`/`Panel`/`Footer` structure.
+4. **Drawer Replaces Sheet**: Always use `Drawer` for slide-over sidebars and mobile sheets (`Sheet` is deprecated).
+5. **RSC & Client Boundaries**: Root `"theoui"` is RSC-neutral (Server Components like `Card`, `Badge`, `Separator`, `Skeleton` remain server-rendered). `"theoui/auth"` is a Client boundary (carries `"use client"`). Never add `"use client"` to `"theoui"` root.
+6. **Tailwind v4 Semantic Tokens**: Use semantic OKLCH tokens (`bg-background`, `text-foreground`, `border-border`, `text-muted-foreground`). Do not alter `--alpha()`.
+
+## Full Documentation
+
+- [Full LLM Context](/llms-full.txt): Complete recipes, Better Auth integration, advanced components, and copy-paste examples.

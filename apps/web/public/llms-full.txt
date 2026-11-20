@@ -1,0 +1,355 @@
+# theoui — Complete Developer & Agent Reference
+
+> Accessible, unstyled-first UI component and authentication library built on Base UI, Better Auth, and Tailwind CSS v4.
+
+---
+
+## 1. 3-Tier Architecture & Skill Delegation
+
+When building applications with `theoui`, recognize the 3 distinct architectural layers:
+
+1. **Layer 1: Base UI Primitives (`coss`)**
+   - Basic accessible primitives (`Button`, `Dialog`, `Select`, `Drawer`, `Tabs`, `Input`, `Checkbox`, `RadioGroup`, `Switch`, `Slider`, `Tooltip`, `Popover`, `Menu`, `Card`, `Badge`, `Separator`, `Skeleton`) follow standard Base UI composition rules.
+   - For primitive APIs, styling, and Base UI patterns, refer to `.agents/skills/coss/SKILL.md` (or Coss UI).
+
+2. **Layer 2: Pattern Blocks & Composed Recipes (`coss-particles`)**
+   - Composed UI layouts (hero sections, pricing tables, dashboards, settings cards, activity feeds) are indexed in `.agents/skills/coss-particles/SKILL.md` and `https://coss.com/ui/particles`.
+   - Prefer searching and installing particle snippets for standard block patterns.
+
+3. **Layer 3: Application Framework & Domain System (`theoui`)**
+   - Complete Better Auth UI views & plugins (`theoui/auth` and `theoui/auth/lib`).
+   - Exclusive advanced domain widgets not available in Coss (`Gantt`, `Kanban`, `EventCalendar`, `Filters`, `Composer`, `Chat Feed`, `AutoHeight`, micro-buttons).
+   - Shared utility functions (`theoui/lib`) and hooks (`theoui/hooks`).
+
+---
+
+## 2. Installation & Setup
+
+### Package Installation
+```bash
+pnpm add theoui @base-ui/react better-auth @better-auth-ui/react lucide-react
+```
+
+### Stylesheet Import
+Import the precompiled Tailwind CSS v4 stylesheet in your root layout:
+```css
+/* app/globals.css or layout.tsx */
+@import "theoui/styles.css";
+```
+
+---
+
+## 3. Public Subpath Import Specifications
+
+Always import from the 5 designated public subpaths:
+
+```tsx
+// 1. General Primitives & Advanced Widgets
+import {
+  Button,
+  Dialog,
+  Drawer,
+  Select,
+  Tabs,
+  Gantt,
+  Kanban,
+  EventCalendar,
+  Filters,
+  Composer,
+  MessageScroller,
+  Message,
+  Bubble,
+  Trace,
+  AutoHeight,
+  HoldButton,
+  RainbowButton,
+  ShimmerButton,
+  UndoButton,
+  CartButton,
+} from "theoui";
+
+// 2. Auth Views & Hooks (Client Boundary)
+import {
+  AuthProvider,
+  SignIn,
+  SignUp,
+  SignOut,
+  UserButton,
+  UserAvatar,
+  Settings,
+  Organization,
+  AdminUsers,
+  useSession,
+  useAuth,
+  useActiveOrganization,
+} from "theoui/auth";
+
+// 3. Better Auth Client Plugins
+import {
+  adminPlugin,
+  organizationPlugin,
+  twoFactorPlugin,
+  passkeyPlugin,
+  apiKeyPlugin,
+  ssoPlugin,
+  magicLinkPlugin,
+} from "theoui/auth/lib";
+
+// 4. Reusable React Hooks
+import {
+  useMediaQuery,
+  useAutoHeight,
+  useComposerEditor,
+  useIsHydrated,
+} from "theoui/hooks";
+
+// 5. Shared Utilities
+import {
+  cn,
+  createSyntaxHighlighter,
+  getComposerQueryRanges,
+} from "theoui/lib";
+```
+
+---
+
+## 4. RSC & Next.js Boundaries
+
+- **`"theoui"` root index is RSC-neutral**: Contains server-renderable components (`Card`, `Badge`, `Separator`, `Skeleton`, etc.) as well as client-interactive widgets marked with `"use client"` at their leaf level. Never place `"use client"` on the root index.
+- **`"theoui/auth"` carries `"use client"`**: Better-Auth UI and hooks depend on React contexts from `@better-auth-ui/react`. The entrypoint carries `"use client"`, allowing Next.js Server Components (like catch-all route pages) to import `<Settings />` or `<Organization />` directly without crashing the RSC runtime.
+
+---
+
+## 5. Better Auth Recipes
+
+### Provider Setup (Client Layout)
+```tsx
+// components/providers.tsx
+"use client";
+
+import { AuthProvider } from "theoui/auth";
+import { authClient } from "@/lib/auth-client";
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  return <AuthProvider authClient={authClient}>{children}</AuthProvider>;
+}
+```
+
+### Next.js Catch-All Settings View (Server Component Page)
+```tsx
+// app/(dashboard)/settings/[...path]/page.tsx
+import { Settings } from "theoui/auth";
+
+export default async function SettingsCatchAllPage({
+  params,
+}: {
+  params: Promise<{ path: string[] }>;
+}) {
+  const { path } = await params;
+  const resolvedPath = path?.join("/") ?? "account";
+
+  return <Settings path={resolvedPath} />;
+}
+```
+
+### Next.js Catch-All Organization View (Server Component Page)
+```tsx
+// app/(dashboard)/organization/[...path]/page.tsx
+import { Organization } from "theoui/auth";
+
+export default async function OrganizationCatchAllPage({
+  params,
+}: {
+  params: Promise<{ path: string[] }>;
+}) {
+  const { path } = await params;
+  const resolvedPath = path?.join("/") ?? "general";
+
+  return <Organization path={resolvedPath} />;
+}
+```
+
+### Dedicated Admin Users Management (Client Component Page)
+```tsx
+// app/(dashboard)/admin/users/page.tsx
+"use client";
+
+import { AdminUsers } from "theoui/auth";
+
+export default function AdminUsersPage() {
+  return (
+    <div className="container mx-auto py-8">
+      <AdminUsers />
+    </div>
+  );
+}
+```
+
+---
+
+## 6. Exclusive Advanced Components
+
+### 6.1 Kanban Board
+```tsx
+"use client";
+
+import { Kanban, KanbanBoard, KanbanColumn, KanbanCard } from "theoui";
+import { useState } from "react";
+
+const initialColumns = [
+  { id: "todo", title: "To Do", items: [{ id: "1", title: "Set up project" }] },
+  { id: "in-progress", title: "In Progress", items: [{ id: "2", title: "Implement Auth" }] },
+  { id: "done", title: "Done", items: [] },
+];
+
+export function ProjectKanban() {
+  const [columns, setColumns] = useState(initialColumns);
+
+  return (
+    <KanbanBoard onDragEnd={({ active, over }) => { /* handle card drop */ }}>
+      {columns.map((col) => (
+        <KanbanColumn key={col.id} id={col.id} title={col.title}>
+          {col.items.map((item) => (
+            <KanbanCard key={item.id} id={item.id}>
+              {item.title}
+            </KanbanCard>
+          ))}
+        </KanbanColumn>
+      ))}
+    </KanbanBoard>
+  );
+}
+```
+
+### 6.2 Gantt Chart
+```tsx
+"use client";
+
+import { Gantt } from "theoui";
+
+const tasks = [
+  { id: "1", name: "Design Phase", start: new Date(2026, 0, 1), end: new Date(2026, 0, 15), progress: 100 },
+  { id: "2", name: "Engineering Sprint", start: new Date(2026, 0, 10), end: new Date(2026, 1, 15), progress: 40 },
+];
+
+export function ProjectTimeline() {
+  return (
+    <div className="h-[400px] w-full border rounded-lg overflow-hidden">
+      <Gantt tasks={tasks} viewMode="Month" />
+    </div>
+  );
+}
+```
+
+### 6.3 Event Calendar
+```tsx
+"use client";
+
+import { EventCalendar } from "theoui";
+import { useState } from "react";
+
+export function TeamCalendar() {
+  const [events, setEvents] = useState([
+    { id: "1", title: "Product Launch", start: new Date(), end: new Date(), allDay: true },
+  ]);
+
+  return (
+    <EventCalendar
+      events={events}
+      view="month"
+      onEventClick={(event) => console.log(event)}
+    />
+  );
+}
+```
+
+### 6.4 Chat Feed & Composer
+```tsx
+"use client";
+
+import {
+  MessageScroller,
+  Message,
+  Bubble,
+  Trace,
+  Composer,
+  ComposerInput,
+  ComposerSubmit,
+} from "theoui";
+import { useState } from "react";
+
+export function ChatInterface() {
+  const [messages, setMessages] = useState([
+    { id: "1", role: "assistant", content: "Hello! How can I help you today?" },
+  ]);
+  const [input, setInput] = useState("");
+
+  return (
+    <div className="flex flex-col h-[600px] border rounded-xl overflow-hidden bg-background">
+      <MessageScroller className="flex-1 p-4 space-y-4">
+        {messages.map((m) => (
+          <Message key={m.id} role={m.role}>
+            <Bubble variant={m.role === "user" ? "user" : "assistant"}>
+              {m.content}
+            </Bubble>
+          </Message>
+        ))}
+      </MessageScroller>
+
+      <div className="p-4 border-t bg-muted/20">
+        <Composer value={input} onChange={setInput} onSubmit={() => { /* submit */ }}>
+          <ComposerInput placeholder="Ask anything..." />
+          <ComposerSubmit />
+        </Composer>
+      </div>
+    </div>
+  );
+}
+```
+
+### 6.5 Interactive Micro-Buttons
+```tsx
+import {
+  HoldButton,
+  RainbowButton,
+  ShimmerButton,
+  UndoButton,
+  CartButton,
+} from "theoui";
+
+export function MicroButtonExamples() {
+  return (
+    <div className="flex items-center gap-4">
+      <HoldButton duration={1500} onComplete={() => alert("Deleted!")}>
+        Hold to Delete
+      </HoldButton>
+
+      <RainbowButton onClick={() => console.log("Sparkle")}>
+        Special Action
+      </RainbowButton>
+
+      <ShimmerButton onClick={() => console.log("Shimmer")}>
+        Upgrade to Pro
+      </ShimmerButton>
+
+      <UndoButton onUndo={() => console.log("Undone")}>
+        Saved
+      </UndoButton>
+
+      <CartButton count={3} onClick={() => console.log("Cart")} />
+    </div>
+  );
+}
+```
+
+---
+
+## 7. Anti-Patterns & Common Mistakes
+
+- ❌ **`asChild` prop**: Base UI does not support Radix `asChild`. Always use `render={<Element />}`.
+- ❌ **`Sheet` component**: `Sheet` is deprecated. Use `Drawer`.
+- ❌ **Internal imports**: Never do `import { Button } from "theoui/components/button"`. Use `import { Button } from "theoui"`.
+- ❌ **Utility import**: Never do `import { cn } from "theoui/utils"`. Use `import { cn } from "theoui/lib"`.
+- ❌ **"use client" on UI root**: Never add `"use client"` to `packages/ui/src/index.ts`. Keep Server Components pure.
+- ❌ **Duplicating primitive docs**: Refer to `.agents/skills/coss/` for standard Base UI primitive patterns; reserve `theoui` for subpaths, Better Auth UI, and exclusive advanced widgets.
+- ❌ **Hardcoded colors**: Never use hardcoded values like `text-gray-500` or `bg-blue-600`. Use semantic theme tokens (`text-muted-foreground`, `bg-primary`, `bg-background`).
