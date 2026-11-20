@@ -4,9 +4,9 @@ import {
   type MagicLinkPluginOptions,
 } from "@better-auth-ui/core/plugins/magic-link";
 
-import { MagicLink } from "theoui/components/auth/magic-link";
-import { MagicLinkButton } from "theoui/components/auth/magic-link-button";
-import { MagicLinkSent } from "theoui/components/auth/magic-link-sent";
+import { MagicLink } from "theoui/auth/magic-link";
+import { MagicLinkButton } from "theoui/auth/magic-link-button";
+import { MagicLinkSent } from "theoui/auth/magic-link-sent";
 
 export const magicLinkPlugin = createAuthPlugin(
   coreMagicLinkPlugin.id,

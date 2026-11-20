@@ -3,7 +3,6 @@
   "compilerOptions": {
     "paths": {
       "#components/*": ["./src/components/*"],
-      "#patterns/*": ["./src/patterns/*"],
       "#hooks/*": ["./src/hooks/*"],
       "#lib/*": ["./src/lib/*"],
       "theoui/*": ["./src/*"]

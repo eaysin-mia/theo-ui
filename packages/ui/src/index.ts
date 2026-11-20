@@ -1,11 +1,10 @@
 // Root entrypoint for theoui
-// Contains core primitives, utilities, providers, and hooks.
-// Domain modules, heavy optional peer-dependent widgets, and composite patterns are exported via dedicated subpaths:
-// - Patterns: "theoui/patterns" or "theoui/patterns/<pattern>"
-// - Auth: "theoui/components/auth" and "theoui/lib/auth"
-// - Charts: "theoui/components/chart" (requires recharts)
-// - Syntax Highlighting: "theoui/lib/highlighter" & "theoui/hooks/use-highlighted-code" (requires shiki)
-// - Motion Animations: "theoui/components/auto-height" (requires motion)
+// Exports all UI components, hooks, and utilities with zero auth dependencies.
+// - All UI components: "theoui" or "theoui/components" or "theoui/components/<component>"
+// - Auth: "theoui/auth"
+// - Hooks: "theoui/hooks"
+// - Utils: "theoui/utils"
+// - Styles: "theoui/styles.css"
 
 // Lib & Utilities
 export * from "./lib/utils";
@@ -91,3 +90,45 @@ export * from "./components/toggle-group";
 export * from "./components/toolbar";
 export * from "./components/tooltip";
 export * from "./components/trace";
+
+// Composite Components & Patterns
+export * from "./components/app-layout";
+export * from "./components/buttons/cart-button";
+export * from "./components/buttons/hold-button";
+export * from "./components/buttons/rainbow-button";
+export * from "./components/buttons/shimmer-button";
+export * from "./components/buttons/tear-button";
+export * from "./components/buttons/undo-button";
+export * from "./components/code-block";
+export * from "./components/composer";
+export * from "./components/event-calendar/event-calendar";
+export * from "./components/event-calendar/event-calendar-types";
+export * from "./components/event-calendar/event-calendar-content";
+export * from "./components/event-calendar/event-calendar-agenda-view";
+export * from "./components/event-calendar/event-calendar-month-view";
+export * from "./components/event-calendar/event-calendar-resource-view";
+export * from "./components/event-calendar/event-calendar-time-grid";
+export * from "./components/event-calendar/event-calendar-nav";
+export * from "./components/event-calendar/event-calendar-event";
+export * from "./components/filters";
+export {
+  Gantt,
+  useGantt,
+  useGanttState,
+  useGanttViewConfig,
+  type GanttProps,
+  type GanttViewConfig,
+} from "./components/gantt/gantt";
+export * from "./components/gantt/gantt-types";
+export * from "./components/gantt/gantt-view";
+export * from "./components/gantt/gantt-bar";
+export * from "./components/gantt/gantt-nav";
+export * from "./components/halo-search";
+export * from "./components/kanban";
+export * from "./components/qr-code";
+export * from "./components/questionnaire";
+export * from "./components/status-dot";
+export * from "./components/timeline";
+export * from "./components/tip-selector";
+export * from "./components/tree";
+export * from "./components/uptime-card";

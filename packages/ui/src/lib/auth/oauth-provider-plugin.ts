@@ -6,14 +6,14 @@ import {
 import { Code2 } from "lucide-react";
 import { createElement, Fragment } from "react";
 
-import { AuthorizedApplications } from "theoui/components/auth/oauth-provider/authorized-applications";
+import { AuthorizedApplications } from "theoui/auth/oauth-provider/authorized-applications";
 import {
   OrganizationOAuthClients,
   UserOAuthClients,
-} from "theoui/components/auth/oauth-provider/oauth-clients";
-import { OAuthConsent } from "theoui/components/auth/oauth-provider/oauth-consent";
-import { OAuthSelectAccount } from "theoui/components/auth/oauth-provider/oauth-select-account";
-import { OAuthSignUp } from "theoui/components/auth/oauth-provider/oauth-sign-up";
+} from "theoui/auth/oauth-provider/oauth-clients";
+import { OAuthConsent } from "theoui/auth/oauth-provider/oauth-consent";
+import { OAuthSelectAccount } from "theoui/auth/oauth-provider/oauth-select-account";
+import { OAuthSignUp } from "theoui/auth/oauth-provider/oauth-sign-up";
 
 const clientManagementLabel = (label: string) =>
   createElement(

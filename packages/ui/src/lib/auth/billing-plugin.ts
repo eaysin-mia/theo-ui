@@ -9,7 +9,7 @@ import { createElement, Fragment } from "react";
 import {
   OrganizationBillingSettings,
   UserBillingSettings,
-} from "theoui/components/auth/billing/billing-settings";
+} from "theoui/auth/billing/billing-settings";
 
 const billingLabel = (label: string) =>
   createElement(

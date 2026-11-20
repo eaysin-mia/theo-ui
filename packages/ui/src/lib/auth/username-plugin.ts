@@ -4,8 +4,8 @@ import {
   type UsernamePluginOptions,
 } from "@better-auth-ui/core/plugins/username";
 
-import { SignInUsername } from "theoui/components/auth/username/sign-in-username";
-import { UsernameField } from "theoui/components/auth/username/username-field";
+import { SignInUsername } from "theoui/auth/username/sign-in-username";
+import { UsernameField } from "theoui/auth/username/username-field";
 
 export const usernamePlugin = createAuthPlugin(
   coreUsernamePlugin.id,

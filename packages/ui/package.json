@@ -40,7 +40,6 @@
   },
   "imports": {
     "#components/*": "./dist/components/*.js",
-    "#patterns/*": "./dist/patterns/*.js",
     "#hooks/*": "./dist/hooks/*.js",
     "#lib/*": "./dist/lib/*.js"
   },
@@ -63,108 +62,25 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles.css",
-    "./globals.css": "./dist/styles.css",
-    "./theme.css": "./dist/styles.css",
-    "./patterns": {
-      "types": "./dist/patterns/index.d.ts",
-      "import": "./dist/patterns/index.js",
-      "default": "./dist/patterns/index.js"
+    "./components": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
-    "./patterns/app-layout": {
-      "types": "./dist/patterns/app-layout/index.d.ts",
-      "import": "./dist/patterns/app-layout/index.js",
-      "default": "./dist/patterns/app-layout/index.js"
+    "./components/*": {
+      "types": "./dist/components/*.d.ts",
+      "import": "./dist/components/*.js",
+      "default": "./dist/components/*.js"
     },
-    "./patterns/app-layout/*": {
-      "types": "./dist/patterns/app-layout/*.d.ts",
-      "import": "./dist/patterns/app-layout/*.js",
-      "default": "./dist/patterns/app-layout/*.js"
+    "./auth": {
+      "types": "./dist/auth/index.d.ts",
+      "import": "./dist/auth/index.js",
+      "default": "./dist/auth/index.js"
     },
-    "./patterns/buttons": {
-      "types": "./dist/patterns/buttons/index.d.ts",
-      "import": "./dist/patterns/buttons/index.js",
-      "default": "./dist/patterns/buttons/index.js"
-    },
-    "./patterns/buttons/*": {
-      "types": "./dist/patterns/buttons/*.d.ts",
-      "import": "./dist/patterns/buttons/*.js",
-      "default": "./dist/patterns/buttons/*.js"
-    },
-    "./patterns/event-calendar": {
-      "types": "./dist/patterns/event-calendar/index.d.ts",
-      "import": "./dist/patterns/event-calendar/index.js",
-      "default": "./dist/patterns/event-calendar/index.js"
-    },
-    "./patterns/event-calendar/*": {
-      "types": "./dist/patterns/event-calendar/*.d.ts",
-      "import": "./dist/patterns/event-calendar/*.js",
-      "default": "./dist/patterns/event-calendar/*.js"
-    },
-    "./patterns/filters": {
-      "types": "./dist/patterns/filters/index.d.ts",
-      "import": "./dist/patterns/filters/index.js",
-      "default": "./dist/patterns/filters/index.js"
-    },
-    "./patterns/filters/*": {
-      "types": "./dist/patterns/filters/*.d.ts",
-      "import": "./dist/patterns/filters/*.js",
-      "default": "./dist/patterns/filters/*.js"
-    },
-    "./patterns/gantt": {
-      "types": "./dist/patterns/gantt/index.d.ts",
-      "import": "./dist/patterns/gantt/index.js",
-      "default": "./dist/patterns/gantt/index.js"
-    },
-    "./patterns/gantt/*": {
-      "types": "./dist/patterns/gantt/*.d.ts",
-      "import": "./dist/patterns/gantt/*.js",
-      "default": "./dist/patterns/gantt/*.js"
-    },
-    "./patterns/qr-code": {
-      "types": "./dist/patterns/qr-code/index.d.ts",
-      "import": "./dist/patterns/qr-code/index.js",
-      "default": "./dist/patterns/qr-code/index.js"
-    },
-    "./patterns/qr-code/*": {
-      "types": "./dist/patterns/qr-code/*.d.ts",
-      "import": "./dist/patterns/qr-code/*.js",
-      "default": "./dist/patterns/qr-code/*.js"
-    },
-    "./patterns/*": {
-      "types": "./dist/patterns/*.d.ts",
-      "import": "./dist/patterns/*.js",
-      "default": "./dist/patterns/*.js"
-    },
-    "./lib": {
-      "types": "./dist/lib/index.d.ts",
-      "import": "./dist/lib/index.js",
-      "default": "./dist/lib/index.js"
-    },
-    "./lib/*": {
-      "types": "./dist/lib/*.d.ts",
-      "import": "./dist/lib/*.js",
-      "default": "./dist/lib/*.js"
-    },
-    "./lib/highlighter": {
-      "types": "./dist/lib/highlighter.d.ts",
-      "import": "./dist/lib/highlighter.js",
-      "default": "./dist/lib/highlighter.js"
-    },
-    "./lib/auth": {
-      "types": "./dist/lib/auth/index.d.ts",
-      "import": "./dist/lib/auth/index.js",
-      "default": "./dist/lib/auth/index.js"
-    },
-    "./lib/auth/*": {
-      "types": "./dist/lib/auth/*.d.ts",
-      "import": "./dist/lib/auth/*.js",
-      "default": "./dist/lib/auth/*.js"
-    },
-    "./lib/auth/organization-plugin": {
-      "types": "./dist/lib/auth/organization-plugin.d.ts",
-      "import": "./dist/lib/auth/organization-plugin.js",
-      "default": "./dist/lib/auth/organization-plugin.js"
+    "./auth/*": {
+      "types": "./dist/auth/*.d.ts",
+      "import": "./dist/auth/*.js",
+      "default": "./dist/auth/*.js"
     },
     "./hooks": {
       "types": "./dist/hooks/index.d.ts",
@@ -176,126 +92,12 @@
       "import": "./dist/hooks/*.js",
       "default": "./dist/hooks/*.js"
     },
-    "./components/app-layout": {
-      "types": "./dist/patterns/app-layout/index.d.ts",
-      "import": "./dist/patterns/app-layout/index.js",
-      "default": "./dist/patterns/app-layout/index.js"
+    "./utils": {
+      "types": "./dist/lib/utils.d.ts",
+      "import": "./dist/lib/utils.js",
+      "default": "./dist/lib/utils.js"
     },
-    "./components/app-layout/*": {
-      "types": "./dist/patterns/app-layout/*.d.ts",
-      "import": "./dist/patterns/app-layout/*.js",
-      "default": "./dist/patterns/app-layout/*.js"
-    },
-    "./components/auth": {
-      "types": "./dist/components/auth/index.d.ts",
-      "import": "./dist/components/auth/index.js",
-      "default": "./dist/components/auth/index.js"
-    },
-    "./components/auth/*": {
-      "types": "./dist/components/auth/*.d.ts",
-      "import": "./dist/components/auth/*.js",
-      "default": "./dist/components/auth/*.js"
-    },
-    "./components/buttons": {
-      "types": "./dist/patterns/buttons/index.d.ts",
-      "import": "./dist/patterns/buttons/index.js",
-      "default": "./dist/patterns/buttons/index.js"
-    },
-    "./components/buttons/*": {
-      "types": "./dist/patterns/buttons/*.d.ts",
-      "import": "./dist/patterns/buttons/*.js",
-      "default": "./dist/patterns/buttons/*.js"
-    },
-    "./components/event-calendar": {
-      "types": "./dist/patterns/event-calendar/index.d.ts",
-      "import": "./dist/patterns/event-calendar/index.js",
-      "default": "./dist/patterns/event-calendar/index.js"
-    },
-    "./components/event-calendar/*": {
-      "types": "./dist/patterns/event-calendar/*.d.ts",
-      "import": "./dist/patterns/event-calendar/*.js",
-      "default": "./dist/patterns/event-calendar/*.js"
-    },
-    "./components/filters": {
-      "types": "./dist/patterns/filters/index.d.ts",
-      "import": "./dist/patterns/filters/index.js",
-      "default": "./dist/patterns/filters/index.js"
-    },
-    "./components/filters/*": {
-      "types": "./dist/patterns/filters/*.d.ts",
-      "import": "./dist/patterns/filters/*.js",
-      "default": "./dist/patterns/filters/*.js"
-    },
-    "./components/gantt": {
-      "types": "./dist/patterns/gantt/index.d.ts",
-      "import": "./dist/patterns/gantt/index.js",
-      "default": "./dist/patterns/gantt/index.js"
-    },
-    "./components/gantt/*": {
-      "types": "./dist/patterns/gantt/*.d.ts",
-      "import": "./dist/patterns/gantt/*.js",
-      "default": "./dist/patterns/gantt/*.js"
-    },
-    "./components/qr-code": {
-      "types": "./dist/patterns/qr-code/index.d.ts",
-      "import": "./dist/patterns/qr-code/index.js",
-      "default": "./dist/patterns/qr-code/index.js"
-    },
-    "./components/qr-code/*": {
-      "types": "./dist/patterns/qr-code/*.d.ts",
-      "import": "./dist/patterns/qr-code/*.js",
-      "default": "./dist/patterns/qr-code/*.js"
-    },
-    "./components/code-block": {
-      "types": "./dist/patterns/code-block.d.ts",
-      "import": "./dist/patterns/code-block.js",
-      "default": "./dist/patterns/code-block.js"
-    },
-    "./components/composer": {
-      "types": "./dist/patterns/composer.d.ts",
-      "import": "./dist/patterns/composer.js",
-      "default": "./dist/patterns/composer.js"
-    },
-    "./components/halo-search": {
-      "types": "./dist/patterns/halo-search.d.ts",
-      "import": "./dist/patterns/halo-search.js",
-      "default": "./dist/patterns/halo-search.js"
-    },
-    "./components/kanban": {
-      "types": "./dist/patterns/kanban.d.ts",
-      "import": "./dist/patterns/kanban.js",
-      "default": "./dist/patterns/kanban.js"
-    },
-    "./components/questionnaire": {
-      "types": "./dist/patterns/questionnaire.d.ts",
-      "import": "./dist/patterns/questionnaire.js",
-      "default": "./dist/patterns/questionnaire.js"
-    },
-    "./components/timeline": {
-      "types": "./dist/patterns/timeline.d.ts",
-      "import": "./dist/patterns/timeline.js",
-      "default": "./dist/patterns/timeline.js"
-    },
-    "./components/tip-selector": {
-      "types": "./dist/patterns/tip-selector.d.ts",
-      "import": "./dist/patterns/tip-selector.js",
-      "default": "./dist/patterns/tip-selector.js"
-    },
-    "./components/tree": {
-      "types": "./dist/patterns/tree.d.ts",
-      "import": "./dist/patterns/tree.js",
-      "default": "./dist/patterns/tree.js"
-    },
-    "./components/uptime-card": {
-      "types": "./dist/patterns/uptime-card.d.ts",
-      "import": "./dist/patterns/uptime-card.js",
-      "default": "./dist/patterns/uptime-card.js"
-    },
-    "./components/*": {
-      "types": "./dist/components/*.d.ts",
-      "import": "./dist/components/*.js",
-      "default": "./dist/components/*.js"
-    }
+    "./styles.css": "./dist/styles.css"
   },
   "peerDependencies": {
     "@better-auth-ui/core": ">=1.0.0",
