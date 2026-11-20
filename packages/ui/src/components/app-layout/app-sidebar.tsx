@@ -1,7 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { NavMain, type NavMainItem } from "theoui/components/app-layout/nav-main";
+import {
+  NavMain,
+  type NavMainItem,
+} from "theoui/components/app-layout/nav-main";
 import { TeamSwitcher } from "theoui/components/app-layout/team-switcher";
 import { Kbd } from "theoui/components/kbd";
 import {
