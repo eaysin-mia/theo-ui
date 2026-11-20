@@ -1,9 +1,9 @@
 // Root entrypoint for theoui
-// Exports all UI components, hooks, and utilities with zero auth dependencies.
-// - All UI components: "theoui" or "theoui/components" or "theoui/components/<component>"
-// - Auth: "theoui/auth"
+// - All UI components: "theoui"
 // - Hooks: "theoui/hooks"
-// - Utils: "theoui/utils"
+// - Auth components: "theoui/auth"
+// - Auth plugins & lib: "theoui/auth/lib"
+// - General lib: "theoui/lib"
 // - Styles: "theoui/styles.css"
 
 // Lib & Utilities
