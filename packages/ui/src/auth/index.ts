@@ -1,3 +1,5 @@
+"use client";
+
 export * from "#lib/auth/auth-plugin";
 export { useAuth, useAuthenticate, useSession } from "@better-auth-ui/react";
 export {
