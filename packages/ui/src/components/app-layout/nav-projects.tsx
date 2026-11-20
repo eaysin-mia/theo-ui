@@ -8,7 +8,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "theoui/components/sidebar";
+} from "#components/sidebar";
 import {
   MoreHorizontalIcon,
   FolderIcon,
@@ -21,7 +21,7 @@ import {
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "theoui/components/menu";
+} from "#components/menu";
 
 export function NavProjects({
   projects,

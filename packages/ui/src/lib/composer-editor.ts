@@ -28,7 +28,7 @@ import {
   type ComposerValue,
   type UseComposerEditorOptions,
   useComposerEditor,
-} from "theoui/hooks/use-composer-editor";
+} from "#hooks/use-composer-editor";
 
 type ComposerEditorOptions = Omit<
   UseComposerEditorOptions,
@@ -499,7 +499,7 @@ export {
   type ComposerValue,
   getComposerText,
   useComposerFilter,
-} from "theoui/hooks/use-composer-editor";
+} from "#hooks/use-composer-editor";
 export type { ComposerEditorOptions };
 export {
   ComposerEditorProvider,

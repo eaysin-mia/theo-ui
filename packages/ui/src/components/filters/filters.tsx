@@ -1,9 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { FiltersAdvanced } from "theoui/components/filters/filters-advanced";
-import { FiltersBuilder } from "theoui/components/filters/filters-builder";
-import { FilterChip } from "theoui/components/filters/filters-chip";
+import { FiltersAdvanced } from "#components/filters/filters-advanced";
+import { FiltersBuilder } from "#components/filters/filters-builder";
+import { FilterChip } from "#components/filters/filters-chip";
 import {
   createFilterFocusStore,
   createFilterResolutionStore,
@@ -20,18 +20,18 @@ import {
   useFilterFocusStore,
   useFilterState,
   type FilterActionsContextValue,
-} from "theoui/components/filters/filters-context";
+} from "#components/filters/filters-context";
 import {
   filterDraftReducer,
   isFilterDraftCommittable,
   type FilterDraftAction,
-} from "theoui/components/filters/filters-draft";
+} from "#components/filters/filters-draft";
 import {
   DEFAULT_FILTER_EDITORS,
   resolveFilterEditor,
   type FilterEditorRegistry,
-} from "theoui/components/filters/filters-editors";
-import { resolveFilterLabels } from "theoui/components/filters/filters-i18n";
+} from "#components/filters/filters-editors";
+import { resolveFilterLabels } from "#components/filters/filters-i18n";
 import {
   buildFilterIndex,
   computeFilterSchemaSignature,
@@ -41,7 +41,7 @@ import {
   getFilterField,
   warnFilterOnce,
   type FilterPathCollapse,
-} from "theoui/components/filters/filters-lib";
+} from "#components/filters/filters-lib";
 import {
   createFilterOperators,
   DEFAULT_FILTER_OPERATOR_LABELS,
@@ -51,7 +51,7 @@ import {
   operatorTakesValue,
   resolveFilterOperators,
   type FilterOperatorLabels,
-} from "theoui/components/filters/filters-operators";
+} from "#components/filters/filters-operators";
 import {
   clearFilterQuery,
   copyFilterNodeTo,
@@ -74,7 +74,7 @@ import {
   unwrapFilterGroup,
   updateFilterRule,
   wrapFilterNodeInGroup,
-} from "theoui/components/filters/filters-query";
+} from "#components/filters/filters-query";
 import type {
   FilterChangeDetails,
   FilterCombinator,
@@ -87,11 +87,11 @@ import type {
   FilterQuery,
   FilterRule,
   FilterValueDisplayContext,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 import { cva } from "class-variance-authority";
 
-import { cn } from "theoui/lib/utils";
-import { Button } from "theoui/components/button";
+import { cn } from "#lib/utils";
+import { Button } from "#components/button";
 
 /* -------------------------------------------------------------------------- */
 /*                                  Variants                                  */
@@ -1165,13 +1165,13 @@ export {
   pruneFilterQuery,
   unwrapFilterGroup,
   wrapFilterNodeInGroup,
-} from "theoui/components/filters/filters-query";
+} from "#components/filters/filters-query";
 
 // The two resolver signatures `collectFilterIssues` takes.
 export type {
   FilterArityResolver,
   FilterValidateResolver,
-} from "theoui/components/filters/filters-query";
+} from "#components/filters/filters-query";
 
 export {
   // The read-only contract: the gate, and the props a mutating control wears.
@@ -1187,7 +1187,7 @@ export {
   useFilterFocusStore,
   useFilterRender,
   useFilterSegmentFocus,
-} from "theoui/components/filters/filters-context";
+} from "#components/filters/filters-context";
 
 export {
   FilterChip,
@@ -1195,28 +1195,28 @@ export {
   FilterRuleMenuItems,
   FilterValuePopover,
   useFilterRuleDisplay,
-} from "theoui/components/filters/filters-chip";
+} from "#components/filters/filters-chip";
 export {
   FiltersAdvanced,
   FiltersAdvancedPanel,
   FilterAdvancedRow,
-} from "theoui/components/filters/filters-advanced";
+} from "#components/filters/filters-advanced";
 export {
   FiltersBuilder,
   FilterFieldPicker,
-} from "theoui/components/filters/filters-builder";
-export { DEFAULT_FILTER_LABELS } from "theoui/components/filters/filters-i18n";
+} from "#components/filters/filters-builder";
+export { DEFAULT_FILTER_LABELS } from "#components/filters/filters-i18n";
 export {
   DEFAULT_FILTER_OPERATORS,
   DEFAULT_FILTER_OPERATOR_LABELS,
-} from "theoui/components/filters/filters-operators";
+} from "#components/filters/filters-operators";
 export {
   DEFAULT_FILTER_EDITORS,
   FilterDateEditor,
   FilterDateRangeEditor,
   useFilterOptions,
   useFilterValueResolution,
-} from "theoui/components/filters/filters-editors";
+} from "#components/filters/filters-editors";
 export {
   formatFilterDate,
   parseFilterDate,
@@ -1224,6 +1224,6 @@ export {
   toFilterDateValue,
   type FilterDateValue,
   type FilterRelativeDate,
-} from "theoui/components/filters/filters-date";
+} from "#components/filters/filters-date";
 
-export type * from "theoui/components/filters/filters-types";
+export type * from "#components/filters/filters-types";

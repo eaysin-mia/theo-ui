@@ -6,9 +6,9 @@ import type {
 } from "@better-auth-ui/core/plugins/multi-session";
 import { useAuth } from "@better-auth-ui/react";
 import { useSetActiveSession } from "@better-auth-ui/react/plugins/multi-session";
-import { UserView } from "theoui/auth/user/user-view";
-import { MenuItem } from "theoui/components/menu";
-import { Spinner } from "theoui/components/spinner";
+import { UserView } from "#auth/user/user-view";
+import { MenuItem } from "#components/menu";
+import { Spinner } from "#components/spinner";
 
 export type SwitchAccountSubmenuItemProps = {
   deviceSession: ListDeviceSession;

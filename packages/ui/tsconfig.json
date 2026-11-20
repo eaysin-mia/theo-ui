@@ -3,9 +3,10 @@
   "compilerOptions": {
     "paths": {
       "#components/*": ["./src/components/*"],
+      "#auth/*": ["./src/auth/*"],
       "#hooks/*": ["./src/hooks/*"],
       "#lib/*": ["./src/lib/*"],
-      "theoui/*": ["./src/*"]
+      "#/*": ["./src/*"]
     }
   },
   "include": ["."],

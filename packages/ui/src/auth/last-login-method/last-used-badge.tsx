@@ -3,8 +3,8 @@
 import { useLastLoginMethod } from "@better-auth-ui/react";
 import type { VariantProps } from "class-variance-authority";
 
-import { Badge, type badgeVariants } from "theoui/components/badge";
-import { cn } from "theoui/lib/utils";
+import { Badge, type badgeVariants } from "#components/badge";
+import { cn } from "#lib/utils";
 
 export type LastUsedBadgeProps = {
   /** Login method IDs that should display the indicator. */

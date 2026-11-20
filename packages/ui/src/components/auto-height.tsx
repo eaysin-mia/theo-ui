@@ -9,11 +9,8 @@ import {
   useReducedMotionConfig,
 } from "motion/react";
 
-import {
-  useAutoHeight,
-  type AutoHeightOptions,
-} from "theoui/hooks/use-auto-height";
-import { cn } from "theoui/lib/utils";
+import { useAutoHeight, type AutoHeightOptions } from "#hooks/use-auto-height";
+import { cn } from "#lib/utils";
 
 const DEFAULT_TRANSITION: Transition = {
   type: "spring",

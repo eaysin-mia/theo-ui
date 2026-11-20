@@ -20,9 +20,9 @@ import {
 import { useIsMutating } from "@tanstack/react-query";
 import type { ComponentProps } from "react";
 
-import { Button } from "theoui/components/button";
-import { Spinner } from "theoui/components/spinner";
-import { cn } from "theoui/lib/utils";
+import { Button } from "#components/button";
+import { Spinner } from "#components/spinner";
+import { cn } from "#lib/utils";
 import { LastUsedBadge } from "./last-login-method/last-used-badge";
 
 export type ProviderButtonProps = {

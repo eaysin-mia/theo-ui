@@ -7,16 +7,16 @@ import {
   useEventCalendarSettings,
   useEventCalendarView,
   useEventCalendarViewConfig,
-} from "theoui/components/event-calendar/event-calendar";
-import { toZoned } from "theoui/components/event-calendar/event-calendar-lib";
-import type { CalendarView } from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar";
+import { toZoned } from "#components/event-calendar/event-calendar-lib";
+import type { CalendarView } from "#components/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, format } from "date-fns";
 
-import { cn } from "theoui/lib/utils";
-import { Button } from "theoui/components/button";
-import { Calendar } from "theoui/components/calendar";
+import { cn } from "#lib/utils";
+import { Button } from "#components/button";
+import { Calendar } from "#components/calendar";
 import {
   Menu,
   MenuGroup,
@@ -24,18 +24,14 @@ import {
   MenuItem,
   MenuPopup,
   MenuTrigger,
-} from "theoui/components/menu";
-import {
-  Popover,
-  PopoverPopup,
-  PopoverTrigger,
-} from "theoui/components/popover";
+} from "#components/menu";
+import { Popover, PopoverPopup, PopoverTrigger } from "#components/popover";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "theoui/components/tooltip";
+} from "#components/tooltip";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,

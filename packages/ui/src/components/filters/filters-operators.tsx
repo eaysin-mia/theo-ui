@@ -2,7 +2,7 @@ import type {
   FilterField,
   FilterOperator,
   FilterValueType,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
 /**
  * Every operator label, keyed by value. Split from `FilterLabels`: operator

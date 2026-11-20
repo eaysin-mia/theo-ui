@@ -4,8 +4,8 @@ import {
   type MultiSessionPluginOptions,
 } from "@better-auth-ui/core/plugins/multi-session";
 
-import { ManageAccounts } from "theoui/auth/multi-session/manage-accounts";
-import { SwitchAccountSubmenu } from "theoui/auth/multi-session/switch-account-submenu";
+import { ManageAccounts } from "#auth/multi-session/manage-accounts";
+import { SwitchAccountSubmenu } from "#auth/multi-session/switch-account-submenu";
 
 export const multiSessionPlugin = createAuthPlugin(
   coreMultiSessionPlugin.id,

@@ -13,12 +13,12 @@ import {
   useFilterPopupOpen,
   useFilterRender,
   useFilterReorderable,
-} from "theoui/components/filters/filters-context";
+} from "#components/filters/filters-context";
 import {
   FilterMenu,
   useFilterOptions,
   useFilterValueResolution,
-} from "theoui/components/filters/filters-editors";
+} from "#components/filters/filters-editors";
 import {
   collapseFilterPath,
   FILTER_MENU_CLASS,
@@ -26,41 +26,41 @@ import {
   formatFilterPath,
   getFilterField,
   getFilterFieldChain,
-} from "theoui/components/filters/filters-lib";
+} from "#components/filters/filters-lib";
 import {
   coerceFilterValue,
   getFilterArity,
   getFilterOperator,
   operatorTakesValue,
   visibleFilterOperators,
-} from "theoui/components/filters/filters-operators";
+} from "#components/filters/filters-operators";
 import {
   findFilterNode,
   isFilterGroup,
-} from "theoui/components/filters/filters-query";
+} from "#components/filters/filters-query";
 import {
   isFilterDateValue,
   formatFilterDate,
   type FilterDateValue,
-} from "theoui/components/filters/filters-date";
+} from "#components/filters/filters-date";
 import type {
   FilterEditorProps,
   FilterField,
   FilterGroupNode,
   FilterOperator,
   FilterRule,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
-import { cn } from "theoui/lib/utils";
-import { Button, buttonVariants } from "theoui/components/button";
+import { cn } from "#lib/utils";
+import { Button, buttonVariants } from "#components/button";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "theoui/components/breadcrumb";
-import { Group, GroupSeparator, GroupText } from "theoui/components/group";
+} from "#components/breadcrumb";
+import { Group, GroupSeparator, GroupText } from "#components/group";
 import {
   Menu,
   MenuPopup,
@@ -68,18 +68,14 @@ import {
   MenuRadioGroup,
   MenuRadioItem,
   MenuTrigger,
-} from "theoui/components/menu";
-import {
-  Popover,
-  PopoverPopup,
-  PopoverTrigger,
-} from "theoui/components/popover";
+} from "#components/menu";
+import { Popover, PopoverPopup, PopoverTrigger } from "#components/popover";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "theoui/components/tooltip";
+} from "#components/tooltip";
 import {
   ChevronRightIcon,
   CornerDownRightIcon,

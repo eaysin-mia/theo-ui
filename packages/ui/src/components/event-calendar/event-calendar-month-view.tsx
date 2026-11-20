@@ -20,43 +20,43 @@ import {
   useEventCalendarViewConfig,
   useEventCalendarViewSettings,
   useEventCalendarWeek,
-} from "theoui/components/event-calendar/event-calendar";
+} from "#components/event-calendar/event-calendar";
 import {
   useEventCalendarGestures,
   wasRecentChipPress,
   wasRecentDrag,
-} from "theoui/components/event-calendar/event-calendar-dnd";
+} from "#components/event-calendar/event-calendar-dnd";
 import {
   EVENT_CALENDAR_GHOST,
   EVENT_CALENDAR_SLOT_DRAFT,
   EventCalendarEvent,
-} from "theoui/components/event-calendar/event-calendar-event";
+} from "#components/event-calendar/event-calendar-event";
 import {
   getDayKey,
   getRangeKey,
   resolveOffDay,
   toZoned,
   zonedStartOfDay,
-} from "theoui/components/event-calendar/event-calendar-lib";
+} from "#components/event-calendar/event-calendar-lib";
 import type {
   EventCalendarDateRange,
   EventCalendarDragState,
   EventCalendarEventId,
   EventCalendarSegment,
-} from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, format, getWeek } from "date-fns";
 
-import { cn } from "theoui/lib/utils";
-import { Button } from "theoui/components/button";
+import { cn } from "#lib/utils";
+import { Button } from "#components/button";
 import {
   Popover,
   PopoverClose,
   PopoverPopup,
   PopoverTrigger,
-} from "theoui/components/popover";
-import { ScrollArea } from "theoui/components/scroll-area";
+} from "#components/popover";
+import { ScrollArea } from "#components/scroll-area";
 import { PlusIcon, XIcon } from "lucide-react";
 
 const EMPTY_SET = new Set<string>();

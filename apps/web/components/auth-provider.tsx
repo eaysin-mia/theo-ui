@@ -26,7 +26,7 @@ import {
   themePlugin,
   twoFactorPlugin,
   usernamePlugin,
-} from "theoui/auth/plugins";
+} from "theoui/auth/lib";
 import { authClient } from "@/lib/auth-client";
 import { useTheme } from "next-themes";
 import Link from "next/link";

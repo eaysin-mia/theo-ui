@@ -1,12 +1,9 @@
 "use client";
 
 import * as React from "react";
-import {
-  NavMain,
-  type NavMainItem,
-} from "theoui/components/app-layout/nav-main";
-import { TeamSwitcher } from "theoui/components/app-layout/team-switcher";
-import { Kbd } from "theoui/components/kbd";
+import { NavMain, type NavMainItem } from "#components/app-layout/nav-main";
+import { TeamSwitcher } from "#components/app-layout/team-switcher";
+import { Kbd } from "#components/kbd";
 import {
   Sidebar,
   SidebarContent,
@@ -18,7 +15,7 @@ import {
   SidebarRail,
   SidebarTrigger,
   useSidebar,
-} from "theoui/components/sidebar";
+} from "#components/sidebar";
 import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 
 export type SidebarTeam = {

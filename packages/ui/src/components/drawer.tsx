@@ -9,9 +9,9 @@ import { useRender } from "@base-ui/react/use-render";
 import { ChevronRightIcon, XIcon } from "lucide-react";
 import type React from "react";
 import { createContext, useContext } from "react";
-import { cn } from "theoui/lib/utils";
-import { Button } from "theoui/components/button";
-import { ScrollArea } from "theoui/components/scroll-area";
+import { cn } from "#lib/utils";
+import { Button } from "#components/button";
+import { ScrollArea } from "#components/scroll-area";
 
 export type DrawerPosition = "right" | "left" | "top" | "bottom";
 

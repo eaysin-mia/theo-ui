@@ -17,14 +17,9 @@ import {
 } from "lucide-react";
 import { useEffect, useMemo } from "react";
 
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "theoui/components/tabs";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
-import { cn } from "theoui/lib/utils";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "#components/tabs";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
+import { cn } from "#lib/utils";
 import { TabsScrollContainer } from "../tabs-scroll-container";
 import { OrganizationPeople } from "./organization-people";
 import { OrganizationRoles } from "./organization-roles";

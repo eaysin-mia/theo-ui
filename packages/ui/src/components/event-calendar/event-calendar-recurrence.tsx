@@ -4,7 +4,7 @@ import type {
   EventCalendarOccurrence,
   EventCalendarRecurrenceRule,
   EventCalendarWeekday,
-} from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar-types";
 import { TZDate } from "@date-fns/tz";
 import { addDays, addMonths, addWeeks, addYears } from "date-fns";
 

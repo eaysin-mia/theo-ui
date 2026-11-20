@@ -9,8 +9,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theoui/components/empty";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+} from "#components/empty";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
 
 /**
  * Empty state for `UserInvitations`.

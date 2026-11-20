@@ -5,12 +5,9 @@ import { useState } from "react";
 import {
   ArrowUpIcon,
   BotIcon,
-  FileTextIcon,
   PaperclipIcon,
-  RotateCcwIcon,
   SparklesIcon,
   SquareIcon,
-  Trash2Icon,
   UserRoundIcon,
   UsersRoundIcon,
 } from "lucide-react";
@@ -21,8 +18,6 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "theoui/components/message-scroller";
-import {
   Composer,
   ComposerActionGroup,
   ComposerActions,
@@ -35,8 +30,6 @@ import {
   type ComposerTrigger,
   type ComposerValue,
   getComposerText,
-} from "theoui";
-import {
   Attachment,
   AttachmentContent,
   AttachmentDescription,
@@ -45,18 +38,18 @@ import {
   AttachmentTitle,
   AttachmentAction,
   AttachmentActions,
-} from "theoui/components/attachment";
-import {
   Empty,
   EmptyContent,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theoui/components/empty";
-import { Button } from "theoui/components/button";
-import { FileType, getFileType } from "theoui/components/file-type";
-import { Message, MessageContent } from "theoui/components/message";
+  Button,
+  FileType,
+  getFileType,
+  Message,
+  MessageContent,
+} from "theoui";
 import {
   ChatMessage,
   type ChatMessageItem,
@@ -127,9 +120,14 @@ const INITIAL_MESSAGES: ChatMessageItem[] = [
 Here is an example snippet showing how you compose the feed:
 
 \`\`\`tsx
-import { MessageScroller, MessageScrollerContent } from "theoui/components/message-scroller";
-import { Message, MessageContent } from "theoui/components/message";
-import { Bubble, BubbleContent } from "theoui/components/bubble";
+import {
+  MessageScroller,
+  MessageScrollerContent,
+  Message,
+  MessageContent,
+  Bubble,
+  BubbleContent,
+} from "theoui";
 
 export function ChatFeed({ messages }) {
   return (

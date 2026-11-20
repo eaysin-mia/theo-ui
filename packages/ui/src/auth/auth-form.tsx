@@ -22,17 +22,17 @@ import {
   useRef,
 } from "react";
 
-import { Button } from "theoui/components/button";
-import { Alert, AlertDescription } from "theoui/components/alert";
+import { Button } from "#components/button";
+import { Alert, AlertDescription } from "#components/alert";
 import { CircleAlertIcon } from "lucide-react";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { Spinner } from "theoui/components/spinner";
+} from "#components/field";
+import { Input } from "#components/input";
+import { Spinner } from "#components/spinner";
 import { AdditionalField, type AdditionalFieldProps } from "./additional-field";
 
 const { fieldContext, formContext, useFieldContext, useFormContext } =

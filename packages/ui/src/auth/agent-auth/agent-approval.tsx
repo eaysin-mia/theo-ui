@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Card,
   CardPanel,
@@ -27,13 +27,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
-import { Checkbox } from "theoui/components/checkbox";
-import { Skeleton } from "theoui/components/skeleton";
-import { Spinner } from "theoui/components/spinner";
-import { agentAuthPlugin } from "theoui/lib/auth/agent-auth-plugin";
+} from "#components/card";
+import { Checkbox } from "#components/checkbox";
+import { Skeleton } from "#components/skeleton";
+import { Spinner } from "#components/spinner";
+import { agentAuthPlugin } from "#lib/auth/agent-auth-plugin";
 import { UserAvatar } from "../user/user-avatar";
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
 type ApprovalResult = "approved" | "denied";
 

@@ -12,12 +12,12 @@ import { useSelector } from "@tanstack/react-form";
 import { useIsMutating } from "@tanstack/react-query";
 import { useId, useState } from "react";
 
-import { Button } from "theoui/components/button";
-import { Field, FieldLabel, FieldSeparator } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { emailOtpPlugin } from "theoui/lib/auth/email-otp-plugin";
-import { useResendCooldown } from "theoui/lib/auth/use-resend-cooldown";
-import { useSignInContinuation } from "theoui/lib/auth/use-sign-in-continuation";
+import { Button } from "#components/button";
+import { Field, FieldLabel, FieldSeparator } from "#components/field";
+import { Input } from "#components/input";
+import { emailOtpPlugin } from "#lib/auth/email-otp-plugin";
+import { useResendCooldown } from "#lib/auth/use-resend-cooldown";
+import { useSignInContinuation } from "#lib/auth/use-sign-in-continuation";
 import {
   isAuthFormFieldInvalid,
   runAuthFormAction,

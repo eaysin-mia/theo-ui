@@ -8,7 +8,7 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useCreateApiKey } from "@better-auth-ui/react/plugins/api-key";
 import { Key } from "lucide-react";
 import { useState } from "react";
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Dialog,
   DialogClose,
@@ -18,9 +18,9 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
+} from "#components/dialog";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
 import {
   Select,
   SelectGroup,
@@ -28,8 +28,8 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "theoui/components/select";
-import { apiKeyPlugin } from "theoui/lib/auth/api-key-plugin";
+} from "#components/select";
+import { apiKeyPlugin } from "#lib/auth/api-key-plugin";
 import { useAuthForm } from "../auth-form";
 import { NewApiKeyDialog } from "./new-api-key-dialog";
 

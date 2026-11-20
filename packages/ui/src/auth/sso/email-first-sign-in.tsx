@@ -31,18 +31,18 @@ import { useIsMutating } from "@tanstack/react-query";
 import { CircleAlertIcon, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "theoui/components/button";
-import { Checkbox } from "theoui/components/checkbox";
-import { Alert, AlertDescription } from "theoui/components/alert";
-import { Field, FieldLabel, FieldSeparator } from "theoui/components/field";
-import { Input } from "theoui/components/input";
+import { Button } from "#components/button";
+import { Checkbox } from "#components/checkbox";
+import { Alert, AlertDescription } from "#components/alert";
+import { Field, FieldLabel, FieldSeparator } from "#components/field";
+import { Input } from "#components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { ssoPlugin } from "theoui/lib/auth/sso-plugin";
-import { useSignInContinuation } from "theoui/lib/auth/use-sign-in-continuation";
+} from "#components/input-group";
+import { ssoPlugin } from "#lib/auth/sso-plugin";
+import { useSignInContinuation } from "#lib/auth/use-sign-in-continuation";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { AuthFormContainer } from "../auth-layout";
 import { ProviderButtons } from "../provider-buttons";

@@ -26,19 +26,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
-import { Alert, AlertDescription } from "theoui/components/alert";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "theoui/components/tabs";
-import { Textarea } from "theoui/components/textarea";
-import { ssoPlugin } from "theoui/lib/auth/sso-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/card";
+import { Alert, AlertDescription } from "#components/alert";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "#components/tabs";
+import { Textarea } from "#components/textarea";
+import { ssoPlugin } from "#lib/auth/sso-plugin";
+import { cn } from "#lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 
 type SsoProtocol = "oidc" | "saml";

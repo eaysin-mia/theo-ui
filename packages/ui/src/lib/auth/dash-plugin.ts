@@ -11,7 +11,7 @@ import {
   AdminUserActivity,
   OrganizationActivity,
   UserActivity,
-} from "theoui/auth/dash/activity";
+} from "#auth/dash/activity";
 
 const activityLabel = (label: string) =>
   createElement(

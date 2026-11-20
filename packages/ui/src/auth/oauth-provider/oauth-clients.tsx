@@ -46,10 +46,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theoui/components/alert-dialog";
-import { Badge } from "theoui/components/badge";
-import { Button, buttonVariants } from "theoui/components/button";
-import { Card, CardPanel } from "theoui/components/card";
+} from "#components/alert-dialog";
+import { Badge } from "#components/badge";
+import { Button, buttonVariants } from "#components/button";
+import { Card, CardPanel } from "#components/card";
 import {
   Dialog,
   DialogClose,
@@ -59,14 +59,14 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
-import { Field, FieldDescription, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
+} from "#components/dialog";
+import { Field, FieldDescription, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
+} from "#components/input-group";
 import {
   Select,
   SelectGroup,
@@ -74,12 +74,12 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "theoui/components/select";
-import { Spinner } from "theoui/components/spinner";
-import { Switch } from "theoui/components/switch";
-import { Textarea } from "theoui/components/textarea";
-import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/select";
+import { Spinner } from "#components/spinner";
+import { Switch } from "#components/switch";
+import { Textarea } from "#components/textarea";
+import { oauthProviderPlugin } from "#lib/auth/oauth-provider-plugin";
+import { cn } from "#lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 
 type ClientAction =

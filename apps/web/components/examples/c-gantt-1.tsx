@@ -12,33 +12,28 @@ import {
   GanttNav,
   GanttToolbar,
   GanttView,
-} from "theoui";
-import { addDays, startOfDay, startOfWeek, type Locale } from "date-fns";
-import { ar, de, es, fr, ja } from "date-fns/locale";
-
-import { Button } from "theoui/components/button";
-import { Card, CardContent } from "theoui/components/card";
-import { Label } from "theoui/components/label";
-import {
+  Button,
+  Card,
+  CardContent,
+  Label,
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "theoui/components/popover";
-import { RadioGroup, RadioGroupItem } from "theoui/components/radio-group";
-import {
+  RadioGroup,
+  RadioGroupItem,
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "theoui/components/select";
-import { Switch } from "theoui/components/switch";
-import {
+  Switch,
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "theoui/components/tabs";
+} from "theoui";
+import { addDays, startOfDay, startOfWeek, type Locale } from "date-fns";
+import { ar, de, es, fr, ja } from "date-fns/locale";
 import { SettingsIcon, RotateCcwIcon } from "lucide-react";
 
 /**

@@ -23,8 +23,8 @@ import {
 } from "@better-auth-ui/react";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "theoui/components/toast";
-import { Button } from "theoui/components/button";
+import { toastManager } from "#components/toast";
+import { Button } from "#components/button";
 import {
   Card,
   CardDescription,
@@ -32,17 +32,17 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
-import { Field, FieldError, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
+} from "#components/card";
+import { Field, FieldError, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { Skeleton } from "theoui/components/skeleton";
-import { Spinner } from "theoui/components/spinner";
-import { cn } from "theoui/lib/utils";
+} from "#components/input-group";
+import { Skeleton } from "#components/skeleton";
+import { Spinner } from "#components/spinner";
+import { cn } from "#lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../../auth-form";
 import { OpenEmailButton } from "../../open-email-button";
 import { PasswordStrengthMeter } from "../../password-strength-meter";

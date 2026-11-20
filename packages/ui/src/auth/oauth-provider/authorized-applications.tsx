@@ -8,9 +8,9 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useListOAuthConsents } from "@better-auth-ui/react/plugins/oauth-provider";
 import { Fragment } from "react";
 
-import { Card, CardHeader, CardPanel, CardTitle } from "theoui/components/card";
-import { Separator } from "theoui/components/separator";
-import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
+import { Card, CardHeader, CardPanel, CardTitle } from "#components/card";
+import { Separator } from "#components/separator";
+import { oauthProviderPlugin } from "#lib/auth/oauth-provider-plugin";
 import { AuthorizedApplication } from "./authorized-application";
 import { AuthorizedApplicationSkeleton } from "./authorized-application-skeleton";
 import { AuthorizedApplicationsEmpty } from "./authorized-applications-empty";

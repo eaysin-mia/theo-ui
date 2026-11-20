@@ -5,13 +5,8 @@ import { useAuth, useAuthenticate } from "@better-auth-ui/react";
 import { Shield, User2 } from "lucide-react";
 import { useMemo } from "react";
 
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "theoui/components/tabs";
-import { cn } from "theoui/lib/utils";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "#components/tabs";
+import { cn } from "#lib/utils";
 import { TabsScrollContainer } from "../tabs-scroll-container";
 import { AccountSettings } from "./account/account-settings";
 import { SecuritySettings } from "./security/security-settings";

@@ -57,15 +57,14 @@ export default function App() {
 
 `theoui` provides clean, fully-typed entrypoints for optimal tree-shaking:
 
-| Entrypoint                       | Description                             | Example                                                       |
-| :------------------------------- | :-------------------------------------- | :------------------------------------------------------------ |
-| **`"theoui"`**                   | All UI components, buttons, and layouts | `import { Button, Dialog, TipSelector, Gantt } from "theoui"` |
-| **`"theoui/components"`**        | Explicit components namespace           | `import { Button, Card } from "theoui/components"`            |
-| **`"theoui/components/<name>"`** | Granular single-component imports       | `import { Button } from "theoui/components/button"`           |
-| **`"theoui/auth"`**              | Better Auth forms, buttons, and views   | `import { SignIn, SignUp, UserButton } from "theoui/auth"`    |
-| **`"theoui/hooks"`**             | Reusable hooks                          | `import { useMediaQuery, useDebounce } from "theoui/hooks"`   |
-| **`"theoui/utils"`**             | Class merge utilities                   | `import { cn } from "theoui/utils"`                           |
-| **`"theoui/styles.css"`**        | Precompiled Tailwind CSS styles         | `@import "theoui/styles.css";`                                |
+| Entrypoint                   | Description                             | Example                                                       |
+| :--------------------------- | :-------------------------------------- | :------------------------------------------------------------ |
+| **`"theoui"`**               | All UI components, buttons, and layouts | `import { Button, Dialog, TipSelector, Gantt } from "theoui"` |
+| **`"theoui/auth"`**          | Better Auth forms, buttons, and views   | `import { SignIn, SignUp, UserButton } from "theoui/auth"`    |
+| **`"theoui/auth/lib"`**      | Auth plugins and client adapters        | `import { adminPlugin, twoFactorPlugin } from "theoui/auth/lib"` |
+| **`"theoui/hooks"`**         | Reusable hooks                          | `import { useMediaQuery, useDebounce } from "theoui/hooks"`   |
+| **`"theoui/lib"`**           | General lib and utilities (`cn`, etc.)  | `import { cn } from "theoui/lib"`                             |
+| **`"theoui/styles.css"`**    | Precompiled Tailwind CSS styles         | `@import "theoui/styles.css";`                                |
 
 ---
 

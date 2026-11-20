@@ -4,7 +4,7 @@ import type { TwoFactorAuthClient } from "@better-auth-ui/core/plugins/two-facto
 import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useDisableTwoFactor } from "@better-auth-ui/react/plugins/two-factor";
 import { ShieldAlert } from "lucide-react";
-import { toastManager } from "theoui/components/toast";
+import { toastManager } from "#components/toast";
 
 import {
   AlertDialog,
@@ -14,12 +14,12 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theoui/components/alert-dialog";
-import { Button } from "theoui/components/button";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { twoFactorPlugin } from "theoui/lib/auth/two-factor-plugin";
-import { useTwoFactorPasswordRequirement } from "theoui/lib/auth/use-two-factor-password";
+} from "#components/alert-dialog";
+import { Button } from "#components/button";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
+import { twoFactorPlugin } from "#lib/auth/two-factor-plugin";
+import { useTwoFactorPasswordRequirement } from "#lib/auth/use-two-factor-password";
 import { useAuthForm } from "../auth-form";
 
 export type DisableTwoFactorDialogProps = {

@@ -4,20 +4,20 @@ import { type ComponentType, type ReactNode } from "react";
 import {
   useEventCalendarSelector,
   useEventCalendarViewConfig,
-} from "theoui/components/event-calendar/event-calendar";
-import { EventCalendarAgendaView } from "theoui/components/event-calendar/event-calendar-agenda-view";
-import { EventCalendarMonthView } from "theoui/components/event-calendar/event-calendar-month-view";
-import { EventCalendarResourceView } from "theoui/components/event-calendar/event-calendar-resource-view";
+} from "#components/event-calendar/event-calendar";
+import { EventCalendarAgendaView } from "#components/event-calendar/event-calendar-agenda-view";
+import { EventCalendarMonthView } from "#components/event-calendar/event-calendar-month-view";
+import { EventCalendarResourceView } from "#components/event-calendar/event-calendar-resource-view";
 import {
   EventCalendarDaysView,
   EventCalendarDayView,
   EventCalendarWeekView,
-} from "theoui/components/event-calendar/event-calendar-time-grid";
-import type { CalendarView } from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar-time-grid";
+import type { CalendarView } from "#components/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
 const DEFAULT_VIEW_COMPONENTS: Record<CalendarView, ComponentType> = {
   month: EventCalendarMonthView,

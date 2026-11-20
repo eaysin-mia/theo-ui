@@ -11,13 +11,13 @@ import { Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "theoui/components/button";
-import { Field, FieldError, FieldLabel } from "theoui/components/field";
+import { Button } from "#components/button";
+import { Field, FieldError, FieldLabel } from "#components/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
+} from "#components/input-group";
 import { isAuthFormFieldInvalid, useAuthForm } from "./auth-form";
 import { AuthFormContainer } from "./auth-layout";
 import { PasswordStrengthMeter } from "./password-strength-meter";

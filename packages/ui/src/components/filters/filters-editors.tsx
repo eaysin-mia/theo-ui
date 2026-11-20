@@ -8,21 +8,21 @@ import {
   ComboboxItem,
   ComboboxList,
   ComboboxSeparator,
-} from "theoui/components/combobox";
-import { Button } from "theoui/components/button";
+} from "#components/combobox";
+import { Button } from "#components/button";
 import { CheckIcon, SearchIcon, XIcon } from "lucide-react";
 import {
   FilterActionsContext,
   filterControlSizes,
   type FilterResolutionStore,
-} from "theoui/components/filters/filters-context";
+} from "#components/filters/filters-context";
 import {
   applyFilterExclusiveSelection,
   filterFilterOptions,
   joinFilterPath,
   normalizeFilterQuery,
   warnFilterOnce,
-} from "theoui/components/filters/filters-lib";
+} from "#components/filters/filters-lib";
 import type {
   AnyFilterEditor,
   FilterEditorProps,
@@ -34,16 +34,16 @@ import type {
   FilterOperator,
   FilterOption,
   FilterOptionsState,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
-import { cn } from "theoui/lib/utils";
-import { Field } from "theoui/components/field";
-import { Form } from "theoui/components/form";
-import { Textarea } from "theoui/components/textarea";
-import { PopoverDescription, PopoverTitle } from "theoui/components/popover";
-import { Group, GroupSeparator, GroupText } from "theoui/components/group";
-import { Input } from "theoui/components/input";
-import { Calendar } from "theoui/components/calendar";
+import { cn } from "#lib/utils";
+import { Field } from "#components/field";
+import { Form } from "#components/form";
+import { Textarea } from "#components/textarea";
+import { PopoverDescription, PopoverTitle } from "#components/popover";
+import { Group, GroupSeparator, GroupText } from "#components/group";
+import { Input } from "#components/input";
+import { Calendar } from "#components/calendar";
 import type { DateRange } from "@daypicker/react";
 import {
   endOfMonth,
@@ -62,7 +62,7 @@ import {
   RELATIVE_TODAY,
   RELATIVE_TOMORROW,
   RELATIVE_YESTERDAY,
-} from "theoui/components/filters/filters-date";
+} from "#components/filters/filters-date";
 
 /* -------------------------------------------------------------------------- */
 /*                              The options service                           */
@@ -1270,7 +1270,7 @@ export function FilterDateRangeEditor<V, O>({
 export type {
   AnyFilterEditor,
   FilterEditorRegistry,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
 export const DEFAULT_FILTER_EDITORS: FilterEditorRegistry = {
   text: FilterTextEditor,

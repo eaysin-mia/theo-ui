@@ -11,10 +11,10 @@ import { usePublicOAuthClient } from "@better-auth-ui/react/plugins/oauth-provid
 import { ShieldCheck, ChevronRight, Check } from "lucide-react";
 import { useState } from "react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "theoui/components/avatar";
-import { Button } from "theoui/components/button";
-import { Skeleton } from "theoui/components/skeleton";
-import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
+import { Avatar, AvatarFallback, AvatarImage } from "#components/avatar";
+import { Button } from "#components/button";
+import { Skeleton } from "#components/skeleton";
+import { oauthProviderPlugin } from "#lib/auth/oauth-provider-plugin";
 import { RemoveAuthorizationDialog } from "./remove-authorization-dialog";
 
 export type AuthorizedApplicationProps = {

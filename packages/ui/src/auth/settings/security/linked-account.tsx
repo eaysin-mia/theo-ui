@@ -18,18 +18,18 @@ import {
 } from "@better-auth-ui/react";
 import type { Account } from "better-auth";
 import { Link2, Link2Off, Plug } from "lucide-react";
-import { toastManager } from "theoui/components/toast";
+import { toastManager } from "#components/toast";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Dialog,
   DialogHeader,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
-import { Skeleton } from "theoui/components/skeleton";
-import { Spinner } from "theoui/components/spinner";
-import { cn } from "theoui/lib/utils";
+} from "#components/dialog";
+import { Skeleton } from "#components/skeleton";
+import { Spinner } from "#components/spinner";
+import { cn } from "#lib/utils";
 import { ReauthenticationAction } from "../../reauthentication";
 
 export type LinkedAccountProps = {

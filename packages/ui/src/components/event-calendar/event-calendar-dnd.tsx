@@ -5,16 +5,16 @@ import {
   useEventCalendar,
   useEventCalendarViewConfig,
   type EventCalendarInstance,
-} from "theoui/components/event-calendar/event-calendar";
+} from "#components/event-calendar/event-calendar";
 import {
   snapMinutes,
   toZoned,
   zonedStartOfDay,
-} from "theoui/components/event-calendar/event-calendar-lib";
+} from "#components/event-calendar/event-calendar-lib";
 import type {
   EventCalendarProposedUpdate,
   EventCalendarSegment,
-} from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar-types";
 import { addDays, addMinutes, differenceInCalendarDays } from "date-fns";
 
 /**

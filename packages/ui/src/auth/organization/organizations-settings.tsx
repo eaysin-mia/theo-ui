@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from "react";
 
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 import { Organizations } from "./organizations";
 import { UserInvitations } from "./user-invitations";
 

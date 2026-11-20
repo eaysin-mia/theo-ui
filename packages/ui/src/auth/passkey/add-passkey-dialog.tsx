@@ -8,7 +8,7 @@ import type {
 import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useAddPasskey } from "@better-auth-ui/react/plugins/passkey";
 import { Fingerprint } from "lucide-react";
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Dialog,
   DialogClose,
@@ -18,10 +18,10 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
-import { Field, FieldError, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { passkeyPlugin } from "theoui/lib/auth/passkey-plugin";
+} from "#components/dialog";
+import { Field, FieldError, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
+import { passkeyPlugin } from "#lib/auth/passkey-plugin";
 import { useAuthForm } from "../auth-form";
 import { ReauthenticationAction } from "../reauthentication";
 

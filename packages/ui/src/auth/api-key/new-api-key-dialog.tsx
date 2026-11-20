@@ -6,9 +6,9 @@ import {
   useCopyToClipboard,
 } from "@better-auth-ui/react";
 import { Check, Copy, Key } from "lucide-react";
-import { toastManager } from "theoui/components/toast";
+import { toastManager } from "#components/toast";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Dialog,
   DialogDescription,
@@ -16,14 +16,14 @@ import {
   DialogHeader,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
+} from "#components/dialog";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { Label } from "theoui/components/label";
-import { apiKeyPlugin } from "theoui/lib/auth/api-key-plugin";
+} from "#components/input-group";
+import { Label } from "#components/label";
+import { apiKeyPlugin } from "#lib/auth/api-key-plugin";
 
 export type NewApiKeyDialogProps = {
   open: boolean;

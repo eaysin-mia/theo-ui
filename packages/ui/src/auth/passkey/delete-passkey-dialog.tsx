@@ -13,12 +13,12 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theoui/components/alert-dialog";
-import { Button } from "theoui/components/button";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { Spinner } from "theoui/components/spinner";
-import { passkeyPlugin } from "theoui/lib/auth/passkey-plugin";
+} from "#components/alert-dialog";
+import { Button } from "#components/button";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
+import { Spinner } from "#components/spinner";
+import { passkeyPlugin } from "#lib/auth/passkey-plugin";
 
 export type ListedPasskey = {
   id: string;

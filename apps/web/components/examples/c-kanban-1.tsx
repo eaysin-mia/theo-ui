@@ -2,12 +2,13 @@
 
 import type { ComponentProps } from "react";
 import { useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "theoui/components/avatar";
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
-import { Card } from "theoui/components/card";
 import {
-  cn,
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  Badge,
+  Button,
+  Card,
   Kanban,
   KanbanBoard,
   KanbanColumn,
@@ -17,6 +18,7 @@ import {
   KanbanItemHandle,
   KanbanOverlay,
 } from "theoui";
+import { cn } from "theoui/lib";
 import { GripVerticalIcon } from "lucide-react";
 
 interface Task {

@@ -4,9 +4,9 @@ import * as React from "react";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
-import { Separator } from "theoui/components/separator";
+import { Separator } from "#components/separator";
 
 function ItemGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (

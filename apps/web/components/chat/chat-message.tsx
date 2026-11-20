@@ -3,7 +3,7 @@
 import * as React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { cn } from "theoui/utils";
+import { cn } from "theoui/lib";
 import {
   CheckIcon,
   CopyIcon,
@@ -17,25 +17,23 @@ import {
   MessageContent,
   MessageFooter,
   MessageHeader,
-} from "theoui/components/message";
-import { Bubble, BubbleContent } from "theoui/components/bubble";
-import {
+  Bubble,
+  BubbleContent,
   Attachment,
   AttachmentContent,
   AttachmentDescription,
   AttachmentGroup,
   AttachmentMedia,
   AttachmentTitle,
-} from "theoui/components/attachment";
-import { FileType, getFileType } from "theoui/components/file-type";
-import { Button } from "theoui/components/button";
-import {
+  FileType,
+  getFileType,
+  Button,
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "theoui/components/tooltip";
-import { Trace } from "theoui/components/trace";
+  Trace,
+} from "theoui";
 import { MarkdownPre } from "@/components/chat/markdown-code";
 import { ReasoningPart } from "@/components/chat/parts/reasoning-part";
 import {

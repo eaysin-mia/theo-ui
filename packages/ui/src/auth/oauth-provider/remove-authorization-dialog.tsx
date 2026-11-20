@@ -17,10 +17,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theoui/components/alert-dialog";
-import { Button } from "theoui/components/button";
-import { Spinner } from "theoui/components/spinner";
-import { oauthProviderPlugin } from "theoui/lib/auth/oauth-provider-plugin";
+} from "#components/alert-dialog";
+import { Button } from "#components/button";
+import { Spinner } from "#components/spinner";
+import { oauthProviderPlugin } from "#lib/auth/oauth-provider-plugin";
 
 export type RemoveAuthorizationDialogProps = {
   /** @remarks `AuthorizedOAuthApplication` */

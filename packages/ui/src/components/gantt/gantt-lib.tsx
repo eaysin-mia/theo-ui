@@ -1,4 +1,4 @@
-import { expandRecurrence } from "theoui/components/gantt/gantt-recurrence";
+import { expandRecurrence } from "#components/gantt/gantt-recurrence";
 import type {
   GanttBaseline,
   GanttBaselineVariance,
@@ -10,7 +10,7 @@ import type {
   GanttResource,
   GanttScale,
   GanttSegment,
-} from "theoui/components/gantt/gantt-types";
+} from "#components/gantt/gantt-types";
 import { TZDate } from "@date-fns/tz";
 import {
   addDays,

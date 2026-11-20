@@ -21,19 +21,19 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theoui/components/alert-dialog";
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
+} from "#components/alert-dialog";
+import { Badge } from "#components/badge";
+import { Button } from "#components/button";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
-import { Skeleton } from "theoui/components/skeleton";
-import { Spinner } from "theoui/components/spinner";
-import { agentAuthPlugin } from "theoui/lib/auth/agent-auth-plugin";
+} from "#components/card";
+import { Skeleton } from "#components/skeleton";
+import { Spinner } from "#components/spinner";
+import { agentAuthPlugin } from "#lib/auth/agent-auth-plugin";
 
 type RevokeTarget = {
   agent: AgentAuthorization;

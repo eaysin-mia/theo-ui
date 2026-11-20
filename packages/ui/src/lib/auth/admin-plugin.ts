@@ -4,7 +4,7 @@ import {
   adminPlugin as coreAdminPlugin,
 } from "@better-auth-ui/core/plugins/admin";
 
-import { StopImpersonating } from "theoui/auth/admin/stop-impersonating";
+import { StopImpersonating } from "#auth/admin/stop-impersonating";
 
 export const adminPlugin = createAuthPlugin(
   coreAdminPlugin.id,

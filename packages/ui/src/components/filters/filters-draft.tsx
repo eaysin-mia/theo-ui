@@ -2,7 +2,7 @@ import type {
   FilterDraft,
   FilterDraftStep,
   FilterOperatorArity,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
 /** Reducer actions for the filter builder draft machine. */
 export type FilterDraftAction<V = unknown> =

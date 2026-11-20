@@ -9,9 +9,9 @@ import {
 import type { Organization } from "better-auth/client";
 import type { ComponentProps } from "react";
 
-import { Badge } from "theoui/components/badge";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
-import { cn } from "theoui/lib/utils";
+import { Badge } from "#components/badge";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
+import { cn } from "#lib/utils";
 import {
   OrganizationLogo,
   type OrganizationLogoSize,

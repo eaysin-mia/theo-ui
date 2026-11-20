@@ -4,8 +4,8 @@ import {
   type TwoFactorPluginOptions,
 } from "@better-auth-ui/core/plugins/two-factor";
 
-import { TwoFactorChallenge } from "theoui/auth/two-factor/two-factor-challenge";
-import { TwoFactorSettings } from "theoui/auth/two-factor/two-factor-settings";
+import { TwoFactorChallenge } from "#auth/two-factor/two-factor-challenge";
+import { TwoFactorSettings } from "#auth/two-factor/two-factor-settings";
 
 export const twoFactorPlugin = createAuthPlugin(
   coreTwoFactorPlugin.id,

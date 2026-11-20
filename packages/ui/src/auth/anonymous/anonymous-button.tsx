@@ -7,11 +7,11 @@ import { useSignInAnonymous } from "@better-auth-ui/react/plugins/anonymous";
 import { useIsMutating } from "@tanstack/react-query";
 import { UserRound } from "lucide-react";
 
-import { Button } from "theoui/components/button";
-import { Spinner } from "theoui/components/spinner";
-import { LastUsedBadge } from "theoui/auth/last-login-method/last-used-badge";
-import { anonymousPlugin } from "theoui/lib/auth/anonymous-plugin";
-import { cn } from "theoui/lib/utils";
+import { Button } from "#components/button";
+import { Spinner } from "#components/spinner";
+import { LastUsedBadge } from "#auth/last-login-method/last-used-badge";
+import { anonymousPlugin } from "#lib/auth/anonymous-plugin";
+import { cn } from "#lib/utils";
 
 /** Sign in with a temporary anonymous account. */
 export function AnonymousButton() {

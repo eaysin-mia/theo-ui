@@ -9,7 +9,7 @@ import {
   useActiveMemberRole,
   useHasPermission,
 } from "@better-auth-ui/react/plugins/organization";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
 import { ApiKeys } from "./api-keys";
 
 export type OrganizationApiKeysProps = {

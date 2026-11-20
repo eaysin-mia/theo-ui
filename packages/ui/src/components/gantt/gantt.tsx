@@ -15,7 +15,7 @@ import {
   mergeGanttI18n,
   type GanttI18nConfig,
   type GanttI18nOverrides,
-} from "theoui/components/gantt/gantt-i18n";
+} from "#components/gantt/gantt-i18n";
 import {
   buildEventIndex,
   defaultEventOrder,
@@ -27,7 +27,7 @@ import {
   toZoned,
   type GanttIndex,
   type WeekStartsOn,
-} from "theoui/components/gantt/gantt-lib";
+} from "#components/gantt/gantt-lib";
 import type {
   GanttBarId,
   GanttBaseline,
@@ -52,12 +52,12 @@ import type {
   GanttSlotInfo,
   GanttState,
   GanttUpdateResult,
-} from "theoui/components/gantt/gantt-types";
+} from "#components/gantt/gantt-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import type { Locale } from "date-fns";
 
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
 const DEFAULT_INTERACTIONS: GanttInteractions = {
   drag: true,

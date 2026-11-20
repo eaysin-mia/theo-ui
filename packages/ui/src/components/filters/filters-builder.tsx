@@ -7,42 +7,38 @@ import {
   useFilterActions,
   useFilterFocusStore,
   useFilterState,
-} from "theoui/components/filters/filters-context";
+} from "#components/filters/filters-context";
 import {
   FILTER_FIELD_PICKER_CLASS,
   getFilterField,
   getFilterFieldChain,
   getFilterFieldCount,
   joinFilterPath,
-} from "theoui/components/filters/filters-lib";
-import { getDefaultFilterOperator } from "theoui/components/filters/filters-operators";
-import { isFilterRule } from "theoui/components/filters/filters-query";
+} from "#components/filters/filters-lib";
+import { getDefaultFilterOperator } from "#components/filters/filters-operators";
+import { isFilterRule } from "#components/filters/filters-query";
 import type {
   FilterField,
   FilterNode,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
-import { cn } from "theoui/lib/utils";
-import { Button } from "theoui/components/button";
+import { cn } from "#lib/utils";
+import { Button } from "#components/button";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "theoui/components/breadcrumb";
+} from "#components/breadcrumb";
 import {
   Combobox,
   ComboboxEmpty,
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "theoui/components/combobox";
-import {
-  Popover,
-  PopoverPopup,
-  PopoverTrigger,
-} from "theoui/components/popover";
+} from "#components/combobox";
+import { Popover, PopoverPopup, PopoverTrigger } from "#components/popover";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,

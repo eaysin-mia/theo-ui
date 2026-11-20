@@ -8,7 +8,7 @@ import {
   SidebarTrigger,
   AppSidebar,
 } from "theoui";
-import { cn } from "theoui/utils";
+import { cn } from "theoui/lib";
 import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import {

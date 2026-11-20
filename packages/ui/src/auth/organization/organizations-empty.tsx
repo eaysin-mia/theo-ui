@@ -3,7 +3,7 @@
 import { useAuthPlugin } from "@better-auth-ui/react";
 import { Briefcase } from "lucide-react";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Empty,
   EmptyContent,
@@ -11,8 +11,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theoui/components/empty";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+} from "#components/empty";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
 
 export type OrganizationsEmptyProps = {
   onCreatePress: () => void;

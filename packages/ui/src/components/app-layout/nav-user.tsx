@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "theoui/components/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "#components/avatar";
 import {
   Menu,
   MenuGroup,
@@ -8,13 +8,13 @@ import {
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "theoui/components/menu";
+} from "#components/menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "theoui/components/sidebar";
+} from "#components/sidebar";
 import {
   BadgeCheckIcon,
   BellIcon,

@@ -12,32 +12,32 @@ import {
   useEventCalendarSelector,
   useEventCalendarViewConfig,
   useEventCalendarViewContext,
-} from "theoui/components/event-calendar/event-calendar";
+} from "#components/event-calendar/event-calendar";
 import {
   markChipPress,
   useEventCalendarGestures,
   wasRecentDrag,
-} from "theoui/components/event-calendar/event-calendar-dnd";
+} from "#components/event-calendar/event-calendar-dnd";
 import {
   spansMultipleDays,
   toZoned,
   zonedStartOfDay,
-} from "theoui/components/event-calendar/event-calendar-lib";
+} from "#components/event-calendar/event-calendar-lib";
 import type {
   EventCalendarOccurrence,
   EventCalendarSegment,
-} from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, format } from "date-fns";
 
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "theoui/components/tooltip";
+} from "#components/tooltip";
 import { RepeatIcon } from "lucide-react";
 
 /** Event color presets; each stays legible on light and dark surfaces. */

@@ -4,7 +4,7 @@ import { useAuth, useAuthPlugin, useSession } from "@better-auth-ui/react";
 import { ShieldCheck } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Card,
   CardAction,
@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
+} from "#components/card";
 import {
   Empty,
   EmptyContent,
@@ -20,9 +20,9 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theoui/components/empty";
-import { Skeleton } from "theoui/components/skeleton";
-import { twoFactorPlugin } from "theoui/lib/auth/two-factor-plugin";
+} from "#components/empty";
+import { Skeleton } from "#components/skeleton";
+import { twoFactorPlugin } from "#lib/auth/two-factor-plugin";
 import { DisableTwoFactorDialog } from "./disable-two-factor-dialog";
 import { EnableTwoFactorDialog } from "./enable-two-factor-dialog";
 import { RegenerateBackupCodesDialog } from "./regenerate-backup-codes-dialog";

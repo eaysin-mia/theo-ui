@@ -9,10 +9,10 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useIsMutating } from "@tanstack/react-query";
 import { KeyRound, Lock } from "lucide-react";
 
-import { buttonVariants } from "theoui/components/button";
-import { LastUsedBadge } from "theoui/auth/last-login-method/last-used-badge";
-import { emailOtpPlugin } from "theoui/lib/auth/email-otp-plugin";
-import { cn } from "theoui/lib/utils";
+import { buttonVariants } from "#components/button";
+import { LastUsedBadge } from "#auth/last-login-method/last-used-badge";
+import { emailOtpPlugin } from "#lib/auth/email-otp-plugin";
+import { cn } from "#lib/utils";
 
 export type EmailOtpButtonProps = {
   /** @remarks `AuthView` */

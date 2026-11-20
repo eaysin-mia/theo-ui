@@ -1,6 +1,6 @@
 import type { ComponentProps, CSSProperties, ReactNode } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
 /* -------------------------------------------------------------------------- */
 /*                                    Types                                   */

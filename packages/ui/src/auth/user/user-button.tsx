@@ -13,15 +13,15 @@ import {
 } from "lucide-react";
 import { isValidElement, type ReactElement, type ReactNode } from "react";
 
-import { buttonVariants } from "theoui/components/button";
+import { buttonVariants } from "#components/button";
 import {
   Menu,
   MenuItem,
   MenuPopup,
   MenuSeparator,
   MenuTrigger,
-} from "theoui/components/menu";
-import { cn } from "theoui/lib/utils";
+} from "#components/menu";
+import { cn } from "#lib/utils";
 import { UserAvatar } from "./user-avatar";
 import { UserView } from "./user-view";
 

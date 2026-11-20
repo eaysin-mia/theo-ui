@@ -45,8 +45,8 @@ import {
 } from "lucide-react";
 import { Fragment, useEffect, useMemo } from "react";
 
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
+import { Badge } from "#components/badge";
+import { Button } from "#components/button";
 import {
   Card,
   CardAction,
@@ -55,7 +55,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
+} from "#components/card";
 import {
   Empty,
   EmptyContent,
@@ -63,13 +63,13 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theoui/components/empty";
-import { Field, FieldLabel } from "theoui/components/field";
+} from "#components/empty";
+import { Field, FieldLabel } from "#components/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
+} from "#components/input-group";
 import {
   Select,
   SelectGroup,
@@ -77,13 +77,13 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "theoui/components/select";
-import { Separator } from "theoui/components/separator";
-import { Skeleton } from "theoui/components/skeleton";
-import { Spinner } from "theoui/components/spinner";
-import { dashPlugin } from "theoui/lib/auth/dash-plugin";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/select";
+import { Separator } from "#components/separator";
+import { Skeleton } from "#components/skeleton";
+import { Spinner } from "#components/spinner";
+import { dashPlugin } from "#lib/auth/dash-plugin";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
+import { cn } from "#lib/utils";
 import { useServerTableState } from "../server-table-state";
 
 type ActivityAccess = "admin" | "admin-user" | "organization" | "user";

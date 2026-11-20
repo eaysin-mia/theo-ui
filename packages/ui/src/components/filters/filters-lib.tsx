@@ -3,7 +3,7 @@ import type {
   FilterIndex,
   FilterOperator,
   FilterOption,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
 /* -------------------------------------------------------------------------- */
 /*                                    Menus                                   */

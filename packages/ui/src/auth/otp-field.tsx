@@ -1,9 +1,9 @@
 "use client";
 
 import { useId } from "react";
-import { Field, FieldError, FieldLabel } from "theoui/components/field";
-import { OTPField, OTPFieldInput } from "theoui/components/otp-field";
-import { cn } from "theoui/lib/utils";
+import { Field, FieldError, FieldLabel } from "#components/field";
+import { OTPField, OTPFieldInput } from "#components/otp-field";
+import { cn } from "#lib/utils";
 
 export type OtpFieldProps = {
   /** Visible label rendered above the slots. */

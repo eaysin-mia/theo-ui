@@ -1,7 +1,7 @@
 import type {
   CalendarView,
   EventCalendarDateRange,
-} from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar-types";
 import {
   format,
   isSameMonth,

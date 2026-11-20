@@ -21,10 +21,10 @@ import type { Member, Organization, User } from "better-auth/client";
 import { LogOut, Pencil, Trash2 } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "theoui/components/button";
-import { Skeleton } from "theoui/components/skeleton";
-import { TableCell, TableRow } from "theoui/components/table";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+import { Button } from "#components/button";
+import { Skeleton } from "#components/skeleton";
+import { TableCell, TableRow } from "#components/table";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
 import { UserView } from "../user/user-view";
 import { EditMemberRolesDialog } from "./edit-member-roles-dialog";
 import { LeaveOrganizationDialog } from "./leave-organization-dialog";

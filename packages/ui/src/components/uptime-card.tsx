@@ -20,8 +20,8 @@ import {
   useRef,
   useState,
 } from "react";
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
+import { Badge } from "#components/badge";
+import { Button } from "#components/button";
 import {
   Card,
   CardAction,
@@ -29,9 +29,9 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
-import { Collapsible, CollapsiblePanel } from "theoui/components/collapsible";
-import { cn } from "theoui/lib/utils";
+} from "#components/card";
+import { Collapsible, CollapsiblePanel } from "#components/collapsible";
+import { cn } from "#lib/utils";
 
 // How much wider the bar under the pointer gets, and how far the swell
 // spreads, in bars.

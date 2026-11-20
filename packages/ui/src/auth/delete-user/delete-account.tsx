@@ -14,7 +14,7 @@ import {
 import { useQueryClient } from "@tanstack/react-query";
 import { Eye, EyeOff, TriangleAlert } from "lucide-react";
 import { useState } from "react";
-import { toastManager } from "theoui/components/toast";
+import { toastManager } from "#components/toast";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -24,8 +24,8 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "theoui/components/alert-dialog";
-import { Button, buttonVariants } from "theoui/components/button";
+} from "#components/alert-dialog";
+import { Button, buttonVariants } from "#components/button";
 import {
   Card,
   CardDescription,
@@ -33,15 +33,15 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
-import { Field, FieldLabel } from "theoui/components/field";
+} from "#components/card";
+import { Field, FieldLabel } from "#components/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { deleteUserPlugin } from "theoui/lib/auth/delete-user-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/input-group";
+import { deleteUserPlugin } from "#lib/auth/delete-user-plugin";
+import { cn } from "#lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { ReauthenticationAction } from "../reauthentication";
 

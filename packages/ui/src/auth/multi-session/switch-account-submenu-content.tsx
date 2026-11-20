@@ -4,9 +4,9 @@ import type { MultiSessionAuthClient } from "@better-auth-ui/core/plugins/multi-
 import { useAuth, useAuthPlugin, useSession } from "@better-auth-ui/react";
 import { useListDeviceSessions } from "@better-auth-ui/react/plugins/multi-session";
 import { Check, CirclePlus } from "lucide-react";
-import { UserView } from "theoui/auth/user/user-view";
-import { MenuItem, MenuSeparator, MenuSubPopup } from "theoui/components/menu";
-import { multiSessionPlugin } from "theoui/lib/auth/multi-session-plugin";
+import { UserView } from "#auth/user/user-view";
+import { MenuItem, MenuSeparator, MenuSubPopup } from "#components/menu";
+import { multiSessionPlugin } from "#lib/auth/multi-session-plugin";
 import { SwitchAccountSubmenuItem } from "./switch-account-submenu-item";
 
 /**

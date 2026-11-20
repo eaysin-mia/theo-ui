@@ -25,9 +25,9 @@ import {
   useReducedMotionConfig,
 } from "motion/react";
 
-import { Kbd } from "theoui/components/kbd";
-import { Spinner } from "theoui/components/spinner";
-import { cn } from "theoui/lib/utils";
+import { Kbd } from "#components/kbd";
+import { Spinner } from "#components/spinner";
+import { cn } from "#lib/utils";
 
 /** Placeholder line: snappy stagger. */
 const PLACEHOLDER_STAGGER_SEC = 0.018;

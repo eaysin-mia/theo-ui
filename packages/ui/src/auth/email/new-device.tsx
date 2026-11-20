@@ -16,7 +16,7 @@ import {
   Text,
 } from "react-email";
 
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 import {
   type EmailClassNames,
   type EmailColors,

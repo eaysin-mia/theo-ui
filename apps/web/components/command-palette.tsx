@@ -22,9 +22,9 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { useAutocompleteFilter } from "theoui/components/autocomplete";
-import { Button } from "theoui/components/button";
 import {
+  Button,
+  useAutocompleteFilter,
   Command,
   CommandCollection,
   CommandCreateHandle,

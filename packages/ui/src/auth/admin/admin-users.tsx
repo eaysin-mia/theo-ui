@@ -57,8 +57,8 @@ import {
   UserRound,
 } from "lucide-react";
 import { type FormEvent, useEffect, useMemo, useState } from "react";
-import { UserAvatar } from "theoui/auth/user/user-avatar";
-import { Alert, AlertDescription } from "theoui/components/alert";
+import { UserAvatar } from "#auth/user/user-avatar";
+import { Alert, AlertDescription } from "#components/alert";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -67,10 +67,10 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theoui/components/alert-dialog";
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
-import { Checkbox } from "theoui/components/checkbox";
+} from "#components/alert-dialog";
+import { Badge } from "#components/badge";
+import { Button } from "#components/button";
+import { Checkbox } from "#components/checkbox";
 import {
   Dialog,
   DialogClose,
@@ -80,37 +80,37 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
+} from "#components/dialog";
 import {
   Menu,
   MenuGroup,
   MenuItem,
   MenuPopup,
   MenuTrigger,
-} from "theoui/components/menu";
+} from "#components/menu";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "theoui/components/field";
-import { Fieldset, FieldsetLegend } from "theoui/components/fieldset";
+} from "#components/field";
+import { Fieldset, FieldsetLegend } from "#components/fieldset";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { RadioGroup, RadioGroupItem } from "theoui/components/radio-group";
+} from "#components/input-group";
+import { RadioGroup, RadioGroupItem } from "#components/radio-group";
 import {
   Select,
   SelectItem,
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "theoui/components/select";
-import { Separator } from "theoui/components/separator";
-import { Skeleton } from "theoui/components/skeleton";
-import { Switch } from "theoui/components/switch";
+} from "#components/select";
+import { Separator } from "#components/separator";
+import { Skeleton } from "#components/skeleton";
+import { Switch } from "#components/switch";
 import {
   Table,
   TableBody,
@@ -118,16 +118,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "theoui/components/table";
-import { Tabs, TabsList, TabsPanel, TabsTab } from "theoui/components/tabs";
+} from "#components/table";
+import { Tabs, TabsList, TabsPanel, TabsTab } from "#components/tabs";
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theoui/components/empty";
-import { adminPlugin } from "theoui/lib/auth/admin-plugin";
+} from "#components/empty";
+import { adminPlugin } from "#lib/auth/admin-plugin";
 import { getAuthAdditionalFieldValidators, useAuthForm } from "../auth-form";
 import { useServerTableState } from "../server-table-state";
 

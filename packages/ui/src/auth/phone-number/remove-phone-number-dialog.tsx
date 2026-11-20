@@ -9,9 +9,9 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "theoui/components/alert-dialog";
-import { Button } from "theoui/components/button";
-import { Spinner } from "theoui/components/spinner";
+} from "#components/alert-dialog";
+import { Button } from "#components/button";
+import { Spinner } from "#components/spinner";
 
 export type RemovePhoneNumberDialogProps = {
   description: string;

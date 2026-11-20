@@ -7,25 +7,25 @@ import {
   useEventCalendarSelector,
   useEventCalendarSettings,
   useEventCalendarViewConfig,
-} from "theoui/components/event-calendar/event-calendar";
-import { EventCalendarEvent } from "theoui/components/event-calendar/event-calendar-event";
+} from "#components/event-calendar/event-calendar";
+import { EventCalendarEvent } from "#components/event-calendar/event-calendar-event";
 import {
   getDayKey,
   getRangeKey,
   toZoned,
   zonedStartOfDay,
-} from "theoui/components/event-calendar/event-calendar-lib";
+} from "#components/event-calendar/event-calendar-lib";
 import type {
   EventCalendarDateRange,
   EventCalendarSegment,
-} from "theoui/components/event-calendar/event-calendar-types";
-import { IconStack } from "theoui/components/icon-stack";
+} from "#components/event-calendar/event-calendar-types";
+import { IconStack } from "#components/icon-stack";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, format } from "date-fns";
 
-import { cn } from "theoui/lib/utils";
-import { ScrollArea } from "theoui/components/scroll-area";
+import { cn } from "#lib/utils";
+import { ScrollArea } from "#components/scroll-area";
 import { CalendarIcon } from "lucide-react";
 
 // The agenda window length is the agendaDayCount SETTING (the store derives

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
 export interface ScrollspyProps extends React.ComponentProps<"div"> {
   children: React.ReactNode;

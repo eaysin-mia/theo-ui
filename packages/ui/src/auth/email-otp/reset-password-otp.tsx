@@ -15,15 +15,15 @@ import { Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "theoui/components/button";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
+import { Button } from "#components/button";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { emailOtpPlugin } from "theoui/lib/auth/email-otp-plugin";
+} from "#components/input-group";
+import { emailOtpPlugin } from "#lib/auth/email-otp-plugin";
 import {
   isAuthFormFieldInvalid,
   setAuthFormServerError,

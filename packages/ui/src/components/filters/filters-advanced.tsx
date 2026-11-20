@@ -1,14 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { FilterFieldPicker } from "theoui/components/filters/filters-builder";
+import { FilterFieldPicker } from "#components/filters/filters-builder";
 import {
   FilterMoveToMenuItems,
   FilterOperatorPopover,
   FilterRuleMenuItems,
   FilterValuePopover,
   useFilterRuleDisplay,
-} from "theoui/components/filters/filters-chip";
+} from "#components/filters/filters-chip";
 import {
   filterControlSizes,
   filterReadOnlyProps,
@@ -26,12 +26,12 @@ import {
   useFilterSegmentFocus,
   useFilterState,
   type FilterActionsContextValue,
-} from "theoui/components/filters/filters-context";
+} from "#components/filters/filters-context";
 import {
   FILTER_ROW_SELECTOR,
   useFilterRowDrag,
-} from "theoui/components/filters/filters-dnd";
-import { filterIssueLabel } from "theoui/components/filters/filters-i18n";
+} from "#components/filters/filters-dnd";
+import { filterIssueLabel } from "#components/filters/filters-i18n";
 import {
   FILTER_FIELD_PICKER_CLASS,
   FILTER_MENU_CLASS,
@@ -40,17 +40,17 @@ import {
   getFilterField,
   isFilterFieldPickable,
   joinFilterPath,
-} from "theoui/components/filters/filters-lib";
+} from "#components/filters/filters-lib";
 import {
   getFilterArity,
   getFilterOperator,
   operatorTakesValue,
-} from "theoui/components/filters/filters-operators";
+} from "#components/filters/filters-operators";
 import {
   collectFilterIssues,
   createFilterRule,
   isFilterRule,
-} from "theoui/components/filters/filters-query";
+} from "#components/filters/filters-query";
 import type {
   FilterCombinator,
   FilterEmptyStateContext,
@@ -61,29 +61,25 @@ import type {
   FilterOperator,
   FilterQuery,
   FilterRule,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
-import { cn } from "theoui/lib/utils";
-import { Button } from "theoui/components/button";
+import { cn } from "#lib/utils";
+import { Button } from "#components/button";
 import {
   Menu,
   MenuPopup,
   MenuItem,
   MenuSeparator,
   MenuTrigger,
-} from "theoui/components/menu";
-import { Input } from "theoui/components/input";
-import {
-  Popover,
-  PopoverPopup,
-  PopoverTrigger,
-} from "theoui/components/popover";
+} from "#components/menu";
+import { Input } from "#components/input";
+import { Popover, PopoverPopup, PopoverTrigger } from "#components/popover";
 import {
   Tooltip,
   TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
-} from "theoui/components/tooltip";
+} from "#components/tooltip";
 import {
   RefreshCwIcon,
   CircleAlertIcon,

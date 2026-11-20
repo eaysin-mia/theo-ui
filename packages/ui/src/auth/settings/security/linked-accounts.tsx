@@ -9,9 +9,9 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
-import { Separator } from "theoui/components/separator";
-import { Skeleton } from "theoui/components/skeleton";
+} from "#components/card";
+import { Separator } from "#components/separator";
+import { Skeleton } from "#components/skeleton";
 import { LinkedAccount } from "./linked-account";
 
 export type LinkedAccountsProps = {

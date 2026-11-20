@@ -24,9 +24,9 @@ import {
   useComposerInputLayout,
   useComposerItem,
   useComposerSuggestionsContext,
-} from "theoui/lib/composer-editor";
-import { cn } from "theoui/lib/utils";
-import { ScrollArea } from "theoui/components/scroll-area";
+} from "#lib/composer-editor";
+import { cn } from "#lib/utils";
+import { ScrollArea } from "#components/scroll-area";
 
 type ComposerPopupProps = ComponentProps<typeof PopoverPrimitive.Popup> & {
   anchor?: ComponentProps<typeof PopoverPrimitive.Positioner>["anchor"];
@@ -509,5 +509,5 @@ export {
   getComposerText,
   useComposerContext,
   useComposerFilter,
-} from "theoui/lib/composer-editor";
+} from "#lib/composer-editor";
 export type { ComposerPopupProps, ComposerTokenVariant };

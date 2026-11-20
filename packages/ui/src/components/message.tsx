@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
 function MessageGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (

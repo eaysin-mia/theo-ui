@@ -19,18 +19,18 @@ import { useSelector } from "@tanstack/react-form";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Card,
   CardPanel,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
-import { Alert, AlertDescription } from "theoui/components/alert";
-import { Skeleton } from "theoui/components/skeleton";
-import { phoneNumberPlugin } from "theoui/lib/auth/phone-number-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/card";
+import { Alert, AlertDescription } from "#components/alert";
+import { Skeleton } from "#components/skeleton";
+import { phoneNumberPlugin } from "#lib/auth/phone-number-plugin";
+import { cn } from "#lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { OtpField } from "../otp-field";
 import { InternationalPhoneField } from "./international-phone-field";

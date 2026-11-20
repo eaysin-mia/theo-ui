@@ -28,9 +28,9 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theoui/components/alert-dialog";
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
+} from "#components/alert-dialog";
+import { Badge } from "#components/badge";
+import { Button } from "#components/button";
 import {
   Card,
   CardPanel,
@@ -38,10 +38,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { Progress } from "theoui/components/progress";
+} from "#components/card";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
+import { Progress } from "#components/progress";
 import {
   Select,
   SelectGroup,
@@ -49,10 +49,10 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "theoui/components/select";
-import { Spinner } from "theoui/components/spinner";
-import { billingPlugin } from "theoui/lib/auth/billing-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/select";
+import { Spinner } from "#components/spinner";
+import { billingPlugin } from "#lib/auth/billing-plugin";
+import { cn } from "#lib/utils";
 
 type SubscriptionAction = "cancel" | "restore";
 

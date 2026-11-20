@@ -7,16 +7,16 @@ import {
   useGanttSelector,
   useGanttSettings,
   useGanttViewConfig,
-} from "theoui/components/gantt/gantt";
-import { toZoned } from "theoui/components/gantt/gantt-lib";
-import type { GanttScale } from "theoui/components/gantt/gantt-types";
+} from "#components/gantt/gantt";
+import { toZoned } from "#components/gantt/gantt-lib";
+import type { GanttScale } from "#components/gantt/gantt-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { format } from "date-fns";
 
-import { cn } from "theoui/lib/utils";
-import { Button } from "theoui/components/button";
-import { Calendar } from "theoui/components/calendar";
+import { cn } from "#lib/utils";
+import { Button } from "#components/button";
+import { Calendar } from "#components/calendar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,18 +24,14 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "theoui/components/menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "theoui/components/popover";
+} from "#components/menu";
+import { Popover, PopoverContent, PopoverTrigger } from "#components/popover";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "theoui/components/tooltip";
+} from "#components/tooltip";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,

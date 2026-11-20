@@ -40,8 +40,10 @@
   },
   "imports": {
     "#components/*": "./dist/components/*.js",
+    "#auth/*": "./dist/auth/*.js",
     "#hooks/*": "./dist/hooks/*.js",
-    "#lib/*": "./dist/lib/*.js"
+    "#lib/*": "./dist/lib/*.js",
+    "#/*": "./dist/*.js"
   },
   "scripts": {
     "build:js": "tsc -p tsconfig.build.json",
@@ -62,35 +64,25 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
-    "./components": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
-    },
-    "./components/*": {
-      "types": "./dist/components/*.d.ts",
-      "import": "./dist/components/*.js",
-      "default": "./dist/components/*.js"
-    },
     "./auth": {
       "types": "./dist/auth/index.d.ts",
       "import": "./dist/auth/index.js",
       "default": "./dist/auth/index.js"
     },
-    "./auth/plugins": {
-      "types": "./dist/lib/auth/index.d.ts",
-      "import": "./dist/lib/auth/index.js",
-      "default": "./dist/lib/auth/index.js"
-    },
-    "./auth/plugins/*": {
-      "types": "./dist/lib/auth/*.d.ts",
-      "import": "./dist/lib/auth/*.js",
-      "default": "./dist/lib/auth/*.js"
-    },
     "./auth/*": {
       "types": "./dist/auth/*.d.ts",
       "import": "./dist/auth/*.js",
       "default": "./dist/auth/*.js"
+    },
+    "./auth/lib": {
+      "types": "./dist/lib/auth/index.d.ts",
+      "import": "./dist/lib/auth/index.js",
+      "default": "./dist/lib/auth/index.js"
+    },
+    "./auth/lib/*": {
+      "types": "./dist/lib/auth/*.d.ts",
+      "import": "./dist/lib/auth/*.js",
+      "default": "./dist/lib/auth/*.js"
     },
     "./hooks": {
       "types": "./dist/hooks/index.d.ts",
@@ -102,10 +94,10 @@
       "import": "./dist/hooks/*.js",
       "default": "./dist/hooks/*.js"
     },
-    "./utils": {
-      "types": "./dist/lib/utils.d.ts",
-      "import": "./dist/lib/utils.js",
-      "default": "./dist/lib/utils.js"
+    "./lib": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js",
+      "default": "./dist/lib/index.js"
     },
     "./lib/*": {
       "types": "./dist/lib/*.d.ts",

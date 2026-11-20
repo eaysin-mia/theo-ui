@@ -12,7 +12,7 @@ import {
 import { useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Card,
   CardPanel,
@@ -21,22 +21,22 @@ import {
   CardFrameFooter,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
-import { Checkbox } from "theoui/components/checkbox";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { Spinner } from "theoui/components/spinner";
+} from "#components/card";
+import { Checkbox } from "#components/checkbox";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
+import { Spinner } from "#components/spinner";
 import {
   clearTwoFactorMethods,
   readTwoFactorMethods,
   type TwoFactorMethod,
-} from "theoui/lib/auth/two-factor-methods";
-import { twoFactorPlugin } from "theoui/lib/auth/two-factor-plugin";
+} from "#lib/auth/two-factor-methods";
+import { twoFactorPlugin } from "#lib/auth/two-factor-plugin";
 import {
   RESEND_COOLDOWN_SECONDS,
   useResendCooldown,
-} from "theoui/lib/auth/use-resend-cooldown";
-import { cn } from "theoui/lib/utils";
+} from "#lib/auth/use-resend-cooldown";
+import { cn } from "#lib/utils";
 import { runAuthFormAction, submitAuthForm, useAuthForm } from "../auth-form";
 import { OtpField } from "../otp-field";
 import { useIsHydrated } from "../use-is-hydrated";

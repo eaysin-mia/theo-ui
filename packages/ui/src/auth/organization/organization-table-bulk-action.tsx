@@ -12,9 +12,9 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "theoui/components/alert-dialog";
-import { Button, buttonVariants } from "theoui/components/button";
-import { Spinner } from "theoui/components/spinner";
+} from "#components/alert-dialog";
+import { Button, buttonVariants } from "#components/button";
+import { Spinner } from "#components/spinner";
 
 export function OrganizationTableBulkAction({
   actionLabel,

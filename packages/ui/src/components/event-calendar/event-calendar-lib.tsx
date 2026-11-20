@@ -1,4 +1,4 @@
-import { expandRecurrence } from "theoui/components/event-calendar/event-calendar-recurrence";
+import { expandRecurrence } from "#components/event-calendar/event-calendar-recurrence";
 import type {
   CalendarEvent,
   CalendarView,
@@ -7,7 +7,7 @@ import type {
   EventCalendarOffDaysConfig,
   EventCalendarResource,
   EventCalendarSegment,
-} from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar-types";
 import { TZDate } from "@date-fns/tz";
 import {
   addDays,

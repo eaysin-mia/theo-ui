@@ -1,7 +1,4 @@
-import type {
-  GanttDateRange,
-  GanttScale,
-} from "theoui/components/gantt/gantt-types";
+import type { GanttDateRange, GanttScale } from "#components/gantt/gantt-types";
 import {
   format,
   isSameMonth,

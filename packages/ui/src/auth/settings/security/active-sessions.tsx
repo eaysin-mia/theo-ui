@@ -12,9 +12,9 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
-import { Separator } from "theoui/components/separator";
-import { Skeleton } from "theoui/components/skeleton";
+} from "#components/card";
+import { Separator } from "#components/separator";
+import { Skeleton } from "#components/skeleton";
 import { ReauthenticationAction } from "../../reauthentication";
 import { ActiveSession } from "./active-session";
 import { SessionActions } from "./session-actions";

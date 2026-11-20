@@ -23,7 +23,7 @@ import {
 import { ChevronDown, UserPlus } from "lucide-react";
 import { useEffect, useMemo, useRef } from "react";
 import { toast } from "sonner";
-import { Button, buttonVariants } from "theoui/components/button";
+import { Button, buttonVariants } from "#components/button";
 import {
   Dialog,
   DialogClose,
@@ -33,15 +33,15 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
+} from "#components/dialog";
 import {
   Menu,
   MenuCheckboxItem,
   MenuPopup,
   MenuTrigger,
-} from "theoui/components/menu";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
+} from "#components/menu";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
 import {
   Select,
   SelectGroup,
@@ -49,9 +49,9 @@ import {
   SelectPopup,
   SelectTrigger,
   SelectValue,
-} from "theoui/components/select";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/select";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
+import { cn } from "#lib/utils";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

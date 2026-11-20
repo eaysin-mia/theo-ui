@@ -30,16 +30,11 @@ import {
   AlertDialogPopup,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "theoui/components/alert-dialog";
-import { Badge } from "theoui/components/badge";
-import { Button, buttonVariants } from "theoui/components/button";
-import {
-  Card,
-  CardFrame,
-  CardFrameFooter,
-  CardPanel,
-} from "theoui/components/card";
-import { Checkbox } from "theoui/components/checkbox";
+} from "#components/alert-dialog";
+import { Badge } from "#components/badge";
+import { Button, buttonVariants } from "#components/button";
+import { Card, CardFrame, CardFrameFooter, CardPanel } from "#components/card";
+import { Checkbox } from "#components/checkbox";
 import {
   Dialog,
   DialogDescription,
@@ -48,22 +43,22 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
+} from "#components/dialog";
 import {
   Menu,
   MenuPopup,
   MenuRadioGroup,
   MenuRadioItem,
   MenuTrigger,
-} from "theoui/components/menu";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
+} from "#components/menu";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { Spinner } from "theoui/components/spinner";
+} from "#components/input-group";
+import { Spinner } from "#components/spinner";
 import {
   Table,
   TableBody,
@@ -71,9 +66,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "theoui/components/table";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/table";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
+import { cn } from "#lib/utils";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

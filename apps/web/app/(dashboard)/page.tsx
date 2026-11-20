@@ -1,30 +1,14 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
 import {
+  Badge,
+  Button,
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
-import {
-  Building2,
-  Database,
-  KeyRound,
-  Lock,
-  Palette,
-  QrCode as QrCodeIcon,
-  ShieldCheck,
-  UserCheck,
-  Users,
-} from "lucide-react";
-import Link from "next/link";
-import { Pattern } from "@/components/examples/c-timeline-4";
-import { AutoHeightDemo } from "@/components/examples/c-auto-height-1";
-import {
   TipSelector,
   HaloSearch,
   HoldButton,
@@ -39,6 +23,20 @@ import {
   RelativeTimeZoneDisplay,
   RelativeTimeZoneLabel,
 } from "theoui";
+import {
+  Building2,
+  Database,
+  KeyRound,
+  Lock,
+  Palette,
+  QrCode as QrCodeIcon,
+  ShieldCheck,
+  UserCheck,
+  Users,
+} from "lucide-react";
+import Link from "next/link";
+import { Pattern } from "@/components/examples/c-timeline-4";
+import { AutoHeightDemo } from "@/components/examples/c-auto-height-1";
 import { useActiveOrganization, useSession } from "theoui/auth";
 
 export default function DashboardOverviewPage() {

@@ -32,9 +32,9 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "theoui/components/alert-dialog";
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
+} from "#components/alert-dialog";
+import { Badge } from "#components/badge";
+import { Button } from "#components/button";
 import {
   Card,
   CardAction,
@@ -42,7 +42,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
+} from "#components/card";
 import {
   Dialog,
   DialogDescription,
@@ -51,21 +51,21 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "theoui/components/dialog";
+} from "#components/dialog";
 import {
   Empty,
   EmptyContent,
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "theoui/components/empty";
-import { Field, FieldError, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { Skeleton } from "theoui/components/skeleton";
-import { Textarea } from "theoui/components/textarea";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
-import { ssoPlugin } from "theoui/lib/auth/sso-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/empty";
+import { Field, FieldError, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
+import { Skeleton } from "#components/skeleton";
+import { Textarea } from "#components/textarea";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
+import { ssoPlugin } from "#lib/auth/sso-plugin";
+import { cn } from "#lib/utils";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 
 import { SsoDomainVerification } from "./sso-domain-verification";

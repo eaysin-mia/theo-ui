@@ -15,17 +15,17 @@ import {
   useEventCalendarSettings,
   useEventCalendarViewConfig,
   useEventCalendarViewSettings,
-} from "theoui/components/event-calendar/event-calendar";
+} from "#components/event-calendar/event-calendar";
 import {
   useEventCalendarGestures,
   wasRecentChipPress,
   wasRecentDrag,
-} from "theoui/components/event-calendar/event-calendar-dnd";
+} from "#components/event-calendar/event-calendar-dnd";
 import {
   EVENT_CALENDAR_GHOST,
   EVENT_CALENDAR_SLOT_DRAFT,
   EventCalendarEvent,
-} from "theoui/components/event-calendar/event-calendar-event";
+} from "#components/event-calendar/event-calendar-event";
 import {
   flattenResources,
   getDayKey,
@@ -35,23 +35,23 @@ import {
   snapMinutes,
   toZoned,
   zonedStartOfDay,
-} from "theoui/components/event-calendar/event-calendar-lib";
+} from "#components/event-calendar/event-calendar-lib";
 import {
   EVENT_TRACK_WIDTH,
   EventCalendarNowIndicator,
   EventCalendarTimeGutter,
   minuteBlockStyle,
-} from "theoui/components/event-calendar/event-calendar-time-grid";
+} from "#components/event-calendar/event-calendar-time-grid";
 import type {
   EventCalendarResource,
   EventCalendarSegment,
-} from "theoui/components/event-calendar/event-calendar-types";
+} from "#components/event-calendar/event-calendar-types";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { addDays, addMinutes } from "date-fns";
 
-import { cn } from "theoui/lib/utils";
-import { ScrollArea } from "theoui/components/scroll-area";
+import { cn } from "#lib/utils";
+import { ScrollArea } from "#components/scroll-area";
 
 const EMPTY_ALL_DAY_SEGMENTS: EventCalendarSegment[] = [];
 

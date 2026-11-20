@@ -1,7 +1,7 @@
 "use client";
 
-import { Skeleton } from "theoui/components/skeleton";
-import { TableCell, TableRow } from "theoui/components/table";
+import { Skeleton } from "#components/skeleton";
+import { TableCell, TableRow } from "#components/table";
 import { UserView } from "../user/user-view";
 import type { ReactNode } from "react";
 

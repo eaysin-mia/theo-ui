@@ -4,8 +4,8 @@ import {
   agentAuthPlugin as coreAgentAuthPlugin,
 } from "@better-auth-ui/core/plugins/agent-auth";
 
-import { AgentApproval } from "theoui/auth/agent-auth/agent-approval";
-import { AgentAuthorizations } from "theoui/auth/agent-auth/agent-authorizations";
+import { AgentApproval } from "#auth/agent-auth/agent-approval";
+import { AgentAuthorizations } from "#auth/agent-auth/agent-authorizations";
 
 export { createAgentAuthClientAdapter } from "@better-auth-ui/core/plugins/agent-auth";
 

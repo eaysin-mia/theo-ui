@@ -3,8 +3,8 @@
 import { getAuthRedirectAction } from "@better-auth-ui/core";
 import { useAuth, useSession } from "@better-auth-ui/react";
 import { useEffect, useRef } from "react";
-import { Spinner } from "theoui/components/spinner";
-import { cn } from "theoui/lib/utils";
+import { Spinner } from "#components/spinner";
+import { cn } from "#lib/utils";
 
 export type AuthRedirectProps = {
   className?: string;

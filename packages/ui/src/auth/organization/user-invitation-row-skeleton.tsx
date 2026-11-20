@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "theoui/components/skeleton";
+import { Skeleton } from "#components/skeleton";
 
 /**
  * Placeholder row matching `UserInvitationRow` while invitations load.

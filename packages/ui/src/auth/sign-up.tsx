@@ -20,19 +20,19 @@ import {
 import { useIsMutating } from "@tanstack/react-query";
 import { CircleAlertIcon, Eye, EyeOff } from "lucide-react";
 import { useMemo, useState } from "react";
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Field,
   FieldError,
   FieldLabel,
   FieldSeparator,
-} from "theoui/components/field";
-import { Input } from "theoui/components/input";
+} from "#components/field";
+import { Input } from "#components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
+} from "#components/input-group";
 import {
   getAuthAdditionalFieldValidators,
   isAuthFormFieldInvalid,

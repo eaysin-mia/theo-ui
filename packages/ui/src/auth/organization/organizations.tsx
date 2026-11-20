@@ -5,16 +5,16 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { useListOrganizations } from "@better-auth-ui/react/plugins/organization";
 import { Fragment, useState } from "react";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Card,
   CardAction,
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
-import { Separator } from "theoui/components/separator";
-import { organizationPlugin } from "theoui/lib/auth/organization-plugin";
+} from "#components/card";
+import { Separator } from "#components/separator";
+import { organizationPlugin } from "#lib/auth/organization-plugin";
 import { CreateOrganizationDialog } from "./create-organization-dialog";
 import { OrganizationRow } from "./organization-row";
 import { OrganizationViewSkeleton } from "./organization-view-skeleton";

@@ -20,8 +20,8 @@ import {
   useTransform,
 } from "motion/react";
 import { type PointerEvent, useRef, useState } from "react";
-import { Button } from "theoui/components/button";
-import { cn } from "theoui/lib/utils";
+import { Button } from "#components/button";
+import { cn } from "#lib/utils";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 /** Width of one percent on the tape, in px. */

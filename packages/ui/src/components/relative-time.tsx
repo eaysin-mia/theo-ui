@@ -10,7 +10,7 @@ import {
   useMemo,
   useState,
 } from "react";
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
 const formatDate = (
   date: Date,

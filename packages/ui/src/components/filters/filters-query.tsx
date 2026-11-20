@@ -6,7 +6,7 @@ import type {
   FilterOperator,
   FilterQuery,
   FilterRule,
-} from "theoui/components/filters/filters-types";
+} from "#components/filters/filters-types";
 
 export function isFilterRule<V>(node: FilterNode<V>): node is FilterRule<V> {
   return node.type === "rule";

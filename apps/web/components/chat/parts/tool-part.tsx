@@ -1,8 +1,9 @@
 "use client";
 
 import { StatusIcon } from "@/components/chat/status-icon";
-import { CodeBlock, CodeBlockContent } from "theoui";
 import {
+  CodeBlock,
+  CodeBlockContent,
   TraceCollapsible,
   TraceCollapsibleContent,
   TraceCollapsibleTrigger,
@@ -10,7 +11,7 @@ import {
   TraceIcon,
   TraceLine,
   TraceTitle,
-} from "theoui/components/trace";
+} from "theoui";
 
 export interface ToolPartProps {
   toolName: string;

@@ -1,12 +1,12 @@
 import { Geist_Mono, Inter } from "next/font/google";
 
 import "./globals.css";
-import { AnchoredToastProvider, ToastProvider } from "theoui/components/toast";
+import { AnchoredToastProvider, ToastProvider } from "theoui";
 import { AppAuthProvider } from "@/components/auth-provider";
 import { MotionProvider } from "@/components/motion-provider";
 import { QueryProvider } from "@/components/query-provider";
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "theoui/utils";
+import { cn } from "theoui/lib";
 
 const fontSans = Inter({
   subsets: ["latin"],

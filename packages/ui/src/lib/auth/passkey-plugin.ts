@@ -4,8 +4,8 @@ import {
   type PasskeyPluginOptions,
 } from "@better-auth-ui/core/plugins/passkey";
 
-import { PasskeyButton } from "theoui/auth/passkey/passkey-button";
-import { Passkeys } from "theoui/auth/passkey/passkeys";
+import { PasskeyButton } from "#auth/passkey/passkey-button";
+import { Passkeys } from "#auth/passkey/passkeys";
 
 export const passkeyPlugin = createAuthPlugin(
   corePasskeyPlugin.id,

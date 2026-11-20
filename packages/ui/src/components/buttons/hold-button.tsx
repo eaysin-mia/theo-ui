@@ -27,7 +27,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 
 export const holdButtonVariants = cva(
   [

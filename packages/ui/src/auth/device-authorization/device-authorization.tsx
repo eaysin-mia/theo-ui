@@ -24,7 +24,7 @@ import {
   useState,
 } from "react";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Card,
   CardPanel,
@@ -32,17 +32,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
-import { Field, FieldError, FieldLabel } from "theoui/components/field";
+} from "#components/card";
+import { Field, FieldError, FieldLabel } from "#components/field";
 import {
   OTPField,
   OTPFieldInput,
   OTPFieldSeparator,
-} from "theoui/components/otp-field";
-import { Spinner } from "theoui/components/spinner";
-import { deviceAuthorizationPlugin } from "theoui/lib/auth/device-authorization-plugin";
+} from "#components/otp-field";
+import { Spinner } from "#components/spinner";
+import { deviceAuthorizationPlugin } from "#lib/auth/device-authorization-plugin";
 import { UserAvatar } from "../user/user-avatar";
-import { cn } from "theoui/lib/utils";
+import { cn } from "#lib/utils";
 import { useAuthForm } from "../auth-form";
 
 type DeviceAuthorizationStep = "code" | "approval" | "approved" | "denied";

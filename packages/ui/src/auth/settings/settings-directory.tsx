@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { Badge } from "theoui/components/badge";
-import { Button } from "theoui/components/button";
+import { Badge } from "#components/badge";
+import { Button } from "#components/button";
 import {
   Empty,
   EmptyContent,
@@ -10,14 +10,14 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "theoui/components/empty";
-import { IconTile } from "theoui/components/icon-tile";
+} from "#components/empty";
+import { IconTile } from "#components/icon-tile";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { cn } from "theoui/lib/utils";
+} from "#components/input-group";
+import { cn } from "#lib/utils";
 import {
   BellIcon,
   Building2Icon,

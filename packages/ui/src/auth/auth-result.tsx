@@ -9,15 +9,15 @@ import { useAuth } from "@better-auth-ui/react";
 import { CircleCheckIcon, CircleXIcon, TriangleAlertIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Card,
   CardPanel,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "theoui/components/card";
-import { cn } from "theoui/lib/utils";
+} from "#components/card";
+import { cn } from "#lib/utils";
 
 type AuthResultProps = {
   className?: string;

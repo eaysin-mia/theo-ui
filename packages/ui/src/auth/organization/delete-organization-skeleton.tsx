@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "theoui/components/skeleton";
+import { Skeleton } from "#components/skeleton";
 
 /**
  * Placeholder matching `DeleteOrganization` while the delete permission resolves.

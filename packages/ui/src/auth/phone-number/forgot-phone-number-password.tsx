@@ -8,7 +8,7 @@ import {
 import { useAuth, useAuthPlugin, useFetchOptions } from "@better-auth-ui/react";
 import { useRequestPhoneNumberPasswordReset } from "@better-auth-ui/react/plugins/phone-number";
 
-import { phoneNumberPlugin } from "theoui/lib/auth/phone-number-plugin";
+import { phoneNumberPlugin } from "#lib/auth/phone-number-plugin";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { AuthFormContainer } from "../auth-layout";
 import { InternationalPhoneField } from "./international-phone-field";

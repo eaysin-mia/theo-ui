@@ -4,8 +4,8 @@ import { useAuth, useAuthPlugin } from "@better-auth-ui/react";
 import { Fingerprint, Pencil, X } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "theoui/components/button";
-import { passkeyPlugin } from "theoui/lib/auth/passkey-plugin";
+import { Button } from "#components/button";
+import { passkeyPlugin } from "#lib/auth/passkey-plugin";
 
 import {
   DeletePasskeyDialog,

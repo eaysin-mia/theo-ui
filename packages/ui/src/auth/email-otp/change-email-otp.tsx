@@ -10,9 +10,9 @@ import {
 } from "@better-auth-ui/react/plugins/email-otp";
 import { useSelector } from "@tanstack/react-form";
 import { useEffect, useReducer } from "react";
-import { toastManager } from "theoui/components/toast";
+import { toastManager } from "#components/toast";
 
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 import {
   Card,
   CardDescription,
@@ -20,12 +20,12 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "theoui/components/card";
-import { Field, FieldLabel } from "theoui/components/field";
-import { Input } from "theoui/components/input";
-import { Skeleton } from "theoui/components/skeleton";
-import { emailOtpPlugin } from "theoui/lib/auth/email-otp-plugin";
-import { cn } from "theoui/lib/utils";
+} from "#components/card";
+import { Field, FieldLabel } from "#components/field";
+import { Input } from "#components/input";
+import { Skeleton } from "#components/skeleton";
+import { emailOtpPlugin } from "#lib/auth/email-otp-plugin";
+import { cn } from "#lib/utils";
 import {
   isAuthFormFieldInvalid,
   submitAuthForm,

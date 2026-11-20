@@ -24,21 +24,18 @@ import { useSignInUsername } from "@better-auth-ui/react/plugins/username";
 import { useIsMutating } from "@tanstack/react-query";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-import {
-  ProviderButtons,
-  type SocialLayout,
-} from "theoui/auth/provider-buttons";
-import { Button } from "theoui/components/button";
-import { Checkbox } from "theoui/components/checkbox";
-import { Field, FieldLabel, FieldSeparator } from "theoui/components/field";
-import { Input } from "theoui/components/input";
+import { ProviderButtons, type SocialLayout } from "#auth/provider-buttons";
+import { Button } from "#components/button";
+import { Checkbox } from "#components/checkbox";
+import { Field, FieldLabel, FieldSeparator } from "#components/field";
+import { Input } from "#components/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "theoui/components/input-group";
-import { useSignInContinuation } from "theoui/lib/auth/use-sign-in-continuation";
-import { usernamePlugin } from "theoui/lib/auth/username-plugin";
+} from "#components/input-group";
+import { useSignInContinuation } from "#lib/auth/use-sign-in-continuation";
+import { usernamePlugin } from "#lib/auth/username-plugin";
 import { isAuthFormFieldInvalid, useAuthForm } from "../auth-form";
 import { AuthFormContainer } from "../auth-layout";
 import { LastUsedBadge } from "../last-login-method/last-used-badge";
