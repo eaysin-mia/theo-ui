@@ -1,6 +1,6 @@
 {
   "name": "theoui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Accessible, unstyled-first UI component library built on Base UI and Tailwind CSS v4",
   "license": "MIT",
   "author": "Eaysin",
