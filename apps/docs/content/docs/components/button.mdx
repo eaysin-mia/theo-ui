@@ -1,0 +1,26 @@
+## Button variants
+
+The starter includes a button primitive in `components/ui/button.tsx`. It supports the variants and sizes provided by its local implementation.
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+<Button variant="outline">Cancel</Button>;
+```
+
+## Use buttons for actions
+
+Use a button for actions that change application state or submit a form. Give icon-only buttons an accessible label, and disable actions when they cannot be used.
+
+## Use links for navigation
+
+Use `next/link` for navigation so the destination remains a real link. When you need the same visual treatment as a button, apply the exported `buttonVariants` to the link:
+
+```tsx
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
+
+<Link href="/docs" className={buttonVariants({ variant: "outline" })}>
+  Read the docs
+</Link>;
+```

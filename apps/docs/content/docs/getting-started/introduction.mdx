@@ -1,0 +1,19 @@
+## What you get
+
+This starter brings the pieces of a small documentation site together without replacing the Next.js App Router or the shadcn/ui components already in your project.
+
+### Markdown-first content
+
+Pages live in `content/docs` as MDX. They are compiled as part of the application, so the content stays local and can be rendered as server components.
+
+### Navigation built for docs
+
+The shared shell includes grouped page navigation, a table of contents, previous and next links, responsive navigation, and a searchable page index.
+
+## How it fits together
+
+The route at `app/docs/[...slug]/page.tsx` resolves a page from the document index in `lib/docs.ts`. The index is also used to build the sidebar and search results. The root layout provides the header, footer, and theme provider for every route.
+
+## Start here
+
+Follow the [installation guide](/docs/getting-started/installation) to run the project. Then adjust the [theme](/docs/customization/theme), add your own [content](/docs/customization/writing-content), and browse the available [components](/docs/components/index).

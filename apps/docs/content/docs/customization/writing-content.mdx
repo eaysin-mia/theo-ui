@@ -1,0 +1,21 @@
+## Add a document
+
+Create an `.mdx` file under `content/docs`. Use Markdown for prose and fenced blocks for code. For example:
+
+```mdx
+## Configure a route
+
+Use the App Router to define pages from the `app` directory.
+```
+
+MDX is compiled at build time with the plugins configured in `next.config.ts`; standard GitHub-flavored Markdown is supported.
+
+## Make it discoverable
+
+Each page has a matching entry in `lib/docs.ts`. Add its route slug, title, section, short description, keywords, and heading IDs there. Then import the MDX file and add it to `contentBySlug` in `app/docs/[...slug]/page.tsx`.
+
+Use the same heading text in the MDX body and the index so the on-page links point to the rendered heading IDs.
+
+## MDX components
+
+The shared MDX component map is defined in `mdx-components.tsx`. Add project-owned React components there when content needs a reusable visual treatment. Keep interactive behavior in ordinary client components and pass only the components that a page actually needs.

@@ -1,0 +1,17 @@
+## Design tokens
+
+The color palette and shared UI values are defined in `app/globals.css`. The CSS variables are exposed to Tailwind through the inline theme, and the shadcn/ui components consume the same tokens.
+
+Change the values in `:root` for the light palette and in `.dark` for the dark palette. Keeping both sets aligned makes new components work with either theme automatically.
+
+## Light and dark themes
+
+The root layout wraps the application in the existing `ThemeProvider`. It uses the class strategy and respects the visitor's system preference. The theme button in the header lets a visitor switch modes; the `d` keyboard shortcut is also available.
+
+To change the default behavior, update the provider options in `components/theme-provider.tsx`.
+
+## Typography and layout
+
+The root layout loads Inter for interface text and Geist Mono for code. Update the font variables in `app/layout.tsx` and `app/globals.css` together if you choose another typeface.
+
+The landing page and docs layout use responsive Tailwind classes. Adjust their maximum widths and breakpoints to fit your content rather than adding a second layout system.

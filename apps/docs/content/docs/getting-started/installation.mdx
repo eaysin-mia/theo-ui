@@ -1,0 +1,38 @@
+## Requirements
+
+- Node.js 20.9 or newer
+- pnpm, npm, or another supported package manager
+
+## Set up the project
+
+Install the dependencies from the repository root:
+
+```bash
+pnpm install
+```
+
+The project is already configured with Next.js, Tailwind CSS, shadcn/ui, and a theme provider.
+
+### Add a shadcn component
+
+Use the shadcn CLI to add components to the local UI library:
+
+```bash
+pnpm dlx shadcn@latest add card
+```
+
+Review the generated files in `components/ui` and keep any component customizations in your project.
+
+## Run the development server
+
+Start the app and open the local address printed in the terminal:
+
+```bash
+pnpm dev
+```
+
+When you are ready to verify a production build, run:
+
+```bash
+pnpm build
+```

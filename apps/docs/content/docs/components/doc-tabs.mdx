@@ -1,0 +1,60 @@
+## Demo
+
+Use tabs to switch between related documentation examples without losing your place on the page.
+
+## Usage
+
+Build the tab interface from the local shadcn tabs components. Each trigger value must match the value on its content panel.
+
+```tsx
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value="cli">Install from the command line.</TabsContent>
+  <TabsContent value="manual">
+    Install by editing the files yourself.
+  </TabsContent>
+</Tabs>
+```
+
+## Props
+
+The composition is intentionally small. Pass a unique value to each trigger and content pair, and use `defaultValue` to choose the initially visible panel.
+
+### DocTabs
+
+Use the tabs root to control selected state. `defaultValue` selects a panel for uncontrolled tabs; a controlled interface can use the props supported by the shadcn tabs component.
+
+### DocTabsList
+
+Place the available tab triggers inside the list.
+
+### DocTabsTrigger
+
+Each trigger needs a `value` that identifies the panel it activates.
+
+### DocTabsContent
+
+Provide the panel content with a value that matches one of the triggers.
+
+## Features
+
+- Organize related examples into a compact, keyboard-navigable control.
+- Keep each panel's content in the page while showing only the selected panel.
+- Use the generated shadcn tabs component so the interface follows the project theme.
+
+## Examples
+
+### Basic Tabs
+
+Use a pair of panels for two alternative approaches, such as a package-manager command and manual setup.
+
+### With CodeBlockCommand
+
+Put a command block inside a tab panel when each option has a different installation command.
+
+### Installation Guide Example
+
+An installation guide can use one tab per package manager, with each panel showing the commands for that tool.

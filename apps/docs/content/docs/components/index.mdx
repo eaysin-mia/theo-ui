@@ -1,0 +1,25 @@
+## Use a component
+
+shadcn/ui components are copied into your repository so their implementation can be read and customized. Import a component from the local UI directory:
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+export function SaveAction() {
+  return <Button>Save changes</Button>;
+}
+```
+
+## Add more components
+
+Use the CLI to add the components you need:
+
+```bash
+pnpm dlx shadcn@latest add alert dialog dropdown-menu
+```
+
+The CLI updates local component files. Read through the generated code and adapt it to the app's conventions.
+
+## Keep components local
+
+Put reusable application-level components in `components`. Keep shadcn primitives in `components/ui`, and use the `@/` alias for imports. The alias and component paths are configured in `components.json` and `tsconfig.json`.
