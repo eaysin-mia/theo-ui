@@ -4,10 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   SidebarInset,
+  SidebarMenuButton,
   SidebarProvider,
   SidebarTrigger,
   AppSidebar,
+  useSidebar,
 } from "theoui";
+import { UserButton } from "theoui/auth";
 import { cn } from "theoui/lib";
 import { GalleryVerticalEndIcon, SearchIcon } from "lucide-react";
 import type { ReactNode } from "react";
@@ -28,6 +31,19 @@ function MobileSearchTrigger() {
     >
       <SearchIcon className="size-4" />
     </button>
+  );
+}
+
+function DashboardSidebarUser() {
+  const { isMobile } = useSidebar();
+  return (
+    <UserButton
+      render={<SidebarMenuButton size="lg" tooltip="Account" />}
+      side={isMobile ? "bottom" : "right"}
+      align="end"
+      sideOffset={4}
+      className="w-full"
+    />
   );
 }
 
@@ -54,6 +70,7 @@ function DashboardInner({
         teams={[]}
         currentPath={pathname}
         onSearchClick={() => setOpen(true)}
+        user={<DashboardSidebarUser />}
         renderLink={({
           href,
           children,
