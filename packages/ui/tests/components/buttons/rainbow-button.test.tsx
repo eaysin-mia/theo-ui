@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
-import { RainbowButton } from "theoui/components/buttons/rainbow-button";
+import { RainbowButton } from "#components/buttons/rainbow-button";
 
 describe("RainbowButton Pattern", () => {
   it("renders with default label and children", () => {
@@ -63,11 +63,7 @@ describe("RainbowButton Pattern", () => {
   it("renders custom element when using render prop", () => {
     render(
       <RainbowButton
-        render={(props) => (
-          <a href="/pricing" {...props}>
-            Link Button
-          </a>
-        )}
+        render={<a href="/pricing">Link Button</a>}
       />,
     );
     const link = screen.getByRole("link", { name: /link button/i });

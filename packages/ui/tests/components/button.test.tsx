@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { Button } from "theoui/components/button";
+import { Button } from "#components/button";
 
 describe("Button component", () => {
   it("renders with default properties and text", () => {
