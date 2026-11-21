@@ -92,17 +92,6 @@ function DashboardInner({
             : "overflow-x-hidden overflow-y-auto",
         )}
       >
-        {/* Mobile App Bar (md:hidden) - in normal flow, so it never overlaps page content */}
-        <header className="sticky top-0 z-20 flex h-14 shrink-0 items-center justify-between border-b border-border/50 bg-background/80 px-4 backdrop-blur-md md:hidden">
-          <div className="flex items-center gap-2.5">
-            <SidebarTrigger className="size-8 text-muted-foreground hover:text-foreground" />
-            <span className="text-sm font-semibold tracking-tight">
-              Theo UI
-            </span>
-          </div>
-          <MobileSearchTrigger />
-        </header>
-
         <div
           className={cn(
             "flex min-w-0 flex-1 flex-col",
