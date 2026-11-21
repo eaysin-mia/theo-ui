@@ -14,6 +14,7 @@ Always import from the 5 designated public subpaths:
 
 - `theoui`: General UI primitives, layouts, tables, and advanced domain components (`Gantt`, `Kanban`, `EventCalendar`, `Filters`, `Composer`, `Chat Feed`, micro-buttons).
 - `theoui/auth`: Better Auth views (`SignIn`, `SignUp`, `Settings`, `Organization`, `AdminUsers`), user buttons, and client hooks (`useSession`, `useAuth`, `useActiveOrganization`). Has `"use client"`.
+- `theoui/auth/email`: Server-side React Email templates (`EmailVerificationEmail`, `ResetPasswordEmail`, `MagicLinkEmail`, `OtpEmail`, etc.) for Node/Edge email delivery. Pure server-safe module.
 - `theoui/auth/lib`: Better Auth client plugins and adapters (`adminPlugin`, `organizationPlugin`, `twoFactorPlugin`, `passkeyPlugin`, etc.).
 - `theoui/hooks`: Reusable hooks (`useMediaQuery`, `useAutoHeight`, `useComposerEditor`, `useIsHydrated`).
 - `theoui/lib`: Shared utilities (`cn`, `createSyntaxHighlighter`, composer helpers).

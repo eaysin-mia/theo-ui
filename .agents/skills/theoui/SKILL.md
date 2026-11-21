@@ -32,7 +32,8 @@ Never import from internal directories (such as `theoui/components/*` or `theoui
 | Subpath | Description | Example |
 | :--- | :--- | :--- |
 | **`"theoui"`** | All general UI components, layouts, and advanced widgets | `import { Button, Dialog, Gantt, Kanban, Drawer } from "theoui";` |
-| **`"theoui/auth"`** | Better Auth forms, views, user buttons, and client hooks | `import { SignIn, SignUp, UserButton, Settings } from "theoui/auth";` |
+| **`"theoui/auth"`** | Better Auth forms, views, user buttons, and client hooks (Client) | `import { SignIn, SignUp, UserButton, Settings } from "theoui/auth";` |
+| **`"theoui/auth/email"`** | Server-side React Email templates for Node/Edge delivery (Server) | `import { EmailVerificationEmail, ResetPasswordEmail } from "theoui/auth/email";` |
 | **`"theoui/auth/lib"`** | Better Auth client plugins and adapters | `import { adminPlugin, organizationPlugin } from "theoui/auth/lib";` |
 | **`"theoui/hooks"`** | Reusable React hooks | `import { useMediaQuery, useAutoHeight } from "theoui/hooks";` |
 | **`"theoui/lib"`** | Utilities (`cn`, syntax highlighter, composer helpers) | `import { cn } from "theoui/lib";` |

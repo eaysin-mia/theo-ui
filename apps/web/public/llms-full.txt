@@ -84,7 +84,16 @@ import {
   useActiveOrganization,
 } from "theoui/auth";
 
-// 3. Better Auth Client Plugins
+// 3. Server-Side Email Templates (Server Boundary)
+import {
+  EmailVerificationEmail,
+  ResetPasswordEmail,
+  MagicLinkEmail,
+  OtpEmail,
+  OrganizationInvitationEmail,
+} from "theoui/auth/email";
+
+// 4. Better Auth Client Plugins
 import {
   adminPlugin,
   organizationPlugin,
@@ -95,7 +104,7 @@ import {
   magicLinkPlugin,
 } from "theoui/auth/lib";
 
-// 4. Reusable React Hooks
+// 5. Reusable React Hooks
 import {
   useMediaQuery,
   useAutoHeight,
@@ -103,7 +112,7 @@ import {
   useIsHydrated,
 } from "theoui/hooks";
 
-// 5. Shared Utilities
+// 6. Shared Utilities
 import {
   cn,
   createSyntaxHighlighter,

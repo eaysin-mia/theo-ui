@@ -9,10 +9,20 @@ import { cn } from "#lib/utils";
 import { Button } from "#components/button";
 import { ScrollArea } from "#components/scroll-area";
 
+/**
+ * @deprecated Sheet is deprecated. Use `Drawer` from `"theoui"` instead for slide-over sidebars and mobile sheets.
+ * @see Drawer
+ */
 export const Sheet: typeof SheetPrimitive.Root = SheetPrimitive.Root;
 
+/**
+ * @deprecated Use `DrawerPortal` from `"theoui"` instead.
+ */
 export const SheetPortal: typeof SheetPrimitive.Portal = SheetPrimitive.Portal;
 
+/**
+ * @deprecated Use `DrawerTrigger` from `"theoui"` instead.
+ */
 export function SheetTrigger(
   props: SheetPrimitive.Trigger.Props,
 ): React.ReactElement {
@@ -109,7 +119,7 @@ export function SheetPopup({
           {showCloseButton && (
             <SheetPrimitive.Close
               aria-label="Close"
-              className="absolute end-2 top-2"
+              className="absolute inset-e-2 top-2"
               render={<Button size="icon" variant="ghost" />}
               {...closeProps}
             >

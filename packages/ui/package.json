@@ -74,6 +74,16 @@
       "import": "./dist/auth/*.js",
       "default": "./dist/auth/*.js"
     },
+    "./auth/email": {
+      "types": "./dist/auth/email/index.d.ts",
+      "import": "./dist/auth/email/index.js",
+      "default": "./dist/auth/email/index.js"
+    },
+    "./auth/email/*": {
+      "types": "./dist/auth/email/*.d.ts",
+      "import": "./dist/auth/email/*.js",
+      "default": "./dist/auth/email/*.js"
+    },
     "./auth/lib": {
       "types": "./dist/lib/auth/index.d.ts",
       "import": "./dist/lib/auth/index.js",
@@ -150,9 +160,6 @@
     "@headless-tree/react": {
       "optional": true
     },
-    "motion": {
-      "optional": true
-    },
     "qrcode": {
       "optional": true
     },
@@ -186,6 +193,7 @@
     "input-otp": "^1.5.0",
     "libphonenumber-js": "^1.13.16",
     "lucide-react": "^1.75.0",
+    "motion": "^12.0.0 || ^14.0.0",
     "next-themes": "^0.4.6",
     "react-email": "^6.11.16",
     "sonner": "^2.0.8",
