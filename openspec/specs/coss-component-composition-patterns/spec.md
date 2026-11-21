@@ -15,10 +15,10 @@ The library SHALL provide direct access to unstyled `@base-ui/react` primitives 
 
 ### Requirement: Standalone Self-Contained Component Ownership
 
-The package SHALL operate as an independent, standalone library (`@theo/ui`) with zero external runtime dependencies on upstream registries, hosting all base and composite components in-tree.
+The package SHALL operate as an independent, standalone library (`theoui`) with zero external runtime dependencies on upstream registries, hosting all base and composite components in-tree.
 
 #### Scenario: Consumer installing the UI library
-- **WHEN** an application runs `pnpm add @theo/ui`
+- **WHEN** an application runs `pnpm add theoui`
 - **THEN** the package installs without requiring any `@coss/*` packages or external registry configuration
 
 ### Requirement: Element Composition via Render Prop

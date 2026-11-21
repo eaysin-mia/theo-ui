@@ -61,11 +61,7 @@ describe("RainbowButton Pattern", () => {
   });
 
   it("renders custom element when using render prop", () => {
-    render(
-      <RainbowButton
-        render={<a href="/pricing">Link Button</a>}
-      />,
-    );
+    render(<RainbowButton render={<a href="/pricing">Link Button</a>} />);
     const link = screen.getByRole("link", { name: /link button/i });
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute("href", "/pricing");
